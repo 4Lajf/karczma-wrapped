@@ -229,7 +229,7 @@
 				<!-- Screenshot Button -->
 				<button
 					onclick={downloadScreenshot}
-					class="absolute top-4 right-4 z-[60] flex h-10 w-10 items-center justify-center rounded-full border-2 border-black bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all hover:scale-110 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
+					class="absolute top-4 right-4 z-60 flex h-10 w-10 items-center justify-center rounded-full border-2 border-black bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all hover:scale-110 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
 					title="Pobierz screenshot"
 				>
 					<svg
@@ -289,6 +289,7 @@
 						<button
 							onclick={prevSlide}
 							disabled={currentSlide === 0}
+							aria-label="Poprzedni slajd"
 							class="flex h-12 w-12 items-center justify-center border-2 border-white bg-white text-black shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] transition-all hover:scale-105 active:translate-x-1 active:translate-y-1 active:shadow-none disabled:cursor-not-allowed disabled:opacity-30 disabled:shadow-none disabled:hover:scale-100"
 						>
 							<svg
@@ -306,6 +307,7 @@
 						<button
 							onclick={nextSlide}
 							disabled={currentSlide === slides.length - 1}
+							aria-label="Następny slajd"
 							class="flex h-12 w-12 items-center justify-center border-2 border-white bg-primary text-primary-foreground shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] transition-all hover:scale-105 active:translate-x-1 active:translate-y-1 active:shadow-none disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none disabled:hover:scale-100"
 						>
 							<svg

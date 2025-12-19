@@ -1,21 +1,240 @@
 <script>
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import { toPng } from 'html-to-image';
+	import { browser } from '$app/environment';
+	import {
+		Chart,
+		LineController,
+		LineElement,
+		PointElement,
+		LinearScale,
+		Title,
+		CategoryScale,
+		BarController,
+		BarElement,
+		Tooltip,
+		Legend,
+		Filler,
+		ArcElement,
+		DoughnutController
+	} from 'chart.js';
 
-	let stats = null;
-	let loading = true;
+	Chart.register(
+		LineController,
+		LineElement,
+		PointElement,
+		LinearScale,
+		Title,
+		CategoryScale,
+		BarController,
+		BarElement,
+		Tooltip,
+		Legend,
+		Filler,
+		ArcElement,
+		DoughnutController
+	);
+
+	const DAYS = ['Nie', 'Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob'];
+
+	let stats = $state(null);
+	let loading = $state(true);
 	let statsContainer = $state(null);
+
+	let timelineCanvas = $state(null);
+	let hourlyCanvas = $state(null);
+	let weeklyCanvas = $state(null);
+	let timeOfDayCanvas = $state(null);
+
+	let charts = [];
 
 	onMount(async () => {
 		try {
 			const res = await fetch('/global-stats-2025.json');
 			stats = await res.json();
+			console.log('Stats loaded:', !!stats);
 		} catch (e) {
-			console.error(e);
+			console.error('Failed to load stats:', e);
 		} finally {
 			loading = false;
 		}
 	});
+
+	$effect(() => {
+		if (stats && !loading) {
+			const snapshot = $state.snapshot(stats);
+			tick().then(() => {
+				setTimeout(() => initCharts(snapshot), 100); // Increased delay slightly
+			});
+		}
+	});
+
+	function initCharts(data) {
+		if (!data || !browser) return;
+		console.log('Initializing charts...');
+
+		// Destroy existing charts to prevent duplication
+		charts.forEach((c) => c.destroy());
+		charts = [];
+
+		// 1. Cartesian Options (Bar, Line)
+		const cartesianOptions = {
+			responsive: true,
+			maintainAspectRatio: false,
+			animation: false,
+			layout: {
+				padding: 10
+			},
+			plugins: {
+				legend: { display: false },
+				tooltip: {
+					backgroundColor: '#000',
+					titleFont: { weight: 'bold' },
+					bodyFont: { weight: 'bold' },
+					cornerRadius: 0,
+					padding: 12,
+					borderColor: '#fff',
+					borderWidth: 2
+				}
+			},
+			scales: {
+				x: {
+					grid: { display: false },
+					border: { width: 4, color: '#000' },
+					ticks: { font: { weight: 'bold', family: 'system-ui' }, color: '#000' }
+				},
+				y: {
+					beginAtZero: true,
+					grid: { color: 'rgba(0,0,0,0.1)', lineWidth: 2 },
+					border: { width: 4, color: '#000' },
+					ticks: { font: { weight: 'bold' }, color: '#000' }
+				}
+			}
+		};
+
+		// 2. Timeline Chart
+		if (timelineCanvas) {
+			console.log('Creating timeline chart');
+			const c = new Chart(timelineCanvas, {
+				type: 'line',
+				data: {
+					labels: data.timeline.map((d) => d.day),
+					datasets: [
+						{
+							label: 'Wiadomości',
+							data: data.timeline.map((d) => d.count),
+							borderColor: '#000',
+							borderWidth: 4,
+							backgroundColor: '#FFD100',
+							fill: true,
+							tension: 0,
+							pointRadius: 0,
+							pointHoverRadius: 6,
+							pointHoverBackgroundColor: '#fff',
+							pointHoverBorderColor: '#000',
+							pointHoverBorderWidth: 4
+						}
+					]
+				},
+				options: {
+					...cartesianOptions,
+					scales: {
+						...cartesianOptions.scales,
+						x: { ...cartesianOptions.scales.x, ticks: { display: false } }
+					}
+				}
+			});
+			charts.push(c);
+		}
+
+		// 3. Hourly Heatmap
+		if (hourlyCanvas) {
+			console.log('Creating hourly chart');
+			const c = new Chart(hourlyCanvas, {
+				type: 'bar',
+				data: {
+					labels: Array.from({ length: 24 }, (_, i) => `${i}:00`),
+					datasets: [
+						{
+							label: 'Wiadomości',
+							data: data.hourlyHeatmap,
+							backgroundColor: '#FF60BB',
+							borderColor: '#000',
+							borderWidth: 3,
+							borderRadius: 0
+						}
+					]
+				},
+				options: cartesianOptions
+			});
+			charts.push(c);
+		}
+
+		// 4. Weekly Rhythm
+		if (weeklyCanvas) {
+			console.log('Creating weekly chart');
+			const c = new Chart(weeklyCanvas, {
+				type: 'bar',
+				data: {
+					labels: DAYS,
+					datasets: [
+						{
+							label: 'Wiadomości',
+							data: data.weeklyHeatmap,
+							backgroundColor: '#00E676',
+							borderColor: '#000',
+							borderWidth: 3,
+							borderRadius: 0
+						}
+					]
+				},
+				options: cartesianOptions
+			});
+			charts.push(c);
+		}
+
+		// 5. Time of Day (Doughnut)
+		if (timeOfDayCanvas) {
+			console.log('Creating doughnut chart');
+			const c = new Chart(timeOfDayCanvas, {
+				type: 'doughnut',
+				data: {
+					labels: data.timeOfDay.map((p) => p.period),
+					datasets: [
+						{
+							data: data.timeOfDay.map((p) => p.count),
+							backgroundColor: ['#FFD100', '#FF60BB', '#00E676', '#000'],
+							borderColor: '#000',
+							borderWidth: 4,
+							hoverOffset: 10
+						}
+					]
+				},
+				options: {
+					responsive: true,
+					maintainAspectRatio: false,
+					animation: false,
+					plugins: {
+						legend: {
+							display: true,
+							position: 'bottom',
+							labels: { font: { weight: 'bold', size: 12 }, color: '#000', padding: 20 }
+						},
+						tooltip: {
+							backgroundColor: '#000',
+							titleFont: { weight: 'bold' },
+							bodyFont: { weight: 'bold' },
+							cornerRadius: 0,
+							padding: 12,
+							borderColor: '#fff',
+							borderWidth: 2
+						}
+					}
+				}
+			});
+			charts.push(c);
+		}
+	}
 
 	function getMax(arr, key) {
 		if (!arr) return 0;
@@ -28,11 +247,11 @@
 			const dataUrl = await toPng(statsContainer, {
 				quality: 0.95,
 				pixelRatio: 2,
-				backgroundColor: '#171717' // Match neutral-900
+				backgroundColor: '#ffffff'
 			});
 
 			const link = document.createElement('a');
-			link.download = `karczma-stats-2025.png`;
+			link.download = `karczma-stats-${stats?.meta?.year || 2025}.png`;
 			link.href = dataUrl;
 			link.click();
 		} catch (err) {
@@ -41,208 +260,201 @@
 	}
 </script>
 
-<div class="min-h-screen bg-neutral-900 p-8 text-white">
-	<div bind:this={statsContainer} class="mx-auto max-w-6xl space-y-12 bg-neutral-900">
-		<header class="relative text-center">
-			<button
-				onclick={downloadScreenshot}
-				class="absolute top-0 right-0 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-neutral-700 bg-neutral-800 shadow-lg transition-all hover:scale-110 active:scale-95 active:bg-neutral-700"
-				title="Pobierz screenshot"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="20"
-					height="20"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline
-						points="7 10 12 15 17 10"
-					/><line x1="12" x2="12" y1="3" y2="15" /></svg
-				>
-			</button>
-			<h1
-				class="bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-4xl font-bold text-transparent"
-			>
-				Karczma Stats 2025
-			</h1>
-			<p class="mt-2 text-neutral-400">Server-wide analytics & trends</p>
+<svelte:head>
+	<title>Globalne Statystyki {stats ? stats.meta.year : '2025'}</title>
+</svelte:head>
 
-			{#if stats && stats.globalAverages}
-				<div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
-					<div class="rounded-lg bg-neutral-800 p-4">
-						<div class="text-2xl font-bold text-yellow-400">{stats.guild.activeUsers}</div>
-						<div class="text-xs text-neutral-500 uppercase">Active Users</div>
+<div class="min-h-screen bg-background p-4 font-sans text-foreground md:p-8">
+	<div bind:this={statsContainer} class="mx-auto max-w-6xl space-y-12 bg-white pb-12">
+		{#if loading}
+			<div class="flex h-[60vh] flex-col items-center justify-center gap-4">
+				<div
+					class="h-16 w-16 animate-spin rounded-full border-8 border-black border-t-transparent"
+				></div>
+				<p class="text-xl font-black uppercase">Obliczanie statystyk...</p>
+			</div>
+		{:else if stats}
+			<header
+				class="relative border-4 border-black bg-primary p-8 text-center shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+			>
+				<button
+					onclick={downloadScreenshot}
+					class="absolute top-4 right-4 z-20 flex h-12 w-12 items-center justify-center border-4 border-black bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:scale-110 active:translate-x-1 active:translate-y-1 active:shadow-none"
+					title="Pobierz screenshot"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="3"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline
+							points="7 10 12 15 17 10"
+						/><line x1="12" x2="12" y1="3" y2="15" /></svg
+					>
+				</button>
+
+				<h1 class="mb-2 text-5xl font-black tracking-tighter uppercase md:text-7xl">
+					{stats.guild.name}
+				</h1>
+				<div
+					class="inline-block border-2 border-black bg-white px-4 py-1 text-2xl font-black uppercase"
+				>
+					Globalne Statystyki {stats.meta.year}
+				</div>
+
+				<div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
+					<div class="border-4 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+						<div class="text-3xl font-black">{stats.guild.activeUsers}</div>
+						<div class="text-xs font-bold text-gray-500 uppercase">Aktywnych Osób</div>
 					</div>
-					<div class="rounded-lg bg-neutral-800 p-4">
-						<div class="text-2xl font-bold text-blue-400">
-							{stats.guild.totalMessages.toLocaleString()}
-						</div>
-						<div class="text-xs text-neutral-500 uppercase">Total Messages</div>
+					<div class="border-4 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+						<div class="text-3xl font-black">{stats.guild.totalMessages.toLocaleString()}</div>
+						<div class="text-xs font-bold text-gray-500 uppercase">Wiadomości</div>
 					</div>
-					<div class="rounded-lg bg-neutral-800 p-4">
-						<div class="text-2xl font-bold text-purple-400">
+					<div class="border-4 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+						<div class="text-3xl font-black">
 							{Math.round(stats.globalAverages.avgMessageLength)}
 						</div>
-						<div class="text-xs text-neutral-500 uppercase">Avg Char Length</div>
+						<div class="text-xs font-bold text-gray-500 uppercase">Śr. Długość</div>
 					</div>
-					<div class="rounded-lg bg-neutral-800 p-4">
-						<div class="text-2xl font-bold text-green-400">
+					<div class="border-4 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+						<div class="text-3xl font-black">
 							{(stats.globalAverages.totalReactions / 1000).toFixed(1)}k
 						</div>
-						<div class="text-xs text-neutral-500 uppercase">Total Reactions</div>
+						<div class="text-xs font-bold text-gray-500 uppercase">Reakcji</div>
 					</div>
 				</div>
-			{/if}
-		</header>
+			</header>
 
-		{#if loading}
-			<div class="py-20 text-center text-neutral-500">Loading metrics...</div>
-		{:else if stats}
 			<!-- HALL OF FAME -->
-			{#if stats.hallOfFame}
-				<section>
-					<h2 class="mb-6 flex items-center justify-center gap-2 text-2xl font-bold text-yellow-500">
-						<span>🏆</span> Hall of Fame
-					</h2>
-					<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-						{#each stats.hallOfFame as record}
-							<div
-								class="relative overflow-hidden rounded-xl border border-yellow-500/20 bg-neutral-800 p-6 text-center shadow-[0_0_15px_rgba(234,179,8,0.1)] transition-transform hover:scale-105"
-							>
-								<div class="absolute top-0 right-0 rounded-bl bg-yellow-500/10 px-2 py-1 text-xs text-yellow-500">
-									Record Holder
-								</div>
-								<div class="mx-auto mb-4 h-20 w-20 overflow-hidden rounded-full border-2 border-yellow-500/50">
-									{#if record.user.avatar}
-										<img src={record.user.avatar} alt={record.user.name} class="h-full w-full object-cover" />
-									{:else}
-										<div class="flex h-full w-full items-center justify-center bg-neutral-700 text-2xl">
-											{record.user.name[0]}
-										</div>
-									{/if}
-								</div>
-								<h3 class="text-lg font-bold text-white">{record.user.name}</h3>
-								<div class="mb-1 text-sm font-medium text-yellow-400 uppercase tracking-widest">
-									{record.title}
-								</div>
-								<div class="text-neutral-400">{record.value}</div>
-							</div>
-						{/each}
-					</div>
-				</section>
-			{/if}
-
-			<!-- TIMELINE -->
-			<section class="rounded-xl border border-neutral-700 bg-neutral-800 p-6">
-				<h2 class="mb-6 flex items-center gap-2 text-xl font-bold">
-					<span>📈</span> Activity Timeline
+			<section>
+				<h2
+					class="mb-8 inline-block border-4 border-black bg-accent px-6 py-2 text-3xl font-black uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
+				>
+					🏆 Hall of Fame
 				</h2>
-				<div class="flex h-48 items-end gap-[1px]">
-					{#each stats.timeline as day}
+				<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+					{#each stats.hallOfFame as record}
 						<div
-							class="group relative flex-1 bg-yellow-500/50 transition-colors hover:bg-yellow-400"
-							style="height: {(day.count / getMax(stats.timeline, 'count')) * 100}%"
+							class="relative border-4 border-black bg-white p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-transform hover:-translate-y-1"
 						>
 							<div
-								class="absolute bottom-full left-1/2 z-10 mb-2 hidden -translate-x-1/2 rounded border border-neutral-600 bg-black p-1 text-xs whitespace-nowrap group-hover:block"
+								class="mx-auto mb-4 h-24 w-24 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
 							>
-								{day.day}: {day.count} msgs
+								{#if record.user.avatar}
+									<img
+										src={record.user.avatar}
+										alt={record.user.name}
+										class="h-full w-full object-cover"
+									/>
+								{:else}
+									<div
+										class="flex h-full w-full items-center justify-center bg-gray-200 text-3xl font-black"
+									>
+										{record.user.name[0]}
+									</div>
+								{/if}
 							</div>
+							<h3 class="text-xl font-black uppercase">{record.user.name}</h3>
+							<div
+								class="my-2 inline-block border-2 border-black bg-primary px-2 py-0.5 text-xs font-black uppercase"
+							>
+								{record.title}
+							</div>
+							<div class="text-2xl font-black text-gray-600">{record.value}</div>
 						</div>
 					{/each}
 				</div>
-				<div class="mt-2 flex justify-between text-xs text-neutral-500">
-					<span>Jan</span><span>Dec</span>
+			</section>
+
+			<!-- TIMELINE -->
+			<section class="border-4 border-black bg-white p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+				<h2 class="mb-8 text-3xl font-black uppercase italic">📈 Aktywność w ciągu roku</h2>
+				<div class="h-64 w-full border-4 border-black bg-white">
+					<canvas bind:this={timelineCanvas}></canvas>
+				</div>
+				<div class="mt-4 flex justify-between font-black uppercase">
+					<span>Styczeń</span><span>Grudzień</span>
 				</div>
 			</section>
 
 			<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
 				<!-- HOURLY HEATMAP -->
-				<section class="rounded-xl border border-neutral-700 bg-neutral-800 p-6">
-					<h2 class="mb-6 text-xl font-bold">🕒 Most Active Hours</h2>
-					<div class="flex h-40 items-end justify-between gap-1">
-						{#each stats.hourlyHeatmap as count, i}
-							<div class="group flex flex-1 flex-col items-center gap-1">
-								<div
-									class="w-full rounded-t bg-blue-500/60 transition-all group-hover:bg-blue-400"
-									style="height: {(count / Math.max(...stats.hourlyHeatmap)) * 100}%"
-								></div>
-								<span class="text-[10px] text-neutral-500">{i}</span>
-							</div>
-						{/each}
+				<section class="border-4 border-black bg-white p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+					<h2 class="mb-6 text-2xl font-black uppercase">🕒 Godziny szczytu</h2>
+					<div class="h-48 w-full border-4 border-black bg-white">
+						<canvas bind:this={hourlyCanvas}></canvas>
 					</div>
 				</section>
 
 				<!-- WEEKLY HEATMAP -->
-				<section class="rounded-xl border border-neutral-700 bg-neutral-800 p-6">
-					<h2 class="mb-6 text-xl font-bold">📅 Weekly Rhythm</h2>
-					<div class="flex h-40 items-end justify-between gap-2">
-						{#each ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] as day, i}
-							<div class="flex flex-1 flex-col items-center gap-1">
-								<div
-									class="w-full rounded-t bg-green-500/60"
-									style="height: {(stats.weeklyHeatmap[i] / Math.max(...stats.weeklyHeatmap)) *
-										100}%"
-								></div>
-								<span class="text-xs text-neutral-500">{day}</span>
-							</div>
-						{/each}
+				<section class="border-4 border-black bg-white p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+					<h2 class="mb-6 text-2xl font-black uppercase">📅 Tygodniowy Rytm</h2>
+					<div class="h-48 w-full border-4 border-black bg-white">
+						<canvas bind:this={weeklyCanvas}></canvas>
 					</div>
 				</section>
-
-				<!-- INTERACTION NETWORK -->
-				{#if stats.interactionNetwork}
-					<section class="rounded-xl border border-neutral-700 bg-neutral-800 p-6">
-						<h2 class="mb-6 text-xl font-bold">🤝 Top Interactions</h2>
-						<div class="grid gap-4 sm:grid-cols-2">
-							{#each stats.interactionNetwork as pair, i}
-								<div class="flex items-center justify-between rounded-lg bg-neutral-700/30 p-3">
-									<div class="flex items-center gap-3">
-										<div class="flex -space-x-2">
-											<img
-												src={pair.user1.avatar}
-												alt={pair.user1.name}
-												class="h-8 w-8 rounded-full border border-neutral-800 bg-neutral-700"
-											/>
-											<img
-												src={pair.user2.avatar}
-												alt={pair.user2.name}
-												class="h-8 w-8 rounded-full border border-neutral-800 bg-neutral-700"
-											/>
-										</div>
-										<div class="text-sm">
-											<span class="font-medium text-neutral-300">{pair.user1.name}</span>
-											<span class="mx-1 text-neutral-500">&</span>
-											<span class="font-medium text-neutral-300">{pair.user2.name}</span>
-										</div>
-									</div>
-									<div class="rounded bg-neutral-700 px-2 py-0.5 text-xs font-mono text-neutral-300">
-										{pair.count}
-									</div>
-								</div>
-							{/each}
-						</div>
-					</section>
 			</div>
 
-			<!-- TOP CHANNELS & ROLES -->
-			<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-				<section class="rounded-xl border border-neutral-700 bg-neutral-800 p-6">
-					<h2 class="mb-6 text-xl font-bold">📢 Top Channels</h2>
-					<div class="space-y-3">
-						{#each stats.channels.channels.slice(0, 10) as channel}
-							<div class="group">
-								<div class="mb-1 flex justify-between text-sm">
-									<span class="font-medium text-neutral-300">#{channel.name}</span>
-									<span class="text-neutral-500">{channel.count.toLocaleString()}</span>
+			<!-- INTERACTION NETWORK -->
+			<section class="border-4 border-black bg-white p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+				<h2 class="mb-2 text-3xl font-black uppercase italic">🤝 Najlepsze Duety</h2>
+				<p class="mb-8 text-sm font-bold text-gray-500 uppercase">
+					Obliczone na podstawie wzajemnych odpowiedzi (replies) w ciągu całego roku.
+				</p>
+				<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+					{#each stats.interactionNetwork as pair}
+						<div
+							class="flex items-center justify-between border-4 border-black bg-accent/10 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+						>
+							<div class="flex items-center gap-3">
+								<div class="flex -space-x-4">
+									<img
+										src={pair.user1.avatar}
+										alt=""
+										class="h-12 w-12 rounded-full border-2 border-black bg-white"
+									/>
+									<img
+										src={pair.user2.avatar}
+										alt=""
+										class="h-12 w-12 rounded-full border-2 border-black bg-white"
+									/>
 								</div>
-								<div class="h-2 overflow-hidden rounded-full bg-neutral-700">
+								<div class="text-sm leading-tight font-black uppercase">
+									{pair.user1.name} <br /> & {pair.user2.name}
+								</div>
+							</div>
+							<div
+								class="border-2 border-black bg-white px-2 py-1 font-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+							>
+								{pair.count}
+							</div>
+						</div>
+					{/each}
+				</div>
+			</section>
+
+			<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+				<!-- TOP CHANNELS -->
+				<section
+					class="col-span-1 border-4 border-black bg-white p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:col-span-2"
+				>
+					<h2 class="mb-6 text-2xl font-black uppercase">📢 Najpopularniejsze Kanały</h2>
+					<div class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
+						{#each stats.channels.channels.slice(0, 20) as channel}
+							<div class="group">
+								<div class="mb-1 flex justify-between font-black uppercase">
+									<span>#{channel.name}</span>
+									<span>{channel.count.toLocaleString()}</span>
+								</div>
+								<div class="h-4 border-2 border-black bg-gray-100">
 									<div
-										class="h-full rounded-full bg-purple-500"
+										class="h-full border-r-2 border-black bg-primary"
 										style="width: {(channel.count / stats.channels.channels[0].count) * 100}%"
 									></div>
 								</div>
@@ -250,111 +462,161 @@
 						{/each}
 					</div>
 				</section>
-
-				{#if stats.roleDistribution}
-					<section class="rounded-xl border border-neutral-700 bg-neutral-800 p-6">
-						<h2 class="mb-6 text-xl font-bold">🎭 Role Distribution</h2>
-						<div class="space-y-3">
-							{#each stats.roleDistribution as role}
-								<div class="flex items-center justify-between">
-									<span class="text-sm text-neutral-300">{role.name}</span>
-									<div class="flex items-center gap-3">
-										<div class="h-1.5 w-24 rounded-full bg-neutral-700">
-											<div
-												class="h-full rounded-full bg-blue-500"
-												style="width: {(role.count / stats.roleDistribution[0].count) * 100}%"
-											></div>
-										</div>
-										<span class="w-8 text-right text-xs text-neutral-500">{role.count}</span>
-									</div>
-								</div>
-							{/each}
-						</div>
-					</section>
-				{/if}
 			</div>
 
 			<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
 				<!-- CONTENT TYPES -->
-				<section class="rounded-xl border border-neutral-700 bg-neutral-800 p-6">
-					<h2 class="mb-6 text-xl font-bold">🖼️ Content Breakdown</h2>
-					<div class="space-y-4">
+				<section class="border-4 border-black bg-white p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+					<h2 class="mb-6 text-2xl font-black uppercase">🖼️ Typy Mediów</h2>
+					<div class="space-y-5">
 						{#each Object.entries(stats.attachments) as [type, count]}
 							<div class="flex items-center gap-4">
-								<div class="w-20 text-sm text-neutral-400 capitalize">{type}</div>
-								<div class="h-3 flex-1 rounded-full bg-neutral-700">
+								<div class="w-24 text-sm font-black uppercase">{type}</div>
+								<div class="h-6 flex-1 border-2 border-black bg-gray-100">
 									<div
-										class="h-full rounded-full bg-pink-500"
+										class="h-full border-r-2 border-black bg-primary"
 										style="width: {(count /
 											Object.values(stats.attachments).reduce((a, b) => a + b, 0)) *
 											100}%"
 									></div>
 								</div>
-								<div class="w-12 text-right text-sm">{count}</div>
+								<div class="w-16 text-right font-black">{count}</div>
 							</div>
 						{/each}
 					</div>
 				</section>
 
 				<!-- LINK TYPES -->
-				<section class="rounded-xl border border-neutral-700 bg-neutral-800 p-6">
-					<h2 class="mb-6 text-xl font-bold">🔗 Most Shared Links</h2>
+				<section class="border-4 border-black bg-white p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+					<h2 class="mb-6 text-2xl font-black uppercase">🔗 Linki</h2>
 					<div class="grid grid-cols-2 gap-4">
-						<div class="rounded-lg bg-neutral-700/50 p-4 text-center">
-							<div class="text-2xl font-bold text-green-400">{stats.links.spotify}</div>
-							<div class="mt-1 text-xs tracking-wider text-neutral-400 uppercase">Spotify</div>
+						<div
+							class="border-4 border-black bg-accent/20 p-4 text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+						>
+							<div class="text-3xl font-black">{stats.links.spotify}</div>
+							<div class="text-xs font-black uppercase">Spotify</div>
 						</div>
-						<div class="rounded-lg bg-neutral-700/50 p-4 text-center">
-							<div class="text-2xl font-bold text-red-400">{stats.links.youtube}</div>
-							<div class="mt-1 text-xs tracking-wider text-neutral-400 uppercase">YouTube</div>
+						<div
+							class="border-4 border-black bg-primary/20 p-4 text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+						>
+							<div class="text-3xl font-black">{stats.links.youtube}</div>
+							<div class="text-xs font-black uppercase">YouTube</div>
 						</div>
-						<div class="rounded-lg bg-neutral-700/50 p-4 text-center">
-							<div class="text-2xl font-bold text-blue-400">{stats.links.twitter}</div>
-							<div class="mt-1 text-xs tracking-wider text-neutral-400 uppercase">Twitter / X</div>
+						<div
+							class="border-4 border-black bg-blue-200 p-4 text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+						>
+							<div class="text-3xl font-black">{stats.links.twitter}</div>
+							<div class="text-xs font-black uppercase">Twitter / X</div>
 						</div>
-						<div class="rounded-lg bg-neutral-700/50 p-4 text-center">
-							<div class="text-2xl font-bold text-orange-400">{stats.links.pixiv}</div>
-							<div class="mt-1 text-xs tracking-wider text-neutral-400 uppercase">Pixiv</div>
+						<div
+							class="border-4 border-black bg-orange-200 p-4 text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+						>
+							<div class="text-3xl font-black">{stats.links.pixiv}</div>
+							<div class="text-xs font-black uppercase">Pixiv</div>
 						</div>
 					</div>
 				</section>
 			</div>
 
 			<!-- EMOJIS -->
-			{#if stats.emojis}
-				<section class="rounded-xl border border-neutral-700 bg-neutral-800 p-6">
-					<h2 class="mb-6 text-xl font-bold">😂 Top Emojis</h2>
-					<div class="flex flex-wrap justify-center gap-2">
-						{#each stats.emojis as emoji}
-							<div
-								class="flex items-center gap-1 rounded bg-neutral-700/30 px-2 py-1 text-xs text-neutral-400 transition-colors hover:bg-neutral-700"
-								title="{emoji.count} uses"
-							>
-								<span class="text-base text-white">{emoji.name}</span>
-								<span class="opacity-60">{emoji.count}</span>
+			<section
+				class="border-4 border-black bg-white p-8 text-center shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+			>
+				<h2 class="mb-8 text-3xl font-black uppercase italic">😂 Top Emotki</h2>
+				<div class="flex flex-wrap justify-center gap-6">
+					{#each stats.emojis.slice(0, 30) as emoji}
+						<div
+							class="flex items-center gap-3 border-4 border-black bg-white p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-transform hover:scale-110"
+							title="{emoji.count} użyć"
+						>
+							{#if emoji.id}
+								<img
+									src="/emojis/{emoji.id}.png"
+									alt={emoji.name}
+									class="h-10 w-10 object-contain"
+									onerror={(e) => {
+										if (e.currentTarget.src.endsWith('.png')) {
+											e.currentTarget.src = `/emojis/${emoji.id}.gif`;
+										} else {
+											e.currentTarget.style.display = 'none';
+										}
+									}}
+								/>
+							{/if}
+							<div class="flex flex-col items-start">
+								<span class="text-lg leading-none font-black">{emoji.name}</span>
+								<span class="text-xs font-bold text-gray-500 uppercase">{emoji.count}</span>
 							</div>
-						{/each}
-					</div>
-				</section>
-			{/if}
+						</div>
+					{/each}
+				</div>
+			</section>
 
-			<!-- WORD CLOUD (SIMPLE LIST) -->
-			<section class="rounded-xl border border-neutral-700 bg-neutral-800 p-6">
-				<h2 class="mb-6 text-xl font-bold">💬 Top Words</h2>
-				<div class="flex flex-wrap justify-center gap-2">
+			<!-- WORD CLOUD -->
+			<section
+				class="border-4 border-black bg-black p-8 text-center shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+			>
+				<h2 class="mb-12 text-3xl font-black text-white uppercase italic">💬 Słownik Karczmy</h2>
+				<div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
 					{#each stats.wordCloud as word}
 						<span
-							class="rounded bg-neutral-700/50 px-2 py-1 text-neutral-300"
+							class="leading-none font-black uppercase transition-all hover:text-primary"
 							style="font-size: {Math.max(
-								0.8,
-								Math.min(2, (word.value / stats.wordCloud[0].value) * 3)
-							)}rem; opacity: {Math.max(0.4, word.value / stats.wordCloud[0].value)}"
+								1,
+								Math.min(4, (word.value / stats.wordCloud[0].value) * 6)
+							)}rem; color: {word.value / stats.wordCloud[0].value > 0.5
+								? '#FFD100'
+								: '#fff'}; opacity: {Math.max(0.4, word.value / stats.wordCloud[0].value)}"
 						>
 							{word.text}
 						</span>
 					{/each}
 				</div>
 			</section>
+
+			<!-- TIME OF DAY -->
+			<section class="border-4 border-black bg-white p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+				<h2 class="mb-8 text-center text-3xl font-black uppercase italic">
+					⌛ Kiedy żyje Karczma?
+				</h2>
+				<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+					<div class="h-64 border-4 border-black bg-white p-4">
+						<canvas bind:this={timeOfDayCanvas}></canvas>
+					</div>
+					<div class="grid grid-cols-2 gap-4">
+						{#each stats.timeOfDay as period}
+							<div
+								class="border-4 border-black p-4 text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] {period.period ===
+								'Night'
+									? 'bg-black text-white'
+									: 'bg-white'}"
+							>
+								<div class="text-3xl font-black">{period.count.toLocaleString()}</div>
+								<div class="text-xs font-black uppercase">
+									{period.period === 'Morning'
+										? 'Poranek'
+										: period.period === 'Afternoon'
+											? 'Popołudnie'
+											: period.period === 'Evening'
+												? 'Wieczór'
+												: 'Noc'}
+								</div>
+							</div>
+						{/each}
+					</div>
+				</div>
+			</section>
 		{/if}
 	</div>
 </div>
+
+<style>
+	:global(body) {
+		background-color: #f0f0f0;
+	}
+	canvas {
+		display: block;
+		width: 100% !important;
+		height: 100% !important;
+	}
+</style>

@@ -1,7 +1,7 @@
 {
   "meta": {
     "year": 2025,
-    "generatedAt": "2025-12-19T01:04:31.187Z",
+    "generatedAt": "2025-12-19T01:57:52.708Z",
     "schemaVersion": "2.1",
     "features": [
       "experimental",
@@ -78,9 +78,9 @@
       "totalLinks": 4547,
       "linkTypes": {
         "spotify": 0,
-        "youtube": 0,
-        "twitter": 0,
-        "pixiv": 0,
+        "youtube": 210,
+        "twitter": 1481,
+        "pixiv": 20,
         "gif": 946,
         "screenshots": 10407
       }
@@ -158,14 +158,6 @@
             "count": 1343
           },
           {
-            "word": "prostu",
-            "count": 1244
-          },
-          {
-            "word": "razie",
-            "count": 1176
-          },
-          {
             "word": "wiec",
             "count": 1124
           },
@@ -182,8 +174,16 @@
             "count": 999
           },
           {
+            "word": "razem",
+            "count": 959
+          },
+          {
             "word": "909369353554771989>",
             "count": 932
+          },
+          {
+            "word": "ludzie",
+            "count": 906
           }
         ],
         "topEmojisSent": [
@@ -236,6 +236,106 @@
             "key": "👍",
             "count": 484,
             "emoji_id": null
+          },
+          {
+            "key": "wakaru",
+            "count": 299,
+            "emoji_id": "949465369045778492"
+          },
+          {
+            "key": "Clueless",
+            "count": 267,
+            "emoji_id": "1083947696299192391"
+          },
+          {
+            "key": "😊",
+            "count": 227,
+            "emoji_id": null
+          },
+          {
+            "key": "pogcelanka",
+            "count": 219,
+            "emoji_id": "997597794032435342"
+          },
+          {
+            "key": "🤝",
+            "count": 207,
+            "emoji_id": null
+          },
+          {
+            "key": "😎",
+            "count": 196,
+            "emoji_id": null
+          },
+          {
+            "key": "😔",
+            "count": 186,
+            "emoji_id": null
+          },
+          {
+            "key": "🥰",
+            "count": 177,
+            "emoji_id": null
+          },
+          {
+            "key": "🚬",
+            "count": 161,
+            "emoji_id": null
+          },
+          {
+            "key": "flush",
+            "count": 154,
+            "emoji_id": "1024969310701109308"
+          },
+          {
+            "key": "tehepero",
+            "count": 126,
+            "emoji_id": "1021208027598159964"
+          },
+          {
+            "key": "🫡",
+            "count": 125,
+            "emoji_id": null
+          },
+          {
+            "key": "🙏",
+            "count": 124,
+            "emoji_id": null
+          },
+          {
+            "key": "nowaying",
+            "count": 116,
+            "emoji_id": "1280903178191372379"
+          },
+          {
+            "key": "Mugi_stronk",
+            "count": 110,
+            "emoji_id": "963490485668827136"
+          },
+          {
+            "key": "👀",
+            "count": 103,
+            "emoji_id": null
+          },
+          {
+            "key": "🤠",
+            "count": 102,
+            "emoji_id": null
+          },
+          {
+            "key": "💢",
+            "count": 99,
+            "emoji_id": null
+          },
+          {
+            "key": "Thonk",
+            "count": 91,
+            "emoji_id": "464137501007937546"
+          },
+          {
+            "key": "pensive_cum",
+            "count": 91,
+            "emoji_id": "800791549013131334"
           }
         ],
         "topEmojisInline": [
@@ -287,6 +387,106 @@
           {
             "key": "😊",
             "count": 227,
+            "emoji_id": null
+          },
+          {
+            "key": "pogcelanka",
+            "count": 219,
+            "emoji_id": "997597794032435342"
+          },
+          {
+            "key": "🤝",
+            "count": 207,
+            "emoji_id": null
+          },
+          {
+            "key": "😎",
+            "count": 196,
+            "emoji_id": null
+          },
+          {
+            "key": "😔",
+            "count": 186,
+            "emoji_id": null
+          },
+          {
+            "key": "🥰",
+            "count": 177,
+            "emoji_id": null
+          },
+          {
+            "key": "🚬",
+            "count": 161,
+            "emoji_id": null
+          },
+          {
+            "key": "flush",
+            "count": 154,
+            "emoji_id": "1024969310701109308"
+          },
+          {
+            "key": "tehepero",
+            "count": 126,
+            "emoji_id": "1021208027598159964"
+          },
+          {
+            "key": "🫡",
+            "count": 125,
+            "emoji_id": null
+          },
+          {
+            "key": "🙏",
+            "count": 124,
+            "emoji_id": null
+          },
+          {
+            "key": "nowaying",
+            "count": 116,
+            "emoji_id": "1280903178191372379"
+          },
+          {
+            "key": "Mugi_stronk",
+            "count": 110,
+            "emoji_id": "963490485668827136"
+          },
+          {
+            "key": "👀",
+            "count": 103,
+            "emoji_id": null
+          },
+          {
+            "key": "🤠",
+            "count": 102,
+            "emoji_id": null
+          },
+          {
+            "key": "💢",
+            "count": 99,
+            "emoji_id": null
+          },
+          {
+            "key": "Thonk",
+            "count": 91,
+            "emoji_id": "464137501007937546"
+          },
+          {
+            "key": "pensive_cum",
+            "count": 91,
+            "emoji_id": "800791549013131334"
+          },
+          {
+            "key": "flushedcool",
+            "count": 86,
+            "emoji_id": "1072666310384816138"
+          },
+          {
+            "key": "sunglas",
+            "count": 85,
+            "emoji_id": "1327979719689375824"
+          },
+          {
+            "key": "💋",
+            "count": 78,
             "emoji_id": null
           }
         ],
@@ -376,6 +576,101 @@
           {
             "key": "👍",
             "count": 311,
+            "emoji_id": null
+          },
+          {
+            "key": "😭",
+            "count": 259,
+            "emoji_id": null
+          },
+          {
+            "key": "trollgefk",
+            "count": 237,
+            "emoji_id": "1003285860596338758"
+          },
+          {
+            "key": "👆",
+            "count": 205,
+            "emoji_id": null
+          },
+          {
+            "key": "😳",
+            "count": 205,
+            "emoji_id": null
+          },
+          {
+            "key": "🚬",
+            "count": 179,
+            "emoji_id": null
+          },
+          {
+            "key": "🫂",
+            "count": 135,
+            "emoji_id": null
+          },
+          {
+            "key": "😔",
+            "count": 110,
+            "emoji_id": null
+          },
+          {
+            "key": "💪",
+            "count": 105,
+            "emoji_id": null
+          },
+          {
+            "key": "Panda_pat",
+            "count": 85,
+            "emoji_id": "867302170775781376"
+          },
+          {
+            "key": "🔥",
+            "count": 72,
+            "emoji_id": null
+          },
+          {
+            "key": "Mugi_stronk",
+            "count": 66,
+            "emoji_id": "963490485668827136"
+          },
+          {
+            "key": "💖",
+            "count": 57,
+            "emoji_id": null
+          },
+          {
+            "key": "flush",
+            "count": 56,
+            "emoji_id": "1024969310701109308"
+          },
+          {
+            "key": "cocoxd_spinning",
+            "count": 52,
+            "emoji_id": "1087822273752338454"
+          },
+          {
+            "key": "💀",
+            "count": 49,
+            "emoji_id": null
+          },
+          {
+            "key": "💯",
+            "count": 47,
+            "emoji_id": null
+          },
+          {
+            "key": "cluelessFK",
+            "count": 45,
+            "emoji_id": "1298666774459318273"
+          },
+          {
+            "key": "🤝",
+            "count": 44,
+            "emoji_id": null
+          },
+          {
+            "key": "💙",
+            "count": 41,
             "emoji_id": null
           }
         ],
@@ -636,54 +931,54 @@
         "persona": "Night Owl",
         "vocabularyFingerprint": [
           {
+            "word": "naklepac",
+            "score": 9.04681058113017,
+            "count": 6
+          },
+          {
             "word": "bigboj",
-            "score": 9.032246979270592,
+            "score": 9.04681058113017,
             "count": 5
           },
           {
             "word": "dzieciorki",
-            "score": 9.032246979270592,
+            "score": 9.04681058113017,
             "count": 5
+          },
+          {
+            "word": "tuptaczka",
+            "score": 9.04681058113017,
+            "count": 6
+          },
+          {
+            "word": "samochut",
+            "score": 9.04681058113017,
+            "count": 7
           },
           {
             "word": "epuw",
-            "score": 9.032246979270592,
+            "score": 9.04681058113017,
             "count": 10
           },
           {
-            "word": "tomaszpout",
-            "score": 9.032246979270592,
-            "count": 8
+            "word": "niewystarczajaco",
+            "score": 9.04681058113017,
+            "count": 6
           },
           {
-            "word": "bokuyabke",
-            "score": 9.032246979270592,
-            "count": 5
+            "word": "mahotsukai",
+            "score": 9.04681058113017,
+            "count": 7
           },
           {
-            "word": "jajnikwatch",
-            "score": 9.032246979270592,
-            "count": 5
+            "word": "ganbarne",
+            "score": 9.04681058113017,
+            "count": 6
           },
           {
-            "word": "konuw",
-            "score": 9.032246979270592,
-            "count": 5
-          },
-          {
-            "word": "srodeczku",
-            "score": 9.032246979270592,
-            "count": 8
-          },
-          {
-            "word": "chopuw",
-            "score": 9.032246979270592,
-            "count": 5
-          },
-          {
-            "word": "nadizeje",
-            "score": 9.032246979270592,
-            "count": 5
+            "word": "guglnelam",
+            "score": 9.04681058113017,
+            "count": 14
           }
         ],
         "responseLatency": {
@@ -780,9 +1075,9 @@
           "capsRatio": 0.049149474168151255,
           "questionRatio": 0.03222515947359347,
           "spotifyCount": 0,
-          "youtubeCount": 0,
-          "twitterCount": 0,
-          "pixivCount": 0,
+          "youtubeCount": 116,
+          "twitterCount": 21,
+          "pixivCount": 2,
           "gifCount": 272,
           "screenshotCount": 4902,
           "totalLinks": 813
@@ -801,12 +1096,13 @@
         },
         "voidScore": 2.13,
         "conversationStarter": 2880,
+        "killerCount": 103,
         "starboardCount": 242,
         "badges": [
           {
             "id": "night-owl",
-            "label": "Nocny Marek/-ka",
-            "description": "Najbardziej aktywny/-a w nocy (20:00 - 05:00)",
+            "label": "Nocny Marek",
+            "description": "Największa aktywność w nocy (20:00 - 05:00)",
             "achieved": true,
             "progress": 0.4546577782886041,
             "threshold": 0.4,
@@ -815,8 +1111,8 @@
           },
           {
             "id": "channel-hopper",
-            "label": "Wędrowiec/-zyni Kanałów",
-            "description": "Aktywny/-a w 5+ kanałach",
+            "label": "Wędrowiec Kanałów",
+            "description": "Aktywność w 5+ kanałach",
             "achieved": true,
             "progress": 5,
             "threshold": 5,
@@ -828,9 +1124,9 @@
             "label": "Fabryka Emoji",
             "description": "Reaguje na wszystko (>30% wiadomości)",
             "achieved": true,
-            "progress": 0.5625251422332049,
+            "progress": 0.6082121717142693,
             "threshold": 0.3,
-            "displayValue": "56.3%",
+            "displayValue": "60.8%",
             "globalPercentage": "66.7%"
           },
           {
@@ -855,18 +1151,18 @@
           },
           {
             "id": "react-lord",
-            "label": "Pan/-i Reakcji",
-            "description": "Otrzymuje średnio 1 reakcję na każde 5 wiadomości",
+            "label": "Mistrz Reakcji",
+            "description": "Średnio 1 reakcja na każde 5 wiadomości",
             "achieved": true,
-            "progress": 0.2214958910407448,
+            "progress": 0.25093385437618526,
             "threshold": 0.2,
-            "displayValue": "15417 reakcji",
+            "displayValue": "1 na 4.0 msg",
             "globalPercentage": "100.0%"
           },
           {
             "id": "trendsetter",
-            "label": "Wyznaczający/-a Trendy",
-            "description": "Top 3 reagujących pod popularnymi postami (10+) - min. 250 wiadomości",
+            "label": "Trendsetter",
+            "description": "Wśród 3 pierwszych osób reagujących pod popularnymi postami (10+) - min. 250 wiadomości",
             "achieved": true,
             "progress": 2156,
             "threshold": 250,
@@ -875,27 +1171,27 @@
           },
           {
             "id": "conversation-killer",
-            "label": "Zabójca/-zyni Konwersacji",
-            "description": "Często kończy rozmowy (>300 razy)",
+            "label": "Pogromca Konwersacji",
+            "description": "Ostatnia wiadomość w rozmowie - min. 100 razy",
             "achieved": true,
-            "progress": 1412,
-            "threshold": 300,
-            "displayValue": "1412 razy",
-            "globalPercentage": "100.0%"
+            "progress": 103,
+            "threshold": 100,
+            "displayValue": "103 razy",
+            "globalPercentage": "33.3%"
           },
           {
             "id": "consistent",
-            "label": "Konsekwentny/-a",
-            "description": "Seria 30 dni z rzędu",
+            "label": "Konsekwencja",
+            "description": "Seria 180 dni z rzędu",
             "achieved": true,
             "progress": 346,
-            "threshold": 30,
+            "threshold": 180,
             "displayValue": "346 dni",
             "globalPercentage": "100.0%"
           },
           {
             "id": "screenshot-abuser",
-            "label": "Animator/-ka Animowych Dysput",
+            "label": "Duch Animowych Dysput",
             "description": "750 obrazków na #animowe-dysputy",
             "achieved": true,
             "progress": 4902,
@@ -904,8 +1200,18 @@
             "globalPercentage": "100.0%"
           },
           {
+            "id": "the-dj",
+            "label": "DJ Cieńka Książka",
+            "description": "> 100 linków muzycznych (YT/Spotify) na #kącik-muzyczny",
+            "achieved": true,
+            "progress": 116,
+            "threshold": 100,
+            "displayValue": "116 linków",
+            "globalPercentage": "33.3%"
+          },
+          {
             "id": "starboard-fame",
-            "label": "Gwiazdor",
+            "label": "Gwiazda Starboardu",
             "description": "100+ wpisów na starboardzie",
             "achieved": true,
             "progress": 242,
@@ -916,7 +1222,7 @@
           {
             "id": "early-bird",
             "label": "Ranny Ptaszek",
-            "description": "Najbardziej aktywny/-a rano (05:00 - 10:00)",
+            "description": "Największa aktywność rano (05:00 - 10:00)",
             "achieved": false,
             "progress": 0.015688753519912647,
             "threshold": 0.4,
@@ -925,8 +1231,8 @@
           },
           {
             "id": "work-hours",
-            "label": "Pracownik/-czka Miesiąca",
-            "description": "Najbardziej aktywny/-a w godzinach pracy (08:00 - 16:00)",
+            "label": "Pracownik Miesiąca",
+            "description": "Największa aktywność w godzinach pracy (08:00 - 16:00)",
             "achieved": false,
             "progress": 0.3680248261594161,
             "threshold": 0.4,
@@ -936,7 +1242,7 @@
           {
             "id": "one-channel",
             "label": "Jednokanałowy Gremlin",
-            "description": "Żyje w jednym kanale (>80% wiadomości)",
+            "description": "80% wiadomości w jednym kanale",
             "achieved": false,
             "progress": 0.43,
             "threshold": 0.8,
@@ -946,7 +1252,7 @@
           {
             "id": "the-editor",
             "label": "Redaktor Naczelny",
-            "description": "Edytuje >5% wiadomości",
+            "description": "Edycja >5% wiadomości",
             "achieved": false,
             "progress": 0.026334693408424804,
             "threshold": 0.05,
@@ -956,7 +1262,7 @@
           {
             "id": "gallery-curator",
             "label": "Kurator Galerii",
-            "description": "Wysyła dużo załączników (>10%)",
+            "description": "Ponad 10% wiadomości z załącznikami",
             "achieved": false,
             "progress": 0.09814091144187116,
             "threshold": 0.1,
@@ -966,21 +1272,11 @@
           {
             "id": "ghost",
             "label": "Szara Eminencja",
-            "description": "Aktywny/-a często, ale mało pisze (<25 msg/dzień)",
+            "description": "Częsta obecność, ale mało pisania (<25 msg/dzień)",
             "achieved": false,
             "progress": 0,
             "threshold": 25,
             "displayValue": "201.2 msg/dzień",
-            "globalPercentage": "0.0%"
-          },
-          {
-            "id": "the-dj",
-            "label": "DJ Cieńka Książka",
-            "description": "> 100 linków muzycznych (YT/Spotify) na #kącik-muzyczny",
-            "achieved": false,
-            "progress": 0,
-            "threshold": 100,
-            "displayValue": "0 linków",
             "globalPercentage": "0.0%"
           }
         ]
@@ -1135,6 +1431,106 @@
             "key": "trollgefk",
             "count": 110,
             "emoji_id": "1003285860596338758"
+          },
+          {
+            "key": "😎",
+            "count": 97,
+            "emoji_id": null
+          },
+          {
+            "key": "pensivecum",
+            "count": 75,
+            "emoji_id": "1003744834793766922"
+          },
+          {
+            "key": "nowaying",
+            "count": 69,
+            "emoji_id": "1280903178191372379"
+          },
+          {
+            "key": "😠",
+            "count": 60,
+            "emoji_id": null
+          },
+          {
+            "key": "vibecat",
+            "count": 44,
+            "emoji_id": "909373540212547594"
+          },
+          {
+            "key": "🙏",
+            "count": 41,
+            "emoji_id": null
+          },
+          {
+            "key": "❓",
+            "count": 36,
+            "emoji_id": null
+          },
+          {
+            "key": "🫡",
+            "count": 34,
+            "emoji_id": null
+          },
+          {
+            "key": "😈",
+            "count": 31,
+            "emoji_id": null
+          },
+          {
+            "key": "🤓",
+            "count": 21,
+            "emoji_id": null
+          },
+          {
+            "key": "yeshoney",
+            "count": 16,
+            "emoji_id": "1188290415430996048"
+          },
+          {
+            "key": "💪",
+            "count": 16,
+            "emoji_id": null
+          },
+          {
+            "key": "🦍",
+            "count": 16,
+            "emoji_id": null
+          },
+          {
+            "key": "–",
+            "count": 15,
+            "emoji_id": null
+          },
+          {
+            "key": "🤨",
+            "count": 13,
+            "emoji_id": null
+          },
+          {
+            "key": "tehepero",
+            "count": 12,
+            "emoji_id": "1021208027598159964"
+          },
+          {
+            "key": "flushedcum",
+            "count": 12,
+            "emoji_id": "1219735965216538744"
+          },
+          {
+            "key": "kazumasaluteleft",
+            "count": 12,
+            "emoji_id": "1243303311176765582"
+          },
+          {
+            "key": "niebieskooki",
+            "count": 12,
+            "emoji_id": "1422706462219698267"
+          },
+          {
+            "key": "🤝",
+            "count": 11,
+            "emoji_id": null
           }
         ],
         "topEmojisInline": [
@@ -1187,6 +1583,106 @@
             "key": "trollgefk",
             "count": 74,
             "emoji_id": "1003285860596338758"
+          },
+          {
+            "key": "nowaying",
+            "count": 69,
+            "emoji_id": "1280903178191372379"
+          },
+          {
+            "key": "😠",
+            "count": 60,
+            "emoji_id": null
+          },
+          {
+            "key": "🙏",
+            "count": 41,
+            "emoji_id": null
+          },
+          {
+            "key": "❓",
+            "count": 36,
+            "emoji_id": null
+          },
+          {
+            "key": "🫡",
+            "count": 34,
+            "emoji_id": null
+          },
+          {
+            "key": "😈",
+            "count": 31,
+            "emoji_id": null
+          },
+          {
+            "key": "🤓",
+            "count": 21,
+            "emoji_id": null
+          },
+          {
+            "key": "yeshoney",
+            "count": 16,
+            "emoji_id": "1188290415430996048"
+          },
+          {
+            "key": "💪",
+            "count": 16,
+            "emoji_id": null
+          },
+          {
+            "key": "🦍",
+            "count": 16,
+            "emoji_id": null
+          },
+          {
+            "key": "–",
+            "count": 15,
+            "emoji_id": null
+          },
+          {
+            "key": "🤨",
+            "count": 13,
+            "emoji_id": null
+          },
+          {
+            "key": "tehepero",
+            "count": 12,
+            "emoji_id": "1021208027598159964"
+          },
+          {
+            "key": "flushedcum",
+            "count": 12,
+            "emoji_id": "1219735965216538744"
+          },
+          {
+            "key": "kazumasaluteleft",
+            "count": 12,
+            "emoji_id": "1243303311176765582"
+          },
+          {
+            "key": "niebieskooki",
+            "count": 12,
+            "emoji_id": "1422706462219698267"
+          },
+          {
+            "key": "🤝",
+            "count": 11,
+            "emoji_id": null
+          },
+          {
+            "key": "😋",
+            "count": 11,
+            "emoji_id": null
+          },
+          {
+            "key": "ン",
+            "count": 10,
+            "emoji_id": null
+          },
+          {
+            "key": "💀",
+            "count": 9,
+            "emoji_id": null
           }
         ],
         "topReactionsSent": [
@@ -1271,6 +1767,106 @@
             "key": "trollgefk",
             "count": 160,
             "emoji_id": "1003285860596338758"
+          },
+          {
+            "key": "👆",
+            "count": 128,
+            "emoji_id": null
+          },
+          {
+            "key": "😔",
+            "count": 78,
+            "emoji_id": null
+          },
+          {
+            "key": "💗",
+            "count": 75,
+            "emoji_id": null
+          },
+          {
+            "key": "🚬",
+            "count": 75,
+            "emoji_id": null
+          },
+          {
+            "key": "👍",
+            "count": 60,
+            "emoji_id": null
+          },
+          {
+            "key": "💪",
+            "count": 60,
+            "emoji_id": null
+          },
+          {
+            "key": "😋",
+            "count": 46,
+            "emoji_id": null
+          },
+          {
+            "key": "UwUkuraii",
+            "count": 45,
+            "emoji_id": "909841552224972831"
+          },
+          {
+            "key": "niebieskokoXD",
+            "count": 39,
+            "emoji_id": "1283541438285484134"
+          },
+          {
+            "key": "plusjeden",
+            "count": 34,
+            "emoji_id": "1030233662618357842"
+          },
+          {
+            "key": "‼️",
+            "count": 34,
+            "emoji_id": null
+          },
+          {
+            "key": "🤝",
+            "count": 34,
+            "emoji_id": null
+          },
+          {
+            "key": "🔥",
+            "count": 33,
+            "emoji_id": null
+          },
+          {
+            "key": "🎉",
+            "count": 31,
+            "emoji_id": null
+          },
+          {
+            "key": "niebieskooki",
+            "count": 29,
+            "emoji_id": "1422706462219698267"
+          },
+          {
+            "key": "😎",
+            "count": 29,
+            "emoji_id": null
+          },
+          {
+            "key": "nowaying",
+            "count": 28,
+            "emoji_id": "1280903178191372379"
+          },
+          {
+            "key": "Pandapat",
+            "count": 27,
+            "emoji_id": "1056314396713955458"
+          },
+          {
+            "key": "sus",
+            "count": 25,
+            "emoji_id": "1304837093616390177"
+          },
+          {
+            "key": "❓",
+            "count": 25,
+            "emoji_id": null
           }
         ],
         "topMentions": [
@@ -1530,53 +2126,53 @@
         "persona": "Afternoon Chatter",
         "vocabularyFingerprint": [
           {
+            "word": "łymen",
+            "score": 29.02971252860412,
+            "count": 6
+          },
+          {
             "word": "matulo",
-            "score": 29.058106774764926,
+            "score": 29.02971252860412,
             "count": 10
           },
           {
             "word": "xdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-            "score": 29.058106774764926,
+            "score": 29.02971252860412,
             "count": 8
           },
           {
+            "word": "habahaba",
+            "score": 29.02971252860412,
+            "count": 6
+          },
+          {
             "word": "manaczka",
-            "score": 29.058106774764926,
+            "score": 29.02971252860412,
             "count": 5
           },
           {
             "word": "com/attachments/875089652518903869/1425190102895820810/bigkokenergia",
-            "score": 29.058106774764926,
+            "score": 29.02971252860412,
             "count": 5
           },
           {
-            "word": "łymen",
-            "score": 29.05810677476492,
-            "count": 6
-          },
-          {
-            "word": "habahaba",
-            "score": 29.05810677476492,
-            "count": 6
-          },
-          {
             "word": "bądż",
-            "score": 26.636597876867846,
+            "score": 26.61056981788711,
             "count": 11
           },
           {
             "word": "bangerino",
-            "score": 26.636597876867846,
+            "score": 26.61056981788711,
             "count": 11
           },
           {
             "word": "xdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-            "score": 26.41646070433175,
+            "score": 26.390647753276472,
             "count": 10
           },
           {
             "word": "wime",
-            "score": 25.425843427919308,
+            "score": 25.400998462528605,
             "count": 7
           }
         ],
@@ -1658,8 +2254,8 @@
           "capsRatio": 0.13580969909924984,
           "questionRatio": 0.03566747538972085,
           "spotifyCount": 0,
-          "youtubeCount": 0,
-          "twitterCount": 0,
+          "youtubeCount": 17,
+          "twitterCount": 9,
           "pixivCount": 0,
           "gifCount": 331,
           "screenshotCount": 3715,
@@ -1679,12 +2275,13 @@
         },
         "voidScore": 1.49,
         "conversationStarter": 1496,
+        "killerCount": 44,
         "starboardCount": 199,
         "badges": [
           {
             "id": "work-hours",
-            "label": "Pracownik/-czka Miesiąca",
-            "description": "Najbardziej aktywny/-a w godzinach pracy (08:00 - 16:00)",
+            "label": "Pracownik Miesiąca",
+            "description": "Największa aktywność w godzinach pracy (08:00 - 16:00)",
             "achieved": true,
             "progress": 0.41983881312920046,
             "threshold": 0.4,
@@ -1693,8 +2290,8 @@
           },
           {
             "id": "channel-hopper",
-            "label": "Wędrowiec/-zyni Kanałów",
-            "description": "Aktywny/-a w 5+ kanałach",
+            "label": "Wędrowiec Kanałów",
+            "description": "Aktywność w 5+ kanałach",
             "achieved": true,
             "progress": 5,
             "threshold": 5,
@@ -1704,7 +2301,7 @@
           {
             "id": "gallery-curator",
             "label": "Kurator Galerii",
-            "description": "Wysyła dużo załączników (>10%)",
+            "description": "Ponad 10% wiadomości z załącznikami",
             "achieved": true,
             "progress": 0.18737276555397528,
             "threshold": 0.1,
@@ -1723,37 +2320,27 @@
           },
           {
             "id": "react-lord",
-            "label": "Pan/-i Reakcji",
-            "description": "Otrzymuje średnio 1 reakcję na każde 5 wiadomości",
+            "label": "Mistrz Reakcji",
+            "description": "Średnio 1 reakcja na każde 5 wiadomości",
             "achieved": true,
-            "progress": 0.4339496360746256,
+            "progress": 0.46002398282160684,
             "threshold": 0.2,
-            "displayValue": "15561 reakcji",
-            "globalPercentage": "100.0%"
-          },
-          {
-            "id": "conversation-killer",
-            "label": "Zabójca/-zyni Konwersacji",
-            "description": "Często kończy rozmowy (>300 razy)",
-            "achieved": true,
-            "progress": 556,
-            "threshold": 300,
-            "displayValue": "556 razy",
+            "displayValue": "1 na 2.2 msg",
             "globalPercentage": "100.0%"
           },
           {
             "id": "consistent",
-            "label": "Konsekwentny/-a",
-            "description": "Seria 30 dni z rzędu",
+            "label": "Konsekwencja",
+            "description": "Seria 180 dni z rzędu",
             "achieved": true,
             "progress": 346,
-            "threshold": 30,
+            "threshold": 180,
             "displayValue": "346 dni",
             "globalPercentage": "100.0%"
           },
           {
             "id": "screenshot-abuser",
-            "label": "Animator/-ka Animowych Dysput",
+            "label": "Duch Animowych Dysput",
             "description": "750 obrazków na #animowe-dysputy",
             "achieved": true,
             "progress": 3715,
@@ -1763,7 +2350,7 @@
           },
           {
             "id": "starboard-fame",
-            "label": "Gwiazdor",
+            "label": "Gwiazda Starboardu",
             "description": "100+ wpisów na starboardzie",
             "achieved": true,
             "progress": 199,
@@ -1773,8 +2360,8 @@
           },
           {
             "id": "night-owl",
-            "label": "Nocny Marek/-ka",
-            "description": "Najbardziej aktywny/-a w nocy (20:00 - 05:00)",
+            "label": "Nocny Marek",
+            "description": "Największa aktywność w nocy (20:00 - 05:00)",
             "achieved": false,
             "progress": 0.380295044479768,
             "threshold": 0.4,
@@ -1784,7 +2371,7 @@
           {
             "id": "early-bird",
             "label": "Ranny Ptaszek",
-            "description": "Najbardziej aktywny/-a rano (05:00 - 10:00)",
+            "description": "Największa aktywność rano (05:00 - 10:00)",
             "achieved": false,
             "progress": 0.010903817730555787,
             "threshold": 0.4,
@@ -1794,7 +2381,7 @@
           {
             "id": "one-channel",
             "label": "Jednokanałowy Gremlin",
-            "description": "Żyje w jednym kanale (>80% wiadomości)",
+            "description": "80% wiadomości w jednym kanale",
             "achieved": false,
             "progress": 0.38,
             "threshold": 0.8,
@@ -1806,15 +2393,15 @@
             "label": "Fabryka Emoji",
             "description": "Reaguje na wszystko (>30% wiadomości)",
             "achieved": false,
-            "progress": 0.11255193954097995,
+            "progress": 0.1304832817423799,
             "threshold": 0.3,
-            "displayValue": "11.3%",
+            "displayValue": "13.0%",
             "globalPercentage": "66.7%"
           },
           {
             "id": "the-editor",
             "label": "Redaktor Naczelny",
-            "description": "Edytuje >5% wiadomości",
+            "description": "Edycja >5% wiadomości",
             "achieved": false,
             "progress": 0.01274435985387211,
             "threshold": 0.05,
@@ -1834,7 +2421,7 @@
           {
             "id": "ghost",
             "label": "Szara Eminencja",
-            "description": "Aktywny/-a często, ale mało pisze (<25 msg/dzień)",
+            "description": "Częsta obecność, ale mało pisania (<25 msg/dzień)",
             "achieved": false,
             "progress": 0,
             "threshold": 25,
@@ -1843,8 +2430,8 @@
           },
           {
             "id": "trendsetter",
-            "label": "Wyznaczający/-a Trendy",
-            "description": "Top 3 reagujących pod popularnymi postami (10+) - min. 250 wiadomości",
+            "label": "Trendsetter",
+            "description": "Wśród 3 pierwszych osób reagujących pod popularnymi postami (10+) - min. 250 wiadomości",
             "achieved": false,
             "progress": 22,
             "threshold": 250,
@@ -1852,14 +2439,24 @@
             "globalPercentage": "66.7%"
           },
           {
+            "id": "conversation-killer",
+            "label": "Pogromca Konwersacji",
+            "description": "Ostatnia wiadomość w rozmowie - min. 100 razy",
+            "achieved": false,
+            "progress": 44,
+            "threshold": 100,
+            "displayValue": "44 razy",
+            "globalPercentage": "33.3%"
+          },
+          {
             "id": "the-dj",
             "label": "DJ Cieńka Książka",
             "description": "> 100 linków muzycznych (YT/Spotify) na #kącik-muzyczny",
             "achieved": false,
-            "progress": 0,
+            "progress": 17,
             "threshold": 100,
-            "displayValue": "0 linków",
-            "globalPercentage": "0.0%"
+            "displayValue": "17 linków",
+            "globalPercentage": "33.3%"
           }
         ]
       }
@@ -2013,6 +2610,106 @@
             "key": "😭",
             "count": 142,
             "emoji_id": null
+          },
+          {
+            "key": "trollgefk",
+            "count": 107,
+            "emoji_id": "1003285860596338758"
+          },
+          {
+            "key": "🚬",
+            "count": 100,
+            "emoji_id": null
+          },
+          {
+            "key": "wakaru",
+            "count": 86,
+            "emoji_id": "949465369045778492"
+          },
+          {
+            "key": "👀",
+            "count": 78,
+            "emoji_id": null
+          },
+          {
+            "key": "😋",
+            "count": 56,
+            "emoji_id": null
+          },
+          {
+            "key": "kumikosaluting",
+            "count": 54,
+            "emoji_id": "1245672542073520228"
+          },
+          {
+            "key": "pensivecum",
+            "count": 45,
+            "emoji_id": "1003744834793766922"
+          },
+          {
+            "key": "😔",
+            "count": 44,
+            "emoji_id": null
+          },
+          {
+            "key": "🥰",
+            "count": 43,
+            "emoji_id": null
+          },
+          {
+            "key": "🙏",
+            "count": 34,
+            "emoji_id": null
+          },
+          {
+            "key": "🔥",
+            "count": 34,
+            "emoji_id": null
+          },
+          {
+            "key": "Mugi_stronk",
+            "count": 33,
+            "emoji_id": "963490485668827136"
+          },
+          {
+            "key": "thonk",
+            "count": 27,
+            "emoji_id": "875472767498199082"
+          },
+          {
+            "key": "‍",
+            "count": 24,
+            "emoji_id": null
+          },
+          {
+            "key": "flushedcool",
+            "count": 22,
+            "emoji_id": "1072666310384816138"
+          },
+          {
+            "key": "👽",
+            "count": 21,
+            "emoji_id": null
+          },
+          {
+            "key": "cryinghearts",
+            "count": 20,
+            "emoji_id": "1381371520991101089"
+          },
+          {
+            "key": "nowaying",
+            "count": 19,
+            "emoji_id": "1280903178191372379"
+          },
+          {
+            "key": "💪",
+            "count": 18,
+            "emoji_id": null
+          },
+          {
+            "key": "😈",
+            "count": 17,
+            "emoji_id": null
           }
         ],
         "topEmojisInline": [
@@ -2065,6 +2762,106 @@
             "key": "kumikosaluting",
             "count": 54,
             "emoji_id": "1245672542073520228"
+          },
+          {
+            "key": "pensivecum",
+            "count": 45,
+            "emoji_id": "1003744834793766922"
+          },
+          {
+            "key": "😔",
+            "count": 44,
+            "emoji_id": null
+          },
+          {
+            "key": "🥰",
+            "count": 43,
+            "emoji_id": null
+          },
+          {
+            "key": "😳",
+            "count": 37,
+            "emoji_id": null
+          },
+          {
+            "key": "🙏",
+            "count": 34,
+            "emoji_id": null
+          },
+          {
+            "key": "🔥",
+            "count": 34,
+            "emoji_id": null
+          },
+          {
+            "key": "Mugi_stronk",
+            "count": 33,
+            "emoji_id": "963490485668827136"
+          },
+          {
+            "key": "thonk",
+            "count": 27,
+            "emoji_id": "875472767498199082"
+          },
+          {
+            "key": "‍",
+            "count": 24,
+            "emoji_id": null
+          },
+          {
+            "key": "flushedcool",
+            "count": 22,
+            "emoji_id": "1072666310384816138"
+          },
+          {
+            "key": "👽",
+            "count": 21,
+            "emoji_id": null
+          },
+          {
+            "key": "cryinghearts",
+            "count": 20,
+            "emoji_id": "1381371520991101089"
+          },
+          {
+            "key": "nowaying",
+            "count": 19,
+            "emoji_id": "1280903178191372379"
+          },
+          {
+            "key": "💪",
+            "count": 18,
+            "emoji_id": null
+          },
+          {
+            "key": "UwUkuraii",
+            "count": 18,
+            "emoji_id": "909841552224972831"
+          },
+          {
+            "key": "😈",
+            "count": 17,
+            "emoji_id": null
+          },
+          {
+            "key": "🐕",
+            "count": 16,
+            "emoji_id": null
+          },
+          {
+            "key": "🦺",
+            "count": 16,
+            "emoji_id": null
+          },
+          {
+            "key": "cluelessFK",
+            "count": 16,
+            "emoji_id": "1298666774459318273"
+          },
+          {
+            "key": "😱",
+            "count": 14,
+            "emoji_id": null
           }
         ],
         "topReactionsSent": [
@@ -2154,6 +2951,96 @@
             "key": "Pandapat",
             "count": 122,
             "emoji_id": "1056314396713955458"
+          },
+          {
+            "key": "👍",
+            "count": 118,
+            "emoji_id": null
+          },
+          {
+            "key": "😭",
+            "count": 118,
+            "emoji_id": null
+          },
+          {
+            "key": "💪",
+            "count": 113,
+            "emoji_id": null
+          },
+          {
+            "key": "UwUkuraii",
+            "count": 108,
+            "emoji_id": "909841552224972831"
+          },
+          {
+            "key": "🚬",
+            "count": 74,
+            "emoji_id": null
+          },
+          {
+            "key": "🔥",
+            "count": 61,
+            "emoji_id": null
+          },
+          {
+            "key": "😔",
+            "count": 58,
+            "emoji_id": null
+          },
+          {
+            "key": "💙",
+            "count": 55,
+            "emoji_id": null
+          },
+          {
+            "key": "plusjeden",
+            "count": 51,
+            "emoji_id": "1030233662618357842"
+          },
+          {
+            "key": "🥰",
+            "count": 46,
+            "emoji_id": null
+          },
+          {
+            "key": "🍯",
+            "count": 44,
+            "emoji_id": null
+          },
+          {
+            "key": "This",
+            "count": 42,
+            "emoji_id": "710843631250178128"
+          },
+          {
+            "key": "💀",
+            "count": 35,
+            "emoji_id": null
+          },
+          {
+            "key": "based",
+            "count": 30,
+            "emoji_id": "1003744984392015882"
+          },
+          {
+            "key": "InaHumuu",
+            "count": 29,
+            "emoji_id": "909877473754378282"
+          },
+          {
+            "key": "cluelessFK",
+            "count": 27,
+            "emoji_id": "1298666774459318273"
+          },
+          {
+            "key": "wakaru",
+            "count": 27,
+            "emoji_id": "949465369045778492"
+          },
+          {
+            "key": "😎",
+            "count": 27,
+            "emoji_id": null
           }
         ],
         "topMentions": [
@@ -2413,53 +3300,53 @@
         "persona": "Afternoon Chatter",
         "vocabularyFingerprint": [
           {
-            "word": "ahyes",
-            "score": 26.509022882550703,
-            "count": 34
+            "word": "thonkowałem",
+            "score": 26.51746812842259,
+            "count": 6
           },
           {
             "word": "okularsach",
-            "score": 26.509022882550703,
+            "score": 26.51746812842259,
             "count": 5
           },
           {
             "word": "prwd",
-            "score": 26.509022882550703,
+            "score": 26.51746812842259,
             "count": 5
           },
           {
+            "word": "ohman",
+            "score": 26.51746812842259,
+            "count": 6
+          },
+          {
             "word": "koxior",
-            "score": 26.509022882550703,
+            "score": 26.51746812842259,
             "count": 11
           },
           {
             "word": "dengenach",
-            "score": 26.509022882550703,
+            "score": 26.51746812842259,
             "count": 5
           },
           {
-            "word": "thonkowałem",
-            "score": 26.5090228825507,
-            "count": 6
-          },
-          {
-            "word": "ohman",
-            "score": 26.5090228825507,
-            "count": 6
-          },
-          {
             "word": "com/view/vince-mc-mahon-falling-in-chair-surprised-wwe-gif-7810711",
-            "score": 26.5090228825507,
+            "score": 26.51746812842259,
             "count": 6
+          },
+          {
+            "word": "ahyes",
+            "score": 26.517468128422585,
+            "count": 34
           },
           {
             "word": "okurde",
-            "score": 25.448661967248672,
+            "score": 25.456769403285687,
             "count": 24
           },
           {
             "word": "powinen",
-            "score": 24.74175469038065,
+            "score": 24.749636919861082,
             "count": 28
           }
         ],
@@ -2561,9 +3448,9 @@
           "capsRatio": 0.03702668281924642,
           "questionRatio": 0.03746155996645233,
           "spotifyCount": 0,
-          "youtubeCount": 0,
-          "twitterCount": 0,
-          "pixivCount": 0,
+          "youtubeCount": 77,
+          "twitterCount": 1451,
+          "pixivCount": 18,
           "gifCount": 343,
           "screenshotCount": 1790,
           "totalLinks": 2695
@@ -2582,12 +3469,13 @@
         },
         "voidScore": 1.81,
         "conversationStarter": 2783,
+        "killerCount": 51,
         "starboardCount": 142,
         "badges": [
           {
             "id": "work-hours",
-            "label": "Pracownik/-czka Miesiąca",
-            "description": "Najbardziej aktywny/-a w godzinach pracy (08:00 - 16:00)",
+            "label": "Pracownik Miesiąca",
+            "description": "Największa aktywność w godzinach pracy (08:00 - 16:00)",
             "achieved": true,
             "progress": 0.5139005373839033,
             "threshold": 0.4,
@@ -2596,8 +3484,8 @@
           },
           {
             "id": "channel-hopper",
-            "label": "Wędrowiec/-zyni Kanałów",
-            "description": "Aktywny/-a w 5+ kanałach",
+            "label": "Wędrowiec Kanałów",
+            "description": "Aktywność w 5+ kanałach",
             "achieved": true,
             "progress": 5,
             "threshold": 5,
@@ -2609,15 +3497,15 @@
             "label": "Fabryka Emoji",
             "description": "Reaguje na wszystko (>30% wiadomości)",
             "achieved": true,
-            "progress": 0.7494486379026496,
+            "progress": 0.7768458981766222,
             "threshold": 0.3,
-            "displayValue": "74.9%",
+            "displayValue": "77.7%",
             "globalPercentage": "66.7%"
           },
           {
             "id": "gallery-curator",
             "label": "Kurator Galerii",
-            "description": "Wysyła dużo załączników (>10%)",
+            "description": "Ponad 10% wiadomości z załącznikami",
             "achieved": true,
             "progress": 0.10371819960861056,
             "threshold": 0.1,
@@ -2626,18 +3514,18 @@
           },
           {
             "id": "react-lord",
-            "label": "Pan/-i Reakcji",
-            "description": "Otrzymuje średnio 1 reakcję na każde 5 wiadomości",
+            "label": "Mistrz Reakcji",
+            "description": "Średnio 1 reakcja na każde 5 wiadomości",
             "achieved": true,
-            "progress": 0.2944739539651477,
+            "progress": 0.32749355449942535,
             "threshold": 0.2,
-            "displayValue": "9480 reakcji",
+            "displayValue": "1 na 3.1 msg",
             "globalPercentage": "100.0%"
           },
           {
             "id": "trendsetter",
-            "label": "Wyznaczający/-a Trendy",
-            "description": "Top 3 reagujących pod popularnymi postami (10+) - min. 250 wiadomości",
+            "label": "Trendsetter",
+            "description": "Wśród 3 pierwszych osób reagujących pod popularnymi postami (10+) - min. 250 wiadomości",
             "achieved": true,
             "progress": 522,
             "threshold": 250,
@@ -2645,28 +3533,18 @@
             "globalPercentage": "66.7%"
           },
           {
-            "id": "conversation-killer",
-            "label": "Zabójca/-zyni Konwersacji",
-            "description": "Często kończy rozmowy (>300 razy)",
-            "achieved": true,
-            "progress": 1066,
-            "threshold": 300,
-            "displayValue": "1066 razy",
-            "globalPercentage": "100.0%"
-          },
-          {
             "id": "consistent",
-            "label": "Konsekwentny/-a",
-            "description": "Seria 30 dni z rzędu",
+            "label": "Konsekwencja",
+            "description": "Seria 180 dni z rzędu",
             "achieved": true,
             "progress": 345,
-            "threshold": 30,
+            "threshold": 180,
             "displayValue": "345 dni",
             "globalPercentage": "100.0%"
           },
           {
             "id": "screenshot-abuser",
-            "label": "Animator/-ka Animowych Dysput",
+            "label": "Duch Animowych Dysput",
             "description": "750 obrazków na #animowe-dysputy",
             "achieved": true,
             "progress": 1790,
@@ -2676,7 +3554,7 @@
           },
           {
             "id": "starboard-fame",
-            "label": "Gwiazdor",
+            "label": "Gwiazda Starboardu",
             "description": "100+ wpisów na starboardzie",
             "achieved": true,
             "progress": 142,
@@ -2686,8 +3564,8 @@
           },
           {
             "id": "night-owl",
-            "label": "Nocny Marek/-ka",
-            "description": "Najbardziej aktywny/-a w nocy (20:00 - 05:00)",
+            "label": "Nocny Marek",
+            "description": "Największa aktywność w nocy (20:00 - 05:00)",
             "achieved": false,
             "progress": 0.2973938433821017,
             "threshold": 0.4,
@@ -2697,7 +3575,7 @@
           {
             "id": "early-bird",
             "label": "Ranny Ptaszek",
-            "description": "Najbardziej aktywny/-a rano (05:00 - 10:00)",
+            "description": "Największa aktywność rano (05:00 - 10:00)",
             "achieved": false,
             "progress": 0.042959649613269965,
             "threshold": 0.4,
@@ -2707,7 +3585,7 @@
           {
             "id": "one-channel",
             "label": "Jednokanałowy Gremlin",
-            "description": "Żyje w jednym kanale (>80% wiadomości)",
+            "description": "80% wiadomości w jednym kanale",
             "achieved": false,
             "progress": 0.26,
             "threshold": 0.8,
@@ -2717,7 +3595,7 @@
           {
             "id": "the-editor",
             "label": "Redaktor Naczelny",
-            "description": "Edytuje >5% wiadomości",
+            "description": "Edycja >5% wiadomości",
             "achieved": false,
             "progress": 0.021650669400180164,
             "threshold": 0.05,
@@ -2747,7 +3625,7 @@
           {
             "id": "ghost",
             "label": "Szara Eminencja",
-            "description": "Aktywny/-a często, ale mało pisze (<25 msg/dzień)",
+            "description": "Częsta obecność, ale mało pisania (<25 msg/dzień)",
             "achieved": false,
             "progress": 0,
             "threshold": 25,
@@ -2755,14 +3633,24 @@
             "globalPercentage": "0.0%"
           },
           {
+            "id": "conversation-killer",
+            "label": "Pogromca Konwersacji",
+            "description": "Ostatnia wiadomość w rozmowie - min. 100 razy",
+            "achieved": false,
+            "progress": 51,
+            "threshold": 100,
+            "displayValue": "51 razy",
+            "globalPercentage": "33.3%"
+          },
+          {
             "id": "the-dj",
             "label": "DJ Cieńka Książka",
             "description": "> 100 linków muzycznych (YT/Spotify) na #kącik-muzyczny",
             "achieved": false,
-            "progress": 0,
+            "progress": 77,
             "threshold": 100,
-            "displayValue": "0 linków",
-            "globalPercentage": "0.0%"
+            "displayValue": "77 linków",
+            "globalPercentage": "33.3%"
           }
         ]
       }

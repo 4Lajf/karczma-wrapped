@@ -105,7 +105,7 @@
 						class="absolute top-full right-2 z-30 mt-2 w-44 rounded-lg border-2 border-black bg-black p-2 text-xs font-bold text-white shadow-lg"
 					>
 						Entropia Shannona - miara zróżnicowania kanałów, w których się udzielasz. Im wyższy
-						wynik (max 10), tym bardziej 'wszędobylski/-a' jesteś na serwerze.
+						wynik (max 10), tym bardziej jesteś wszędzie na serwerze.
 					</div>
 				{/if}
 				<h3 class="mb-2 text-xs font-black tracking-widest text-black uppercase">
@@ -242,7 +242,7 @@
 						class="absolute right-2 bottom-full z-30 mb-2 w-44 rounded-lg border-2 border-black bg-black p-2 text-xs font-bold text-white shadow-lg"
 					>
 						Sesja to ciąg wiadomości wysyłanych z przerwami nie dłuższymi niż 30 minut. Pokazuje ile
-						razy 'zasiadałeś/-aś' do Discorda.
+						razy zasiadano do Discorda.
 					</div>
 				{/if}
 				<h3 class="mb-3 text-xs font-black tracking-widest uppercase">Analiza Sesji</h3>

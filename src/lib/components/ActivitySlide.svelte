@@ -66,7 +66,7 @@
 			{/if}
 			<p class="mt-2 text-sm text-muted-foreground">
 				{#if isNumberOne}
-					Największy/-a spamer/-ka w 2025 roku!
+					Największe spamowanie w 2025 roku!
 				{:else}
 					Jesteś w top {topPercent}% najbardziej aktywnych użytkowników
 				{/if}
@@ -87,7 +87,7 @@
 				<div
 					class="absolute right-1 bottom-full z-30 mb-2 w-40 rounded-lg border-2 border-black bg-black p-2 text-xs font-bold text-white shadow-lg"
 				>
-					Liczba unikalnych dni w roku, w których wysłałeś/-aś przynajmniej jedną wiadomość.
+					Liczba unikalnych dni w roku, w których wysłano przynajmniej jedną wiadomość.
 				</div>
 			{/if}
 			<p class="text-4xl font-black">{user.metrics.activeDays}</p>
@@ -108,7 +108,7 @@
 				<div
 					class="absolute right-1 bottom-full z-30 mb-2 w-40 rounded-lg border-2 border-black bg-black p-2 text-xs font-bold text-white shadow-lg"
 				>
-					Średnia liczba wiadomości na aktywny dzień (dni kiedy cokolwiek napisałeś/-aś).
+					Średnia liczba wiadomości na aktywny dzień (dni kiedy cokolwiek napisano).
 				</div>
 			{/if}
 			<p class="text-4xl font-black">{avgDaily}</p>

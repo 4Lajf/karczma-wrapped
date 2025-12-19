@@ -4,6 +4,25 @@
 	// Track which emoji images failed to load (reactive object)
 	let failedImages = $state({});
 	let showTooltip = $state({});
+	let showOnlyCustom = $state(false);
+
+	const filteredInline = $derived(
+		showOnlyCustom
+			? (user.metrics.topEmojisInline || []).filter((e) => e.emoji_id)
+			: user.metrics.topEmojisInline || []
+	);
+
+	const filteredSent = $derived(
+		showOnlyCustom
+			? (user.metrics.topReactionsSent || []).filter((e) => e.emoji_id)
+			: user.metrics.topReactionsSent || []
+	);
+
+	const filteredReceived = $derived(
+		showOnlyCustom
+			? (user.metrics.topEmojisReceived || []).filter((e) => e.emoji_id)
+			: user.metrics.topEmojisReceived || []
+	);
 
 	function handleImageError(event, emojiKey) {
 		const img = event.target;
@@ -38,6 +57,26 @@
 		Vibe Check
 	</h2>
 
+	<!-- Filter Toggle -->
+	<div class="mb-4 flex items-center gap-2">
+		<button
+			class="border-2 border-black px-3 py-1 text-[10px] font-black uppercase transition-all {showOnlyCustom
+				? 'bg-gray-200 opacity-50'
+				: 'bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'}"
+			onclick={() => (showOnlyCustom = false)}
+		>
+			Wszystkie
+		</button>
+		<button
+			class="border-2 border-black px-3 py-1 text-[10px] font-black uppercase transition-all {showOnlyCustom
+				? 'bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
+				: 'bg-gray-200 opacity-50'}"
+			onclick={() => (showOnlyCustom = true)}
+		>
+			Tylko serwerowe
+		</button>
+	</div>
+
 	<!-- Scroll indicator -->
 	<div
 		class="mb-2 flex items-center gap-2 text-[10px] font-bold tracking-widest uppercase opacity-70"
@@ -63,7 +102,7 @@
 				<div
 					class="absolute top-full right-0 z-30 mt-2 w-44 rounded-lg border-2 border-black bg-black p-2 text-xs font-bold text-white shadow-lg"
 				>
-					Emoji których sam/-a używasz bezpośrednio w treści swoich wiadomości.
+					Emoji których używasz bezpośrednio w treści swoich wiadomości.
 				</div>
 			{/if}
 			<h3
@@ -72,7 +111,7 @@
 				Twoje ulubione w tekście
 			</h3>
 			<div class="flex flex-wrap items-end justify-center gap-3">
-				{#each (user.metrics.topEmojisInline || []).slice(0, 3) as emoji, i}
+				{#each filteredInline.slice(0, 3) as emoji, i}
 					<div
 						class="flex flex-col items-center border-4 border-black bg-white p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
 					>
@@ -94,10 +133,8 @@
 						</div>
 					</div>
 				{/each}
-				{#if (user.metrics.topEmojisInline || []).length === 0}
-					<p class="border-2 border-black bg-white p-2 text-xs font-bold italic">
-						Brak emoji w tekście
-					</p>
+				{#if filteredInline.length === 0}
+					<p class="border-2 border-black bg-white p-2 text-xs font-bold italic">Brak emoji</p>
 				{/if}
 			</div>
 		</div>
@@ -124,7 +161,7 @@
 				Twoje reakcje pod postami
 			</h3>
 			<div class="flex flex-wrap items-end justify-center gap-3">
-				{#each (user.metrics.topReactionsSent || []).slice(0, 3) as emoji, i}
+				{#each filteredSent.slice(0, 3) as emoji, i}
 					<div
 						class="flex flex-col items-center border-4 border-black bg-white p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
 					>
@@ -146,10 +183,8 @@
 						</div>
 					</div>
 				{/each}
-				{#if (user.metrics.topReactionsSent || []).length === 0}
-					<p class="border-2 border-black bg-white p-2 text-xs font-bold italic">
-						Zero reakcji wysłanych
-					</p>
+				{#if filteredSent.length === 0}
+					<p class="border-2 border-black bg-white p-2 text-xs font-bold italic">Brak emoji</p>
 				{/if}
 			</div>
 		</div>
@@ -176,7 +211,7 @@
 				Reakcje innych pod Twoimi
 			</h3>
 			<div class="flex flex-wrap items-end justify-center gap-3">
-				{#each user.metrics.topEmojisReceived.slice(0, 3) as emoji, i}
+				{#each filteredReceived.slice(0, 3) as emoji, i}
 					<div
 						class="flex flex-col items-center border-4 border-black bg-white p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
 					>
@@ -200,8 +235,8 @@
 						</div>
 					</div>
 				{/each}
-				{#if user.metrics.topEmojisReceived.length === 0}
-					<p class="border-2 border-black bg-white p-2 text-xs font-bold italic">Zero reakcji :(</p>
+				{#if filteredReceived.length === 0}
+					<p class="border-2 border-black bg-white p-2 text-xs font-bold italic">Brak emoji</p>
 				{/if}
 			</div>
 		</div>

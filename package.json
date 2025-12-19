@@ -29,6 +29,7 @@
 	},
 	"dependencies": {
 		"better-sqlite3": "^12.5.0",
+		"chart.js": "^4.5.1",
 		"html-to-image": "^1.11.13",
 		"snowball-stemmers": "^0.6.0",
 		"stemmer_pl": "^1.0.1"

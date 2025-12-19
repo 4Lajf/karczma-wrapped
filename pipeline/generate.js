@@ -87,7 +87,7 @@ try {
 const STOPWORDS = new Set([
   'a', 'aby', 'ach', 'acz', 'aczkolwiek', 'aj', 'albo', 'ale', 'alez', 'aleź', 'ani', 'az', 'aż', 'bardziej', 'bardzo', 'beda', 'bedzie', 'bez', 'deda', 'będą', 'bede', 'będę', 'będzie', 'bo', 'bowiem', 'by', 'byc', 'być', 'byl', 'byla', 'byli', 'bylo', 'byly', 'był', 'była', 'było', 'były', 'bynajmniej', 'caly', 'cały', 'ci', 'cie', 'ciebie', 'ciat', 'co', 'cokolwiek', 'cos', 'coś', 'czasami', 'czasem', 'czemu', 'czy', 'czyli', 'daleko', 'dla', 'dlaczego', 'dlatego', 'do', 'dobrze', 'dokad', 'dokąd', 'dosc', 'dość', 'duzo', 'dużo', 'dwa', 'dwaj', 'dwie', 'dwoje', 'dzis', 'dzisiaj', 'dziś', 'dy', 'gdy', 'gdyby', 'gdyz', 'gdyż', 'gdzie', 'gdziekolwiek', 'gdzies', 'gdzieś', 'go', 'i', 'ich', 'ile', 'im', 'inna', 'inne', 'inny', 'innych', 'iz', 'iż', 'ja', 'jak', 'jakas', 'jakaś', 'jakby', 'jaki', 'jakichs', 'jakichś', 'jakie', 'jakis', 'jakiś', 'jako', 'jakos', 'jakoś', 'je', 'jeden', 'jedna', 'jedno', 'jednak', 'jednakze', 'jednakże', 'jego', 'jej', 'jemu', 'jest', 'jestem', 'jeszcze', 'jesli', 'jeśli', 'jezeli', 'jeżeli', 'juz', 'już', 'kazdy', 'każdy', 'kiedy', 'kilka', 'kims', 'kimś', 'kto', 'ktokolwiek', 'ktora', 'ktore', 'ktorego', 'ktorej', 'ktory', 'ktorych', 'ktorym', 'ktorzy', 'ktos', 'ktoś', 'która', 'które', 'którego', 'której', 'który', 'których', 'którym', 'którzy', 'ku', 'lat', 'lecz', 'lub', 'ma', 'mają', 'mało', 'mam', 'mi', 'miedzy', 'między', 'mimo', 'mna', 'mną', 'mnie', 'moga', 'mogą', 'moi', 'moim', 'moj', 'moja', 'moje', 'moze', 'może', 'mozliwe', 'możliwe', 'mozna', 'można', 'mój', 'mu', 'musi', 'my', 'na', 'nad', 'nam', 'nami', 'nas', 'nasi', 'nasz', 'nasza', 'nasze', 'naszego', 'naszych', 'natomiast', 'natychmiast', 'nawet', 'nia', 'nią', 'nic', 'nich', 'nie', 'niech', 'niego', 'niej', 'niemu', 'nigdy', 'nim', 'nimi', 'niz', 'niż', 'no', 'o', 'obok', 'od', 'okolo', 'około', 'on', 'ona', 'one', 'oni', 'ono', 'oraz', 'oto', 'owszem', 'pan', 'pana', 'pani', 'po', 'pod', 'podczas', 'pomimo', 'ponad', 'poniewaz', 'ponieważ', 'powinien', 'powinna', 'powinni', 'powinno', 'poza', 'prawie', 'przeciez', 'przecież', 'przed', 'przede', 'przedtem', 'przez', 'przy', 'roku', 'rowniez', 'również', 'sam', 'sama', 'są', 'sie', 'się', 'skad', 'skąd', 'soba', 'sobą', 'sobie', 'sposob', 'sposób', 'swoje', 'ta', 'tak', 'taka', 'taki', 'takie', 'takze', 'także', 'tam', 'te', 'tego', 'tej', 'temu', 'ten', 'teraz', 'też', 'to', 'toba', 'tobą', 'tobie', 'totez', 'toteż', 'totobą', 'trzeba', 'tu', 'tutaj', 'twoi', 'twoim', 'twoj', 'twoja', 'twoje', 'twój', 'ty', 'tylko', 'tym', 'u', 'w', 'wam', 'wami', 'was', 'wasz', 'wasza', 'wasze', 'we', 'według', 'wiele', 'wielu', 'więc', 'więcej', 'wlasnie', 'właśnie', 'wszyscy', 'wszystkich', 'wszystkie', 'wszystkim', 'wszystko', 'wtedy', 'wy', 'z', 'za', 'zaden', 'zadna', 'zadne', 'zadnych', 'zapewne', 'zawsze', 'ze', 'zeby', 'żeby', 'zez', 'zi', 'znow', 'znowu', 'znów', 'zostal', 'został', 'żaden', 'żadna', 'żadne', 'żadnych', 'że', 'żeby',
   // Conversational fillers
-  'chyba', 'tez', 'tylko', 'troche', 'trochę', 'moze', 'może', 'jeszcze', 'tutaj', 'wlasnie', 'właśnie', 'potem', 'teraz', 'znowu', 'nawet', 'nagle', 'napisze', 'dobra', 'raz', 'sumie', 'serio', 'naprawde', 'naprawdę', 'ogolnie', 'ogólnie', 'wtedy', 'zawsze', 'nigdy', 'moim', 'zdaniem', 'raczej', 'zbyt', 'bardzo', 'całkiem', 'całkowicie', 'znow', 'znów', 'wiem', 'chce', 'chcę', 'wiedzieć', 'powiedzieć', 'robić', 'robic', 'mówić', 'mowic'
+  'chyba', 'tez', 'tylko', 'troche', 'trochę', 'moze', 'może', 'jeszcze', 'tutaj', 'wlasnie', 'właśnie', 'potem', 'teraz', 'znowu', 'nawet', 'nagle', 'napisze', 'dobra', 'raz', 'sumie', 'serio', 'naprawde', 'naprawdę', 'ogolnie', 'ogólnie', 'wtedy', 'zawsze', 'nigdy', 'moim', 'zdaniem', 'raczej', 'zbyt', 'bardzo', 'całkiem', 'całkowicie', 'znow', 'znów', 'wiem', 'chce', 'chcę', 'wiedzieć', 'powiedzieć', 'robić', 'robic', 'mówić', 'mowic', 'prostu', 'razie'
 ]);
 
 // ==================== EMOJI DISCOVERY ====================
@@ -571,7 +571,7 @@ function computeEntropy(userId, totalMessages, activeChannelCount) {
 function computeContentHabits(userId) {
   console.log('  Computing content habits (links, caps, questions)...');
   const msgs = db.prepare(`
-    SELECT content 
+    SELECT content, channel_id
     FROM messages 
     WHERE author_id = ? AND strftime('%Y', timestamp, 'localtime') = ?
   `).all(userId, TARGET_YEAR.toString());
@@ -830,8 +830,8 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
   const nightRatio = m.totalMessages > 0 ? nightMsgs / m.totalMessages : 0;
   allBadges.push({
     id: 'night-owl',
-    label: 'Nocny Marek/-ka',
-    description: 'Najbardziej aktywny/-a w nocy (20:00 - 05:00)',
+    label: 'Nocny Marek',
+    description: 'Największa aktywność w nocy (20:00 - 05:00)',
     achieved: m.totalMessages > 50 && nightRatio > 0.4,
     progress: nightRatio,
     threshold: 0.4,
@@ -845,7 +845,7 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
   allBadges.push({
     id: 'early-bird',
     label: 'Ranny Ptaszek',
-    description: 'Najbardziej aktywny/-a rano (05:00 - 10:00)',
+    description: 'Największa aktywność rano (05:00 - 10:00)',
     achieved: m.totalMessages > 50 && morningRatio > 0.4,
     progress: morningRatio,
     threshold: 0.4,
@@ -858,8 +858,8 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
   const workRatio = m.totalMessages > 0 ? workMsgs / m.totalMessages : 0;
   allBadges.push({
     id: 'work-hours',
-    label: 'Pracownik/-czka Miesiąca',
-    description: 'Najbardziej aktywny/-a w godzinach pracy (08:00 - 16:00)',
+    label: 'Pracownik Miesiąca',
+    description: 'Największa aktywność w godzinach pracy (08:00 - 16:00)',
     achieved: m.totalMessages > 50 && workRatio > 0.4,
     progress: workRatio,
     threshold: 0.4,
@@ -869,8 +869,8 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
   // 3. Channel Hopper
   allBadges.push({
     id: 'channel-hopper',
-    label: 'Wędrowiec/-zyni Kanałów',
-    description: 'Aktywny/-a w 5+ kanałach',
+    label: 'Wędrowiec Kanałów',
+    description: 'Aktywność w 5+ kanałach',
     achieved: m.topChannels.length >= 5,
     progress: m.topChannels.length,
     threshold: 5,
@@ -882,7 +882,7 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
   allBadges.push({
     id: 'one-channel',
     label: 'Jednokanałowy Gremlin',
-    description: 'Żyje w jednym kanale (>80% wiadomości)',
+    description: '80% wiadomości w jednym kanale',
     achieved: m.totalMessages > 100 && topChannelPct > 0.8,
     progress: topChannelPct,
     threshold: 0.8,
@@ -911,7 +911,7 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
   allBadges.push({
     id: 'the-editor',
     label: 'Redaktor Naczelny',
-    description: 'Edytuje >5% wiadomości',
+    description: 'Edycja >5% wiadomości',
     achieved: editRatio > 0.05,
     progress: editRatio,
     threshold: 0.05,
@@ -923,7 +923,7 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
   allBadges.push({
     id: 'gallery-curator',
     label: 'Kurator Galerii',
-    description: 'Wysyła dużo załączników (>10%)',
+    description: 'Ponad 10% wiadomości z załącznikami',
     achieved: attachRatio > 0.1,
     progress: attachRatio,
     threshold: 0.1,
@@ -980,7 +980,7 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
   allBadges.push({
     id: 'ghost',
     label: 'Szara Eminencja',
-    description: 'Aktywny/-a często, ale mało pisze (<25 msg/dzień)',
+    description: 'Częsta obecność, ale mało pisania (<25 msg/dzień)',
     achieved: m.activeDays > 100 && msgsPerActiveDay < 25,
     progress: Math.max(0, 25 - msgsPerActiveDay),
     threshold: 25,
@@ -990,14 +990,16 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
   // 11. React Lord
   const totalReactionsReceived = m.topEmojisReceived.reduce((a, b) => a + b.count, 0);
   const receivedRatio = m.totalMessages > 0 ? totalReactionsReceived / m.totalMessages : 0;
+  const msgPerReaction = receivedRatio > 0 ? (1 / receivedRatio) : 0;
+
   allBadges.push({
     id: 'react-lord',
-    label: 'Pan/-i Reakcji',
-    description: 'Otrzymuje średnio 1 reakcję na każde 5 wiadomości',
+    label: 'Mistrz Reakcji',
+    description: 'Średnio 1 reakcja na każde 5 wiadomości',
     achieved: receivedRatio >= 0.2,
     progress: receivedRatio,
     threshold: 0.2,
-    displayValue: `${totalReactionsReceived} reakcji`
+    displayValue: msgPerReaction > 0 ? `1 na ${msgPerReaction.toFixed(1)} msg` : '0 reakcji'
   });
 
   // 12. Trendsetter
@@ -1019,8 +1021,8 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
 
   allBadges.push({
     id: 'trendsetter',
-    label: 'Wyznaczający/-a Trendy',
-    description: 'Top 3 reagujących pod popularnymi postami (10+) - min. 250 wiadomości',
+    label: 'Trendsetter',
+    description: 'Wśród 3 pierwszych osób reagujących pod popularnymi postami (10+) - min. 250 wiadomości',
     achieved: trendsetterCount >= 250,
     progress: trendsetterCount,
     threshold: 250,
@@ -1028,52 +1030,31 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
   });
 
   // 13. Conversation Killer
-  let killerCount = 0;
-  const checkStmt = db.prepare(`
-        SELECT id FROM messages
-        WHERE channel_id = ?
-        AND timestamp > ?
-        AND (julianday(timestamp) - julianday(?)) * 86400 < 7200
-        LIMIT 1
-    `);
-  const allUserMsgs = db.prepare(`
-        SELECT id, channel_id, timestamp
-        FROM messages
-        WHERE author_id = ? 
-        AND strftime('%Y', timestamp, 'localtime') = ?
-        ORDER BY timestamp ASC
-    `).all(userId, TARGET_YEAR.toString());
-
-  for (const msg of allUserMsgs) {
-    const nextMsg = checkStmt.get(msg.channel_id, msg.timestamp, msg.timestamp);
-    if (!nextMsg) killerCount++;
-  }
-
   allBadges.push({
     id: 'conversation-killer',
-    label: 'Zabójca/-zyni Konwersacji',
-    description: 'Często kończy rozmowy (>300 razy)',
-    achieved: killerCount > 300,
-    progress: killerCount,
-    threshold: 300,
-    displayValue: `${killerCount} razy`
+    label: 'Pogromca Konwersacji',
+    description: 'Ostatnia wiadomość w rozmowie - min. 100 razy',
+    achieved: m.killerCount >= 100,
+    progress: m.killerCount,
+    threshold: 100,
+    displayValue: `${m.killerCount} razy`
   });
 
   // 15. Consistent
   allBadges.push({
     id: 'consistent',
-    label: 'Konsekwentny/-a',
-    description: 'Seria 30 dni z rzędu',
-    achieved: m.longestStreak > 30,
+    label: 'Konsekwencja',
+    description: 'Seria 180 dni z rzędu',
+    achieved: m.longestStreak > 180,
     progress: m.longestStreak,
-    threshold: 30,
+    threshold: 180,
     displayValue: `${m.longestStreak} dni`
   });
 
   // 16. Screenshot Abuser
   allBadges.push({
     id: 'screenshot-abuser',
-    label: 'Animator/-ka Animowych Dysput',
+    label: 'Duch Animowych Dysput',
     description: '750 obrazków na #animowe-dysputy',
     achieved: m.contentHabits.screenshotCount >= 750,
     progress: m.contentHabits.screenshotCount,
@@ -1097,7 +1078,7 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
 
   allBadges.push({
     id: 'starboard-fame',
-    label: 'Gwiazdor',
+    label: 'Gwiazda Starboardu',
     description: '100+ wpisów na starboardzie',
     achieved: starboardCount >= 100,
     progress: starboardCount,
@@ -1107,6 +1088,59 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
 
   console.log(`  🏅 Badges Generated: ${allBadges.map(b => b.id).join(', ')}`);
   return allBadges;
+}
+
+function computeAllKills() {
+  console.log('  Computing all conversation kills (this may take a moment)...');
+  const kills = {};
+
+  // Get all messages ordered by channel and timestamp
+  const allMsgs = db.prepare(`
+    SELECT channel_id, author_id, timestamp,
+           LAG(timestamp) OVER (PARTITION BY channel_id ORDER BY timestamp) as prev_ts,
+           LEAD(timestamp) OVER (PARTITION BY channel_id ORDER BY timestamp) as next_ts
+    FROM messages
+    WHERE strftime('%Y', timestamp, 'localtime') = ?
+    ORDER BY channel_id, timestamp ASC
+  `).all(TARGET_YEAR.toString());
+
+  let conversationLength = 0;
+  for (let i = 0; i < allMsgs.length; i++) {
+    const msg = allMsgs[i];
+
+    // Check if this message continues a conversation (gap <= 15 mins)
+    if (msg.prev_ts) {
+      const gapWithPrev = (new Date(msg.timestamp) - new Date(msg.prev_ts)) / 1000;
+      if (gapWithPrev <= 900) { // 15 minutes
+        conversationLength++;
+      } else {
+        conversationLength = 1; // Start new conversation
+      }
+    } else {
+      conversationLength = 1;
+    }
+
+    // Check if this message KILLS the conversation
+    // 1. Conversation must be at least 20 messages long
+    // 2. No message in the same channel for at least 2 hours
+    let isKill = false;
+    if (conversationLength >= 20) {
+      if (!msg.next_ts) {
+        isKill = true;
+      } else {
+        const gapWithNext = (new Date(msg.next_ts) - new Date(msg.timestamp)) / 1000;
+        if (gapWithNext >= 7200) { // 2 hours
+          isKill = true;
+        }
+      }
+    }
+
+    if (isKill) {
+      kills[msg.author_id] = (kills[msg.author_id] || 0) + 1;
+    }
+  }
+
+  return kills;
 }
 
 // ==================== MAIN GENERATION ====================
@@ -1247,6 +1281,9 @@ async function generate() {
 
   // Pre-compute starboard counts
   const starboardCounts = computeAllStarboardCounts();
+
+  // Pre-compute conversation kills
+  const conversationKills = computeAllKills();
 
   console.log('Computing server-wide word frequencies for TF-IDF...');
   const allMessages = db.prepare(`
@@ -1449,7 +1486,7 @@ async function generate() {
 
     const mapToTopList = (map) => Object.entries(map)
       .sort((a, b) => b[1] - a[1])
-      .slice(0, 10)
+      .slice(0, 30) // Increased from 10 to 30 to allow filtering in UI
       .map(([normalizedKey, count]) => ({
         key: emojiKeyMap[normalizedKey] || normalizedKey,
         count,
@@ -1467,7 +1504,7 @@ async function generate() {
             WHERE m.author_id = ? AND strftime('%Y', m.timestamp, 'localtime') = ?
             GROUP BY r.emoji_name, r.emoji_id
             ORDER BY count DESC
-            LIMIT 10
+            LIMIT 30
         `).all(u.id, TARGET_YEAR.toString());
 
     // Download received reaction emojis
@@ -1518,7 +1555,7 @@ async function generate() {
         emoji_id: data.emoji_id
       }))
       .sort((a, b) => b.count - a.count)
-      .slice(0, 10);
+      .slice(0, 30); // Increased from 10 to 30 to allow filtering in UI
 
     const topWords = computeContentStats(u.id);
 
@@ -1633,6 +1670,7 @@ async function generate() {
       networkStats: computeNetworkStats(u.id),
       voidScore: computeVoidShouter(u.id, u.msg_count),
       conversationStarter: computeConversationStarter(u.id),
+      killerCount: conversationKills[u.id] || 0,
       starboardCount: userStarboardCount,
       badges: []
     };
