@@ -87,7 +87,7 @@ try {
 const STOPWORDS = new Set([
   'a', 'aby', 'ach', 'acz', 'aczkolwiek', 'aj', 'albo', 'ale', 'alez', 'aleź', 'ani', 'az', 'aż', 'bardziej', 'bardzo', 'beda', 'bedzie', 'bez', 'deda', 'będą', 'bede', 'będę', 'będzie', 'bo', 'bowiem', 'by', 'byc', 'być', 'byl', 'byla', 'byli', 'bylo', 'byly', 'był', 'była', 'było', 'były', 'bynajmniej', 'caly', 'cały', 'ci', 'cie', 'ciebie', 'ciat', 'co', 'cokolwiek', 'cos', 'coś', 'czasami', 'czasem', 'czemu', 'czy', 'czyli', 'daleko', 'dla', 'dlaczego', 'dlatego', 'do', 'dobrze', 'dokad', 'dokąd', 'dosc', 'dość', 'duzo', 'dużo', 'dwa', 'dwaj', 'dwie', 'dwoje', 'dzis', 'dzisiaj', 'dziś', 'dy', 'gdy', 'gdyby', 'gdyz', 'gdyż', 'gdzie', 'gdziekolwiek', 'gdzies', 'gdzieś', 'go', 'i', 'ich', 'ile', 'im', 'inna', 'inne', 'inny', 'innych', 'iz', 'iż', 'ja', 'jak', 'jakas', 'jakaś', 'jakby', 'jaki', 'jakichs', 'jakichś', 'jakie', 'jakis', 'jakiś', 'jako', 'jakos', 'jakoś', 'je', 'jeden', 'jedna', 'jedno', 'jednak', 'jednakze', 'jednakże', 'jego', 'jej', 'jemu', 'jest', 'jestem', 'jeszcze', 'jesli', 'jeśli', 'jezeli', 'jeżeli', 'juz', 'już', 'kazdy', 'każdy', 'kiedy', 'kilka', 'kims', 'kimś', 'kto', 'ktokolwiek', 'ktora', 'ktore', 'ktorego', 'ktorej', 'ktory', 'ktorych', 'ktorym', 'ktorzy', 'ktos', 'ktoś', 'która', 'które', 'którego', 'której', 'który', 'których', 'którym', 'którzy', 'ku', 'lat', 'lecz', 'lub', 'ma', 'mają', 'mało', 'mam', 'mi', 'miedzy', 'między', 'mimo', 'mna', 'mną', 'mnie', 'moga', 'mogą', 'moi', 'moim', 'moj', 'moja', 'moje', 'moze', 'może', 'mozliwe', 'możliwe', 'mozna', 'można', 'mój', 'mu', 'musi', 'my', 'na', 'nad', 'nam', 'nami', 'nas', 'nasi', 'nasz', 'nasza', 'nasze', 'naszego', 'naszych', 'natomiast', 'natychmiast', 'nawet', 'nia', 'nią', 'nic', 'nich', 'nie', 'niech', 'niego', 'niej', 'niemu', 'nigdy', 'nim', 'nimi', 'niz', 'niż', 'no', 'o', 'obok', 'od', 'okolo', 'około', 'on', 'ona', 'one', 'oni', 'ono', 'oraz', 'oto', 'owszem', 'pan', 'pana', 'pani', 'po', 'pod', 'podczas', 'pomimo', 'ponad', 'poniewaz', 'ponieważ', 'powinien', 'powinna', 'powinni', 'powinno', 'poza', 'prawie', 'przeciez', 'przecież', 'przed', 'przede', 'przedtem', 'przez', 'przy', 'roku', 'rowniez', 'również', 'sam', 'sama', 'są', 'sie', 'się', 'skad', 'skąd', 'soba', 'sobą', 'sobie', 'sposob', 'sposób', 'swoje', 'ta', 'tak', 'taka', 'taki', 'takie', 'takze', 'także', 'tam', 'te', 'tego', 'tej', 'temu', 'ten', 'teraz', 'też', 'to', 'toba', 'tobą', 'tobie', 'totez', 'toteż', 'totobą', 'trzeba', 'tu', 'tutaj', 'twoi', 'twoim', 'twoj', 'twoja', 'twoje', 'twój', 'ty', 'tylko', 'tym', 'u', 'w', 'wam', 'wami', 'was', 'wasz', 'wasza', 'wasze', 'we', 'według', 'wiele', 'wielu', 'więc', 'więcej', 'wlasnie', 'właśnie', 'wszyscy', 'wszystkich', 'wszystkie', 'wszystkim', 'wszystko', 'wtedy', 'wy', 'z', 'za', 'zaden', 'zadna', 'zadne', 'zadnych', 'zapewne', 'zawsze', 'ze', 'zeby', 'żeby', 'zez', 'zi', 'znow', 'znowu', 'znów', 'zostal', 'został', 'żaden', 'żadna', 'żadne', 'żadnych', 'że', 'żeby',
   // Conversational fillers
-  'chyba', 'wiec', 'tez', 'tylko', 'troche', 'trochę', 'moze', 'może', 'jeszcze', 'tutaj', 'wlasnie', 'właśnie', 'potem', 'teraz', 'znowu', 'nawet', 'nagle', 'napisze', 'dobra', 'raz', 'sumie', 'serio', 'naprawde', 'naprawdę', 'ogolnie', 'ogólnie', 'wtedy', 'zawsze', 'nigdy', 'moim', 'zdaniem', 'raczej', 'zbyt', 'bardzo', 'całkiem', 'całkowicie', 'znow', 'znów', 'wiem', 'chce', 'chcę', 'wiedzieć', 'powiedzieć', 'robić', 'robic', 'mówić', 'mowic', 'prostu', 'razie'
+  'chyba', 'https', 'wiec', 'tez', 'tylko', 'troche', 'trochę', 'moze', 'może', 'jeszcze', 'tutaj', 'wlasnie', 'właśnie', 'potem', 'teraz', 'znowu', 'nawet', 'nagle', 'napisze', 'dobra', 'raz', 'sumie', 'serio', 'naprawde', 'naprawdę', 'ogolnie', 'ogólnie', 'wtedy', 'zawsze', 'nigdy', 'moim', 'zdaniem', 'raczej', 'zbyt', 'bardzo', 'całkiem', 'całkowicie', 'znow', 'znów', 'wiem', 'chce', 'chcę', 'wiedzieć', 'powiedzieć', 'robić', 'robic', 'mówić', 'mowic', 'prostu', 'razie'
 ]);
 
 // ==================== EMOJI DISCOVERY ====================
@@ -204,6 +204,21 @@ async function discoverAllEmojis() {
 // This will be set in the generate() function
 let GLOBAL_EMOJI_MAP = {};
 
+function isLikelyLink(w) {
+  if (w.startsWith('http')) return true;
+  if (w.includes('/') && (w.includes('attachments') || w.includes('cdn') || w.includes('com'))) return true;
+  if (w.split('/').length > 2) return true; // More than 2 slashes is likely a path/link
+  return false;
+}
+
+function shortenRepeatedChars(w) {
+  // Look for any character repeated 5+ times
+  // We use a regex that matches a character and its subsequent identical characters
+  return w.replace(/(.)\1{4,}/g, (match, char) => {
+    return char.repeat(4) + `[x${match.length}]`;
+  });
+}
+
 // ==================== ADVANCED METRICS ====================
 
 function computeVocabularyFingerprint(userId, serverWordFreqs, serverRawWords) {
@@ -220,19 +235,21 @@ function computeVocabularyFingerprint(userId, serverWordFreqs, serverRawWords) {
   for (const row of msgs) {
     if (!row.content) continue;
     const words = row.content.toLowerCase().split(/[\s,.!?":;()\[\]<>]+/);
-    for (const w of words) {
+    for (let w of words) {
       // Skip short words, stopwords, URLs, mentions, numbers
       if ((w.length < 4 && w !== 'uwu' && w !== 'owo') || STOPWORDS.has(w)) continue;
-      if (w.startsWith('http') || w.startsWith('@') || w.startsWith('#')) continue;
+      if (w.startsWith('@') || w.startsWith('#') || isLikelyLink(w)) continue;
       if (/^\d+$/.test(w)) continue;
 
       const s = getStem(w);
       if (s.length < 3 && s !== 'uwu' && s !== 'owo') continue;
 
+      const displayWord = shortenRepeatedChars(w);
+
       userWordCount[s] = (userWordCount[s] || 0) + 1;
       // Store the raw word for display
       if (!userRawWords[s]) userRawWords[s] = {};
-      userRawWords[s][w] = (userRawWords[s][w] || 0) + 1;
+      userRawWords[s][displayWord] = (userRawWords[s][displayWord] || 0) + 1;
       userTotalWords++;
     }
   }
@@ -535,9 +552,9 @@ function computeEntropy(userId, totalMessages, activeChannelCount) {
     if (p > 0) entropy -= p * Math.log2(p);
   }
 
-  // Normalize entropy to a 0-10 scale based on server size
-  // Max entropy is log2(N) where N is the total number of active channels in the server
-  const maxPossibleEntropy = Math.log2(activeChannelCount || 15); // Default to 15 if 0
+  // Normalize entropy to a 0-10 scale
+  // Max entropy is capped at log2(15) channels for the 10/10 score
+  const maxPossibleEntropy = Math.log2(15);
   const normalizedEntropy = Math.min(10, (entropy / maxPossibleEntropy) * 10);
 
   console.log(`  📊 Entropy Debug [${userId}]:`);
@@ -545,7 +562,7 @@ function computeEntropy(userId, totalMessages, activeChannelCount) {
   console.log(`     - Channels (All): ${channels.length}`);
   console.log(`     - Channels (Relevant >2%): ${relevantChannels.length}`);
   console.log(`     - Raw Entropy: ${entropy.toFixed(3)}`);
-  console.log(`     - Max Possible Entropy (log2(${activeChannelCount || 15})): ${maxPossibleEntropy.toFixed(3)}`);
+  console.log(`     - Max Possible Entropy (log2(15)): ${maxPossibleEntropy.toFixed(3)}`);
   console.log(`     - Normalized Result: ${normalizedEntropy.toFixed(2)}/10`);
   if (relevantChannels.length > 0) {
     console.log(`     - Top Channel Share: ${((relevantChannels.sort((a, b) => b.count - a.count)[0].count / relevantTotal) * 100).toFixed(1)}%`);
@@ -1165,11 +1182,13 @@ function computeContentStats(userId, rawWordsMap) {
   for (const row of msgs) {
     if (!row.content) continue;
     const words = row.content.toLowerCase().split(/[\s,.!?":;()]+/);
-    for (const w of words) {
+    for (let w of words) {
       if ((w.length < 4 && w !== 'uwu' && w !== 'owo') || STOPWORDS.has(w)) continue;
+      if (isLikelyLink(w)) continue;
       const s = getStem(w);
+      const displayWord = shortenRepeatedChars(w);
       wordCounts[s] = (wordCounts[s] || 0) + 1;
-      if (!rawWords[s]) rawWords[s] = w;
+      if (!rawWords[s]) rawWords[s] = displayWord;
     }
   }
 
@@ -1294,8 +1313,9 @@ async function generate() {
   for (const row of allMessages) {
     if (!row.content) continue;
     const words = row.content.toLowerCase().split(/[\s,.!?":;()]+/);
-    for (const w of words) {
+    for (let w of words) {
       if ((w.length < 4 && w !== 'uwu' && w !== 'owo') || STOPWORDS.has(w)) continue;
+      if (isLikelyLink(w)) continue;
       const s = getStem(w);
       if (s.length < 3 && s !== 'uwu' && s !== 'owo') continue;
       serverWordFreqs[s] = (serverWordFreqs[s] || 0) + 1;
@@ -1382,11 +1402,12 @@ async function generate() {
             WHERE m.author_id = ? AND strftime('%Y', m.timestamp, 'localtime') = ?
             GROUP BY c.id
             ORDER BY count DESC
-            LIMIT 5
-        `).all(u.id, TARGET_YEAR.toString()).map(c => ({
-      ...c,
-      percentage: Math.round((c.count / u.msg_count) * 100)
-    }));
+        `).all(u.id, TARGET_YEAR.toString())
+      .map(c => ({
+        ...c,
+        percentage: Math.round((c.count / u.msg_count) * 100)
+      }))
+      .filter(c => c.percentage >= 1);
 
     const topMentions = db.prepare(`
             SELECT u.id, u.name, u.avatar_url, COUNT(*) as count

@@ -26,6 +26,19 @@ const db = new Database(DB_PATH, { readonly: true });
 
 // --- Helpers ---
 
+function isLikelyLink(w) {
+    if (w.startsWith('http')) return true;
+    if (w.includes('/') && (w.includes('attachments') || w.includes('cdn') || w.includes('com'))) return true;
+    if (w.split('/').length > 2) return true;
+    return false;
+}
+
+function shortenRepeatedChars(w) {
+    return w.replace(/(.)\1{4,}/g, (match, char) => {
+        return char.repeat(4) + `[x${match.length}]`;
+    });
+}
+
 function downloadEmoji(id) {
     if (!id) return;
     const dest = path.join(EMOJI_DIR, `${id}.png`);
@@ -148,13 +161,14 @@ function getGlobalWords(userFilter = '') {
         if (!row.content) continue;
         const words = row.content.toLowerCase().split(/[\s,.!?":;()\[\]<>{}|\\/+=*&^%$#@~`]+/);
         for (const w of words) {
-            if (!w || w.includes('http') || w.includes('https') || w.includes('tenor') || w.includes('discord') || w.includes('www')) continue;
+            if (!w || isLikelyLink(w) || w.includes('tenor') || w.includes('discord') || w.includes('www')) continue;
             if (/^\d+$/.test(w) || w.length > 15) continue;
             if ((w.length < 4 && w !== 'uwu' && w !== 'owo' && w !== 'xd') || STOPWORDS.has(w)) continue;
 
             const s = stem(w);
+            const displayWord = shortenRepeatedChars(w);
             counts[s] = (counts[s] || 0) + 1;
-            if (!rawMap[s]) rawMap[s] = w;
+            if (!rawMap[s]) rawMap[s] = displayWord;
         }
     }
 
@@ -326,6 +340,51 @@ function getHallOfFame(userFilter = '') {
         };
     };
 
+    const findOmnipresent = (filter = '') => {
+        const userChannels = db.prepare(`
+            SELECT author_id, channel_id, COUNT(*) as count
+            FROM messages
+            WHERE strftime('%Y', timestamp) = ?${filter}
+            GROUP BY author_id, channel_id
+        `).all(year);
+
+        const userTotals = {};
+        const userChannelData = {};
+
+        for (const row of userChannels) {
+            userTotals[row.author_id] = (userTotals[row.author_id] || 0) + row.count;
+            if (!userChannelData[row.author_id]) userChannelData[row.author_id] = [];
+            userChannelData[row.author_id].push(row.count);
+        }
+
+        let bestUser = null;
+        let maxEntropy = -1;
+
+        for (const [userId, counts] of Object.entries(userChannelData)) {
+            const total = userTotals[userId];
+            if (total < 100) continue; // Minimum activity threshold
+
+            let entropy = 0;
+            for (const count of counts) {
+                const p = count / total;
+                if (p > 0) entropy -= p * Math.log2(p);
+            }
+
+            if (entropy > maxEntropy) {
+                maxEntropy = entropy;
+                bestUser = { id: userId, val: counts.length, entropy };
+            }
+        }
+
+        if (!bestUser) return null;
+        const user = db.prepare('SELECT name, avatar_url FROM users WHERE id = ?').get(bestUser.id);
+        return {
+            title: 'Omnipresent',
+            user: { name: user?.name, avatar: user?.avatar_url },
+            value: `${bestUser.val} channels`
+        };
+    };
+
     return [
         getTopUser(`
             SELECT author_id as id, COUNT(*) as val FROM messages 
@@ -350,12 +409,7 @@ function getHallOfFame(userFilter = '') {
             GROUP BY author_id ORDER BY val DESC LIMIT 1
         `, 'Media Mogul', v => `${v.toLocaleString()} files`),
 
-        getTopUser(`
-            SELECT author_id as id, COUNT(*) as val FROM messages 
-            WHERE strftime('%Y', timestamp) = ? 
-            AND CAST(strftime('%H', timestamp) as INT) BETWEEN 2 AND 5${userFilter}
-            GROUP BY author_id ORDER BY val DESC LIMIT 1
-        `, 'Nocturnal Beast', v => `${v} night msgs`),
+        findOmnipresent(userFilter),
 
         getTopUser(`
             SELECT user_id as id, COUNT(*) as val FROM reactions

@@ -177,8 +177,7 @@
 					<div
 						class="absolute right-2 bottom-full z-30 mb-2 w-44 rounded-lg border-2 border-black bg-black p-2 text-xs font-bold text-white shadow-lg"
 					>
-						Słowa, których używasz częściej niż statystyczny użytkownik tego serwera. Liczba
-						pokazuje ile razy częściej używasz tego słowa.
+						Słowa, których używasz częściej niż statystyczny użytkownik tego serwera.
 					</div>
 				{/if}
 
@@ -192,10 +191,6 @@
 								class="flex items-center justify-between border-b-2 border-dashed border-gray-300 pb-2 last:border-0"
 							>
 								<span class="text-lg font-bold text-primary">"{w.word}"</span>
-								<span
-									class="border-2 border-black bg-secondary px-2 py-1 font-mono text-xs text-secondary-foreground"
-									>×{Math.round(w.score)} częściej</span
-								>
 							</div>
 						{/each}
 					</div>
@@ -209,10 +204,6 @@
 								class="flex items-center justify-between border-b-2 border-dashed border-gray-300 pb-2 last:border-0"
 							>
 								<span class="text-lg font-bold text-primary">"{w.word}"</span>
-								<span
-									class="border-2 border-black bg-secondary px-2 py-1 font-mono text-xs text-secondary-foreground"
-									>×{Math.round(w.score)} częściej</span
-								>
 							</div>
 						{/each}
 					</div>

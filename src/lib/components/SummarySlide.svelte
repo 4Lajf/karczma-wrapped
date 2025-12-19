@@ -10,13 +10,13 @@
 	const topChannelPercent = $derived(topChannelData?.percentage || 0);
 	const topChannelCount = $derived(topChannelData?.count || 0);
 
-	const customReactions = $derived((user.metrics.topReactionsSent || []).filter(r => r.emoji_id));
-	const topEmoji = $derived(customReactions[0]?.key || '❓');
-	const topEmojiId = $derived(customReactions[0]?.emoji_id);
-	const secondEmoji = $derived(customReactions[1]?.key || '📂');
-	const secondEmojiId = $derived(customReactions[1]?.emoji_id);
-	const thirdEmoji = $derived(customReactions[2]?.key || '🎨');
-	const thirdEmojiId = $derived(customReactions[2]?.emoji_id);
+	const customEmojis = $derived((user.metrics.topEmojisInline || []).filter(r => r.emoji_id));
+	const topEmoji = $derived(customEmojis[0]?.key || '❓');
+	const topEmojiId = $derived(customEmojis[0]?.emoji_id);
+	const secondEmoji = $derived(customEmojis[1]?.key || '📂');
+	const secondEmojiId = $derived(customEmojis[1]?.emoji_id);
+	const thirdEmoji = $derived(customEmojis[2]?.key || '🎨');
+	const thirdEmojiId = $derived(customEmojis[2]?.emoji_id);
 	const topWord = $derived(user.metrics.topWords?.[0]?.word || '-');
 
 	// New detailed stats
