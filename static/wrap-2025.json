@@ -1,0 +1,2535 @@
+{
+  "meta": {
+    "year": 2025,
+    "generatedAt": "2025-12-18T22:12:31.853Z",
+    "schemaVersion": "2.1",
+    "features": [
+      "experimental",
+      "tf-idf",
+      "asymmetry",
+      "sessions",
+      "chronotype",
+      "roles",
+      "entropy",
+      "links"
+    ]
+  },
+  "guild": {
+    "id": "0",
+    "name": "Fantastyczna Karczma",
+    "totalMessages": 707252,
+    "activeUsers": 324,
+    "activeChannels": 138,
+    "topChannels": [
+      {
+        "id": "875089652518903869",
+        "name": "animowe-dysputy",
+        "count": 139679
+      },
+      {
+        "id": "1043195907258196079",
+        "name": "degenerackie-pogawędki",
+        "count": 118895
+      },
+      {
+        "id": "904454003977502730",
+        "name": "pogawędki",
+        "count": 93118
+      },
+      {
+        "id": "1034931177414479992",
+        "name": "biblioteka-mangowa",
+        "count": 45502
+      },
+      {
+        "id": "976957742621290556",
+        "name": "meetowo-konwentowy",
+        "count": 35050
+      },
+      {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "count": 30827
+      },
+      {
+        "id": "875089730759426069",
+        "name": "kanał-na-komendy",
+        "count": 24970
+      },
+      {
+        "id": "918039801419145277",
+        "name": "kinowo-literacki",
+        "count": 22853
+      },
+      {
+        "id": "875089347072917574",
+        "name": "gotuj-z-karczmą",
+        "count": 17404
+      },
+      {
+        "id": "875089270430396526",
+        "name": "kącik-muzyczny",
+        "count": 17221
+      }
+    ],
+    "globalStats": {
+      "avgEntropy": 3.69,
+      "avgVoidScore": 1.81,
+      "avgCapsRatio": 0.074,
+      "totalLinks": 4547,
+      "linkTypes": {
+        "spotify": 0,
+        "youtube": 0,
+        "twitter": 0,
+        "pixiv": 0,
+        "gif": 946,
+        "screenshots": 10407
+      }
+    }
+  },
+  "users": [
+    {
+      "id": "237208084378812416",
+      "profile": {
+        "name": "tomasz",
+        "nickname": "Tomasz",
+        "avatarUrl": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+        "isBot": false
+      },
+      "metrics": {
+        "totalMessages": 69604,
+        "rank": 1,
+        "percentile": 100,
+        "activeDays": 346,
+        "longestStreak": 346,
+        "mostActiveMonth": 10,
+        "topChannels": [
+          {
+            "id": "875089652518903869",
+            "name": "animowe-dysputy",
+            "category_name": "╭──WEEBOWA IZAKAYA──╮",
+            "type": "GuildTextChat",
+            "count": 30078,
+            "percentage": 43
+          },
+          {
+            "id": "904454003977502730",
+            "name": "pogawędki",
+            "category_name": "╭──SOCJALNA KARCZMA──╮",
+            "type": "GuildTextChat",
+            "count": 10363,
+            "percentage": 15
+          },
+          {
+            "id": "976957742621290556",
+            "name": "meetowo-konwentowy",
+            "category_name": "╭──SOCJALNA KARCZMA──╮",
+            "type": "GuildTextChat",
+            "count": 6213,
+            "percentage": 9
+          },
+          {
+            "id": "909153584766132315",
+            "name": "kebab-głosowo-tekstowy",
+            "category_name": "╭── KANAŁY GŁOSOWE ──╮",
+            "type": "GuildTextChat",
+            "count": 2877,
+            "percentage": 4
+          },
+          {
+            "id": "875089270430396526",
+            "name": "kącik-muzyczny",
+            "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+            "type": "GuildTextChat",
+            "count": 2815,
+            "percentage": 4
+          }
+        ],
+        "topWords": [
+          {
+            "word": "uwu",
+            "count": 1363
+          },
+          {
+            "word": "kocham",
+            "count": 1349
+          },
+          {
+            "word": "bajke",
+            "count": 1343
+          },
+          {
+            "word": "wiem",
+            "count": 1278
+          },
+          {
+            "word": "chce",
+            "count": 1257
+          },
+          {
+            "word": "jutro",
+            "count": 1100
+          },
+          {
+            "word": "anime",
+            "count": 1050
+          }
+        ],
+        "topEmojisSent": [
+          {
+            "key": "cocoXD_4",
+            "count": 19203,
+            "emoji_id": "729822486799319071"
+          },
+          {
+            "key": "❤️",
+            "count": 5704,
+            "emoji_id": null
+          },
+          {
+            "key": "😍",
+            "count": 5682,
+            "emoji_id": null
+          },
+          {
+            "key": "vibecat",
+            "count": 3151,
+            "emoji_id": "909373540212547594"
+          },
+          {
+            "key": "trollgefk",
+            "count": 990,
+            "emoji_id": "1003285860596338758"
+          },
+          {
+            "key": "😳",
+            "count": 780,
+            "emoji_id": null
+          },
+          {
+            "key": "👆",
+            "count": 686,
+            "emoji_id": null
+          },
+          {
+            "key": "💪",
+            "count": 514,
+            "emoji_id": null
+          },
+          {
+            "key": "👍",
+            "count": 477,
+            "emoji_id": null
+          },
+          {
+            "key": "wakaru",
+            "count": 299,
+            "emoji_id": "949465369045778492"
+          }
+        ],
+        "topEmojisInline": [
+          {
+            "key": "uwu",
+            "count": 1363,
+            "emoji_id": null
+          },
+          {
+            "key": "vibecat",
+            "count": 1200,
+            "emoji_id": "909373540212547594"
+          }
+        ],
+        "topReactionsSent": [
+          {
+            "key": "cocoXD_4",
+            "count": 19203,
+            "emoji_id": "729822486799319071"
+          },
+          {
+            "key": "❤️",
+            "count": 5704,
+            "emoji_id": null
+          },
+          {
+            "key": "😍",
+            "count": 5682,
+            "emoji_id": null
+          }
+        ],
+        "topEmojisReceived": [
+          {
+            "key": "cocoXD",
+            "count": 9133,
+            "emoji_id": "909369353554771989"
+          },
+          {
+            "key": "❤️",
+            "count": 2304,
+            "emoji_id": null
+          },
+          {
+            "key": "😍",
+            "count": 2215,
+            "emoji_id": null
+          },
+          {
+            "key": "vibecat",
+            "count": 417,
+            "emoji_id": "909373540212547594"
+          },
+          {
+            "key": "UwUkuraii",
+            "count": 352,
+            "emoji_id": "909841552224972831"
+          },
+          {
+            "key": "💗",
+            "count": 349,
+            "emoji_id": null
+          },
+          {
+            "key": "Pandapat",
+            "count": 336,
+            "emoji_id": "1056314396713955458"
+          },
+          {
+            "key": "👍",
+            "count": 311,
+            "emoji_id": null
+          }
+        ],
+        "topMentions": [
+          {
+            "id": "279397680776478720",
+            "name": "bari2288",
+            "avatar_url": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512",
+            "count": 479
+          },
+          {
+            "id": "338642102479224833",
+            "name": "blonzej",
+            "avatar_url": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+            "count": 344
+          },
+          {
+            "id": "270245951837437955",
+            "name": "nokatoki",
+            "avatar_url": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+            "count": 334
+          },
+          {
+            "id": "291270443829035008",
+            "name": "mayxs",
+            "avatar_url": "https://cdn.discordapp.com/avatars/291270443829035008/ee356ccfd8435d88b3e7f5c289186ea4.png?size=512",
+            "count": 242
+          },
+          {
+            "id": "517766317961510912",
+            "name": "kon7216",
+            "avatar_url": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512",
+            "count": 218
+          }
+        ],
+        "topMentionedBy": [
+          {
+            "id": "338642102479224833",
+            "name": "blonzej",
+            "avatar_url": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+            "count": 519
+          },
+          {
+            "id": "270245951837437955",
+            "name": "nokatoki",
+            "avatar_url": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+            "count": 356
+          },
+          {
+            "id": "279397680776478720",
+            "name": "bari2288",
+            "avatar_url": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512",
+            "count": 254
+          },
+          {
+            "id": "291563667290324992",
+            "name": "nesttouc",
+            "avatar_url": "https://cdn.discordapp.com/avatars/291563667290324992/88fbc4fceb7a2de86e0b2a97b188b40d.png?size=512",
+            "count": 249
+          },
+          {
+            "id": "284044360192884736",
+            "name": "tlenmlem",
+            "avatar_url": "https://cdn.discordapp.com/avatars/284044360192884736/4c170e9d4554b315eadc8331d6700fbd.png?size=512",
+            "count": 226
+          }
+        ],
+        "topRepliesTo": [
+          {
+            "id": "237208084378812416",
+            "name": "tomasz",
+            "avatar_url": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+            "count": 1180
+          },
+          {
+            "id": "338642102479224833",
+            "name": "blonzej",
+            "avatar_url": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+            "count": 931
+          },
+          {
+            "id": "279397680776478720",
+            "name": "bari2288",
+            "avatar_url": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512",
+            "count": 931
+          },
+          {
+            "id": "125677084319285249",
+            "name": "willq",
+            "avatar_url": "https://cdn.discordapp.com/avatars/125677084319285249/612b660ef4c5d1bc215d836362979481.png?size=512",
+            "count": 719
+          },
+          {
+            "id": "234623423257509888",
+            "name": "mrball",
+            "avatar_url": "https://cdn.discordapp.com/avatars/234623423257509888/fea36ea8c1c606aa30c666ac08640227.png?size=512",
+            "count": 631
+          }
+        ],
+        "topRepliedBy": [
+          {
+            "id": "237208084378812416",
+            "name": "tomasz",
+            "avatar_url": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+            "count": 1180
+          },
+          {
+            "id": "279397680776478720",
+            "name": "bari2288",
+            "avatar_url": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512",
+            "count": 888
+          },
+          {
+            "id": "440239078957383680",
+            "name": "kodjax",
+            "avatar_url": "https://cdn.discordapp.com/avatars/440239078957383680/8d2c878cc9d2f3402a4ef3785b274455.png?size=512",
+            "count": 628
+          },
+          {
+            "id": "338642102479224833",
+            "name": "blonzej",
+            "avatar_url": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+            "count": 575
+          },
+          {
+            "id": "351006685587963916",
+            "name": "4lajf",
+            "avatar_url": "https://cdn.discordapp.com/avatars/351006685587963916/a_fc3281e48a26b0edae13c46024a37424.gif?size=512",
+            "count": 424
+          }
+        ],
+        "topReactors": [
+          {
+            "id": "279397680776478720",
+            "name": "bari2288",
+            "avatar_url": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512",
+            "count": 2526
+          },
+          {
+            "id": "388709668941332480",
+            "name": "_porcelain_",
+            "avatar_url": "https://cdn.discordapp.com/guilds/875086635744763914/users/388709668941332480/avatars/4ee20ce86bc8c4fb5a839bce3db22fb9.png?size=512",
+            "count": 1187
+          },
+          {
+            "id": "748305998686453910",
+            "name": "macaron_cure",
+            "avatar_url": "https://cdn.discordapp.com/avatars/748305998686453910/2c593ca809dac2c76e91af47596f1f0c.png?size=512",
+            "count": 1149
+          },
+          {
+            "id": "440239078957383680",
+            "name": "kodjax",
+            "avatar_url": "https://cdn.discordapp.com/avatars/440239078957383680/8d2c878cc9d2f3402a4ef3785b274455.png?size=512",
+            "count": 969
+          },
+          {
+            "id": "376814914771091456",
+            "name": "boxxi.",
+            "avatar_url": "https://cdn.discordapp.com/avatars/376814914771091456/97ce7ab1ede5a8fc9ccaaf5a7bfc9855.png?size=512",
+            "count": 739
+          }
+        ],
+        "topReactedTo": [
+          {
+            "id": "338642102479224833",
+            "name": "blonzej",
+            "avatar_url": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+            "count": 3790
+          },
+          {
+            "id": "279397680776478720",
+            "name": "bari2288",
+            "avatar_url": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512",
+            "count": 2409
+          },
+          {
+            "id": "270245951837437955",
+            "name": "nokatoki",
+            "avatar_url": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+            "count": 2328
+          },
+          {
+            "id": "517766317961510912",
+            "name": "kon7216",
+            "avatar_url": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512",
+            "count": 2050
+          },
+          {
+            "id": "125677084319285249",
+            "name": "willq",
+            "avatar_url": "https://cdn.discordapp.com/avatars/125677084319285249/612b660ef4c5d1bc215d836362979481.png?size=512",
+            "count": 1487
+          }
+        ],
+        "hourlyDistribution": [
+          5305,
+          3347,
+          1404,
+          692,
+          203,
+          26,
+          62,
+          162,
+          214,
+          628,
+          1850,
+          2549,
+          3836,
+          4014,
+          4112,
+          4213,
+          4200,
+          3976,
+          4226,
+          3890,
+          4014,
+          5185,
+          5729,
+          5767
+        ],
+        "dailyDistribution": [
+          10172,
+          8749,
+          10152,
+          10596,
+          11616,
+          10626,
+          7693
+        ],
+        "monthlyDistribution": [
+          6629,
+          5347,
+          6735,
+          5965,
+          4938,
+          3963,
+          7372,
+          5224,
+          7270,
+          8890,
+          5533,
+          1738
+        ],
+        "avgMessageLength": 51,
+        "avgWordCount": 8,
+        "attachmentCount": 6831,
+        "attachmentStats": {
+          "image": 8502,
+          "video": 17,
+          "audio": 0,
+          "file": 0
+        },
+        "avgTimeToEdit": 25427,
+        "pinnedMessages": 12,
+        "firstMessageTimestamp": "2025-01-01T03:31:25.686+01:00",
+        "lastMessageTimestamp": "2025-12-12T01:12:43.555+01:00",
+        "persona": "Day Walker",
+        "vocabularyFingerprint": [
+          {
+            "word": "bigboj",
+            "score": 9.037286028221144,
+            "count": 5
+          },
+          {
+            "word": "dzieciorki",
+            "score": 9.037286028221144,
+            "count": 5
+          },
+          {
+            "word": "samochut",
+            "score": 9.037286028221144,
+            "count": 7
+          },
+          {
+            "word": "epuw",
+            "score": 9.037286028221144,
+            "count": 10
+          },
+          {
+            "word": "mahotsukai",
+            "score": 9.037286028221144,
+            "count": 7
+          }
+        ],
+        "responseLatency": {
+          "median": 186,
+          "average": 4209
+        },
+        "chronotype": {
+          "sleepStart": 4,
+          "sleepEnd": 9,
+          "duration": 5
+        },
+        "sessionAnalysis": {
+          "sessionCount": 2330,
+          "avgSessionLength": 55,
+          "avgAttentionSpan": 130
+        },
+        "interactionAsymmetry": [
+          {
+            "id": "107889688429248512",
+            "name": "jarzyna",
+            "sent": 37,
+            "received": 37,
+            "ratio": 1,
+            "type": "balanced"
+          },
+          {
+            "id": "114097401639206920",
+            "name": "staszek",
+            "sent": 2,
+            "received": 2,
+            "ratio": 1,
+            "type": "balanced"
+          },
+          {
+            "id": "1162716486020890634",
+            "name": "Link Expander",
+            "sent": 5,
+            "received": 5,
+            "ratio": 1,
+            "type": "balanced"
+          }
+        ],
+        "roleInfo": null,
+        "categoryStats": [
+          {
+            "name": "╭──WEEBOWA IZAKAYA──╮",
+            "count": 34082
+          },
+          {
+            "name": "╭──SOCJALNA KARCZMA──╮",
+            "count": 24931
+          },
+          {
+            "name": "╭──HOBBYSTYCZNY BAR──╮",
+            "count": 4708
+          },
+          {
+            "name": "╭── KANAŁY GŁOSOWE ──╮",
+            "count": 2878
+          },
+          {
+            "name": "integracja-online",
+            "count": 1469
+          },
+          {
+            "name": "propozycje",
+            "count": 720
+          },
+          {
+            "name": "╭── EIZOUKEN ──╮",
+            "count": 282
+          },
+          {
+            "name": "animowe-dysputy",
+            "count": 182
+          },
+          {
+            "name": "kącik-muzyczny",
+            "count": 121
+          },
+          {
+            "name": "╭── ARCHIWUM ──╮",
+            "count": 112
+          },
+          {
+            "name": "╭── GRZYBLING ──╮",
+            "count": 53
+          },
+          {
+            "name": "międzygatunkowi-recenzenci",
+            "count": 20
+          },
+          {
+            "name": "╭── WAŻNE ──╮",
+            "count": 17
+          },
+          {
+            "name": "pokaż-mi-swoje-towary",
+            "count": 17
+          },
+          {
+            "name": "kebab-głosowo-tekstowy",
+            "count": 6
+          },
+          {
+            "name": "pogawędki",
+            "count": 5
+          },
+          {
+            "name": "kanał-na-komendy",
+            "count": 1
+          }
+        ],
+        "entropy": {
+          "value": 2.35,
+          "normalized": 3.3,
+          "persona": "The Explorer"
+        },
+        "contentHabits": {
+          "capsRatio": 0.049149474168151255,
+          "questionRatio": 0.03222515947359347,
+          "spotifyCount": 0,
+          "youtubeCount": 0,
+          "twitterCount": 0,
+          "pixivCount": 0,
+          "gifCount": 272,
+          "screenshotCount": 4902,
+          "totalLinks": 813
+        },
+        "workLifeBalance": {
+          "weekend": 0.2566662835469226,
+          "weekday": 0.7433337164530774
+        },
+        "networkStats": {
+          "cliqueMembers": [
+            "tomasz",
+            "blonzej",
+            "bari2288"
+          ],
+          "uniqueContacts": 181
+        },
+        "voidScore": 2.13,
+        "conversationStarter": 2880,
+        "starboardCount": 242,
+        "badges": [
+          {
+            "id": "night-owl",
+            "label": "Nocny Marek",
+            "description": "Najbardziej aktywny w nocy (20:00 - 05:00)",
+            "achieved": true,
+            "progress": 0.4546577782886041,
+            "threshold": 0.4,
+            "displayValue": "45.5%",
+            "globalPercentage": "33.3%"
+          },
+          {
+            "id": "channel-hopper",
+            "label": "Wędrowiec Kanałów",
+            "description": "Aktywny w 5+ kanałach",
+            "achieved": true,
+            "progress": 5,
+            "threshold": 5,
+            "displayValue": "5 kanałów",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "emoji-machine",
+            "label": "Fabryka Emoji",
+            "description": "Reaguje na wszystko (>30% wiadomości)",
+            "achieved": true,
+            "progress": 0.5385610022412505,
+            "threshold": 0.3,
+            "displayValue": "53.9%",
+            "globalPercentage": "66.7%"
+          },
+          {
+            "id": "pinned-celebrity",
+            "label": "Przypięta Gwiazda",
+            "description": "5+ przypiętych wiadomości",
+            "achieved": true,
+            "progress": 12,
+            "threshold": 5,
+            "displayValue": "12 przypiętych",
+            "globalPercentage": "33.3%"
+          },
+          {
+            "id": "double-texter",
+            "label": "Podwójny SMS",
+            "description": "Szybkie serie (3 wiadomości w 4s)",
+            "achieved": true,
+            "progress": 393,
+            "threshold": 5,
+            "displayValue": "393 serii",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "trendsetter",
+            "label": "Wyznaczający Trendy",
+            "description": "Jeden z 3 pierwszych przy popularnych postach",
+            "achieved": true,
+            "progress": 2162,
+            "threshold": 10,
+            "displayValue": "2162 razy",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "conversation-killer",
+            "label": "Zabójca Konwersacji",
+            "description": "Często kończy rozmowy (>50 razy)",
+            "achieved": true,
+            "progress": 1412,
+            "threshold": 50,
+            "displayValue": "1412 razy",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "consistent",
+            "label": "Konsekwentny",
+            "description": "Seria 30 dni z rzędu",
+            "achieved": true,
+            "progress": 346,
+            "threshold": 30,
+            "displayValue": "346 dni",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "screenshot-abuser",
+            "label": "Złodziej Screenshotów",
+            "description": "> 200 obrazków na #zrzuty",
+            "achieved": true,
+            "progress": 4902,
+            "threshold": 200,
+            "displayValue": "4902 zrzutów",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "starboard-fame",
+            "label": "Gwiazdor",
+            "description": "100+ wpisów na starboardzie",
+            "achieved": true,
+            "progress": 242,
+            "threshold": 100,
+            "displayValue": "242 wpisów",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "early-bird",
+            "label": "Ranny Ptaszek",
+            "description": "Wstaje ze słońcem (05:00 - 10:00)",
+            "achieved": false,
+            "progress": 0.015688753519912647,
+            "threshold": 0.4,
+            "displayValue": "1.6%",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "work-hours",
+            "label": "Pracownik",
+            "description": "Najbardziej aktywny w godzinach pracy (08:00 - 16:00)",
+            "achieved": false,
+            "progress": 0.3680248261594161,
+            "threshold": 0.4,
+            "displayValue": "36.8%",
+            "globalPercentage": "66.7%"
+          },
+          {
+            "id": "one-channel",
+            "label": "Jednokanałowy Gremlin",
+            "description": "Żyje w jednym kanale (>90% wiadomości)",
+            "achieved": false,
+            "progress": 0.43,
+            "threshold": 0.9,
+            "displayValue": "43.0%",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "the-editor",
+            "label": "Redaktor Naczelny",
+            "description": "Edytuje >5% wiadomości",
+            "achieved": false,
+            "progress": 0.026334693408424804,
+            "threshold": 0.05,
+            "displayValue": "2.6%",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "gallery-curator",
+            "label": "Kurator Galerii",
+            "description": "Wysyła dużo załączników (>20%)",
+            "achieved": false,
+            "progress": 0.09814091144187116,
+            "threshold": 0.2,
+            "displayValue": "9.8%",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "ghost",
+            "label": "Duch",
+            "description": "Aktywny często, ale mało pisze (<3 msg/dzień)",
+            "achieved": false,
+            "progress": 201.16763005780348,
+            "threshold": 3,
+            "displayValue": "201.2 msg/dzień",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "react-lord",
+            "label": "Pan Reakcji",
+            "description": "Otrzymuje 2x więcej reakcji niż wysyła wiadomości",
+            "achieved": false,
+            "progress": 0.2214958910407448,
+            "threshold": 2,
+            "displayValue": "15417 reakcji",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "simp",
+            "label": "Wielbiciel",
+            "description": "Uwielbia kogoś (ratio > 5.0)",
+            "achieved": false,
+            "progress": 0,
+            "threshold": 5,
+            "displayValue": "Ratio 0.0",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "the-dj",
+            "label": "DJ Karczmy",
+            "description": "> 100 linków YouTube",
+            "achieved": false,
+            "progress": 0,
+            "threshold": 100,
+            "displayValue": "0 linków",
+            "globalPercentage": "0.0%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "338642102479224833",
+      "profile": {
+        "name": "blonzej",
+        "nickname": "Błążej",
+        "avatarUrl": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+        "isBot": false
+      },
+      "metrics": {
+        "totalMessages": 35859,
+        "rank": 2,
+        "percentile": 99.7,
+        "activeDays": 346,
+        "longestStreak": 346,
+        "mostActiveMonth": 7,
+        "topChannels": [
+          {
+            "id": "875089652518903869",
+            "name": "animowe-dysputy",
+            "category_name": "╭──WEEBOWA IZAKAYA──╮",
+            "type": "GuildTextChat",
+            "count": 13551,
+            "percentage": 38
+          },
+          {
+            "id": "1034931177414479992",
+            "name": "biblioteka-mangowa",
+            "category_name": "╭──WEEBOWA IZAKAYA──╮",
+            "type": "GuildTextChat",
+            "count": 7103,
+            "percentage": 20
+          },
+          {
+            "id": "904454003977502730",
+            "name": "pogawędki",
+            "category_name": "╭──SOCJALNA KARCZMA──╮",
+            "type": "GuildTextChat",
+            "count": 3441,
+            "percentage": 10
+          },
+          {
+            "id": "918039801419145277",
+            "name": "kinowo-literacki",
+            "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+            "type": "GuildTextChat",
+            "count": 3107,
+            "percentage": 9
+          },
+          {
+            "id": "1065666586477867119",
+            "name": "wciągalnia-kreskówek",
+            "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+            "type": "GuildTextChat",
+            "count": 1156,
+            "percentage": 3
+          }
+        ],
+        "topWords": [
+          {
+            "word": "https",
+            "count": 1033
+          },
+          {
+            "word": "xddd",
+            "count": 713
+          },
+          {
+            "word": "sumie",
+            "count": 651
+          },
+          {
+            "word": "chyba",
+            "count": 639
+          },
+          {
+            "word": "xdd",
+            "count": 582
+          },
+          {
+            "word": "razem",
+            "count": 569
+          },
+          {
+            "word": "wiem",
+            "count": 522
+          },
+          {
+            "word": "widziałem",
+            "count": 517
+          },
+          {
+            "word": "kurwa",
+            "count": 499
+          },
+          {
+            "word": "oglądania",
+            "count": 498
+          }
+        ],
+        "topEmojisSent": [
+          {
+            "key": "cocoXD_4",
+            "count": 1898,
+            "emoji_id": "917810523003813948"
+          },
+          {
+            "key": "😍",
+            "count": 413,
+            "emoji_id": null
+          },
+          {
+            "key": "flush",
+            "count": 341,
+            "emoji_id": "1024969310701109308"
+          },
+          {
+            "key": "cluelessFK",
+            "count": 171,
+            "emoji_id": "1298666774459318273"
+          },
+          {
+            "key": "❤️",
+            "count": 161,
+            "emoji_id": null
+          },
+          {
+            "key": "trollgefk",
+            "count": 110,
+            "emoji_id": "1003285860596338758"
+          },
+          {
+            "key": "😳",
+            "count": 104,
+            "emoji_id": null
+          },
+          {
+            "key": "pensivecum",
+            "count": 75,
+            "emoji_id": "1003744834793766922"
+          },
+          {
+            "key": "nowaying",
+            "count": 69,
+            "emoji_id": "1280903178191372379"
+          },
+          {
+            "key": "😔",
+            "count": 49,
+            "emoji_id": null
+          }
+        ],
+        "topEmojisReceived": [
+          {
+            "key": "cocoXD",
+            "count": 11267,
+            "emoji_id": "909369353554771989"
+          },
+          {
+            "key": "😍",
+            "count": 1992,
+            "emoji_id": null
+          },
+          {
+            "key": "❤️",
+            "count": 1145,
+            "emoji_id": null
+          },
+          {
+            "key": "vibecat",
+            "count": 359,
+            "emoji_id": "909373540212547594"
+          },
+          {
+            "key": "😳",
+            "count": 233,
+            "emoji_id": null
+          },
+          {
+            "key": "flush",
+            "count": 232,
+            "emoji_id": "1024969310701109308"
+          },
+          {
+            "key": "😭",
+            "count": 173,
+            "emoji_id": null
+          },
+          {
+            "key": "trollgefk",
+            "count": 160,
+            "emoji_id": "1003285860596338758"
+          }
+        ],
+        "topMentions": [
+          {
+            "id": "270245951837437955",
+            "name": "nokatoki",
+            "avatar_url": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+            "count": 656
+          },
+          {
+            "id": "297647773103292416",
+            "name": "jakosi",
+            "avatar_url": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
+            "count": 567
+          },
+          {
+            "id": "237208084378812416",
+            "name": "tomasz",
+            "avatar_url": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+            "count": 519
+          },
+          {
+            "id": "279397680776478720",
+            "name": "bari2288",
+            "avatar_url": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512",
+            "count": 491
+          },
+          {
+            "id": "291563667290324992",
+            "name": "nesttouc",
+            "avatar_url": "https://cdn.discordapp.com/avatars/291563667290324992/88fbc4fceb7a2de86e0b2a97b188b40d.png?size=512",
+            "count": 361
+          }
+        ],
+        "topMentionedBy": [
+          {
+            "id": "237208084378812416",
+            "name": "tomasz",
+            "avatar_url": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+            "count": 344
+          },
+          {
+            "id": "270245951837437955",
+            "name": "nokatoki",
+            "avatar_url": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+            "count": 341
+          },
+          {
+            "id": "297647773103292416",
+            "name": "jakosi",
+            "avatar_url": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
+            "count": 271
+          },
+          {
+            "id": "291563667290324992",
+            "name": "nesttouc",
+            "avatar_url": "https://cdn.discordapp.com/avatars/291563667290324992/88fbc4fceb7a2de86e0b2a97b188b40d.png?size=512",
+            "count": 236
+          },
+          {
+            "id": "517766317961510912",
+            "name": "kon7216",
+            "avatar_url": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512",
+            "count": 200
+          }
+        ],
+        "topRepliesTo": [
+          {
+            "id": "237208084378812416",
+            "name": "tomasz",
+            "avatar_url": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+            "count": 575
+          },
+          {
+            "id": "270245951837437955",
+            "name": "nokatoki",
+            "avatar_url": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+            "count": 559
+          },
+          {
+            "id": "297647773103292416",
+            "name": "jakosi",
+            "avatar_url": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
+            "count": 555
+          },
+          {
+            "id": "279397680776478720",
+            "name": "bari2288",
+            "avatar_url": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512",
+            "count": 403
+          },
+          {
+            "id": "338642102479224833",
+            "name": "blonzej",
+            "avatar_url": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+            "count": 337
+          }
+        ],
+        "topRepliedBy": [
+          {
+            "id": "237208084378812416",
+            "name": "tomasz",
+            "avatar_url": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+            "count": 931
+          },
+          {
+            "id": "297647773103292416",
+            "name": "jakosi",
+            "avatar_url": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
+            "count": 389
+          },
+          {
+            "id": "279397680776478720",
+            "name": "bari2288",
+            "avatar_url": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512",
+            "count": 350
+          },
+          {
+            "id": "338642102479224833",
+            "name": "blonzej",
+            "avatar_url": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+            "count": 337
+          },
+          {
+            "id": "270245951837437955",
+            "name": "nokatoki",
+            "avatar_url": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+            "count": 271
+          }
+        ],
+        "topReactors": [
+          {
+            "id": "237208084378812416",
+            "name": "tomasz",
+            "avatar_url": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+            "count": 3790
+          },
+          {
+            "id": "279397680776478720",
+            "name": "bari2288",
+            "avatar_url": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512",
+            "count": 2039
+          },
+          {
+            "id": "517766317961510912",
+            "name": "kon7216",
+            "avatar_url": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512",
+            "count": 895
+          },
+          {
+            "id": "388709668941332480",
+            "name": "_porcelain_",
+            "avatar_url": "https://cdn.discordapp.com/guilds/875086635744763914/users/388709668941332480/avatars/4ee20ce86bc8c4fb5a839bce3db22fb9.png?size=512",
+            "count": 724
+          },
+          {
+            "id": "376814914771091456",
+            "name": "boxxi.",
+            "avatar_url": "https://cdn.discordapp.com/avatars/376814914771091456/97ce7ab1ede5a8fc9ccaaf5a7bfc9855.png?size=512",
+            "count": 688
+          }
+        ],
+        "topReactedTo": [
+          {
+            "id": "237208084378812416",
+            "name": "tomasz",
+            "avatar_url": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+            "count": 310
+          },
+          {
+            "id": "270245951837437955",
+            "name": "nokatoki",
+            "avatar_url": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+            "count": 292
+          },
+          {
+            "id": "291563667290324992",
+            "name": "nesttouc",
+            "avatar_url": "https://cdn.discordapp.com/avatars/291563667290324992/88fbc4fceb7a2de86e0b2a97b188b40d.png?size=512",
+            "count": 183
+          },
+          {
+            "id": "279397680776478720",
+            "name": "bari2288",
+            "avatar_url": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512",
+            "count": 166
+          },
+          {
+            "id": "297647773103292416",
+            "name": "jakosi",
+            "avatar_url": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
+            "count": 152
+          }
+        ],
+        "hourlyDistribution": [
+          1944,
+          1042,
+          315,
+          36,
+          24,
+          3,
+          21,
+          30,
+          129,
+          208,
+          632,
+          1667,
+          2467,
+          2507,
+          2285,
+          2476,
+          2684,
+          2697,
+          1969,
+          2447,
+          2552,
+          2577,
+          2527,
+          2620
+        ],
+        "dailyDistribution": [
+          5101,
+          5098,
+          6466,
+          6100,
+          5594,
+          4541,
+          2959
+        ],
+        "monthlyDistribution": [
+          3374,
+          2812,
+          4333,
+          4168,
+          2199,
+          2066,
+          5503,
+          2263,
+          3214,
+          3154,
+          1907,
+          866
+        ],
+        "avgMessageLength": 31,
+        "avgWordCount": 5,
+        "attachmentCount": 6719,
+        "attachmentStats": {
+          "image": 6892,
+          "video": 60,
+          "audio": 3,
+          "file": 6
+        },
+        "avgTimeToEdit": 43,
+        "pinnedMessages": 1,
+        "firstMessageTimestamp": "2025-01-01T00:13:51.915+01:00",
+        "lastMessageTimestamp": "2025-12-12T00:32:30.305+01:00",
+        "persona": "Afternoon Chatter",
+        "vocabularyFingerprint": [
+          {
+            "word": "łymen",
+            "score": 28.900262376180404,
+            "count": 6
+          },
+          {
+            "word": "matulo",
+            "score": 28.900262376180404,
+            "count": 10
+          },
+          {
+            "word": "xdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "score": 28.900262376180404,
+            "count": 8
+          },
+          {
+            "word": "habahaba",
+            "score": 28.900262376180404,
+            "count": 6
+          },
+          {
+            "word": "manaczka",
+            "score": 28.900262376180404,
+            "count": 5
+          }
+        ],
+        "responseLatency": {
+          "median": 103,
+          "average": 5462
+        },
+        "chronotype": {
+          "sleepStart": 3,
+          "sleepEnd": 9,
+          "duration": 6
+        },
+        "sessionAnalysis": {
+          "sessionCount": 2149,
+          "avgSessionLength": 42,
+          "avgAttentionSpan": 189
+        },
+        "interactionAsymmetry": [
+          {
+            "id": "107889688429248512",
+            "name": "jarzyna",
+            "sent": 2,
+            "received": 2,
+            "ratio": 1,
+            "type": "balanced"
+          },
+          {
+            "id": "1162716486020890634",
+            "name": "Link Expander",
+            "sent": 2,
+            "received": 2,
+            "ratio": 1,
+            "type": "balanced"
+          },
+          {
+            "id": "125677084319285249",
+            "name": "willq",
+            "sent": 158,
+            "received": 158,
+            "ratio": 1,
+            "type": "balanced"
+          }
+        ],
+        "roleInfo": {
+          "topRole": "Moderator",
+          "color": "#649EFA",
+          "roleCount": 37
+        },
+        "categoryStats": [
+          {
+            "name": "╭──WEEBOWA IZAKAYA──╮",
+            "count": 21856
+          },
+          {
+            "name": "╭──SOCJALNA KARCZMA──╮",
+            "count": 7434
+          },
+          {
+            "name": "╭──HOBBYSTYCZNY BAR──╮",
+            "count": 5463
+          },
+          {
+            "name": "╭── KANAŁY GŁOSOWE ──╮",
+            "count": 743
+          },
+          {
+            "name": "animowe-dysputy",
+            "count": 124
+          },
+          {
+            "name": "╭── ARCHIWUM ──╮",
+            "count": 104
+          },
+          {
+            "name": "propozycje",
+            "count": 97
+          },
+          {
+            "name": "integracja-online",
+            "count": 19
+          },
+          {
+            "name": "╭── EIZOUKEN ──╮",
+            "count": 6
+          },
+          {
+            "name": "pokaż-mi-swoje-towary",
+            "count": 5
+          },
+          {
+            "name": "międzygatunkowi-recenzenci",
+            "count": 5
+          },
+          {
+            "name": "foto-studio",
+            "count": 3
+          }
+        ],
+        "entropy": {
+          "value": 2.34,
+          "normalized": 3.29,
+          "persona": "The Explorer"
+        },
+        "contentHabits": {
+          "capsRatio": 0.13580969909924984,
+          "questionRatio": 0.03566747538972085,
+          "spotifyCount": 0,
+          "youtubeCount": 0,
+          "twitterCount": 0,
+          "pixivCount": 0,
+          "gifCount": 331,
+          "screenshotCount": 3715,
+          "totalLinks": 1039
+        },
+        "workLifeBalance": {
+          "weekend": 0.22476923505953875,
+          "weekday": 0.7752307649404613
+        },
+        "networkStats": {
+          "cliqueMembers": [
+            "tomasz",
+            "nokatoki",
+            "jakosi"
+          ],
+          "uniqueContacts": 100
+        },
+        "voidScore": 1.49,
+        "conversationStarter": 1496,
+        "starboardCount": 199,
+        "badges": [
+          {
+            "id": "work-hours",
+            "label": "Pracownik",
+            "description": "Najbardziej aktywny w godzinach pracy (08:00 - 16:00)",
+            "achieved": true,
+            "progress": 0.41983881312920046,
+            "threshold": 0.4,
+            "displayValue": "42.0%",
+            "globalPercentage": "66.7%"
+          },
+          {
+            "id": "channel-hopper",
+            "label": "Wędrowiec Kanałów",
+            "description": "Aktywny w 5+ kanałach",
+            "achieved": true,
+            "progress": 5,
+            "threshold": 5,
+            "displayValue": "5 kanałów",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "double-texter",
+            "label": "Podwójny SMS",
+            "description": "Szybkie serie (3 wiadomości w 4s)",
+            "achieved": true,
+            "progress": 362,
+            "threshold": 5,
+            "displayValue": "362 serii",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "trendsetter",
+            "label": "Wyznaczający Trendy",
+            "description": "Jeden z 3 pierwszych przy popularnych postach",
+            "achieved": true,
+            "progress": 22,
+            "threshold": 10,
+            "displayValue": "22 razy",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "conversation-killer",
+            "label": "Zabójca Konwersacji",
+            "description": "Często kończy rozmowy (>50 razy)",
+            "achieved": true,
+            "progress": 556,
+            "threshold": 50,
+            "displayValue": "556 razy",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "consistent",
+            "label": "Konsekwentny",
+            "description": "Seria 30 dni z rzędu",
+            "achieved": true,
+            "progress": 346,
+            "threshold": 30,
+            "displayValue": "346 dni",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "screenshot-abuser",
+            "label": "Złodziej Screenshotów",
+            "description": "> 200 obrazków na #zrzuty",
+            "achieved": true,
+            "progress": 3715,
+            "threshold": 200,
+            "displayValue": "3715 zrzutów",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "starboard-fame",
+            "label": "Gwiazdor",
+            "description": "100+ wpisów na starboardzie",
+            "achieved": true,
+            "progress": 199,
+            "threshold": 100,
+            "displayValue": "199 wpisów",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "night-owl",
+            "label": "Nocny Marek",
+            "description": "Najbardziej aktywny w nocy (20:00 - 05:00)",
+            "achieved": false,
+            "progress": 0.380295044479768,
+            "threshold": 0.4,
+            "displayValue": "38.0%",
+            "globalPercentage": "33.3%"
+          },
+          {
+            "id": "early-bird",
+            "label": "Ranny Ptaszek",
+            "description": "Wstaje ze słońcem (05:00 - 10:00)",
+            "achieved": false,
+            "progress": 0.010903817730555787,
+            "threshold": 0.4,
+            "displayValue": "1.1%",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "one-channel",
+            "label": "Jednokanałowy Gremlin",
+            "description": "Żyje w jednym kanale (>90% wiadomości)",
+            "achieved": false,
+            "progress": 0.38,
+            "threshold": 0.9,
+            "displayValue": "38.0%",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "emoji-machine",
+            "label": "Fabryka Emoji",
+            "description": "Reaguje na wszystko (>30% wiadomości)",
+            "achieved": false,
+            "progress": 0.09456482333584317,
+            "threshold": 0.3,
+            "displayValue": "9.5%",
+            "globalPercentage": "66.7%"
+          },
+          {
+            "id": "the-editor",
+            "label": "Redaktor Naczelny",
+            "description": "Edytuje >5% wiadomości",
+            "achieved": false,
+            "progress": 0.01274435985387211,
+            "threshold": 0.05,
+            "displayValue": "1.3%",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "gallery-curator",
+            "label": "Kurator Galerii",
+            "description": "Wysyła dużo załączników (>20%)",
+            "achieved": false,
+            "progress": 0.18737276555397528,
+            "threshold": 0.2,
+            "displayValue": "18.7%",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "pinned-celebrity",
+            "label": "Przypięta Gwiazda",
+            "description": "5+ przypiętych wiadomości",
+            "achieved": false,
+            "progress": 1,
+            "threshold": 5,
+            "displayValue": "1 przypiętych",
+            "globalPercentage": "33.3%"
+          },
+          {
+            "id": "ghost",
+            "label": "Duch",
+            "description": "Aktywny często, ale mało pisze (<3 msg/dzień)",
+            "achieved": false,
+            "progress": 103.63872832369943,
+            "threshold": 3,
+            "displayValue": "103.6 msg/dzień",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "react-lord",
+            "label": "Pan Reakcji",
+            "description": "Otrzymuje 2x więcej reakcji niż wysyła wiadomości",
+            "achieved": false,
+            "progress": 0.4339496360746256,
+            "threshold": 2,
+            "displayValue": "15561 reakcji",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "simp",
+            "label": "Wielbiciel",
+            "description": "Uwielbia kogoś (ratio > 5.0)",
+            "achieved": false,
+            "progress": 0,
+            "threshold": 5,
+            "displayValue": "Ratio 0.0",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "the-dj",
+            "label": "DJ Karczmy",
+            "description": "> 100 linków YouTube",
+            "achieved": false,
+            "progress": 0,
+            "threshold": 100,
+            "displayValue": "0 linków",
+            "globalPercentage": "0.0%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "279397680776478720",
+      "profile": {
+        "name": "bari2288",
+        "nickname": "Nick Bariej",
+        "avatarUrl": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512",
+        "isBot": false
+      },
+      "metrics": {
+        "totalMessages": 32193,
+        "rank": 3,
+        "percentile": 99.4,
+        "activeDays": 345,
+        "longestStreak": 345,
+        "mostActiveMonth": 7,
+        "topChannels": [
+          {
+            "id": "875089652518903869",
+            "name": "animowe-dysputy",
+            "category_name": "╭──WEEBOWA IZAKAYA──╮",
+            "type": "GuildTextChat",
+            "count": 8254,
+            "percentage": 26
+          },
+          {
+            "id": "918039801419145277",
+            "name": "kinowo-literacki",
+            "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+            "type": "GuildTextChat",
+            "count": 4751,
+            "percentage": 15
+          },
+          {
+            "id": "1130865669429264456",
+            "name": "fantastyczny-burdel🍯",
+            "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+            "type": "GuildTextChat",
+            "count": 4189,
+            "percentage": 13
+          },
+          {
+            "id": "904454003977502730",
+            "name": "pogawędki",
+            "category_name": "╭──SOCJALNA KARCZMA──╮",
+            "type": "GuildTextChat",
+            "count": 2238,
+            "percentage": 7
+          },
+          {
+            "id": "1043195907258196079",
+            "name": "degenerackie-pogawędki",
+            "category_name": "╭──WEEBOWA IZAKAYA──╮",
+            "type": "GuildTextChat",
+            "count": 1226,
+            "percentage": 4
+          }
+        ],
+        "topWords": [
+          {
+            "word": "https",
+            "count": 2691
+          },
+          {
+            "word": "//x",
+            "count": 1405
+          },
+          {
+            "word": "filmów",
+            "count": 834
+          },
+          {
+            "word": "chyba",
+            "count": 667
+          },
+          {
+            "word": "dobre",
+            "count": 641
+          },
+          {
+            "word": "widzę",
+            "count": 618
+          },
+          {
+            "word": "myślę",
+            "count": 564
+          },
+          {
+            "word": "wsm",
+            "count": 523
+          },
+          {
+            "word": "xdd",
+            "count": 509
+          },
+          {
+            "word": "fajny",
+            "count": 476
+          }
+        ],
+        "topEmojisSent": [
+          {
+            "key": "cocoXD_4",
+            "count": 11109,
+            "emoji_id": "917810523003813948"
+          },
+          {
+            "key": "❤️",
+            "count": 5646,
+            "emoji_id": null
+          },
+          {
+            "key": "😍",
+            "count": 5111,
+            "emoji_id": null
+          },
+          {
+            "key": "vibecat",
+            "count": 440,
+            "emoji_id": "909373540212547594"
+          },
+          {
+            "key": "💗",
+            "count": 392,
+            "emoji_id": null
+          },
+          {
+            "key": "UwUkuraii",
+            "count": 328,
+            "emoji_id": "909841552224972831"
+          },
+          {
+            "key": "👍",
+            "count": 308,
+            "emoji_id": null
+          },
+          {
+            "key": "😳",
+            "count": 277,
+            "emoji_id": null
+          },
+          {
+            "key": "flush",
+            "count": 181,
+            "emoji_id": "1024969310701109308"
+          },
+          {
+            "key": "trollgefk",
+            "count": 107,
+            "emoji_id": "1003285860596338758"
+          }
+        ],
+        "topEmojisReceived": [
+          {
+            "key": "cocoXD",
+            "count": 5262,
+            "emoji_id": "909369353554771989"
+          },
+          {
+            "key": "❤️",
+            "count": 1701,
+            "emoji_id": null
+          },
+          {
+            "key": "😍",
+            "count": 1294,
+            "emoji_id": null
+          },
+          {
+            "key": "💗",
+            "count": 324,
+            "emoji_id": null
+          },
+          {
+            "key": "vibecat",
+            "count": 285,
+            "emoji_id": "909373540212547594"
+          },
+          {
+            "key": "👆",
+            "count": 196,
+            "emoji_id": null
+          },
+          {
+            "key": "trollgefk",
+            "count": 168,
+            "emoji_id": "1003285860596338758"
+          },
+          {
+            "key": "😳",
+            "count": 128,
+            "emoji_id": null
+          },
+          {
+            "key": "Pandapat",
+            "count": 122,
+            "emoji_id": "1056314396713955458"
+          }
+        ],
+        "topMentions": [
+          {
+            "id": "237208084378812416",
+            "name": "tomasz",
+            "avatar_url": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+            "count": 254
+          },
+          {
+            "id": "338642102479224833",
+            "name": "blonzej",
+            "avatar_url": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+            "count": 178
+          },
+          {
+            "id": "284044360192884736",
+            "name": "tlenmlem",
+            "avatar_url": "https://cdn.discordapp.com/avatars/284044360192884736/4c170e9d4554b315eadc8331d6700fbd.png?size=512",
+            "count": 172
+          },
+          {
+            "id": "517766317961510912",
+            "name": "kon7216",
+            "avatar_url": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512",
+            "count": 90
+          },
+          {
+            "id": "877097274021396530",
+            "name": "Pingu",
+            "avatar_url": "https://cdn.discordapp.com/avatars/877097274021396530/e42c3a69ca1506268b00cebb56bd806b.png?size=512",
+            "count": 74
+          }
+        ],
+        "topMentionedBy": [
+          {
+            "id": "338642102479224833",
+            "name": "blonzej",
+            "avatar_url": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+            "count": 491
+          },
+          {
+            "id": "237208084378812416",
+            "name": "tomasz",
+            "avatar_url": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+            "count": 479
+          },
+          {
+            "id": "517766317961510912",
+            "name": "kon7216",
+            "avatar_url": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512",
+            "count": 268
+          },
+          {
+            "id": "284044360192884736",
+            "name": "tlenmlem",
+            "avatar_url": "https://cdn.discordapp.com/avatars/284044360192884736/4c170e9d4554b315eadc8331d6700fbd.png?size=512",
+            "count": 262
+          },
+          {
+            "id": "358585562321387521",
+            "name": "vexklexx",
+            "avatar_url": "https://cdn.discordapp.com/avatars/358585562321387521/ae9ac007f212290ea21650ca3be1c5bf.png?size=512",
+            "count": 150
+          }
+        ],
+        "topRepliesTo": [
+          {
+            "id": "237208084378812416",
+            "name": "tomasz",
+            "avatar_url": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+            "count": 888
+          },
+          {
+            "id": "338642102479224833",
+            "name": "blonzej",
+            "avatar_url": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+            "count": 350
+          },
+          {
+            "id": "284044360192884736",
+            "name": "tlenmlem",
+            "avatar_url": "https://cdn.discordapp.com/avatars/284044360192884736/4c170e9d4554b315eadc8331d6700fbd.png?size=512",
+            "count": 308
+          },
+          {
+            "id": "517766317961510912",
+            "name": "kon7216",
+            "avatar_url": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512",
+            "count": 272
+          },
+          {
+            "id": "125677084319285249",
+            "name": "willq",
+            "avatar_url": "https://cdn.discordapp.com/avatars/125677084319285249/612b660ef4c5d1bc215d836362979481.png?size=512",
+            "count": 196
+          }
+        ],
+        "topRepliedBy": [
+          {
+            "id": "237208084378812416",
+            "name": "tomasz",
+            "avatar_url": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+            "count": 931
+          },
+          {
+            "id": "338642102479224833",
+            "name": "blonzej",
+            "avatar_url": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+            "count": 403
+          },
+          {
+            "id": "517766317961510912",
+            "name": "kon7216",
+            "avatar_url": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512",
+            "count": 297
+          },
+          {
+            "id": "284044360192884736",
+            "name": "tlenmlem",
+            "avatar_url": "https://cdn.discordapp.com/avatars/284044360192884736/4c170e9d4554b315eadc8331d6700fbd.png?size=512",
+            "count": 230
+          },
+          {
+            "id": "797950399541805067",
+            "name": "tsuna_jq",
+            "avatar_url": "https://cdn.discordapp.com/avatars/797950399541805067/8658906fac717ad4289d3f6764455188.png?size=512",
+            "count": 220
+          }
+        ],
+        "topReactors": [
+          {
+            "id": "237208084378812416",
+            "name": "tomasz",
+            "avatar_url": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+            "count": 2409
+          },
+          {
+            "id": "388709668941332480",
+            "name": "_porcelain_",
+            "avatar_url": "https://cdn.discordapp.com/guilds/875086635744763914/users/388709668941332480/avatars/4ee20ce86bc8c4fb5a839bce3db22fb9.png?size=512",
+            "count": 854
+          },
+          {
+            "id": "748305998686453910",
+            "name": "macaron_cure",
+            "avatar_url": "https://cdn.discordapp.com/avatars/748305998686453910/2c593ca809dac2c76e91af47596f1f0c.png?size=512",
+            "count": 650
+          },
+          {
+            "id": "284044360192884736",
+            "name": "tlenmlem",
+            "avatar_url": "https://cdn.discordapp.com/avatars/284044360192884736/4c170e9d4554b315eadc8331d6700fbd.png?size=512",
+            "count": 476
+          },
+          {
+            "id": "273256326279462913",
+            "name": "radonsinclair",
+            "avatar_url": "https://cdn.discordapp.com/avatars/273256326279462913/33b232381fc445873a43389e4026df59.png?size=512",
+            "count": 476
+          }
+        ],
+        "topReactedTo": [
+          {
+            "id": "877097274021396530",
+            "name": "Pingu",
+            "avatar_url": "https://cdn.discordapp.com/avatars/877097274021396530/e42c3a69ca1506268b00cebb56bd806b.png?size=512",
+            "count": 3023
+          },
+          {
+            "id": "237208084378812416",
+            "name": "tomasz",
+            "avatar_url": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+            "count": 2526
+          },
+          {
+            "id": "338642102479224833",
+            "name": "blonzej",
+            "avatar_url": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+            "count": 2039
+          },
+          {
+            "id": "517766317961510912",
+            "name": "kon7216",
+            "avatar_url": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512",
+            "count": 1059
+          },
+          {
+            "id": "256173446050873344",
+            "name": "futon_s_",
+            "avatar_url": "https://cdn.discordapp.com/avatars/256173446050873344/30b3b5b51c7a9ce881590f691144572c.png?size=512",
+            "count": 857
+          }
+        ],
+        "hourlyDistribution": [
+          1347,
+          406,
+          89,
+          5,
+          10,
+          2,
+          14,
+          129,
+          443,
+          795,
+          1537,
+          2082,
+          2499,
+          2540,
+          2244,
+          2380,
+          2024,
+          2042,
+          1891,
+          1997,
+          1827,
+          1835,
+          2177,
+          1878
+        ],
+        "dailyDistribution": [
+          4569,
+          4276,
+          4813,
+          5211,
+          4813,
+          4839,
+          3672
+        ],
+        "monthlyDistribution": [
+          2967,
+          2343,
+          2885,
+          2360,
+          2173,
+          2471,
+          3660,
+          3237,
+          2626,
+          3352,
+          2708,
+          1411
+        ],
+        "avgMessageLength": 39,
+        "avgWordCount": 6,
+        "attachmentCount": 3339,
+        "attachmentStats": {
+          "image": 5165,
+          "video": 26,
+          "audio": 0,
+          "file": 6
+        },
+        "avgTimeToEdit": 1760,
+        "pinnedMessages": 3,
+        "firstMessageTimestamp": "2025-01-01T00:08:16.517+01:00",
+        "lastMessageTimestamp": "2025-12-11T23:50:50.242+01:00",
+        "persona": "Afternoon Chatter",
+        "vocabularyFingerprint": [
+          {
+            "word": "thonkowałem",
+            "score": 26.59537307876403,
+            "count": 6
+          },
+          {
+            "word": "okularsach",
+            "score": 26.59537307876403,
+            "count": 5
+          },
+          {
+            "word": "prwd",
+            "score": 26.59537307876403,
+            "count": 5
+          },
+          {
+            "word": "ohman",
+            "score": 26.59537307876403,
+            "count": 6
+          },
+          {
+            "word": "dengenach",
+            "score": 26.59537307876403,
+            "count": 5
+          }
+        ],
+        "responseLatency": {
+          "median": 213,
+          "average": 6743
+        },
+        "chronotype": {
+          "sleepStart": 2,
+          "sleepEnd": 7,
+          "duration": 5
+        },
+        "sessionAnalysis": {
+          "sessionCount": 2280,
+          "avgSessionLength": 44,
+          "avgAttentionSpan": 201
+        },
+        "interactionAsymmetry": [
+          {
+            "id": "107889688429248512",
+            "name": "jarzyna",
+            "sent": 19,
+            "received": 19,
+            "ratio": 1,
+            "type": "balanced"
+          },
+          {
+            "id": "114097401639206920",
+            "name": "staszek",
+            "sent": 6,
+            "received": 6,
+            "ratio": 1,
+            "type": "balanced"
+          },
+          {
+            "id": "1162716486020890634",
+            "name": "Link Expander",
+            "sent": 7,
+            "received": 7,
+            "ratio": 1,
+            "type": "balanced"
+          }
+        ],
+        "roleInfo": {
+          "topRole": "Admin",
+          "color": "#FF8BBA",
+          "roleCount": 40
+        },
+        "categoryStats": [
+          {
+            "name": "╭──HOBBYSTYCZNY BAR──╮",
+            "count": 12475
+          },
+          {
+            "name": "╭──WEEBOWA IZAKAYA──╮",
+            "count": 11167
+          },
+          {
+            "name": "╭──SOCJALNA KARCZMA──╮",
+            "count": 5853
+          },
+          {
+            "name": "kącik-muzyczny",
+            "count": 902
+          },
+          {
+            "name": "╭── KANAŁY GŁOSOWE ──╮",
+            "count": 711
+          },
+          {
+            "name": "propozycje",
+            "count": 462
+          },
+          {
+            "name": "animowe-dysputy",
+            "count": 226
+          },
+          {
+            "name": "integracja-online",
+            "count": 182
+          },
+          {
+            "name": "╭── ARCHIWUM ──╮",
+            "count": 66
+          },
+          {
+            "name": "międzygatunkowi-recenzenci",
+            "count": 41
+          },
+          {
+            "name": "╭── EIZOUKEN ──╮",
+            "count": 34
+          },
+          {
+            "name": "╭── GRZYBLING ──╮",
+            "count": 27
+          },
+          {
+            "name": "kanał-na-komendy",
+            "count": 18
+          },
+          {
+            "name": "╭── WAŻNE ──╮",
+            "count": 13
+          },
+          {
+            "name": "pokaż-mi-swoje-towary",
+            "count": 8
+          },
+          {
+            "name": "pogawędki",
+            "count": 4
+          },
+          {
+            "name": "kebab-głosowo-tekstowy",
+            "count": 4
+          }
+        ],
+        "entropy": {
+          "value": 3.18,
+          "normalized": 4.48,
+          "persona": "The Explorer"
+        },
+        "contentHabits": {
+          "capsRatio": 0.03702668281924642,
+          "questionRatio": 0.03746155996645233,
+          "spotifyCount": 0,
+          "youtubeCount": 0,
+          "twitterCount": 0,
+          "pixivCount": 0,
+          "gifCount": 343,
+          "screenshotCount": 1790,
+          "totalLinks": 2695
+        },
+        "workLifeBalance": {
+          "weekend": 0.2559873264374243,
+          "weekday": 0.7440126735625757
+        },
+        "networkStats": {
+          "cliqueMembers": [
+            "tomasz",
+            "blonzej",
+            "tlenmlem"
+          ],
+          "uniqueContacts": 116
+        },
+        "voidScore": 1.81,
+        "conversationStarter": 2783,
+        "starboardCount": 142,
+        "badges": [
+          {
+            "id": "work-hours",
+            "label": "Pracownik",
+            "description": "Najbardziej aktywny w godzinach pracy (08:00 - 16:00)",
+            "achieved": true,
+            "progress": 0.5139005373839033,
+            "threshold": 0.4,
+            "displayValue": "51.4%",
+            "globalPercentage": "66.7%"
+          },
+          {
+            "id": "channel-hopper",
+            "label": "Wędrowiec Kanałów",
+            "description": "Aktywny w 5+ kanałach",
+            "achieved": true,
+            "progress": 5,
+            "threshold": 5,
+            "displayValue": "5 kanałów",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "emoji-machine",
+            "label": "Fabryka Emoji",
+            "description": "Reaguje na wszystko (>30% wiadomości)",
+            "achieved": true,
+            "progress": 0.7423663529338677,
+            "threshold": 0.3,
+            "displayValue": "74.2%",
+            "globalPercentage": "66.7%"
+          },
+          {
+            "id": "double-texter",
+            "label": "Podwójny SMS",
+            "description": "Szybkie serie (3 wiadomości w 4s)",
+            "achieved": true,
+            "progress": 33,
+            "threshold": 5,
+            "displayValue": "33 serii",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "trendsetter",
+            "label": "Wyznaczający Trendy",
+            "description": "Jeden z 3 pierwszych przy popularnych postach",
+            "achieved": true,
+            "progress": 522,
+            "threshold": 10,
+            "displayValue": "522 razy",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "conversation-killer",
+            "label": "Zabójca Konwersacji",
+            "description": "Często kończy rozmowy (>50 razy)",
+            "achieved": true,
+            "progress": 1066,
+            "threshold": 50,
+            "displayValue": "1066 razy",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "consistent",
+            "label": "Konsekwentny",
+            "description": "Seria 30 dni z rzędu",
+            "achieved": true,
+            "progress": 345,
+            "threshold": 30,
+            "displayValue": "345 dni",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "screenshot-abuser",
+            "label": "Złodziej Screenshotów",
+            "description": "> 200 obrazków na #zrzuty",
+            "achieved": true,
+            "progress": 1790,
+            "threshold": 200,
+            "displayValue": "1790 zrzutów",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "starboard-fame",
+            "label": "Gwiazdor",
+            "description": "100+ wpisów na starboardzie",
+            "achieved": true,
+            "progress": 142,
+            "threshold": 100,
+            "displayValue": "142 wpisów",
+            "globalPercentage": "100.0%"
+          },
+          {
+            "id": "night-owl",
+            "label": "Nocny Marek",
+            "description": "Najbardziej aktywny w nocy (20:00 - 05:00)",
+            "achieved": false,
+            "progress": 0.2973938433821017,
+            "threshold": 0.4,
+            "displayValue": "29.7%",
+            "globalPercentage": "33.3%"
+          },
+          {
+            "id": "early-bird",
+            "label": "Ranny Ptaszek",
+            "description": "Wstaje ze słońcem (05:00 - 10:00)",
+            "achieved": false,
+            "progress": 0.042959649613269965,
+            "threshold": 0.4,
+            "displayValue": "4.3%",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "one-channel",
+            "label": "Jednokanałowy Gremlin",
+            "description": "Żyje w jednym kanale (>90% wiadomości)",
+            "achieved": false,
+            "progress": 0.26,
+            "threshold": 0.9,
+            "displayValue": "26.0%",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "the-editor",
+            "label": "Redaktor Naczelny",
+            "description": "Edytuje >5% wiadomości",
+            "achieved": false,
+            "progress": 0.021650669400180164,
+            "threshold": 0.05,
+            "displayValue": "2.2%",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "gallery-curator",
+            "label": "Kurator Galerii",
+            "description": "Wysyła dużo załączników (>20%)",
+            "achieved": false,
+            "progress": 0.10371819960861056,
+            "threshold": 0.2,
+            "displayValue": "10.4%",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "pinned-celebrity",
+            "label": "Przypięta Gwiazda",
+            "description": "5+ przypiętych wiadomości",
+            "achieved": false,
+            "progress": 3,
+            "threshold": 5,
+            "displayValue": "3 przypiętych",
+            "globalPercentage": "33.3%"
+          },
+          {
+            "id": "ghost",
+            "label": "Duch",
+            "description": "Aktywny często, ale mało pisze (<3 msg/dzień)",
+            "achieved": false,
+            "progress": 93.31304347826087,
+            "threshold": 3,
+            "displayValue": "93.3 msg/dzień",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "react-lord",
+            "label": "Pan Reakcji",
+            "description": "Otrzymuje 2x więcej reakcji niż wysyła wiadomości",
+            "achieved": false,
+            "progress": 0.2944739539651477,
+            "threshold": 2,
+            "displayValue": "9480 reakcji",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "simp",
+            "label": "Wielbiciel",
+            "description": "Uwielbia kogoś (ratio > 5.0)",
+            "achieved": false,
+            "progress": 0,
+            "threshold": 5,
+            "displayValue": "Ratio 0.0",
+            "globalPercentage": "0.0%"
+          },
+          {
+            "id": "the-dj",
+            "label": "DJ Karczmy",
+            "description": "> 100 linków YouTube",
+            "achieved": false,
+            "progress": 0,
+            "threshold": 100,
+            "displayValue": "0 linków",
+            "globalPercentage": "0.0%"
+          }
+        ]
+      }
+    }
+  ]
+}
