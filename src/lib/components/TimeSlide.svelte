@@ -8,6 +8,11 @@
 		user.metrics.hourlyDistribution.map((h) => (maxHour ? Math.max(5, (h / maxHour) * 100) : 0))
 	);
 
+	const maxMonth = $derived(Math.max(...user.metrics.monthlyDistribution));
+	const monthBars = $derived(
+		user.metrics.monthlyDistribution.map((m) => (maxMonth ? Math.max(5, (m / maxMonth) * 100) : 0))
+	);
+
 	function toggleTooltip(key) {
 		showTooltip[key] = !showTooltip[key];
 	}
@@ -22,10 +27,10 @@
 </script>
 
 <div
-	class="flex h-full flex-col items-center justify-center border-4 border-black bg-chart-4 p-6 text-foreground shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+	class="flex h-full flex-col items-center justify-center border-4 border-black bg-chart-4 p-4 text-foreground shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
 >
 	<div
-		class="relative mb-8 rotate-1 transform border-4 border-black bg-white p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+		class="relative mb-4 rotate-1 transform border-4 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
 	>
 		<button
 			class="absolute top-2 right-2 z-20 h-5 w-5 rounded-full border-2 border-black bg-gray-100 text-[10px] font-bold transition-colors hover:bg-black hover:text-white"
@@ -65,7 +70,7 @@
 		{/if}
 		<p class="mb-2 text-xs font-bold tracking-widest uppercase">Aktywność godzinowa</p>
 		<div
-			class="flex h-36 w-full items-end justify-between gap-[2px] border-b-4 border-black bg-white/50 p-2"
+			class="flex h-28 w-full items-end justify-between gap-[2px] border-b-4 border-black bg-white/50 p-2"
 		>
 			{#each bars as h, i}
 				<div
@@ -130,6 +135,42 @@
 					>
 				</div>
 			{/each}
+		</div>
+	</div>
+
+	<!-- Monthly Chart -->
+	<div class="relative w-full max-w-md pt-2">
+		<button
+			class="absolute top-0 right-0 z-20 h-5 w-5 rounded-full border-2 border-black bg-white/40 text-[10px] font-bold text-black transition-colors hover:bg-black hover:text-white"
+			onmouseenter={() => showTooltipOnHover('monthly')}
+			onmouseleave={() => hideTooltip('monthly')}
+			onclick={() => toggleTooltip('monthly')}
+			type="button">?</button
+		>
+		{#if showTooltip['monthly']}
+			<div
+				class="absolute bottom-full right-0 z-30 mb-2 w-44 rounded-lg border-2 border-black bg-black p-2 text-xs font-bold text-white shadow-lg"
+			>
+				Twoja aktywność w poszczególnych miesiącach roku.
+			</div>
+		{/if}
+		<p class="mb-2 text-center text-xs font-bold tracking-widest uppercase">Aktywność miesięczna</p>
+		<div class="grid grid-cols-12 gap-1 h-12 items-end border-b-2 border-black bg-white/30 px-1 pb-1">
+			{#each monthBars as m, i}
+				<div class="group relative flex h-full w-full flex-col justify-end">
+					<div 
+						class="w-full bg-chart-1 border-x border-t border-black/20 group-hover:bg-accent transition-colors" 
+						style="height: {m}%"
+					></div>
+					<span class="absolute -top-6 left-1/2 -translate-x-1/2 bg-black px-1 text-[8px] font-bold text-white opacity-0 group-hover:opacity-100 whitespace-nowrap z-50">
+						{user.metrics.monthlyDistribution[i]}
+					</span>
+				</div>
+			{/each}
+		</div>
+		<div class="mt-1 flex w-full justify-between px-0.5 text-[8px] font-black uppercase opacity-60">
+			<span>STY</span>
+			<span>GRU</span>
 		</div>
 	</div>
 </div>

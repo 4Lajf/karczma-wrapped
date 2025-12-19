@@ -264,7 +264,7 @@
 				<p class="text-lg leading-tight font-black wrap-break-word">
 					"{user.metrics.topWords
 						.map((w) => w.word)
-						.slice(0, 5)
+						.slice(0, 6)
 						.join(', ')}"
 				</p>
 			</div>
