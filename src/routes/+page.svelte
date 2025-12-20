@@ -10,6 +10,7 @@
 	import ChannelsSlide from '$lib/components/ChannelsSlide.svelte';
 	import DeepStatsSlide from '$lib/components/DeepStatsSlide.svelte';
 	import BadgesSlide from '$lib/components/BadgesSlide.svelte';
+	import SpecialStatsSlide from '$lib/components/SpecialStatsSlide.svelte';
 	import SummarySlide from '$lib/components/SummarySlide.svelte';
 
 	let data = $state(null);
@@ -27,6 +28,7 @@
 		TimeSlide,
 		ChannelsSlide,
 		DeepStatsSlide,
+		SpecialStatsSlide,
 		BadgesSlide,
 		SummarySlide
 	];
@@ -115,10 +117,10 @@
 
 	function getFilteredUsers() {
 		if (!data) return [];
-		if (!searchTerm) return data.users.slice(0, 50);
+		if (!searchTerm) return data.users.slice(0, 100);
 		return data.users
 			.filter((u) => u.profile.name.toLowerCase().includes(searchTerm.toLowerCase()))
-			.slice(0, 50);
+			.slice(0, 100);
 	}
 
 	// V2: Keyboard navigation handler

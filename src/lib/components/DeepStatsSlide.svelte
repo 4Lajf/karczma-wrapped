@@ -71,7 +71,7 @@
 	<h2
 		class="mb-4 -rotate-1 transform border-2 border-white bg-black px-6 py-2 text-3xl font-black tracking-tight text-white uppercase"
 	>
-		Deep Stats 🔬
+		STATYSTYKI
 	</h2>
 
 	<!-- Scroll indicator -->
@@ -190,7 +190,7 @@
 							<div
 								class="flex items-center justify-between border-b-2 border-dashed border-gray-300 pb-2 last:border-0"
 							>
-								<span class="text-lg font-bold text-primary">"{w.word}"</span>
+								<span class="text-lg font-bold text-primary wrap-anywhere">"{w.word}"</span>
 							</div>
 						{/each}
 					</div>
@@ -203,7 +203,7 @@
 							<div
 								class="flex items-center justify-between border-b-2 border-dashed border-gray-300 pb-2 last:border-0"
 							>
-								<span class="text-lg font-bold text-primary">"{w.word}"</span>
+								<span class="text-lg font-bold text-primary wrap-anywhere">"{w.word}"</span>
 							</div>
 						{/each}
 					</div>

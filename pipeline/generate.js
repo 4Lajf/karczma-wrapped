@@ -87,7 +87,7 @@ try {
 const STOPWORDS = new Set([
   'a', 'aby', 'ach', 'acz', 'aczkolwiek', 'aj', 'albo', 'ale', 'alez', 'aleź', 'ani', 'az', 'aż', 'bardziej', 'bardzo', 'beda', 'bedzie', 'bez', 'deda', 'będą', 'bede', 'będę', 'będzie', 'bo', 'bowiem', 'by', 'byc', 'być', 'byl', 'byla', 'byli', 'bylo', 'byly', 'był', 'była', 'było', 'były', 'bynajmniej', 'caly', 'cały', 'ci', 'cie', 'ciebie', 'ciat', 'co', 'cokolwiek', 'cos', 'coś', 'czasami', 'czasem', 'czemu', 'czy', 'czyli', 'daleko', 'dla', 'dlaczego', 'dlatego', 'do', 'dobrze', 'dokad', 'dokąd', 'dosc', 'dość', 'duzo', 'dużo', 'dwa', 'dwaj', 'dwie', 'dwoje', 'dzis', 'dzisiaj', 'dziś', 'dy', 'gdy', 'gdyby', 'gdyz', 'gdyż', 'gdzie', 'gdziekolwiek', 'gdzies', 'gdzieś', 'go', 'i', 'ich', 'ile', 'im', 'inna', 'inne', 'inny', 'innych', 'iz', 'iż', 'ja', 'jak', 'jakas', 'jakaś', 'jakby', 'jaki', 'jakichs', 'jakichś', 'jakie', 'jakis', 'jakiś', 'jako', 'jakos', 'jakoś', 'je', 'jeden', 'jedna', 'jedno', 'jednak', 'jednakze', 'jednakże', 'jego', 'jej', 'jemu', 'jest', 'jestem', 'jeszcze', 'jesli', 'jeśli', 'jezeli', 'jeżeli', 'juz', 'już', 'kazdy', 'każdy', 'kiedy', 'kilka', 'kims', 'kimś', 'kto', 'ktokolwiek', 'ktora', 'ktore', 'ktorego', 'ktorej', 'ktory', 'ktorych', 'ktorym', 'ktorzy', 'ktos', 'ktoś', 'która', 'które', 'którego', 'której', 'który', 'których', 'którym', 'którzy', 'ku', 'lat', 'lecz', 'lub', 'ma', 'mają', 'mało', 'mam', 'mi', 'miedzy', 'między', 'mimo', 'mna', 'mną', 'mnie', 'moga', 'mogą', 'moi', 'moim', 'moj', 'moja', 'moje', 'moze', 'może', 'mozliwe', 'możliwe', 'mozna', 'można', 'mój', 'mu', 'musi', 'my', 'na', 'nad', 'nam', 'nami', 'nas', 'nasi', 'nasz', 'nasza', 'nasze', 'naszego', 'naszych', 'natomiast', 'natychmiast', 'nawet', 'nia', 'nią', 'nic', 'nich', 'nie', 'niech', 'niego', 'niej', 'niemu', 'nigdy', 'nim', 'nimi', 'niz', 'niż', 'no', 'o', 'obok', 'od', 'okolo', 'około', 'on', 'ona', 'one', 'oni', 'ono', 'oraz', 'oto', 'owszem', 'pan', 'pana', 'pani', 'po', 'pod', 'podczas', 'pomimo', 'ponad', 'poniewaz', 'ponieważ', 'powinien', 'powinna', 'powinni', 'powinno', 'poza', 'prawie', 'przeciez', 'przecież', 'przed', 'przede', 'przedtem', 'przez', 'przy', 'roku', 'rowniez', 'również', 'sam', 'sama', 'są', 'sie', 'się', 'skad', 'skąd', 'soba', 'sobą', 'sobie', 'sposob', 'sposób', 'swoje', 'ta', 'tak', 'taka', 'taki', 'takie', 'takze', 'także', 'tam', 'te', 'tego', 'tej', 'temu', 'ten', 'teraz', 'też', 'to', 'toba', 'tobą', 'tobie', 'totez', 'toteż', 'totobą', 'trzeba', 'tu', 'tutaj', 'twoi', 'twoim', 'twoj', 'twoja', 'twoje', 'twój', 'ty', 'tylko', 'tym', 'u', 'w', 'wam', 'wami', 'was', 'wasz', 'wasza', 'wasze', 'we', 'według', 'wiele', 'wielu', 'więc', 'więcej', 'wlasnie', 'właśnie', 'wszyscy', 'wszystkich', 'wszystkie', 'wszystkim', 'wszystko', 'wtedy', 'wy', 'z', 'za', 'zaden', 'zadna', 'zadne', 'zadnych', 'zapewne', 'zawsze', 'ze', 'zeby', 'żeby', 'zez', 'zi', 'znow', 'znowu', 'znów', 'zostal', 'został', 'żaden', 'żadna', 'żadne', 'żadnych', 'że', 'żeby',
   // Conversational fillers
-  'chyba', 'https', 'wiec', 'tez', 'tylko', 'troche', 'trochę', 'moze', 'może', 'jeszcze', 'tutaj', 'wlasnie', 'właśnie', 'potem', 'teraz', 'znowu', 'nawet', 'nagle', 'napisze', 'dobra', 'raz', 'sumie', 'serio', 'naprawde', 'naprawdę', 'ogolnie', 'ogólnie', 'wtedy', 'zawsze', 'nigdy', 'moim', 'zdaniem', 'raczej', 'zbyt', 'bardzo', 'całkiem', 'całkowicie', 'znow', 'znów', 'wiem', 'chce', 'chcę', 'wiedzieć', 'powiedzieć', 'robić', 'robic', 'mówić', 'mowic', 'prostu', 'razie'
+  'chyba', 's=19', 'trollgefk', 'youtube', 'start_radio', 'fixupx', 'vxtwitter', 'ab_channel', 'sessionid', 'seiyuucorner', '_blank', 'shinobuded1', 'shinobuded2', '30**', '909369353554771989><', 'is_from_webapp=1&sender_device=pc&web_id=7476523811413984790', 'gref', 'discordapp', '🇵🇱', 'searchbtn', 'g_st=com', 'cocoxd', 'dogoangery', 'emotethonk', 'anthropic', 's=20', 's=21', 'https', 'wiec', 'tez', 'tylko', 'troche', 'trochę', 'moze', 'może', 'jeszcze', 'tutaj', 'wlasnie', 'właśnie', 'potem', 'teraz', 'znowu', 'nawet', 'nagle', 'napisze', 'dobra', 'raz', 'sumie', 'serio', 'naprawde', 'naprawdę', 'ogolnie', 'ogólnie', 'wtedy', 'zawsze', 'nigdy', 'moim', 'zdaniem', 'raczej', 'zbyt', 'bardzo', 'całkiem', 'całkowicie', 'znow', 'znów', 'wiem', 'chce', 'chcę', 'wiedzieć', 'powiedzieć', 'robić', 'robic', 'mówić', 'mowic', 'prostu', 'razie'
 ]);
 
 // ==================== EMOJI DISCOVERY ====================
@@ -211,12 +211,20 @@ function isLikelyLink(w) {
   return false;
 }
 
-function shortenRepeatedChars(w) {
-  // Look for any character repeated 5+ times
-  // We use a regex that matches a character and its subsequent identical characters
-  return w.replace(/(.)\1{4,}/g, (match, char) => {
-    return char.repeat(4) + `[x${match.length}]`;
-  });
+function isGarbageWord(w) {
+  // Pattern 1: URL parameters like "s=46&t=..." (though aggressive split handles most)
+  if (w.includes('=') || w.includes('&')) return true;
+
+  // Pattern 2: Malformed Discord emojis or numeric IDs ending with >
+  if (w.endsWith('>') || w.startsWith('<')) return true;
+
+  // Pattern 3: Lone numeric IDs (usually fragments of emojis/mentions)
+  if (/^\d{15,20}$/.test(w)) return true;
+
+  // Pattern 4: Discord-specific patterns that sometimes slip through
+  if (w.includes('cdn') || w.includes('discordapp') || w.includes('tenor')) return true;
+
+  return false;
 }
 
 // ==================== ADVANCED METRICS ====================
@@ -234,22 +242,26 @@ function computeVocabularyFingerprint(userId, serverWordFreqs, serverRawWords) {
 
   for (const row of msgs) {
     if (!row.content) continue;
-    const words = row.content.toLowerCase().split(/[\s,.!?":;()\[\]<>]+/);
+    // Strip Discord emojis and mentions before splitting to avoid emoji names appearing as words
+    const cleanContent = row.content.toLowerCase()
+      .replace(/<a?:\w+:\d+>/g, '') // Strip emojis <:name:id>
+      .replace(/<@!?\d+>/g, '')     // Strip user mentions
+      .replace(/<#\d+>/g, '');      // Strip channel mentions
+
+    const words = cleanContent.split(/[\s,.!?":;()\[\]<>{}|\\/+=*&^%$#@~`]+/);
     for (let w of words) {
       // Skip short words, stopwords, URLs, mentions, numbers
       if ((w.length < 4 && w !== 'uwu' && w !== 'owo') || STOPWORDS.has(w)) continue;
-      if (w.startsWith('@') || w.startsWith('#') || isLikelyLink(w)) continue;
+      if (isLikelyLink(w) || isGarbageWord(w)) continue;
       if (/^\d+$/.test(w)) continue;
 
       const s = getStem(w);
       if (s.length < 3 && s !== 'uwu' && s !== 'owo') continue;
 
-      const displayWord = shortenRepeatedChars(w);
-
       userWordCount[s] = (userWordCount[s] || 0) + 1;
       // Store the raw word for display
       if (!userRawWords[s]) userRawWords[s] = {};
-      userRawWords[s][displayWord] = (userRawWords[s][displayWord] || 0) + 1;
+      userRawWords[s][w] = (userRawWords[s][w] || 0) + 1;
       userTotalWords++;
     }
   }
@@ -467,6 +479,7 @@ function computeReactionRelationships(userId) {
         JOIN messages m ON r.message_id = m.id
         JOIN users u ON r.user_id = u.id
         WHERE m.author_id = ? AND strftime('%Y', m.timestamp, 'localtime') = ?
+        AND u.name != 'Link Expander'
         GROUP BY r.user_id
         ORDER BY count DESC
         LIMIT 5
@@ -478,6 +491,7 @@ function computeReactionRelationships(userId) {
         JOIN messages m ON r.message_id = m.id
         JOIN users u ON m.author_id = u.id
         WHERE r.user_id = ? AND strftime('%Y', m.timestamp, 'localtime') = ?
+        AND u.name != 'Link Expander'
         GROUP BY m.author_id
         ORDER BY count DESC
         LIMIT 5
@@ -487,6 +501,168 @@ function computeReactionRelationships(userId) {
 }
 
 // ==================== NEW ADVANCED METRICS (2025 UPDATE) ====================
+
+const COCOXD_IDS = [
+  '909369353554771989',
+  '729822486799319071',
+  '917810523003813948',
+  '932416113902485544',
+  '1389334877807313076',
+  '1324140637372682260'
+];
+
+const IGNORED_EMOJI_IDS = [
+  '942868829854384148',
+  '1443166033144975400',
+  '1324140863487610921',
+  '914627053486211092',
+  '1020667496346427393',
+  '1003285860596338758',
+  '1056314396713955458',
+  '1324140679785480284',
+  '867302170775781376'
+];
+
+const IGNORED_EMOJI_NAMES = [
+  '🚬'
+];
+
+function computeFunniestMessages(userId, guildId) {
+  console.log(`  Computing funniest messages (cocoxd)...`);
+  // Top 3 messages with most "cocoxd" reactions
+  const funniest = db.prepare(`
+    SELECT m.id, m.content, m.channel_id, m.attachment_urls, COUNT(r.message_id) as reaction_count
+    FROM messages m
+    JOIN reactions r ON m.id = r.message_id
+    WHERE m.author_id = ? 
+    AND (r.emoji_id IN (${COCOXD_IDS.map(id => `'${id}'`).join(',')}) OR LOWER(r.emoji_name) LIKE '%cocoxd%')
+    AND strftime('%Y', m.timestamp, 'localtime') = ?
+    GROUP BY m.id
+    ORDER BY reaction_count DESC
+    LIMIT 15
+  `).all(userId, TARGET_YEAR.toString());
+
+  return funniest.map(msg => {
+    // Get all reactions for this message to display them
+    const reactions = db.prepare(`
+      SELECT emoji_id, emoji_name, COUNT(*) as count
+      FROM reactions
+      WHERE message_id = ?
+      GROUP BY emoji_id, emoji_name
+      ORDER BY count DESC
+    `).all(msg.id);
+
+    return {
+      id: msg.id,
+      content: msg.content,
+      count: msg.reaction_count,
+      link: `https://discord.com/channels/${guildId}/${msg.channel_id}/${msg.id}`,
+      attachments: msg.attachment_urls ? JSON.parse(msg.attachment_urls) : [],
+      reactions
+    };
+  });
+}
+
+function computeMostReactedMessages(userId, guildId) {
+  console.log(`  Computing most reacted messages (single emoji type)...`);
+  // Find top messages based on the highest count of a SINGLE emoji type
+  const excludedIds = [...COCOXD_IDS, ...IGNORED_EMOJI_IDS];
+
+  // Use a subquery to find the best reaction type for each message first
+  const mostReacted = db.prepare(`
+    SELECT id, content, channel_id, attachment_urls, emoji_name, emoji_id, max_count
+    FROM (
+      SELECT m.id, m.content, m.channel_id, m.attachment_urls, r.emoji_name, r.emoji_id, COUNT(*) as max_count,
+             ROW_NUMBER() OVER (PARTITION BY m.id ORDER BY COUNT(*) DESC) as rn
+      FROM messages m
+      JOIN reactions r ON m.id = r.message_id
+      WHERE m.author_id = ? 
+      AND (r.emoji_id NOT IN (${excludedIds.map(id => `'${id}'`).join(',')}) OR r.emoji_id IS NULL)
+      AND r.emoji_name NOT IN (${IGNORED_EMOJI_NAMES.map(name => `'${name}'`).join(',')})
+      AND LOWER(r.emoji_name) NOT LIKE '%cocoxd%'
+      AND strftime('%Y', m.timestamp, 'localtime') = ?
+      GROUP BY m.id, r.emoji_name, r.emoji_id
+    )
+    WHERE rn = 1
+    ORDER BY max_count DESC
+    LIMIT 15
+  `).all(userId, TARGET_YEAR.toString());
+
+  return mostReacted.map(msg => {
+    const reactions = db.prepare(`
+      SELECT emoji_id, emoji_name, COUNT(*) as count
+      FROM reactions
+      WHERE message_id = ?
+      GROUP BY emoji_id, emoji_name
+      ORDER BY count DESC
+    `).all(msg.id);
+
+    return {
+      id: msg.id,
+      content: msg.content,
+      emoji_name: msg.emoji_name,
+      emoji_id: msg.emoji_id,
+      count: msg.max_count,
+      link: `https://discord.com/channels/${guildId}/${msg.channel_id}/${msg.id}`,
+      attachments: msg.attachment_urls ? JSON.parse(msg.attachment_urls) : [],
+      reactions
+    };
+  });
+}
+
+function computeLongestMessage(userId, guildId) {
+  console.log(`  Computing longest message...`);
+  const longest = db.prepare(`
+    SELECT id, content, channel_id, char_count
+    FROM messages
+    WHERE author_id = ? AND strftime('%Y', timestamp, 'localtime') = ?
+    ORDER BY char_count DESC
+    LIMIT 1
+  `).get(userId, TARGET_YEAR.toString());
+
+  if (!longest) return null;
+
+  return {
+    id: longest.id,
+    content: longest.content.substring(0, 100) + (longest.content.length > 100 ? '...' : ''),
+    char_count: longest.char_count,
+    link: `https://discord.com/channels/${guildId}/${longest.channel_id}/${longest.id}`
+  };
+}
+
+function computeMostRepliedToMessage(userId, guildId) {
+  console.log(`  Computing most replied to message...`);
+  // This user's message that received the most replies from others
+  const mostRepliedTo = db.prepare(`
+    SELECT m1.id, m1.content, m1.channel_id, m1.attachment_urls, COUNT(m2.id) as reply_count
+    FROM messages m1
+    JOIN messages m2 ON m1.id = m2.reply_to_msg_id
+    WHERE m1.author_id = ? AND m2.author_id != ?
+    AND strftime('%Y', m1.timestamp, 'localtime') = ?
+    GROUP BY m1.id
+    ORDER BY reply_count DESC
+    LIMIT 1
+  `).get(userId, userId, TARGET_YEAR.toString());
+
+  if (!mostRepliedTo) return null;
+
+  const reactions = db.prepare(`
+    SELECT emoji_id, emoji_name, COUNT(*) as count
+    FROM reactions
+    WHERE message_id = ?
+    GROUP BY emoji_id, emoji_name
+    ORDER BY count DESC
+  `).all(mostRepliedTo.id);
+
+  return {
+    id: mostRepliedTo.id,
+    content: mostRepliedTo.content,
+    count: mostRepliedTo.reply_count,
+    link: `https://discord.com/channels/${guildId}/${mostRepliedTo.channel_id}/${mostRepliedTo.id}`,
+    attachments: mostRepliedTo.attachment_urls ? JSON.parse(mostRepliedTo.attachment_urls) : [],
+    reactions
+  };
+}
 
 function computeRoleAnalytics(userId) {
   const user = db.prepare('SELECT roles FROM users WHERE id = ?').get(userId);
@@ -884,14 +1060,15 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
   });
 
   // 3. Channel Hopper
+  const significantChannels = m.topChannels.filter(c => c.percentage >= 5).length;
   allBadges.push({
     id: 'channel-hopper',
     label: 'Wędrowiec Kanałów',
-    description: 'Aktywność w 5+ kanałach',
-    achieved: m.topChannels.length >= 5,
-    progress: m.topChannels.length,
+    description: 'Aktywność w 5+ kanałach (min. 5% w każdym)',
+    achieved: significantChannels >= 5,
+    progress: significantChannels,
     threshold: 5,
-    displayValue: `${m.topChannels.length} kanałów`
+    displayValue: `${significantChannels} kanałów`
   });
 
   // 4. One Channel Gremlin
@@ -912,7 +1089,7 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
   allBadges.push({
     id: 'emoji-machine',
     label: 'Fabryka Emoji',
-    description: 'Reaguje na wszystko (>30% wiadomości)',
+    description: 'Używasz emoji w ponad 30% aktywności',
     achieved: reactionRatio > 0.3,
     progress: reactionRatio,
     threshold: 0.3,
@@ -951,10 +1128,10 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
   allBadges.push({
     id: 'pinned-celebrity',
     label: 'Przypięta Gwiazda',
-    description: '5+ przypiętych wiadomości',
-    achieved: m.pinnedMessages > 5,
+    description: '3+ przypiętych wiadomości',
+    achieved: m.pinnedMessages >= 3,
     progress: m.pinnedMessages,
-    threshold: 5,
+    threshold: 3,
     displayValue: `${m.pinnedMessages} przypiętych`
   });
 
@@ -1012,7 +1189,7 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
   allBadges.push({
     id: 'react-lord',
     label: 'Mistrz Reakcji',
-    description: 'Średnio 1 reakcja na każde 5 wiadomości',
+    description: 'Otrzymujesz średnio 1 reakcję na każde 5 wiadomości',
     achieved: receivedRatio >= 0.2,
     progress: receivedRatio,
     threshold: 0.2,
@@ -1050,10 +1227,10 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
   allBadges.push({
     id: 'conversation-killer',
     label: 'Pogromca Konwersacji',
-    description: 'Ostatnia wiadomość w rozmowie - min. 100 razy',
-    achieved: m.killerCount >= 100,
+    description: 'Ostatnia wiadomość w rozmowie - min. 50 razy',
+    achieved: m.killerCount >= 50,
     progress: m.killerCount,
-    threshold: 100,
+    threshold: 50,
     displayValue: `${m.killerCount} razy`
   });
 
@@ -1096,10 +1273,10 @@ function computeAdvancedBadges(userId, metrics, guildStats) {
   allBadges.push({
     id: 'starboard-fame',
     label: 'Gwiazda Starboardu',
-    description: '100+ wpisów na starboardzie',
-    achieved: starboardCount >= 100,
+    description: '50+ wpisów na starboardzie',
+    achieved: starboardCount >= 50,
     progress: starboardCount,
-    threshold: 100,
+    threshold: 50,
     displayValue: `${starboardCount} wpisów`
   });
 
@@ -1181,14 +1358,20 @@ function computeContentStats(userId, rawWordsMap) {
 
   for (const row of msgs) {
     if (!row.content) continue;
-    const words = row.content.toLowerCase().split(/[\s,.!?":;()]+/);
+    // Strip Discord emojis and mentions before splitting
+    const cleanContent = row.content.toLowerCase()
+      .replace(/<a?:\w+:\d+>/g, '') // Strip emojis <:name:id>
+      .replace(/<@!?\d+>/g, '')     // Strip user mentions
+      .replace(/<#\d+>/g, '');      // Strip channel mentions
+
+    const words = cleanContent.split(/[\s,.!?":;()\[\]<>{}|\\/+=*&^%$#@~`]+/);
     for (let w of words) {
       if ((w.length < 4 && w !== 'uwu' && w !== 'owo') || STOPWORDS.has(w)) continue;
-      if (isLikelyLink(w)) continue;
+      if (isLikelyLink(w) || isGarbageWord(w)) continue;
+      if (/^\d+$/.test(w)) continue;
       const s = getStem(w);
-      const displayWord = shortenRepeatedChars(w);
       wordCounts[s] = (wordCounts[s] || 0) + 1;
-      if (!rawWords[s]) rawWords[s] = displayWord;
+      if (!rawWords[s]) rawWords[s] = w;
     }
   }
 
@@ -1242,12 +1425,14 @@ function computeInlineEmojis(userId) {
 }
 
 function computeRepliesMetrics(userId) {
+  console.log(`  Computing replies metrics for ${userId}...`);
   const repliesTo = db.prepare(`
         SELECT u.id, u.name, u.avatar_url, COUNT(*) as count
         FROM messages m1
         JOIN messages m2 ON m1.reply_to_msg_id = m2.id
         JOIN users u ON m2.author_id = u.id
         WHERE m1.author_id = ? AND strftime('%Y', m1.timestamp, 'localtime') = ?
+        AND u.name != 'Link Expander'
         GROUP BY u.id
         ORDER BY count DESC
         LIMIT 5
@@ -1258,11 +1443,16 @@ function computeRepliesMetrics(userId) {
         FROM messages m1
         JOIN messages m2 ON m2.reply_to_msg_id = m1.id
         JOIN users u ON m2.author_id = u.id
-        WHERE m1.author_id = ? AND strftime('%Y', m1.timestamp, 'localtime') = ?
+        WHERE m1.author_id = ? AND strftime('%Y', m2.timestamp, 'localtime') = ?
+        AND u.name != 'Link Expander'
         GROUP BY u.id
         ORDER BY count DESC
         LIMIT 5
     `).all(userId, TARGET_YEAR.toString());
+
+  if (repliesTo.length > 0 && repliedBy.length > 0 && repliesTo[0].id === repliedBy[0].id && repliesTo[0].count === repliedBy[0].count) {
+    console.log(`    ⚠️  REPLY DEBUG [${userId}]: Symmetry detected with ${repliesTo[0].name} (${repliesTo[0].count} replies)`);
+  }
 
   return { repliesTo, repliedBy };
 }
@@ -1312,10 +1502,17 @@ async function generate() {
   const serverWordFreqs = { _total: 0 };
   for (const row of allMessages) {
     if (!row.content) continue;
-    const words = row.content.toLowerCase().split(/[\s,.!?":;()]+/);
+    // Strip Discord emojis and mentions before splitting to avoid emoji names appearing as words
+    const cleanContent = row.content.toLowerCase()
+      .replace(/<a?:\w+:\d+>/g, '') // Strip emojis <:name:id>
+      .replace(/<@!?\d+>/g, '')     // Strip user mentions
+      .replace(/<#\d+>/g, '');      // Strip channel mentions
+
+    const words = cleanContent.split(/[\s,.!?":;()\[\]<>{}|\\/+=*&^%$#@~`]+/);
     for (let w of words) {
       if ((w.length < 4 && w !== 'uwu' && w !== 'owo') || STOPWORDS.has(w)) continue;
-      if (isLikelyLink(w)) continue;
+      if (isLikelyLink(w) || isGarbageWord(w)) continue;
+      if (/^\d+$/.test(w)) continue;
       const s = getStem(w);
       if (s.length < 3 && s !== 'uwu' && s !== 'owo') continue;
       serverWordFreqs[s] = (serverWordFreqs[s] || 0) + 1;
@@ -1341,7 +1538,9 @@ async function generate() {
         LIMIT 10
     `).all(TARGET_YEAR.toString());
 
-  const guildName = db.prepare('SELECT guild_name FROM channels LIMIT 1').get()?.guild_name || 'Fantastyczna Karczma';
+  const guildInfo = db.prepare('SELECT guild_id, guild_name FROM channels LIMIT 1').get() || { guild_id: '0', guild_name: 'Fantastyczna Karczma' };
+  const guildId = guildInfo.guild_id;
+  const guildName = guildInfo.guild_name;
 
   const activeUsers = db.prepare(`
         SELECT u.id, u.name, u.nickname, u.avatar_url, u.is_bot, COUNT(m.id) as msg_count
@@ -1415,6 +1614,7 @@ async function generate() {
             JOIN messages m ON mn.message_id = m.id
             JOIN users u ON mn.mentioned_user_id = u.id
             WHERE m.author_id = ? AND strftime('%Y', m.timestamp, 'localtime') = ?
+            AND u.name != 'Link Expander'
             GROUP BY u.id
             ORDER BY count DESC
             LIMIT 5
@@ -1426,6 +1626,7 @@ async function generate() {
             JOIN messages m ON mn.message_id = m.id
             JOIN users u ON m.author_id = u.id
             WHERE mn.mentioned_user_id = ? AND strftime('%Y', m.timestamp, 'localtime') = ?
+            AND u.name != 'Link Expander'
             GROUP BY u.id
             ORDER BY count DESC
             LIMIT 5
@@ -1647,8 +1848,20 @@ async function generate() {
     // Starboard count - lookup by username (case insensitive)
     const userStarboardCount = starboardCounts[u.name.toLowerCase()] || 0;
 
+    const totalStats = db.prepare(`
+            SELECT SUM(char_count) as total_char, SUM(word_count) as total_word
+            FROM messages
+            WHERE author_id = ? AND strftime('%Y', timestamp, 'localtime') = ?
+        `).get(u.id, TARGET_YEAR.toString());
+
+    const totalWords = totalStats.total_word || 0;
+    const typingSpeedWPM = 40;
+    const typingTimeMinutes = Math.round(totalWords / typingSpeedWPM);
+
     const metricsObj = {
       totalMessages: u.msg_count,
+      totalWords,
+      typingTimeMinutes,
       rank,
       percentile,
       activeDays,
@@ -1693,6 +1906,10 @@ async function generate() {
       conversationStarter: computeConversationStarter(u.id),
       killerCount: conversationKills[u.id] || 0,
       starboardCount: userStarboardCount,
+      funniestMessages: computeFunniestMessages(u.id, guildId),
+      mostReactedMessages: computeMostReactedMessages(u.id, guildId),
+      longestMessage: computeLongestMessage(u.id, guildId),
+      mostRepliedToMessage: computeMostRepliedToMessage(u.id, guildId),
       badges: []
     };
 

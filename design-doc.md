@@ -162,10 +162,10 @@ Examples (rules are conceptual and can be tuned later):
 - **Early Bird** – majority of messages early in the morning.
 - **Emoji Machine** – very high proportion of emoji usage.
 - **React Lord** – unusually high reaction counts received.
-- **Channel Hopper** – active in many different channels.
+- **Channel Hopper** – active in at least 5 channels with min. 5% activity in each.
 - **One-Channel Gremlin** – the vast majority of messages in a single channel.
 - **The Editor** - Edited > 5% of their messages.
-- **The Pinned Celebrity** - Has an unusually high number of pinned messages.
+- **The Pinned Celebrity** - Has at least 3 pinned messages.
 - **Gallery Curator** - High ratio of attachments/images posted.
 - **Trendsetter** - Often the first to react to a message that later goes viral (>5 reactions).
 - **Conversation Killer** - Frequently the last person to post in a channel for > 6 hours.

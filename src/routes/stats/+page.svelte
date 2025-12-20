@@ -45,6 +45,7 @@
 	let hourlyCanvas = $state(null);
 	let weeklyCanvas = $state(null);
 	let timeOfDayCanvas = $state(null);
+	let networkPage = $state(0);
 
 	let charts = [];
 
@@ -309,8 +310,10 @@
 
 				<div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
 					<div class="border-4 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-						<div class="text-3xl font-black">{stats.guild.activeUsers}</div>
-						<div class="text-xs font-bold text-gray-500 uppercase">Aktywnych Osób</div>
+						<div class="text-3xl font-black">
+							{Math.round((stats.guild.timeSpentTypingMinutes || 0) / 60).toLocaleString()}h
+						</div>
+						<div class="text-xs font-bold text-gray-500 uppercase">Czas Pisania</div>
 					</div>
 					<div class="border-4 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
 						<div class="text-3xl font-black">{stats.guild.totalMessages.toLocaleString()}</div>
@@ -318,9 +321,9 @@
 					</div>
 					<div class="border-4 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
 						<div class="text-3xl font-black">
-							{Math.round(stats.globalAverages.avgMessageLength)}
+							{stats.guild.totalWords ? (stats.guild.totalWords / 1000).toFixed(0) + 'k' : '0'}
 						</div>
-						<div class="text-xs font-bold text-gray-500 uppercase">Śr. Długość</div>
+						<div class="text-xs font-bold text-gray-500 uppercase">Wysłanych Słów</div>
 					</div>
 					<div class="border-4 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
 						<div class="text-3xl font-black">
@@ -334,10 +337,13 @@
 			<!-- HALL OF FAME -->
 			<section>
 				<h2
-					class="mb-8 inline-block border-4 border-black bg-accent px-6 py-2 text-3xl font-black uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
+					class="mb-2 inline-block border-4 border-black bg-accent px-6 py-2 text-3xl font-black uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
 				>
 					🏆 Hall of Fame
 				</h2>
+				<p class="mb-8 text-xs font-bold text-gray-500 uppercase">
+					Jeden użytkownik może zdobyć tylko jedno wyróżnienie w tej sekcji.
+				</p>
 				<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 					{#each stats.hallOfFame as record}
 						<div
@@ -405,10 +411,10 @@
 			<section class="border-4 border-black bg-white p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
 				<h2 class="mb-2 text-3xl font-black uppercase italic">🤝 Najlepsze Duety</h2>
 				<p class="mb-8 text-sm font-bold text-gray-500 uppercase">
-					Obliczone na podstawie wzajemnych odpowiedzi (replies) w ciągu całego roku.
+					Obliczone na podstawie wzajemnych odpowiedzi w ciągu całego roku.
 				</p>
 				<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-					{#each stats.interactionNetwork as pair}
+					{#each stats.interactionNetwork.slice(networkPage * 12, (networkPage + 1) * 12) as pair}
 						<div
 							class="flex items-center justify-between border-4 border-black bg-accent/10 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
 						>
@@ -437,6 +443,21 @@
 						</div>
 					{/each}
 				</div>
+
+				{#if stats.interactionNetwork.length > 12}
+					<div class="mt-8 flex justify-center gap-2">
+						{#each Array(Math.min(5, Math.ceil(stats.interactionNetwork.length / 12))) as _, i}
+							<button
+								onclick={() => (networkPage = i)}
+								class="h-10 w-10 border-4 border-black font-black transition-all {networkPage === i
+									? 'bg-black text-white'
+									: 'bg-white text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]'}"
+							>
+								{i + 1}
+							</button>
+						{/each}
+					</div>
+				{/if}
 			</section>
 
 			<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -522,7 +543,7 @@
 			<section
 				class="border-4 border-black bg-white p-8 text-center shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
 			>
-				<h2 class="mb-8 text-3xl font-black uppercase italic">😂 Top Emotki</h2>
+				<h2 class="mb-8 text-3xl font-black uppercase italic">Top Emotki</h2>
 				<div class="flex flex-wrap justify-center gap-6">
 					{#each stats.emojis.slice(0, 30) as emoji}
 						<div
@@ -544,8 +565,12 @@
 								/>
 							{/if}
 							<div class="flex flex-col items-start">
-								<span class="text-lg leading-none font-black">{emoji.name}</span>
-								<span class="text-xs font-bold text-gray-500 uppercase">{emoji.count}</span>
+								<span class="text-lg leading-none font-black"
+									>{emoji.name}{emoji.server ? ` (${emoji.server})` : ''}</span
+								>
+								<span class="text-xs font-bold text-gray-500 uppercase"
+									>{emoji.count.toLocaleString()}</span
+								>
 							</div>
 						</div>
 					{/each}
@@ -556,7 +581,7 @@
 			<section
 				class="border-4 border-black bg-black p-8 text-center shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
 			>
-				<h2 class="mb-12 text-3xl font-black text-white uppercase italic">💬 Słownik Karczmy</h2>
+				<h2 class="mb-12 text-3xl font-black text-white uppercase italic">Słownik Karczmy</h2>
 				<div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
 					{#each stats.wordCloud as word}
 						<span
@@ -577,7 +602,7 @@
 			<!-- TIME OF DAY -->
 			<section class="border-4 border-black bg-white p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
 				<h2 class="mb-8 text-center text-3xl font-black uppercase italic">
-					⌛ Kiedy żyje Karczma?
+					Kiedy żyje Karczma?
 				</h2>
 				<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
 					<div class="h-64 border-4 border-black bg-white p-4">

@@ -52,13 +52,14 @@ function prepareStatements() {
     `);
 
   stmts.insertMessage = db.prepare(`
-        INSERT INTO messages (id, channel_id, author_id, content, timestamp, timestamp_edited, type, is_pinned, reply_to_msg_id, word_count, char_count, has_attachments, attachment_types)
-        VALUES (@id, @channelId, @authorId, @content, @timestamp, @timestampEdited, @type, @isPinned, @replyToMsgId, @wordCount, @charCount, @hasAttachments, @attachmentTypes)
+        INSERT INTO messages (id, channel_id, author_id, content, timestamp, timestamp_edited, type, is_pinned, reply_to_msg_id, word_count, char_count, has_attachments, attachment_types, attachment_urls)
+        VALUES (@id, @channelId, @authorId, @content, @timestamp, @timestampEdited, @type, @isPinned, @replyToMsgId, @wordCount, @charCount, @hasAttachments, @attachmentTypes, @attachmentUrls)
         ON CONFLICT(id) DO UPDATE SET
             channel_id=excluded.channel_id,
             content=excluded.content,
             has_attachments=excluded.has_attachments,
-            attachment_types=excluded.attachment_types
+            attachment_types=excluded.attachment_types,
+            attachment_urls=excluded.attachment_urls
     `);
 
   stmts.insertMention = db.prepare(`
@@ -194,6 +195,12 @@ async function processFile(filePath) {
           return 'file';
         }).join(',');
 
+        const attachmentUrls = (msg.attachments || []).map(a => ({
+          url: a.url,
+          name: a.fileName,
+          type: a.contentType ? a.contentType.split('/')[0] : 'file'
+        }));
+
         stmts.insertMessage.run({
           id: msg.id,
           channelId: channelId,
@@ -207,7 +214,8 @@ async function processFile(filePath) {
           wordCount: content.split(/\s+/).filter(w => w.length > 0).length,
           charCount: content.length,
           hasAttachments: (msg.attachments && msg.attachments.length > 0) ? 1 : 0,
-          attachmentTypes: attachmentTypes
+          attachmentTypes: attachmentTypes,
+          attachmentUrls: JSON.stringify(attachmentUrls)
         });
 
         // Mentions

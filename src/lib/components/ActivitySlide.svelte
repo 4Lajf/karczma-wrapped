@@ -62,7 +62,11 @@
 				</p>
 			{:else}
 				<p class="text-6xl font-black text-primary">Top {topPercent}%</p>
-				<p class="text-lg font-bold">Jesteś w topce serwera!</p>
+				{#if parseFloat(topPercent) <= 3}
+					<p class="text-lg font-bold">Jesteś w topce serwera!</p>
+				{:else}
+					<p class="text-lg font-bold">Dobra robota!</p>
+				{/if}
 			{/if}
 			<p class="mt-2 text-sm text-muted-foreground">
 				{#if isNumberOne}

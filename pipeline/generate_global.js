@@ -33,9 +33,18 @@ function isLikelyLink(w) {
     return false;
 }
 
+function isGarbageWord(w) {
+    if (w.includes('=') || w.includes('&')) return true;
+    if (w.endsWith('>') || w.startsWith('<')) return true;
+    if (/^\d{15,20}$/.test(w)) return true;
+    if (w.includes('cdn') || w.includes('discordapp') || w.includes('tenor')) return true;
+    return false;
+}
+
 function shortenRepeatedChars(w) {
+    // Format: "p...p" to indicate the repeated character clearly
     return w.replace(/(.)\1{4,}/g, (match, char) => {
-        return char.repeat(4) + `[x${match.length}]`;
+        return `${char}...${char}`;
     });
 }
 
@@ -79,7 +88,8 @@ function stem(word) {
 const STOPWORDS = new Set([
     'i', 'w', 'z', 'na', 'do', 'ze', 'za', 'o', 'a', 'ale', 'te', 'to', 'jest', 'jak', 'nie', 'tak', 'co', 'po', 'od', 'tym', 'czy', 'bo', 'się', 'ma', 'są', 'będzie', 'było', 'mnie', 'ci', 'mu', 'jej', 'im', 'nam', 'wam', 'ten', 'ta', 'tego', 'tej', 'dla', 'lub', 'ani', 'gdy', 'już', 'może', 'będą', 'kto', 'gdzie', 'kiedy', 'nic', 'wszystko',
     'albo', 'bardzo', 'bez', 'być', 'ciebie', 'czemu', 'dlaczego', 'dziś', 'go', 'ja', 'je', 'jego', 'jeszcze', 'każdy', 'kogo', 'który', 'mam', 'mi', 'mój', 'moje', 'moim', 'my', 'nad', 'nas', 'nawet', 'niech', 'niż', 'no', 'ona', 'one', 'oni', 'ono', 'pan', 'pani', 'pod', 'ponad', 'przed', 'przez', 'przy', 'sam', 'sobą', 'sobie', 'tam', 'teraz', 'to', 'tobą', 'tobie', 'tu', 'twoje', 'twoim', 'twój', 'ty', 'tylko', 'więc', 'właśnie', 'wszyscy', 'wy', 'wiele', 'żaden', 'zawsze', 'że', 'żeby', 'wiem', 'chce', 'chcę', 'wiedzieć', 'powiedzieć', 'robić', 'robic', 'mówić', 'mowic',
-    'które', 'która', 'którego', 'której', 'którym', 'którzy', 'mną', 'tobą', 'sobą', 'naszym', 'waszym', 'ich', 'jego', 'jej', 'nam', 'wam', 'mamy', 'macie', 'mają', 'miał', 'miała', 'mieli', 'był', 'była', 'było', 'byli'
+    'które', 'która', 'którego', 'której', 'którym', 'którzy', 'mną', 'tobą', 'sobą', 'naszym', 'waszym', 'ich', 'jego', 'jej', 'nam', 'wam', 'mamy', 'macie', 'mają', 'miał', 'miała', 'mieli', 'był', 'była', 'było', 'byli',
+    'status', 'vxtwitter', 'view', 'attachments', 'youtube', 'watch'
 ]);
 
 // --- Metrics ---
@@ -159,9 +169,15 @@ function getGlobalWords(userFilter = '') {
 
     for (const row of msgs) {
         if (!row.content) continue;
-        const words = row.content.toLowerCase().split(/[\s,.!?":;()\[\]<>{}|\\/+=*&^%$#@~`]+/);
+        // Strip Discord emojis and mentions before splitting
+        const cleanContent = row.content.toLowerCase()
+            .replace(/<a?:\w+:\d+>/g, '') // Strip emojis <:name:id>
+            .replace(/<@!?\d+>/g, '')     // Strip user mentions
+            .replace(/<#\d+>/g, '');      // Strip channel mentions
+
+        const words = cleanContent.split(/[\s,.!?":;()\[\]<>{}|\\/+=*&^%$#@~`]+/);
         for (const w of words) {
-            if (!w || isLikelyLink(w) || w.includes('tenor') || w.includes('discord') || w.includes('www')) continue;
+            if (!w || isLikelyLink(w) || isGarbageWord(w) || w.includes('tenor') || w.includes('discord') || w.includes('www')) continue;
             if (/^\d+$/.test(w) || w.length > 15) continue;
             if ((w.length < 4 && w !== 'uwu' && w !== 'owo' && w !== 'xd') || STOPWORDS.has(w)) continue;
 
@@ -264,13 +280,24 @@ function getEmojiStats(userFilter = '') {
         WHERE message_id IN (SELECT id FROM messages WHERE strftime('%Y', timestamp) = ?${userFilter})
         GROUP BY emoji_name, emoji_id
         ORDER BY count DESC
-        LIMIT 50
+        LIMIT 100
     `).all(TARGET_YEAR.toString());
 
-    // Trigger downloads for top emojis
-    topEmojis.forEach(e => downloadEmoji(e.id));
+    // Add server differentiation for specific emojis
+    const differentiated = topEmojis.map(e => {
+        if (e.id === '909369353554771989') return { ...e, server: 'Karczma' };
+        if (e.id === '729822486799319071') return { ...e, server: 'Vtuberkowy' };
+        return e;
+    });
 
-    return topEmojis;
+    // Trigger downloads for top emojis
+    console.log('\n--- TOP 5 EMOJIS DEBUG ---');
+    differentiated.slice(0, 5).forEach((e, idx) => console.log(`[${idx}]`, JSON.stringify(e, null, 2)));
+    console.log('--------------------------\n');
+
+    differentiated.forEach(e => downloadEmoji(e.id));
+
+    return differentiated;
 }
 
 function getMostActiveDay(userFilter = '') {
@@ -305,7 +332,7 @@ function getInteractionNetwork(userFilter = '') {
 
     const topPairs = Object.entries(pairs)
         .sort((a, b) => b[1] - a[1])
-        .slice(0, 12);
+        .slice(0, 60);
 
     const result = [];
     const nameStmt = db.prepare('SELECT name, avatar_url FROM users WHERE id = ?');
@@ -328,10 +355,33 @@ function getInteractionNetwork(userFilter = '') {
 function getHallOfFame(userFilter = '') {
     console.log('Computing Hall of Fame...');
     const year = TARGET_YEAR.toString();
+    const assignedUserIds = new Set();
 
-    const getTopUser = (query, label, valueFormatter = v => v) => {
-        const res = db.prepare(query).get(year);
+    const getTopUser = (query, label, valueFormatter = v => v, skipIds = new Set()) => {
+        let sql = query;
+        let idField = 'author_id';
+        if (sql.includes('user_id')) idField = 'user_id';
+        if (sql.includes('m.author_id')) idField = 'm.author_id';
+
+        if (skipIds.size > 0) {
+            const placeholders = Array.from(skipIds).map(id => `'${id}'`).join(',');
+            // Insert NOT IN clause before GROUP BY or ORDER BY
+            if (sql.includes('GROUP BY')) {
+                sql = sql.replace('GROUP BY', `AND ${idField} NOT IN (${placeholders}) GROUP BY`);
+            } else if (sql.includes('ORDER BY')) {
+                // If no group by, we might need a WHERE clause adjustment
+                if (sql.includes('WHERE')) {
+                    sql = sql.replace('ORDER BY', `AND ${idField} NOT IN (${placeholders}) ORDER BY`);
+                } else {
+                    sql = sql.replace('ORDER BY', `WHERE ${idField} NOT IN (${placeholders}) ORDER BY`);
+                }
+            }
+        }
+
+        const res = db.prepare(sql).get(year);
         if (!res) return null;
+
+        assignedUserIds.add(res.id);
         const user = db.prepare('SELECT name, avatar_url FROM users WHERE id = ?').get(res.id);
         return {
             title: label,
@@ -340,7 +390,7 @@ function getHallOfFame(userFilter = '') {
         };
     };
 
-    const findOmnipresent = (filter = '') => {
+    const findOmnipresent = (filter = '', skipIds = new Set()) => {
         const userChannels = db.prepare(`
             SELECT author_id, channel_id, COUNT(*) as count
             FROM messages
@@ -354,69 +404,70 @@ function getHallOfFame(userFilter = '') {
         for (const row of userChannels) {
             userTotals[row.author_id] = (userTotals[row.author_id] || 0) + row.count;
             if (!userChannelData[row.author_id]) userChannelData[row.author_id] = [];
-            userChannelData[row.author_id].push(row.count);
+            userChannelData[row.author_id].push({ channel_id: row.channel_id, count: row.count });
         }
 
         let bestUser = null;
-        let maxEntropy = -1;
+        let maxSignificantChannels = -1;
 
-        for (const [userId, counts] of Object.entries(userChannelData)) {
+        for (const [userId, channels] of Object.entries(userChannelData)) {
+            if (skipIds.has(userId)) continue;
+
             const total = userTotals[userId];
-            if (total < 100) continue; // Minimum activity threshold
+            if (total < 500) continue; // Higher threshold for omnipresent
 
-            let entropy = 0;
-            for (const count of counts) {
-                const p = count / total;
-                if (p > 0) entropy -= p * Math.log2(p);
-            }
+            // Logic: Count channels where (msgs >= 200) AND (msgs >= 1% of total)
+            const significantChannels = channels.filter(c => c.count >= 200 && (c.count / total) >= 0.01).length;
 
-            if (entropy > maxEntropy) {
-                maxEntropy = entropy;
-                bestUser = { id: userId, val: counts.length, entropy };
+            if (significantChannels > maxSignificantChannels) {
+                maxSignificantChannels = significantChannels;
+                bestUser = { id: userId, val: significantChannels };
             }
         }
 
-        if (!bestUser) return null;
+        if (!bestUser || maxSignificantChannels === 0) return null;
+
+        assignedUserIds.add(bestUser.id);
         const user = db.prepare('SELECT name, avatar_url FROM users WHERE id = ?').get(bestUser.id);
         return {
-            title: 'Omnipresent',
+            title: 'Wszechobecny',
             user: { name: user?.name, avatar: user?.avatar_url },
-            value: `${bestUser.val} channels`
+            value: `w ${bestUser.val} kanałach`
         };
     };
 
-    return [
-        getTopUser(`
-            SELECT author_id as id, COUNT(*) as val FROM messages 
-            WHERE strftime('%Y', timestamp) = ?${userFilter} GROUP BY author_id ORDER BY val DESC LIMIT 1
-        `, 'Chatterbox', v => `${v.toLocaleString()} msgs`),
+    const chatterbox = getTopUser(`
+        SELECT author_id as id, COUNT(*) as val FROM messages 
+        WHERE strftime('%Y', timestamp) = ?${userFilter} GROUP BY author_id ORDER BY val DESC LIMIT 1
+    `, 'Gaduła', v => `${v.toLocaleString()} wiadomości`, assignedUserIds);
 
-        getTopUser(`
-            SELECT author_id as id, SUM(word_count) as val FROM messages 
-            WHERE strftime('%Y', timestamp) = ?${userFilter} GROUP BY author_id ORDER BY val DESC LIMIT 1
-        `, 'Yap God', v => `${v.toLocaleString()} words`),
+    const yapGod = getTopUser(`
+        SELECT author_id as id, SUM(word_count) as val FROM messages 
+        WHERE strftime('%Y', timestamp) = ?${userFilter} GROUP BY author_id ORDER BY val DESC LIMIT 1
+    `, 'Mistrz Yappowania', v => `${v.toLocaleString()} słów`, assignedUserIds);
 
-        getTopUser(`
-            SELECT m.author_id as id, COUNT(*) as val FROM reactions r
-            JOIN messages m ON r.message_id = m.id
-            WHERE strftime('%Y', m.timestamp) = ?${userFilter.replace(/author_id/g, 'm.author_id')} 
-            GROUP BY m.author_id ORDER BY val DESC LIMIT 1
-        `, 'Reaction Farmer', v => `${v.toLocaleString()} reactions`),
+    const reactionFarmer = getTopUser(`
+        SELECT m.author_id as id, COUNT(*) as val FROM reactions r
+        JOIN messages m ON r.message_id = m.id
+        WHERE strftime('%Y', m.timestamp) = ?${userFilter.replace(/author_id/g, 'm.author_id')} 
+        GROUP BY m.author_id ORDER BY val DESC LIMIT 1
+    `, 'Farmer Reakcji', v => `${v.toLocaleString()} otrzymanych reakcji`, assignedUserIds);
 
-        getTopUser(`
-            SELECT author_id as id, COUNT(*) as val FROM messages 
-            WHERE strftime('%Y', timestamp) = ? AND has_attachments = 1${userFilter} 
-            GROUP BY author_id ORDER BY val DESC LIMIT 1
-        `, 'Media Mogul', v => `${v.toLocaleString()} files`),
+    const mediaMogul = getTopUser(`
+        SELECT author_id as id, COUNT(*) as val FROM messages 
+        WHERE strftime('%Y', timestamp) = ? AND has_attachments = 1${userFilter} 
+        GROUP BY author_id ORDER BY val DESC LIMIT 1
+    `, 'Potentat Mediowy', v => `${v.toLocaleString()} plików`, assignedUserIds);
 
-        findOmnipresent(userFilter),
+    const omnipresent = findOmnipresent(userFilter, assignedUserIds);
 
-        getTopUser(`
-            SELECT user_id as id, COUNT(*) as val FROM reactions
-            WHERE message_id IN (SELECT id FROM messages WHERE strftime('%Y', timestamp) = ?${userFilter})
-            GROUP BY user_id ORDER BY val DESC LIMIT 1
-        `, 'Serial Reactor', v => `${v.toLocaleString()} reacts sent`)
-    ].filter(x => x !== null);
+    const serialReactor = getTopUser(`
+        SELECT user_id as id, COUNT(*) as val FROM reactions
+        WHERE message_id IN (SELECT id FROM messages WHERE strftime('%Y', timestamp) = ?${userFilter})
+        GROUP BY user_id ORDER BY val DESC LIMIT 1
+    `, 'Seryjny Reaktor', v => `${v.toLocaleString()} wysłanych reakcji`, assignedUserIds);
+
+    return [chatterbox, yapGod, reactionFarmer, mediaMogul, omnipresent, serialReactor].filter(x => x !== null);
 }
 
 function getTimeOfDayStats(userFilter = '') {
@@ -475,6 +526,11 @@ function generateGlobal() {
         }
     }
 
+    const totalMessages = db.prepare(`SELECT COUNT(*) as count FROM messages WHERE strftime('%Y', timestamp) = ?${userFilter}`).get(TARGET_YEAR.toString()).count;
+    const totalWords = db.prepare(`SELECT SUM(word_count) as val FROM messages WHERE strftime('%Y', timestamp) = ?${userFilter}`).get(TARGET_YEAR.toString())?.val || 0;
+    const typingSpeedWPM = 40;
+    const timeSpentTypingMinutes = totalWords / typingSpeedWPM;
+
     const stats = {
         meta: {
             generatedAt: new Date().toISOString(),
@@ -485,7 +541,9 @@ function generateGlobal() {
         guild: {
             name: "Fantastyczna Karczma",
             activeUsers: db.prepare(`SELECT COUNT(DISTINCT author_id) as count FROM messages WHERE strftime('%Y', timestamp) = ?${userFilter}`).get(TARGET_YEAR.toString()).count,
-            totalMessages: db.prepare(`SELECT COUNT(*) as count FROM messages WHERE strftime('%Y', timestamp) = ?${userFilter}`).get(TARGET_YEAR.toString()).count,
+            totalMessages,
+            totalWords,
+            timeSpentTypingMinutes
         },
         timeline: getTimeline(userFilter),
         hourlyHeatmap: getHourlyHeatmap(userFilter),
@@ -503,6 +561,7 @@ function generateGlobal() {
 
         globalAverages: {
             avgMessageLength: db.prepare(`SELECT AVG(char_count) as val FROM messages WHERE strftime('%Y', timestamp) = ?${userFilter}`).get(TARGET_YEAR.toString())?.val || 0,
+            totalWords,
             totalReactions: db.prepare(`SELECT COUNT(*) as count FROM reactions WHERE message_id IN (SELECT id FROM messages WHERE strftime('%Y', timestamp) = ?${userFilter})`).get(TARGET_YEAR.toString())?.count || 0,
             totalMentions: db.prepare(`SELECT COUNT(*) as count FROM mentions WHERE message_id IN (SELECT id FROM messages WHERE strftime('%Y', timestamp) = ?${userFilter})`).get(TARGET_YEAR.toString())?.count || 0
         },

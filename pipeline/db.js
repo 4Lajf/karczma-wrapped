@@ -98,6 +98,9 @@ export function initDB() {
         db.exec('ALTER TABLE messages ADD COLUMN attachment_types TEXT');
     } catch (e) { }
     try {
+        db.exec('ALTER TABLE messages ADD COLUMN attachment_urls TEXT');
+    } catch (e) { }
+    try {
         db.exec('ALTER TABLE channels ADD COLUMN category_name TEXT');
         db.exec('ALTER TABLE channels ADD COLUMN type TEXT');
     } catch (e) { }
