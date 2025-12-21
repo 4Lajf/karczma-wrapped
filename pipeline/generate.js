@@ -87,7 +87,7 @@ try {
 const STOPWORDS = new Set([
   'a', 'aby', 'ach', 'acz', 'aczkolwiek', 'aj', 'albo', 'ale', 'alez', 'aleź', 'ani', 'az', 'aż', 'bardziej', 'bardzo', 'beda', 'bedzie', 'bez', 'deda', 'będą', 'bede', 'będę', 'będzie', 'bo', 'bowiem', 'by', 'byc', 'być', 'byl', 'byla', 'byli', 'bylo', 'byly', 'był', 'była', 'było', 'były', 'bynajmniej', 'caly', 'cały', 'ci', 'cie', 'ciebie', 'ciat', 'co', 'cokolwiek', 'cos', 'coś', 'czasami', 'czasem', 'czemu', 'czy', 'czyli', 'daleko', 'dla', 'dlaczego', 'dlatego', 'do', 'dobrze', 'dokad', 'dokąd', 'dosc', 'dość', 'duzo', 'dużo', 'dwa', 'dwaj', 'dwie', 'dwoje', 'dzis', 'dzisiaj', 'dziś', 'dy', 'gdy', 'gdyby', 'gdyz', 'gdyż', 'gdzie', 'gdziekolwiek', 'gdzies', 'gdzieś', 'go', 'i', 'ich', 'ile', 'im', 'inna', 'inne', 'inny', 'innych', 'iz', 'iż', 'ja', 'jak', 'jakas', 'jakaś', 'jakby', 'jaki', 'jakichs', 'jakichś', 'jakie', 'jakis', 'jakiś', 'jako', 'jakos', 'jakoś', 'je', 'jeden', 'jedna', 'jedno', 'jednak', 'jednakze', 'jednakże', 'jego', 'jej', 'jemu', 'jest', 'jestem', 'jeszcze', 'jesli', 'jeśli', 'jezeli', 'jeżeli', 'juz', 'już', 'kazdy', 'każdy', 'kiedy', 'kilka', 'kims', 'kimś', 'kto', 'ktokolwiek', 'ktora', 'ktore', 'ktorego', 'ktorej', 'ktory', 'ktorych', 'ktorym', 'ktorzy', 'ktos', 'ktoś', 'która', 'które', 'którego', 'której', 'który', 'których', 'którym', 'którzy', 'ku', 'lat', 'lecz', 'lub', 'ma', 'mają', 'mało', 'mam', 'mi', 'miedzy', 'między', 'mimo', 'mna', 'mną', 'mnie', 'moga', 'mogą', 'moi', 'moim', 'moj', 'moja', 'moje', 'moze', 'może', 'mozliwe', 'możliwe', 'mozna', 'można', 'mój', 'mu', 'musi', 'my', 'na', 'nad', 'nam', 'nami', 'nas', 'nasi', 'nasz', 'nasza', 'nasze', 'naszego', 'naszych', 'natomiast', 'natychmiast', 'nawet', 'nia', 'nią', 'nic', 'nich', 'nie', 'niech', 'niego', 'niej', 'niemu', 'nigdy', 'nim', 'nimi', 'niz', 'niż', 'no', 'o', 'obok', 'od', 'okolo', 'około', 'on', 'ona', 'one', 'oni', 'ono', 'oraz', 'oto', 'owszem', 'pan', 'pana', 'pani', 'po', 'pod', 'podczas', 'pomimo', 'ponad', 'poniewaz', 'ponieważ', 'powinien', 'powinna', 'powinni', 'powinno', 'poza', 'prawie', 'przeciez', 'przecież', 'przed', 'przede', 'przedtem', 'przez', 'przy', 'roku', 'rowniez', 'również', 'sam', 'sama', 'są', 'sie', 'się', 'skad', 'skąd', 'soba', 'sobą', 'sobie', 'sposob', 'sposób', 'swoje', 'ta', 'tak', 'taka', 'taki', 'takie', 'takze', 'także', 'tam', 'te', 'tego', 'tej', 'temu', 'ten', 'teraz', 'też', 'to', 'toba', 'tobą', 'tobie', 'totez', 'toteż', 'totobą', 'trzeba', 'tu', 'tutaj', 'twoi', 'twoim', 'twoj', 'twoja', 'twoje', 'twój', 'ty', 'tylko', 'tym', 'u', 'w', 'wam', 'wami', 'was', 'wasz', 'wasza', 'wasze', 'we', 'według', 'wiele', 'wielu', 'więc', 'więcej', 'wlasnie', 'właśnie', 'wszyscy', 'wszystkich', 'wszystkie', 'wszystkim', 'wszystko', 'wtedy', 'wy', 'z', 'za', 'zaden', 'zadna', 'zadne', 'zadnych', 'zapewne', 'zawsze', 'ze', 'zeby', 'żeby', 'zez', 'zi', 'znow', 'znowu', 'znów', 'zostal', 'został', 'żaden', 'żadna', 'żadne', 'żadnych', 'że', 'żeby',
   // Conversational fillers
-  'chyba', 's=19', 'trollgefk', 'youtube', 'start_radio', 'fixupx', 'vxtwitter', 'ab_channel', 'sessionid', 'seiyuucorner', '_blank', 'shinobuded1', 'shinobuded2', '30**', '909369353554771989><', 'is_from_webapp=1&sender_device=pc&web_id=7476523811413984790', 'gref', 'discordapp', '🇵🇱', 'searchbtn', 'g_st=com', 'cocoxd', 'dogoangery', 'emotethonk', 'anthropic', 's=20', 's=21', 'https', 'wiec', 'tez', 'tylko', 'troche', 'trochę', 'moze', 'może', 'jeszcze', 'tutaj', 'wlasnie', 'właśnie', 'potem', 'teraz', 'znowu', 'nawet', 'nagle', 'napisze', 'dobra', 'raz', 'sumie', 'serio', 'naprawde', 'naprawdę', 'ogolnie', 'ogólnie', 'wtedy', 'zawsze', 'nigdy', 'moim', 'zdaniem', 'raczej', 'zbyt', 'bardzo', 'całkiem', 'całkowicie', 'znow', 'znów', 'wiem', 'chce', 'chcę', 'wiedzieć', 'powiedzieć', 'robić', 'robic', 'mówić', 'mowic', 'prostu', 'razie'
+  'chyba', 's=19', 'trollgefk', 'youtube', 'qt_iw4yb22jfxrnx3q6eug', 'ezgif-1-458e83eb9c', 'sakamoto_store', 'start_radio', 'fixupx', 'medicos_et_02', 'kaiyodo_pr', 'bilety24', '27s_gate_3', 'hatsune-miku-miku-hatsune-miku-hatsune-washing-machine-gif-4863029126409914383', 'sorry-gif-22861535', 'nero-devil-may-cry-nero-dmc-dmc-devilmaycry-gif-5266084179185635046', 'cat-wiggle-crazy-cat-zoomies-gif-987735829864339346', 'hiding-spooked-sad-crying-cold-gif-15759512', 'teto-kasane-teto-bald-explosion-explode-gif-6656963363388285940', 'kegf3rsj6thrccde4xenvq', 'bocchi_goods', 'sbeaeba-gif-133119280752873140', 'amane_bushi', 'lft4vjtv471cfkd1scuzaw', 'sagafro2', 'vxtwitter', 'ab_channel', 'sessionid', 'seiyuucorner', '_blank', 'shinobuded1', 'shinobuded2', '30**', '909369353554771989><', 'is_from_webapp=1&sender_device=pc&web_id=7476523811413984790', 'gref', 'discordapp', '🇵🇱', 'searchbtn', 'g_st=com', 'cocoxd', 'dogoangery', 'emotethonk', 'anthropic', 's=20', 's=21', 'https', 'wiec', 'tez', 'tylko', 'troche', 'trochę', 'moze', 'może', 'jeszcze', 'tutaj', 'wlasnie', 'właśnie', 'potem', 'teraz', 'znowu', 'nawet', 'nagle', 'napisze', 'dobra', 'raz', 'sumie', 'serio', 'naprawde', 'naprawdę', 'ogolnie', 'ogólnie', 'wtedy', 'zawsze', 'nigdy', 'moim', 'zdaniem', 'raczej', 'zbyt', 'bardzo', 'całkiem', 'całkowicie', 'znow', 'znów', 'wiem', 'chce', 'chcę', 'wiedzieć', 'powiedzieć', 'robić', 'robic', 'mówić', 'mowic', 'prostu', 'razie'
 ]);
 
 // ==================== EMOJI DISCOVERY ====================
@@ -855,6 +855,98 @@ function computeContentHabits(userId) {
   };
 }
 
+function computeTopGifs(userId) {
+  console.log(`  Computing top GIFs for ${userId}...`);
+  const msgs = db.prepare(`
+    SELECT content, attachment_urls, attachment_types
+    FROM messages 
+    WHERE author_id = ? AND strftime('%Y', timestamp, 'localtime') = ?
+    AND (
+      content LIKE '%tenor.com%' 
+      OR content LIKE '%giphy.com%' 
+      OR content LIKE '%.gif%'
+      OR attachment_types LIKE '%gif%'
+    )
+  `).all(userId, TARGET_YEAR.toString());
+
+  if (msgs.length === 0) return [];
+
+  const gifCounts = {};
+  // Improved regex to catch:
+  // 1. Tenor/Giphy links (any path)
+  // 2. Direct .gif links (ignoring query params for grouping)
+  const linkRegex = /https?:\/\/[^\s]+(?:\.gif(?:[?#][^\s]*)?|tenor\.com\/[^\s]+|giphy\.com\/[^\s]+)/gi;
+
+  let totalGifsFound = 0;
+
+  for (const row of msgs) {
+    // 1. Check content for links
+    if (row.content) {
+      const links = row.content.match(linkRegex);
+      if (links) {
+        for (const link of links) {
+          // Normalize link: strip query parameters for .gif files to group them
+          // But keep them for tenor/giphy as they might be important or just handle them as is
+          // Actually, for tenor/giphy, usually the ID is in the path.
+          // Let's strip query params for all to be safe for grouping.
+          let cleanLink = link;
+          try {
+            const urlObj = new URL(link);
+            urlObj.search = '';
+            urlObj.hash = '';
+            cleanLink = urlObj.toString();
+          } catch (e) {
+            // If invalid URL, just use original
+          }
+
+          gifCounts[cleanLink] = (gifCounts[cleanLink] || 0) + 1;
+          totalGifsFound++;
+        }
+      }
+    }
+
+    // 2. Check attachments for GIFs
+    if (row.attachment_urls && row.attachment_types && row.attachment_types.includes('gif')) {
+      const urls = row.attachment_urls.split(',');
+      const types = row.attachment_types.split(',');
+
+      for (let i = 0; i < types.length; i++) {
+        if (types[i].toLowerCase().includes('gif') && urls[i]) {
+          let gifUrl = urls[i].trim();
+          // Normalize attachment URL too
+          try {
+            const urlObj = new URL(gifUrl);
+            urlObj.search = '';
+            urlObj.hash = '';
+            gifUrl = urlObj.toString();
+          } catch (e) { }
+
+          gifCounts[gifUrl] = (gifCounts[gifUrl] || 0) + 1;
+          totalGifsFound++;
+        }
+      }
+    }
+  }
+
+  console.log(`    Found ${totalGifsFound} total GIF candidates.`);
+
+  // Convert to array and sort
+  const sortedGifs = Object.entries(gifCounts)
+    .map(([url, count]) => ({ url, count }))
+    .sort((a, b) => b.count - a.count)
+    .filter(g => g.count >= 5) // Keep threshold at 5
+    .slice(0, 5); // Top 5
+
+  if (sortedGifs.length > 0) {
+    console.log(`    🏆 Top GIF: ${sortedGifs[0].url} (${sortedGifs[0].count} times)`);
+    console.log(`    Found ${sortedGifs.length} GIFs matching criteria.`);
+    return sortedGifs;
+  } else {
+    console.log(`    No GIFs found with count >= 5.`);
+    return [];
+  }
+}
+
 function computeWorkLifeBalance(userId) {
   // Weekend vs Weekday
   const days = db.prepare(`
@@ -889,10 +981,11 @@ function computeNetworkStats(userId) {
     FROM messages m1
     JOIN messages m2 ON m1.reply_to_msg_id = m2.id
     WHERE m1.author_id = ? AND strftime('%Y', m1.timestamp, 'localtime') = ?
+    AND m2.author_id != ?
     GROUP BY m2.author_id
     ORDER BY count DESC
     LIMIT 10
-  `).all(userId, TARGET_YEAR.toString());
+  `).all(userId, TARGET_YEAR.toString(), userId);
 
   let cliqueScore = 0;
   const cliqueMembers = [];
@@ -925,7 +1018,8 @@ function computeNetworkStats(userId) {
     FROM messages m1
     JOIN messages m2 ON m1.reply_to_msg_id = m2.id
     WHERE m1.author_id = ? AND strftime('%Y', m1.timestamp, 'localtime') = ?
-  `).get(userId, TARGET_YEAR.toString()).count;
+    AND m2.author_id != ?
+  `).get(userId, TARGET_YEAR.toString(), userId).count;
 
   return { cliqueMembers: cliqueMembers.slice(0, 3), uniqueContacts };
 }
@@ -1433,10 +1527,11 @@ function computeRepliesMetrics(userId) {
         JOIN users u ON m2.author_id = u.id
         WHERE m1.author_id = ? AND strftime('%Y', m1.timestamp, 'localtime') = ?
         AND u.name != 'Link Expander'
+        AND u.id != ?
         GROUP BY u.id
         ORDER BY count DESC
         LIMIT 5
-    `).all(userId, TARGET_YEAR.toString());
+    `).all(userId, TARGET_YEAR.toString(), userId);
 
   const repliedBy = db.prepare(`
         SELECT u.id, u.name, u.avatar_url, COUNT(*) as count
@@ -1445,10 +1540,11 @@ function computeRepliesMetrics(userId) {
         JOIN users u ON m2.author_id = u.id
         WHERE m1.author_id = ? AND strftime('%Y', m2.timestamp, 'localtime') = ?
         AND u.name != 'Link Expander'
+        AND u.id != ?
         GROUP BY u.id
         ORDER BY count DESC
         LIMIT 5
-    `).all(userId, TARGET_YEAR.toString());
+    `).all(userId, TARGET_YEAR.toString(), userId);
 
   if (repliesTo.length > 0 && repliedBy.length > 0 && repliesTo[0].id === repliedBy[0].id && repliesTo[0].count === repliedBy[0].count) {
     console.log(`    ⚠️  REPLY DEBUG [${userId}]: Symmetry detected with ${repliesTo[0].name} (${repliesTo[0].count} replies)`);
@@ -1615,10 +1711,11 @@ async function generate() {
             JOIN users u ON mn.mentioned_user_id = u.id
             WHERE m.author_id = ? AND strftime('%Y', m.timestamp, 'localtime') = ?
             AND u.name != 'Link Expander'
+            AND u.id != ?
             GROUP BY u.id
             ORDER BY count DESC
             LIMIT 5
-        `).all(u.id, TARGET_YEAR.toString());
+        `).all(u.id, TARGET_YEAR.toString(), u.id);
 
     const topMentionedBy = db.prepare(`
             SELECT u.id, u.name, u.avatar_url, COUNT(*) as count
@@ -1627,10 +1724,11 @@ async function generate() {
             JOIN users u ON m.author_id = u.id
             WHERE mn.mentioned_user_id = ? AND strftime('%Y', m.timestamp, 'localtime') = ?
             AND u.name != 'Link Expander'
+            AND u.id != ?
             GROUP BY u.id
             ORDER BY count DESC
             LIMIT 5
-        `).all(u.id, TARGET_YEAR.toString());
+        `).all(u.id, TARGET_YEAR.toString(), u.id);
 
     const { repliesTo, repliedBy } = computeRepliesMetrics(u.id);
     const { topReactors, topReactedTo } = computeReactionRelationships(u.id);
@@ -1910,6 +2008,7 @@ async function generate() {
       mostReactedMessages: computeMostReactedMessages(u.id, guildId),
       longestMessage: computeLongestMessage(u.id, guildId),
       mostRepliedToMessage: computeMostRepliedToMessage(u.id, guildId),
+      topGifs: computeTopGifs(u.id),
       badges: []
     };
 

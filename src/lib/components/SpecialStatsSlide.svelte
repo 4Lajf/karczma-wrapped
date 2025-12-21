@@ -7,15 +7,21 @@
 	const mostRepliedToMessage = $derived(user.metrics.mostRepliedToMessage);
 	const totalWords = $derived(user.metrics.totalWords || 0);
 	const typingTime = $derived(user.metrics.typingTimeMinutes || 0);
+	const topGifs = $derived(user.metrics.topGifs || []);
 	const topRepliesTo = $derived(user.metrics.topRepliesTo?.[0]);
 	const topRepliedBy = $derived(user.metrics.topRepliedBy?.[0]);
 
 	let funnyPage = $state(0);
 	let reactedPage = $state(0);
+	let gifPage = $state(0);
 	const itemsPerPage = 3;
+
+	// Copy state
+	let copied = $state(false);
 
 	const displayedFunniest = $derived(funniestMessages.slice(funnyPage * itemsPerPage, (funnyPage + 1) * itemsPerPage));
 	const displayedReacted = $derived(mostReactedMessages.slice(reactedPage * itemsPerPage, (reactedPage + 1) * itemsPerPage));
+	const currentGif = $derived(topGifs[gifPage]);
 
 	function formatTypingTime(minutes) {
 		if (minutes < 60) return `${minutes} min`;
@@ -42,6 +48,23 @@
 			urls.push(`https://cdn.discordapp.com/emojis/${match[1]}.png`);
 		}
 		return urls;
+	}
+
+	function getGifName(url) {
+		if (!url) return 'GIF';
+		try {
+			const filename = url.split('/').pop();
+			return filename.replace(/\.(gif|mp4|webm|png|jpg|jpeg)$/i, '');
+		} catch (e) {
+			return 'GIF';
+		}
+	}
+
+	function handleCopy() {
+		if (!currentGif?.url) return;
+		navigator.clipboard.writeText(currentGif.url);
+		copied = true;
+		setTimeout(() => copied = false, 2000);
 	}
 </script>
 
@@ -92,6 +115,59 @@
 			</div>
 			<p class="mt-2 text-[8px] italic opacity-70">*szacowane przy 40 WPM</p>
 		</div>
+
+		<!-- Top GIF Section -->
+		{#if topGifs.length > 0}
+			<div class="border-4 border-black bg-purple-200 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+				<div class="mb-3 flex items-center justify-between">
+					<h3 class="text-xs font-black uppercase text-purple-900">Twój Ulubiony GIF</h3>
+					<!-- Pagination Controls -->
+					{#if topGifs.length > 1}
+						<div class="flex items-center gap-2">
+							<button 
+								onclick={() => { gifPage = Math.max(0, gifPage - 1); copied = false; }}
+								disabled={gifPage === 0}
+								class="flex h-6 w-6 items-center justify-center border-2 border-black bg-white/50 font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none disabled:opacity-30"
+							>
+								&larr;
+							</button>
+							<span class="text-[10px] font-bold text-purple-900">{gifPage + 1}/{topGifs.length}</span>
+							<button 
+								onclick={() => { gifPage = Math.min(topGifs.length - 1, gifPage + 1); copied = false; }}
+								disabled={gifPage >= topGifs.length - 1}
+								class="flex h-6 w-6 items-center justify-center border-2 border-black bg-white/50 font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none disabled:opacity-30"
+							>
+								&rarr;
+							</button>
+						</div>
+					{/if}
+				</div>
+				<div class="flex flex-col items-center gap-3">
+					<div class="bg-white p-4 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] w-full text-center">
+						<p class="text-sm font-black text-purple-600 mb-2">{currentGif.count} RAZY!</p>
+						
+						<!-- Name Prominently -->
+						<h4 class="text-xl font-black uppercase break-all leading-tight mb-2">
+							{getGifName(currentGif.url)}
+						</h4>
+
+						<!-- Instruction -->
+						<p class="text-[10px] text-gray-500 mb-3 italic">
+							Nie można wyświetlić GIFa.<br/>
+							Wklej link na Discorda aby go zobaczyć.
+						</p>
+
+						<!-- Copy Button -->
+						<button 
+							onclick={handleCopy}
+							class="w-full py-2 bg-black text-white font-bold uppercase text-xs hover:bg-gray-800 active:scale-95 transition-transform"
+						>
+							{copied ? 'SKOPIOWANO!' : 'SKOPIUJ LINK'}
+						</button>
+					</div>
+				</div>
+			</div>
+		{/if}
 
 		<!-- Funniest Messages -->
 		{#if funniestMessages.length > 0}
