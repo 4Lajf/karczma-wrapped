@@ -357,6 +357,16 @@ function getHallOfFame(userFilter = '') {
     const year = TARGET_YEAR.toString();
     const assignedUserIds = new Set();
 
+    // Exclude specific users by name
+    const excludedNames = ['Pingu'];
+    for (const name of excludedNames) {
+        const user = db.prepare('SELECT id FROM users WHERE name = ?').get(name);
+        if (user) {
+            assignedUserIds.add(user.id);
+            console.log(`    🚫 Excluding ${name} (${user.id}) from Hall of Fame`);
+        }
+    }
+
     const getTopUser = (query, label, valueFormatter = v => v, skipIds = new Set()) => {
         let sql = query;
         let idField = 'author_id';
