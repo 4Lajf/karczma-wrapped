@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2025-12-21T11:50:34.461Z",
+    "generatedAt": "2025-12-22T16:15:24.030Z",
     "year": 2025,
     "isLimited": false,
     "limitCount": null
@@ -3266,6 +3266,30 @@
         "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/388709668941332480/avatars/4ee20ce86bc8c4fb5a839bce3db22fb9.png?size=512"
       },
       "value": "15 815 wysłanych reakcji"
+    },
+    {
+      "title": "Kolekcjoner Gwiazdek",
+      "user": {
+        "name": "nokatoki",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512"
+      },
+      "value": "151 postów na starboardzie"
+    },
+    {
+      "title": "Gwiazda Karczmy",
+      "user": {
+        "name": "roshek",
+        "avatar": "https://cdn.discordapp.com/avatars/311211514164019200/ca13aca67a163796338d7251ebb34ca5.png?size=512"
+      },
+      "value": "1 na 31 wiadomości trafia na starboard"
+    },
+    {
+      "title": "Jednogłośny",
+      "user": {
+        "name": "karczma_",
+        "avatar": "https://cdn.discordapp.com/avatars/560839137364541504/ce383c8faa8712f26def651f650735e9.png?size=512"
+      },
+      "value": "45x ❤️ pod jedną wiadomością"
     }
   ],
   "globalAverages": {

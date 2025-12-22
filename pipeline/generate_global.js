@@ -357,6 +357,61 @@ function getHallOfFame(userFilter = '') {
     const year = TARGET_YEAR.toString();
     const assignedUserIds = new Set();
 
+    // --- Starboard Data Pre-computation ---
+    console.log('  Processing starboard data for badges...');
+    const starboardUserData = {}; // author_id -> { totalPosts, totalStars, maxStars }
+    let globalMaxStars = -1;
+    let globalBestPost = null; // { author_id, stars }
+
+    const inputDir = path.join(__dirname, 'input');
+    const files = fs.readdirSync(inputDir);
+    const starboardFile = files.find(f => f.includes('starboard') && f.includes('951084270313672744'));
+
+    if (starboardFile) {
+        const filePath = path.join(inputDir, starboardFile);
+        const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        const authorCache = new Map(); // original_msg_id -> author_id
+
+        if (data.messages) {
+            for (const msg of data.messages) {
+                if (msg.embeds && msg.embeds.length > 0) {
+                    const embed = msg.embeds[0];
+                    const originalMsgId = embed.footer?.text;
+                    if (!originalMsgId || !/^\d+$/.test(originalMsgId)) continue;
+
+                    let authorId = authorCache.get(originalMsgId);
+                    if (!authorId) {
+                        const row = db.prepare('SELECT author_id FROM messages WHERE id = ?').get(originalMsgId);
+                        if (row) {
+                            authorId = row.author_id;
+                            authorCache.set(originalMsgId, authorId);
+                        }
+                    }
+
+                    if (authorId) {
+                        const stars = (msg.reactions || []).reduce((sum, r) => sum + (r.count || 0), 0);
+
+                        if (!starboardUserData[authorId]) {
+                            starboardUserData[authorId] = { totalPosts: 0, totalStars: 0, maxStars: 0 };
+                        }
+
+                        starboardUserData[authorId].totalPosts++;
+                        starboardUserData[authorId].totalStars += stars;
+                        if (stars > starboardUserData[authorId].maxStars) {
+                            starboardUserData[authorId].maxStars = stars;
+                        }
+
+                        if (stars > globalMaxStars) {
+                            globalMaxStars = stars;
+                            globalBestPost = { author_id: authorId, stars };
+                        }
+                    }
+                }
+            }
+        }
+    }
+    console.log(`  Found ${Object.keys(starboardUserData).length} users with starboard presence.`);
+
     // Exclude specific users by name
     const excludedNames = ['Pingu'];
     for (const name of excludedNames) {
@@ -477,7 +532,89 @@ function getHallOfFame(userFilter = '') {
         GROUP BY user_id ORDER BY val DESC LIMIT 1
     `, 'Seryjny Reaktor', v => `${v.toLocaleString()} wysłanych reakcji`, assignedUserIds);
 
-    return [chatterbox, yapGod, reactionFarmer, mediaMogul, omnipresent, serialReactor].filter(x => x !== null);
+    // --- New Starboard Badges ---
+
+    // 7. Kolekcjoner Gwiazdek (Most total posts in starboard)
+    let starCollector = null;
+    let maxStarPosts = -1;
+    for (const [authorId, data] of Object.entries(starboardUserData)) {
+        if (assignedUserIds.has(authorId)) continue;
+        if (data.totalPosts > maxStarPosts) {
+            maxStarPosts = data.totalPosts;
+            starCollector = { id: authorId, val: data.totalPosts };
+        }
+    }
+    let starCollectorBadge = null;
+    if (starCollector) {
+        assignedUserIds.add(starCollector.id);
+        const user = db.prepare('SELECT name, avatar_url FROM users WHERE id = ?').get(starCollector.id);
+        starCollectorBadge = {
+            title: 'Kolekcjoner Gwiazdek',
+            user: { name: user?.name, avatar: user?.avatar_url },
+            value: `${starCollector.val} postów na starboardzie`
+        };
+    }
+
+    // 8. Gwiazda Karczmy (Best proportion: starboard posts / total messages)
+    // Need total messages per user first
+    const userTotalMessages = {};
+    const totalMsgsRows = db.prepare(`SELECT author_id, COUNT(*) as count FROM messages WHERE strftime('%Y', timestamp) = ? GROUP BY author_id`).all(year);
+    for (const row of totalMsgsRows) {
+        userTotalMessages[row.author_id] = row.count;
+    }
+
+    let starOfTavern = null;
+    let bestProportion = -1;
+    for (const [authorId, data] of Object.entries(starboardUserData)) {
+        if (assignedUserIds.has(authorId)) continue;
+        const total = userTotalMessages[authorId] || 0;
+        if (total < 100) continue; // Requirement: at least 100 messages overall
+        const proportion = data.totalPosts / total;
+        if (proportion > bestProportion) {
+            bestProportion = proportion;
+            starOfTavern = { id: authorId, val: proportion };
+        }
+    }
+    let starOfTavernBadge = null;
+    if (starOfTavern) {
+        assignedUserIds.add(starOfTavern.id);
+        const user = db.prepare('SELECT name, avatar_url FROM users WHERE id = ?').get(starOfTavern.id);
+        starOfTavernBadge = {
+            title: 'Gwiazda Karczmy',
+            user: { name: user?.name, avatar: user?.avatar_url },
+            value: `1 na ${Math.round(1 / starOfTavern.val)} wiadomości trafia na starboard`
+        };
+    }
+
+    // 9. Jednogłośny (Single message with most reactions of a single type)
+    const topEmojiOnSingleMessage = db.prepare(`
+        SELECT m.author_id as id, r.emoji_name, r.emoji_id, COUNT(*) as val
+        FROM reactions r
+        JOIN messages m ON r.message_id = m.id
+        WHERE strftime('%Y', m.timestamp) = ?
+        GROUP BY r.message_id, r.emoji_name, r.emoji_id
+        ORDER BY val DESC
+    `).all(year);
+
+    let unanimousBadge = null;
+    for (const row of topEmojiOnSingleMessage) {
+        if (assignedUserIds.has(row.id)) continue;
+
+        assignedUserIds.add(row.id);
+        const user = db.prepare('SELECT name, avatar_url FROM users WHERE id = ?').get(row.id);
+        unanimousBadge = {
+            title: 'Jednogłośny',
+            user: { name: user?.name, avatar: user?.avatar_url },
+            value: `${row.val.toLocaleString()}x ${row.emoji_name} pod jedną wiadomością`
+        };
+        break;
+    }
+
+    return [
+        chatterbox, yapGod, reactionFarmer,
+        mediaMogul, omnipresent, serialReactor,
+        starCollectorBadge, starOfTavernBadge, unanimousBadge
+    ].filter(x => x !== null);
 }
 
 function getTimeOfDayStats(userFilter = '') {
