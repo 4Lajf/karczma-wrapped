@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2025-12-23T14:04:30.796Z",
+    "generatedAt": "2025-12-23T21:57:03.336Z",
     "year": 2025,
     "isLimited": false,
     "limitCount": null
@@ -8,9 +8,9 @@
   "guild": {
     "name": "Fantastyczna Karczma",
     "activeUsers": 324,
-    "totalMessages": 707100,
-    "totalWords": 4677903,
-    "timeSpentTypingMinutes": 116947.575
+    "totalMessages": 707081,
+    "totalWords": 4677599,
+    "timeSpentTypingMinutes": 116939.975
   },
   "timeline": [
     {
@@ -23,7 +23,7 @@
     },
     {
       "day": "2025-01-03",
-      "count": 1162
+      "count": 1161
     },
     {
       "day": "2025-01-04",
@@ -71,11 +71,11 @@
     },
     {
       "day": "2025-01-15",
-      "count": 2087
+      "count": 2086
     },
     {
       "day": "2025-01-16",
-      "count": 2637
+      "count": 2636
     },
     {
       "day": "2025-01-17",
@@ -87,7 +87,7 @@
     },
     {
       "day": "2025-01-19",
-      "count": 2018
+      "count": 2017
     },
     {
       "day": "2025-01-20",
@@ -203,7 +203,7 @@
     },
     {
       "day": "2025-02-17",
-      "count": 1090
+      "count": 1089
     },
     {
       "day": "2025-02-18",
@@ -243,7 +243,7 @@
     },
     {
       "day": "2025-02-27",
-      "count": 1902
+      "count": 1901
     },
     {
       "day": "2025-02-28",
@@ -607,7 +607,7 @@
     },
     {
       "day": "2025-05-29",
-      "count": 2419
+      "count": 2418
     },
     {
       "day": "2025-05-30",
@@ -859,7 +859,7 @@
     },
     {
       "day": "2025-07-31",
-      "count": 2986
+      "count": 2985
     },
     {
       "day": "2025-08-01",
@@ -883,7 +883,7 @@
     },
     {
       "day": "2025-08-06",
-      "count": 1362
+      "count": 1361
     },
     {
       "day": "2025-08-07",
@@ -903,7 +903,7 @@
     },
     {
       "day": "2025-08-11",
-      "count": 2306
+      "count": 2305
     },
     {
       "day": "2025-08-12",
@@ -915,7 +915,7 @@
     },
     {
       "day": "2025-08-14",
-      "count": 2670
+      "count": 2668
     },
     {
       "day": "2025-08-15",
@@ -967,7 +967,7 @@
     },
     {
       "day": "2025-08-27",
-      "count": 2584
+      "count": 2583
     },
     {
       "day": "2025-08-28",
@@ -1099,7 +1099,7 @@
     },
     {
       "day": "2025-09-29",
-      "count": 1510
+      "count": 1509
     },
     {
       "day": "2025-09-30",
@@ -1111,7 +1111,7 @@
     },
     {
       "day": "2025-10-02",
-      "count": 2235
+      "count": 2234
     },
     {
       "day": "2025-10-03",
@@ -1167,7 +1167,7 @@
     },
     {
       "day": "2025-10-16",
-      "count": 2500
+      "count": 2499
     },
     {
       "day": "2025-10-17",
@@ -1275,7 +1275,7 @@
     },
     {
       "day": "2025-11-12",
-      "count": 1995
+      "count": 1994
     },
     {
       "day": "2025-11-13",
@@ -1315,7 +1315,7 @@
     },
     {
       "day": "2025-11-22",
-      "count": 2084
+      "count": 2083
     },
     {
       "day": "2025-11-23",
@@ -1335,7 +1335,7 @@
     },
     {
       "day": "2025-11-27",
-      "count": 1836
+      "count": 1835
     },
     {
       "day": "2025-11-28",
@@ -1411,13 +1411,13 @@
     29988,
     36818,
     41141,
-    43786,
-    41575,
-    42566,
-    46570,
-    42477,
-    44046,
-    48472,
+    43783,
+    41573,
+    42565,
+    46565,
+    42475,
+    44043,
+    48469,
     51009,
     53381,
     47270,
@@ -1425,13 +1425,13 @@
     26500
   ],
   "weeklyHeatmap": [
-    94579,
-    107416,
+    94578,
+    107413,
     103941,
-    108998,
-    110992,
-    98500,
-    82674
+    108994,
+    110983,
+    98499,
+    82673
   ],
   "channels": {
     "channels": [
@@ -1464,11 +1464,6 @@
         "name": "fantastyczny-burdel🍯",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
         "count": 30826
-      },
-      {
-        "name": "kanał-na-komendy",
-        "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 24970
       },
       {
         "name": "kinowo-literacki",
@@ -1531,9 +1526,14 @@
         "count": 6324
       },
       {
-        "name": "starboard",
-        "category_name": "╭── WAŻNE ──╮",
-        "count": 5483
+        "name": "Karczmogus",
+        "category_name": "integracja-online",
+        "count": 5442
+      },
+      {
+        "name": "polecajkowo-linkowy",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 4901
       }
     ],
     "categories": [
@@ -1559,7 +1559,7 @@
       },
       {
         "category_name": "╭── WAŻNE ──╮",
-        "count": 5560
+        "count": 5541
       },
       {
         "category_name": "propozycje",
@@ -1634,11 +1634,11 @@
     },
     {
       "text": "taka",
-      "value": 14192
+      "value": 14191
     },
     {
       "text": "dobra",
-      "value": 10902
+      "value": 10898
     },
     {
       "text": "jako",
@@ -1646,15 +1646,15 @@
     },
     {
       "text": "fajnie",
-      "value": 8805
+      "value": 8804
     },
     {
       "text": "sumie",
-      "value": 8519
+      "value": 8518
     },
     {
       "text": "czas",
-      "value": 8466
+      "value": 8464
     },
     {
       "text": "razie",
@@ -1678,7 +1678,7 @@
     },
     {
       "text": "rzeczy",
-      "value": 6561
+      "value": 6560
     },
     {
       "text": "kocham",
@@ -1730,7 +1730,7 @@
     },
     {
       "text": "pierwsze",
-      "value": 5177
+      "value": 5176
     },
     {
       "text": "kurde",
@@ -1742,7 +1742,7 @@
     },
     {
       "text": "film",
-      "value": 4951
+      "value": 4948
     },
     {
       "text": "inny",
@@ -1758,7 +1758,7 @@
     },
     {
       "text": "nowy",
-      "value": 4538
+      "value": 4535
     },
     {
       "text": "muszę",
@@ -1814,7 +1814,7 @@
     },
     {
       "text": "anime",
-      "value": 3672
+      "value": 3668
     },
     {
       "text": "seria",
@@ -1890,7 +1890,7 @@
     },
     {
       "text": "jakieś",
-      "value": 3209
+      "value": 3208
     },
     {
       "text": "nigdy",
@@ -1934,7 +1934,7 @@
     },
     {
       "text": "temu",
-      "value": 2884
+      "value": 2883
     },
     {
       "text": "ktore",
@@ -1974,7 +1974,7 @@
     },
     {
       "text": "chodzi",
-      "value": 2702
+      "value": 2701
     },
     {
       "text": "chciałem",
@@ -1989,11 +1989,11 @@
       "value": 2664
     },
     {
-      "text": "końcu",
-      "value": 2659
+      "text": "miejsce",
+      "value": 2657
     },
     {
-      "text": "miejsce",
+      "text": "końcu",
       "value": 2657
     },
     {
@@ -2034,18 +2034,18 @@
     "5000+": 42
   },
   "attachments": {
-    "image": 92548,
+    "image": 92542,
     "video": 2635,
     "audio": 31,
     "file": 133
   },
   "links": {
     "spotify": 492,
-    "youtube": 5406,
+    "youtube": 5394,
     "twitter": 30949,
     "pixiv": 508,
     "gif": 4923,
-    "total": 52103
+    "total": 52091
   },
   "emojis": [
     {
@@ -2057,12 +2057,12 @@
     {
       "name": "❤️",
       "id": "",
-      "count": 55823
+      "count": 55628
     },
     {
       "name": "😍",
       "id": "",
-      "count": 35762
+      "count": 35757
     },
     {
       "name": "cocoXD",
@@ -2073,7 +2073,7 @@
     {
       "name": "vibecat",
       "id": "909373540212547594",
-      "count": 8355
+      "count": 8327
     },
     {
       "name": "cocoXD_4",
@@ -2108,12 +2108,12 @@
     {
       "name": "😳",
       "id": "",
-      "count": 2696
+      "count": 2691
     },
     {
       "name": "👍",
       "id": "",
-      "count": 2334
+      "count": 2331
     },
     {
       "name": "UwUkuraii",
@@ -2143,7 +2143,7 @@
     {
       "name": "🔥",
       "id": "",
-      "count": 1338
+      "count": 1323
     },
     {
       "name": "💀",
@@ -2438,7 +2438,7 @@
     {
       "name": "🗿",
       "id": "",
-      "count": 114
+      "count": 111
     },
     {
       "name": "🧠",
@@ -2446,14 +2446,14 @@
       "count": 110
     },
     {
-      "name": "alienweary",
-      "id": "1176932404464730112",
-      "count": 107
-    },
-    {
       "name": "rudolf",
       "id": "1406285656753176657",
       "count": 107
+    },
+    {
+      "name": "alienweary",
+      "id": "1176932404464730112",
+      "count": 105
     },
     {
       "name": "👏",
@@ -2653,32 +2653,6 @@
       ]
     },
     {
-      "id": "1402623021952270437",
-      "content": "@everyone 5 lat temu założyłem swój kanał na Youtube, a dzień później wrzuciłem swój pierwszy film. Początek sierpnia jest czasem kiedy zawsze obchodzona jest rocznica mojego kanału, a w tym roku mija już 5 lat! \n\nZ tej okazji zapraszam wszystkich na **live w przyszły czwartek o godzinie 20:00. **",
-      "author": {
-        "name": "karczma_",
-        "avatar": "https://cdn.discordapp.com/avatars/560839137364541504/ce383c8faa8712f26def651f650735e9.png?size=512"
-      },
-      "emoji_name": "❤️",
-      "emoji_id": "",
-      "count": 37,
-      "link": "https://discord.com/channels/875086635744763914/875089858144632832/1402623021952270437",
-      "attachments": [
-        {
-          "url": "https://cdn.discordapp.com/attachments/875089858144632832/1402623021805473923/urodzinowy_live_grafika_YT.jpg?ex=693c047b&is=693ab2fb&hm=ef928257f83e998f6127777fb187a5ac98081b5e6be581df5b78a167070f59e8&",
-          "name": "urodzinowy_live_grafika_YT.jpg",
-          "type": "file"
-        }
-      ],
-      "reactions": [
-        {
-          "emoji_id": "",
-          "emoji_name": "❤️",
-          "count": 37
-        }
-      ]
-    },
-    {
       "id": "1433831763402031156",
       "content": "a racja xD",
       "author": {
@@ -2848,6 +2822,32 @@
         {
           "emoji_id": "",
           "emoji_name": "🍌",
+          "count": 33
+        }
+      ]
+    },
+    {
+      "id": "1392794819105132554",
+      "content": "Mamy to moi drodzy\nMagister Alicja Horny",
+      "author": {
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512"
+      },
+      "emoji_name": "💪",
+      "emoji_id": "",
+      "count": 33,
+      "link": "https://discord.com/channels/875086635744763914/904454003977502730/1392794819105132554",
+      "attachments": [
+        {
+          "url": "https://cdn.discordapp.com/attachments/904454003977502730/1392794818714927104/20250710_105444.jpg?ex=693bdbc1&is=693a8a41&hm=d99ea2f9ccab839ac87c260db05d12c7cf81f3d46719b55b6ba6a37f7505f680&",
+          "name": "20250710_105444.jpg",
+          "type": "file"
+        }
+      ],
+      "reactions": [
+        {
+          "emoji_id": "",
+          "emoji_name": "💪",
           "count": 33
         }
       ]
@@ -3563,7 +3563,7 @@
         "name": "_porcelain_",
         "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/388709668941332480/avatars/4ee20ce86bc8c4fb5a839bce3db22fb9.png?size=512"
       },
-      "value": "15 815 wysłanych reakcji"
+      "value": "15 803 wysłanych reakcji"
     },
     {
       "title": "Kolekcjoner Gwiazdek",
@@ -3591,19 +3591,19 @@
     }
   ],
   "globalAverages": {
-    "avgMessageLength": 44.101028143119784,
-    "totalWords": 4677903,
-    "totalReactions": 306439,
-    "totalMentions": 57429
+    "avgMessageLength": 44.09862519287041,
+    "totalWords": 4677599,
+    "totalReactions": 306164,
+    "totalMentions": 57428
   },
   "timeOfDay": [
     {
       "period": "Afternoon",
-      "count": 261020
+      "count": 261004
     },
     {
       "period": "Evening",
-      "count": 239273
+      "count": 239270
     },
     {
       "period": "Morning",
@@ -3615,8 +3615,8 @@
     }
   ],
   "responseStats": {
-    "avgWords": 6.615617310140008,
-    "avgChars": 44.101028143119784,
-    "replyRate": 16.224862112855323
+    "avgWords": 6.615365142041718,
+    "avgChars": 44.09862519287041,
+    "replyRate": 16.225298091732064
   }
 }
