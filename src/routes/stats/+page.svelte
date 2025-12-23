@@ -259,6 +259,27 @@
 			console.error('Failed to take screenshot:', err);
 		}
 	}
+
+	function renderContent(content) {
+		if (!content) return '';
+		return content
+			.replace(/<a?:\w+:(\d+)>/g, () => '')
+			.replace(/<@!?\d+>/g, '@użytkownik')
+			.replace(/<@&\d+>/g, '@rola')
+			.replace(/<#\d+>/g, '#kanał')
+			.trim();
+	}
+
+	function getEmojiUrls(content) {
+		if (!content) return [];
+		const emojiRegex = /<a?:\w+:(\d+)>/g;
+		const urls = [];
+		let match;
+		while ((match = emojiRegex.exec(content)) !== null) {
+			urls.push(`https://cdn.discordapp.com/emojis/${match[1]}.png`);
+		}
+		return urls;
+	}
 </script>
 
 <svelte:head>
@@ -373,6 +394,137 @@
 								{record.title}
 							</div>
 							<div class="text-2xl font-black text-gray-600">{record.value}</div>
+						</div>
+					{/each}
+				</div>
+			</section>
+
+			<!-- LEGENDARY UNANIMITY (MOST REACTED MESSAGES) -->
+			<section>
+				<h2
+					class="mb-2 inline-block border-4 border-black bg-primary px-6 py-2 text-3xl font-black uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
+				>
+					🔥 NAJGORĘTSZE WIADOMOŚCI
+				</h2>
+				<p class="mb-8 text-xs font-bold text-gray-500 uppercase">
+					Wiadomości, które otrzymały najwięcej reakcji jednego typu (w całym roku).
+				</p>
+				<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+					{#each stats.mostReactedMessages as msg, i}
+						<div
+							class="flex flex-col border-4 border-black bg-white p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-transform hover:-translate-y-1"
+						>
+							<div class="mb-4 flex items-center gap-3">
+								<div
+									class="h-12 w-12 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+								>
+									{#if msg.author.avatar}
+										<img
+											src={msg.author.avatar}
+											alt={msg.author.name}
+											class="h-full w-full object-cover"
+										/>
+									{:else}
+										<div
+											class="flex h-full w-full items-center justify-center bg-gray-200 text-xl font-black"
+										>
+											{msg.author.name[0]}
+										</div>
+									{/if}
+								</div>
+								<div>
+									<div class="text-sm font-black uppercase">{msg.author.name}</div>
+									<div class="text-[10px] font-bold text-gray-500 uppercase">Autor</div>
+								</div>
+							</div>
+
+							<div class="flex-1">
+								<p class="mb-4 text-sm italic leading-relaxed line-clamp-6 wrap-anywhere">
+									"{renderContent(msg.content) || '(Tylko emoji/media)'}"
+								</p>
+
+								{#if !renderContent(msg.content)}
+									<div class="mb-4 flex flex-wrap gap-1">
+										{#each getEmojiUrls(msg.content) as url}
+											<img src={url} alt="" class="h-8 w-8 object-contain" />
+										{/each}
+									</div>
+								{/if}
+
+								{#if msg.attachments && msg.attachments.length > 0}
+									<div class="mb-4 flex flex-wrap gap-2">
+										{#each msg.attachments as attr}
+											{#if attr.type === 'image'}
+												<img
+													src={attr.url}
+													alt=""
+													class="max-h-48 w-full rounded border-2 border-black object-cover shadow-sm"
+												/>
+											{:else}
+												<div
+													class="flex items-center gap-1 border-2 border-black bg-gray-100 p-2 text-xs font-bold"
+												>
+													<span>📎</span> {attr.name}
+												</div>
+											{/if}
+										{/each}
+									</div>
+								{/if}
+							</div>
+
+							<div class="mt-4 flex flex-wrap items-center gap-2">
+								<div
+									class="flex items-center gap-1.5 border-2 border-black bg-primary px-3 py-1.5 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+								>
+									{#if msg.emoji_id}
+										<img
+											src="/emojis/{msg.emoji_id}.png"
+											alt={msg.emoji_name}
+											class="h-6 w-6 object-contain"
+											onerror={(e) => {
+												if (e.currentTarget.src.endsWith('.png')) {
+													e.currentTarget.src = `/emojis/${msg.emoji_id}.gif`;
+												}
+											}}
+										/>
+									{:else}
+										<span class="text-xl">{msg.emoji_name}</span>
+									{/if}
+									<span class="text-xl font-black">{msg.count}</span>
+								</div>
+
+								<div class="flex flex-wrap gap-1">
+									{#each msg.reactions.filter((r) => r.emoji_name !== msg.emoji_name).slice(0, 3) as react}
+										<div
+											class="flex items-center gap-1 border border-black bg-gray-50 px-1.5 py-0.5 text-[10px] font-bold"
+										>
+											{#if react.emoji_id}
+												<img
+													src="/emojis/{react.emoji_id}.png"
+													alt=""
+													class="h-4 w-4 object-contain"
+													onerror={(e) => {
+														if (e.currentTarget.src.endsWith('.png')) {
+															e.currentTarget.src = `/emojis/${react.emoji_id}.gif`;
+														}
+													}}
+												/>
+											{:else}
+												<span>{react.emoji_name}</span>
+											{/if}
+											<span>{react.count}</span>
+										</div>
+									{/each}
+								</div>
+							</div>
+
+							<a
+								href={msg.link}
+								target="_blank"
+								class="mt-4 text-[10px] font-black text-blue-600 uppercase underline hover:text-blue-800"
+							>
+								Skocz do wiadomości &rarr;
+							</a>
 						</div>
 					{/each}
 				</div>

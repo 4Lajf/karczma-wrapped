@@ -94,6 +94,22 @@ const STOPWORDS = new Set([
 
 // --- Metrics ---
 
+const IGNORED_EMOJI_IDS = [
+    '942868829854384148',
+    '1443166033144975400',
+    '1324140863487610921',
+    '914627053486211092',
+    '1020667496346427393',
+    '1003285860596338758',
+    '1056314396713955458',
+    '1324140679785480284',
+    '867302170775781376'
+];
+
+const IGNORED_EMOJI_NAMES = [
+    '🚬'
+];
+
 function getTimeline(userFilter = '') {
     console.log('Computing daily timeline...');
     const rows = db.prepare(`
@@ -592,6 +608,7 @@ function getHallOfFame(userFilter = '') {
         FROM reactions r
         JOIN messages m ON r.message_id = m.id
         WHERE strftime('%Y', m.timestamp) = ?
+        AND m.channel_id != '875088709677121586'
         GROUP BY r.message_id, r.emoji_name, r.emoji_id
         ORDER BY val DESC
     `).all(year);
@@ -615,6 +632,58 @@ function getHallOfFame(userFilter = '') {
         mediaMogul, omnipresent, serialReactor,
         starCollectorBadge, starOfTavernBadge, unanimousBadge
     ].filter(x => x !== null);
+}
+
+function getGlobalMostReactedMessages() {
+    console.log('Computing global most reacted messages (single emoji type)...');
+
+    const guildInfo = db.prepare('SELECT guild_id FROM channels LIMIT 1').get() || { guild_id: '0' };
+    const guildId = guildInfo.guild_id;
+
+    // Use a subquery to find the best reaction type for each message first
+    const mostReacted = db.prepare(`
+        SELECT id, content, channel_id, author_id, attachment_urls, emoji_name, emoji_id, max_count
+        FROM (
+            SELECT m.id, m.content, m.channel_id, m.author_id, m.attachment_urls, r.emoji_name, r.emoji_id, COUNT(*) as max_count,
+                   ROW_NUMBER() OVER (PARTITION BY m.id ORDER BY COUNT(*) DESC) as rn
+            FROM messages m
+            JOIN reactions r ON m.id = r.message_id
+            WHERE strftime('%Y', m.timestamp) = ?
+            AND m.channel_id != '875088709677121586'
+            AND (r.emoji_id NOT IN (${IGNORED_EMOJI_IDS.map(id => `'${id}'`).join(',')}) OR r.emoji_id IS NULL)
+            AND r.emoji_name NOT IN (${IGNORED_EMOJI_NAMES.map(name => `'${name}'`).join(',')})
+            GROUP BY m.id, r.emoji_name, r.emoji_id
+        )
+        WHERE rn = 1
+        ORDER BY max_count DESC
+        LIMIT 12
+    `).all(TARGET_YEAR.toString());
+
+    return mostReacted.map(msg => {
+        const author = db.prepare('SELECT name, avatar_url FROM users WHERE id = ?').get(msg.author_id);
+        const reactions = db.prepare(`
+            SELECT emoji_id, emoji_name, COUNT(*) as count
+            FROM reactions
+            WHERE message_id = ?
+            GROUP BY emoji_id, emoji_name
+            ORDER BY count DESC
+        `).all(msg.id);
+
+        return {
+            id: msg.id,
+            content: msg.content,
+            author: {
+                name: author?.name || 'Unknown',
+                avatar: author?.avatar_url
+            },
+            emoji_name: msg.emoji_name,
+            emoji_id: msg.emoji_id,
+            count: msg.max_count,
+            link: `https://discord.com/channels/${guildId}/${msg.channel_id}/${msg.id}`,
+            attachments: msg.attachment_urls ? JSON.parse(msg.attachment_urls) : [],
+            reactions
+        };
+    });
 }
 
 function getTimeOfDayStats(userFilter = '') {
@@ -702,6 +771,7 @@ function generateGlobal() {
         links: getLinkStats(userFilter),
         emojis: getEmojiStats(userFilter),
         mostActiveDay: getMostActiveDay(userFilter),
+        mostReactedMessages: getGlobalMostReactedMessages(),
         roleDistribution: [], // Removed as requested
         interactionNetwork: getInteractionNetwork(userFilter),
         hallOfFame: getHallOfFame(userFilter),
