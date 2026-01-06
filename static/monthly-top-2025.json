@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-01-06T15:51:16.975Z",
+    "generatedAt": "2026-01-06T17:25:47.918Z",
     "year": 2025
   },
   "users": {
@@ -110,12 +110,6 @@
         "count": 1228
       },
       {
-        "id": "877097274021396530",
-        "name": "Pingu",
-        "avatar": "https://cdn.discordapp.com/avatars/877097274021396530/e42c3a69ca1506268b00cebb56bd806b.png?size=512",
-        "count": 1175
-      },
-      {
         "id": "797950399541805067",
         "name": "tsuna_jq",
         "avatar": "https://cdn.discordapp.com/avatars/797950399541805067/8658906fac717ad4289d3f6764455188.png?size=512",
@@ -126,6 +120,12 @@
         "name": "yuhime_",
         "avatar": "https://cdn.discordapp.com/avatars/650761899021041685/5dcd8e268c11e73f2376b936cb79280e.png?size=512",
         "count": 1145
+      },
+      {
+        "id": "526541334467706914",
+        "name": "maslanaa",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/526541334467706914/avatars/f96feb0277d4dab4570941ebd1cfebf5.png?size=512",
+        "count": 1141
       }
     ],
     "3": [
@@ -172,12 +172,6 @@
         "count": 1767
       },
       {
-        "id": "877097274021396530",
-        "name": "Pingu",
-        "avatar": "https://cdn.discordapp.com/avatars/877097274021396530/e42c3a69ca1506268b00cebb56bd806b.png?size=512",
-        "count": 1460
-      },
-      {
         "id": "517766317961510912",
         "name": "kon7216",
         "avatar": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512",
@@ -188,6 +182,12 @@
         "name": "yuhime_",
         "avatar": "https://cdn.discordapp.com/avatars/650761899021041685/5dcd8e268c11e73f2376b936cb79280e.png?size=512",
         "count": 1218
+      },
+      {
+        "id": "351006685587963916",
+        "name": "4lajf",
+        "avatar": "https://cdn.discordapp.com/avatars/351006685587963916/a_fc3281e48a26b0edae13c46024a37424.gif?size=512",
+        "count": 1210
       }
     ],
     "4": [
@@ -246,10 +246,10 @@
         "count": 1364
       },
       {
-        "id": "877097274021396530",
-        "name": "Pingu",
-        "avatar": "https://cdn.discordapp.com/avatars/877097274021396530/e42c3a69ca1506268b00cebb56bd806b.png?size=512",
-        "count": 1286
+        "id": "256173446050873344",
+        "name": "futon_s_",
+        "avatar": "https://cdn.discordapp.com/avatars/256173446050873344/30b3b5b51c7a9ce881590f691144572c.png?size=512",
+        "count": 1266
       }
     ],
     "5": [
@@ -278,12 +278,6 @@
         "count": 2174
       },
       {
-        "id": "429656936435286016",
-        "name": "RinBot",
-        "avatar": "https://cdn.discordapp.com/avatars/429656936435286016/19caf89ba433bef1ad18a4d84e07a63a.png?size=512",
-        "count": 2050
-      },
-      {
         "id": "517766317961510912",
         "name": "kon7216",
         "avatar": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512",
@@ -296,12 +290,6 @@
         "count": 1667
       },
       {
-        "id": "877097274021396530",
-        "name": "Pingu",
-        "avatar": "https://cdn.discordapp.com/avatars/877097274021396530/e42c3a69ca1506268b00cebb56bd806b.png?size=512",
-        "count": 1393
-      },
-      {
         "id": "270968874420273153",
         "name": ".goge",
         "avatar": "https://cdn.discordapp.com/avatars/270968874420273153/f64c6d9100b86c364211dc800696fea9.png?size=512",
@@ -312,6 +300,18 @@
         "name": "otoshigami",
         "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270601300570406925/avatars/f1add6d475286dd292cade9c69e2f8f2.png?size=512",
         "count": 1360
+      },
+      {
+        "id": "284044360192884736",
+        "name": "tlenmlem",
+        "avatar": "https://cdn.discordapp.com/avatars/284044360192884736/4c170e9d4554b315eadc8331d6700fbd.png?size=512",
+        "count": 1261
+      },
+      {
+        "id": "262986692602888192",
+        "name": "jacekczarny",
+        "avatar": "https://cdn.discordapp.com/avatars/262986692602888192/1c842f8641336e266113b4e739a91e2d.png?size=512",
+        "count": 1259
       }
     ],
     "6": [
@@ -352,12 +352,6 @@
         "count": 2154
       },
       {
-        "id": "429656936435286016",
-        "name": "RinBot",
-        "avatar": "https://cdn.discordapp.com/avatars/429656936435286016/19caf89ba433bef1ad18a4d84e07a63a.png?size=512",
-        "count": 1908
-      },
-      {
         "id": "270245951837437955",
         "name": "nokatoki",
         "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
@@ -374,6 +368,12 @@
         "name": "avinex",
         "avatar": "https://cdn.discordapp.com/avatars/165731360563003392/ef279720c2bdef55f122f0dea6d6a26f.png?size=512",
         "count": 1458
+      },
+      {
+        "id": "213257041609752578",
+        "name": "fucktor",
+        "avatar": "https://cdn.discordapp.com/avatars/213257041609752578/8bf40cac298c724182c4665bced6d48f.png?size=512",
+        "count": 1332
       }
     ],
     "7": [
@@ -488,16 +488,16 @@
         "count": 2123
       },
       {
-        "id": "877097274021396530",
-        "name": "Pingu",
-        "avatar": "https://cdn.discordapp.com/avatars/877097274021396530/e42c3a69ca1506268b00cebb56bd806b.png?size=512",
-        "count": 1969
-      },
-      {
         "id": "270968874420273153",
         "name": ".goge",
         "avatar": "https://cdn.discordapp.com/avatars/270968874420273153/f64c6d9100b86c364211dc800696fea9.png?size=512",
         "count": 1773
+      },
+      {
+        "id": "384742201554632704",
+        "name": "he__d",
+        "avatar": "https://cdn.discordapp.com/avatars/384742201554632704/66c4b0d78d45d2bef0b7f45718bdcaa8.png?size=512",
+        "count": 1752
       }
     ],
     "9": [
@@ -506,12 +506,6 @@
         "name": "tomasz",
         "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
         "count": 7361
-      },
-      {
-        "id": "429656936435286016",
-        "name": "RinBot",
-        "avatar": "https://cdn.discordapp.com/avatars/429656936435286016/19caf89ba433bef1ad18a4d84e07a63a.png?size=512",
-        "count": 4353
       },
       {
         "id": "299488561130897410",
@@ -560,6 +554,12 @@
         "name": "jakosi",
         "avatar": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
         "count": 2221
+      },
+      {
+        "id": "650761899021041685",
+        "name": "yuhime_",
+        "avatar": "https://cdn.discordapp.com/avatars/650761899021041685/5dcd8e268c11e73f2376b936cb79280e.png?size=512",
+        "count": 2216
       }
     ],
     "10": [
@@ -574,12 +574,6 @@
         "name": "bari2288",
         "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512",
         "count": 3352
-      },
-      {
-        "id": "429656936435286016",
-        "name": "RinBot",
-        "avatar": "https://cdn.discordapp.com/avatars/429656936435286016/19caf89ba433bef1ad18a4d84e07a63a.png?size=512",
-        "count": 3304
       },
       {
         "id": "338642102479224833",
@@ -606,12 +600,6 @@
         "count": 1957
       },
       {
-        "id": "877097274021396530",
-        "name": "Pingu",
-        "avatar": "https://cdn.discordapp.com/avatars/877097274021396530/e42c3a69ca1506268b00cebb56bd806b.png?size=512",
-        "count": 1954
-      },
-      {
         "id": "291563667290324992",
         "name": "nesttouc",
         "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/291563667290324992/avatars/1895170f1ef1db39c3afbf8fe81839a2.png?size=512",
@@ -622,6 +610,18 @@
         "name": "fucktor",
         "avatar": "https://cdn.discordapp.com/avatars/213257041609752578/8bf40cac298c724182c4665bced6d48f.png?size=512",
         "count": 1765
+      },
+      {
+        "id": "234623423257509888",
+        "name": "mrball",
+        "avatar": "https://cdn.discordapp.com/avatars/234623423257509888/fea36ea8c1c606aa30c666ac08640227.png?size=512",
+        "count": 1672
+      },
+      {
+        "id": "696657144442912828",
+        "name": "spinacz451",
+        "avatar": "https://cdn.discordapp.com/avatars/696657144442912828/c4074a2e20b15b20b20e310e1d8b3cc5.png?size=512",
+        "count": 1655
       }
     ],
     "11": [
@@ -724,12 +724,6 @@
         "count": 2181
       },
       {
-        "id": "1162716486020890634",
-        "name": "Link Expander",
-        "avatar": "https://cdn.discordapp.com/embed/avatars/0.png",
-        "count": 1813
-      },
-      {
         "id": "297647773103292416",
         "name": "jakosi",
         "avatar": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
@@ -746,6 +740,12 @@
         "name": "raien",
         "avatar": "https://cdn.discordapp.com/avatars/95969159845806080/f81b4f5923c4fed048ffbaa7d42b3a12.png?size=512",
         "count": 1579
+      },
+      {
+        "id": "270968874420273153",
+        "name": ".goge",
+        "avatar": "https://cdn.discordapp.com/avatars/270968874420273153/f64c6d9100b86c364211dc800696fea9.png?size=512",
+        "count": 1439
       }
     ]
   },
@@ -755,55 +755,55 @@
         "id": "875089652518903869",
         "name": "animowe-dysputy",
         "category_name": "Unknown",
-        "count": 10521
+        "count": 10492
       },
       {
         "id": "904454003977502730",
         "name": "pogawędki",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 9928
+        "count": 9912
       },
       {
         "id": "1043195907258196079",
         "name": "degenerackie-pogawędki",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 5914
+        "count": 5835
       },
       {
         "id": "1034931177414479992",
         "name": "biblioteka-mangowa",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 4495
+        "count": 4473
       },
       {
         "id": "1130865669429264456",
         "name": "fantastyczny-burdel🍯",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 3899
+        "count": 3598
       },
       {
         "id": "918039801419145277",
         "name": "kinowo-literacki",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2700
+        "count": 2686
       },
       {
         "id": "1305164589410811924",
         "name": "Karczmogus",
         "category_name": "integracja-online",
-        "count": 2087
+        "count": 2080
       },
       {
         "id": "909036888017489920",
         "name": "salon-gier",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 1889
+        "count": 1885
       },
       {
         "id": "976957742621290556",
         "name": "meetowo-konwentowy",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 1777
+        "count": 1776
       },
       {
         "id": "976551528691298345",
@@ -817,61 +817,61 @@
         "id": "904454003977502730",
         "name": "pogawędki",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 8581
+        "count": 8537
       },
       {
         "id": "875089652518903869",
         "name": "animowe-dysputy",
         "category_name": "Unknown",
-        "count": 8030
+        "count": 8006
       },
       {
         "id": "1043195907258196079",
         "name": "degenerackie-pogawędki",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 5338
+        "count": 5265
       },
       {
         "id": "1034931177414479992",
         "name": "biblioteka-mangowa",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 4124
+        "count": 4097
       },
       {
         "id": "1130865669429264456",
         "name": "fantastyczny-burdel🍯",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 3507
+        "count": 3106
       },
       {
         "id": "918039801419145277",
         "name": "kinowo-literacki",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2541
+        "count": 2522
       },
       {
         "id": "875089347072917574",
         "name": "gotuj-z-karczmą",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 1807
+        "count": 1806
       },
       {
         "id": "909036888017489920",
         "name": "salon-gier",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 1470
+        "count": 1462
       },
       {
         "id": "976551528691298345",
         "name": "foto-studio",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 1337
+        "count": 1336
       },
       {
         "id": "875089270430396526",
         "name": "kącik-muzyczny",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 1295
+        "count": 1279
       }
     ],
     "3": [
@@ -879,61 +879,61 @@
         "id": "875089652518903869",
         "name": "animowe-dysputy",
         "category_name": "Unknown",
-        "count": 12288
+        "count": 12250
       },
       {
         "id": "904454003977502730",
         "name": "pogawędki",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 9122
+        "count": 9093
       },
       {
         "id": "1043195907258196079",
         "name": "degenerackie-pogawędki",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 6456
+        "count": 6344
       },
       {
         "id": "1034931177414479992",
         "name": "biblioteka-mangowa",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 4078
+        "count": 4063
       },
       {
         "id": "1130865669429264456",
         "name": "fantastyczny-burdel🍯",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 3465
+        "count": 2918
       },
       {
         "id": "918039801419145277",
         "name": "kinowo-literacki",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2674
+        "count": 2640
       },
       {
         "id": "909153584766132315",
         "name": "kebab-głosowo-tekstowy",
         "category_name": "╭── KANAŁY GŁOSOWE ──╮",
-        "count": 1852
+        "count": 1849
       },
       {
         "id": "976551528691298345",
         "name": "foto-studio",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 1711
+        "count": 1710
       },
       {
         "id": "909379591267819570",
         "name": "【zobacz-memy】",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 1693
+        "count": 1662
       },
       {
         "id": "909036888017489920",
         "name": "salon-gier",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 1546
+        "count": 1540
       }
     ],
     "4": [
@@ -941,61 +941,61 @@
         "id": "875089652518903869",
         "name": "animowe-dysputy",
         "category_name": "Unknown",
-        "count": 14388
+        "count": 14343
       },
       {
         "id": "1043195907258196079",
         "name": "degenerackie-pogawędki",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 6436
+        "count": 6353
       },
       {
         "id": "904454003977502730",
         "name": "pogawędki",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 6175
+        "count": 6149
       },
       {
         "id": "1034931177414479992",
         "name": "biblioteka-mangowa",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 4830
+        "count": 4815
       },
       {
         "id": "918039801419145277",
         "name": "kinowo-literacki",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2258
-      },
-      {
-        "id": "1130865669429264456",
-        "name": "fantastyczny-burdel🍯",
-        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2123
+        "count": 2239
       },
       {
         "id": "909379591267819570",
         "name": "【zobacz-memy】",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 1808
+        "count": 1782
+      },
+      {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1779
       },
       {
         "id": "976957742621290556",
         "name": "meetowo-konwentowy",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 1668
+        "count": 1665
       },
       {
         "id": "875089270430396526",
         "name": "kącik-muzyczny",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 1582
+        "count": 1566
       },
       {
         "id": "909036888017489920",
         "name": "salon-gier",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 1538
+        "count": 1532
       }
     ],
     "5": [
@@ -1003,61 +1003,61 @@
         "id": "875089652518903869",
         "name": "animowe-dysputy",
         "category_name": "Unknown",
-        "count": 10862
+        "count": 10844
       },
       {
         "id": "1043195907258196079",
         "name": "degenerackie-pogawędki",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 6848
+        "count": 6745
       },
       {
         "id": "904454003977502730",
         "name": "pogawędki",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 4561
-      },
-      {
-        "id": "1130865669429264456",
-        "name": "fantastyczny-burdel🍯",
-        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 3090
+        "count": 4539
       },
       {
         "id": "1034931177414479992",
         "name": "biblioteka-mangowa",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 2917
+        "count": 2902
+      },
+      {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2555
       },
       {
         "id": "918039801419145277",
         "name": "kinowo-literacki",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2109
+        "count": 2097
       },
       {
         "id": "976957742621290556",
         "name": "meetowo-konwentowy",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 1845
+        "count": 1841
       },
       {
         "id": "875089270430396526",
         "name": "kącik-muzyczny",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 1749
+        "count": 1741
       },
       {
         "id": "909379591267819570",
         "name": "【zobacz-memy】",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 1426
+        "count": 1390
       },
       {
         "id": "909153584766132315",
         "name": "kebab-głosowo-tekstowy",
         "category_name": "╭── KANAŁY GŁOSOWE ──╮",
-        "count": 1386
+        "count": 1384
       }
     ],
     "6": [
@@ -1065,61 +1065,61 @@
         "id": "1043195907258196079",
         "name": "degenerackie-pogawędki",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 11506
+        "count": 11405
       },
       {
         "id": "875089652518903869",
         "name": "animowe-dysputy",
         "category_name": "Unknown",
-        "count": 10294
+        "count": 10257
       },
       {
         "id": "904454003977502730",
         "name": "pogawędki",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 4938
+        "count": 4920
       },
       {
         "id": "976957742621290556",
         "name": "meetowo-konwentowy",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 3612
+        "count": 3606
       },
       {
         "id": "1034931177414479992",
         "name": "biblioteka-mangowa",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 3009
+        "count": 2978
       },
       {
         "id": "1130865669429264456",
         "name": "fantastyczny-burdel🍯",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2156
+        "count": 1663
       },
       {
         "id": "909379591267819570",
         "name": "【zobacz-memy】",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 1329
+        "count": 1291
       },
       {
         "id": "875089270430396526",
         "name": "kącik-muzyczny",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 1256
+        "count": 1244
       },
       {
         "id": "918039801419145277",
         "name": "kinowo-literacki",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 1231
+        "count": 1221
       },
       {
         "id": "875089347072917574",
         "name": "gotuj-z-karczmą",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 1127
+        "count": 1124
       }
     ],
     "7": [
@@ -1127,61 +1127,61 @@
         "id": "875089652518903869",
         "name": "animowe-dysputy",
         "category_name": "Unknown",
-        "count": 21268
+        "count": 21216
       },
       {
         "id": "1043195907258196079",
         "name": "degenerackie-pogawędki",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 18471
+        "count": 18238
       },
       {
         "id": "904454003977502730",
         "name": "pogawędki",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 7730
+        "count": 7679
       },
       {
         "id": "1034931177414479992",
         "name": "biblioteka-mangowa",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 5241
+        "count": 5228
       },
       {
         "id": "976957742621290556",
         "name": "meetowo-konwentowy",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 3965
-      },
-      {
-        "id": "1130865669429264456",
-        "name": "fantastyczny-burdel🍯",
-        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2500
+        "count": 3960
       },
       {
         "id": "1232272048274014288",
         "name": "Konie do zagrody (gacha kanał)",
         "category_name": "propozycje",
-        "count": 2472
+        "count": 2470
       },
       {
         "id": "918039801419145277",
         "name": "kinowo-literacki",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2268
+        "count": 2256
       },
       {
         "id": "875089270430396526",
         "name": "kącik-muzyczny",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2186
+        "count": 2179
       },
       {
         "id": "914458084892606484",
         "name": "integracja-online",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
         "count": 2073
+      },
+      {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2042
       }
     ],
     "8": [
@@ -1189,61 +1189,61 @@
         "id": "1043195907258196079",
         "name": "degenerackie-pogawędki",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 14537
+        "count": 14386
       },
       {
         "id": "875089652518903869",
         "name": "animowe-dysputy",
         "category_name": "Unknown",
-        "count": 10957
+        "count": 10895
       },
       {
         "id": "904454003977502730",
         "name": "pogawędki",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 10896
+        "count": 10849
       },
       {
         "id": "976957742621290556",
         "name": "meetowo-konwentowy",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 6236
+        "count": 6222
       },
       {
         "id": "1034931177414479992",
         "name": "biblioteka-mangowa",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 3095
+        "count": 3082
       },
       {
         "id": "1130865669429264456",
         "name": "fantastyczny-burdel🍯",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2971
+        "count": 2398
       },
       {
         "id": "875089270430396526",
         "name": "kącik-muzyczny",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 1997
+        "count": 1982
       },
       {
         "id": "875089347072917574",
         "name": "gotuj-z-karczmą",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 1865
-      },
-      {
-        "id": "918039801419145277",
-        "name": "kinowo-literacki",
-        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 1837
+        "count": 1864
       },
       {
         "id": "976551528691298345",
         "name": "foto-studio",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 1830
+        "count": 1826
+      },
+      {
+        "id": "918039801419145277",
+        "name": "kinowo-literacki",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1814
       }
     ],
     "9": [
@@ -1251,126 +1251,8 @@
         "id": "875089652518903869",
         "name": "animowe-dysputy",
         "category_name": "Unknown",
-        "count": 14609
+        "count": 14562
       },
-      {
-        "id": "1043195907258196079",
-        "name": "degenerackie-pogawędki",
-        "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 13427
-      },
-      {
-        "id": "904454003977502730",
-        "name": "pogawędki",
-        "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 9585
-      },
-      {
-        "id": "976957742621290556",
-        "name": "meetowo-konwentowy",
-        "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 8041
-      },
-      {
-        "id": "1034931177414479992",
-        "name": "biblioteka-mangowa",
-        "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 4552
-      },
-      {
-        "id": "1406686362979139837",
-        "name": "zakupowo-merchowy",
-        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 4088
-      },
-      {
-        "id": "875089347072917574",
-        "name": "gotuj-z-karczmą",
-        "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 2765
-      },
-      {
-        "id": "976551528691298345",
-        "name": "foto-studio",
-        "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 2191
-      },
-      {
-        "id": "914458084892606484",
-        "name": "integracja-online",
-        "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 1915
-      },
-      {
-        "id": "909153584766132315",
-        "name": "kebab-głosowo-tekstowy",
-        "category_name": "╭── KANAŁY GŁOSOWE ──╮",
-        "count": 1616
-      }
-    ],
-    "10": [
-      {
-        "id": "875089652518903869",
-        "name": "animowe-dysputy",
-        "category_name": "Unknown",
-        "count": 15950
-      },
-      {
-        "id": "1043195907258196079",
-        "name": "degenerackie-pogawędki",
-        "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 11590
-      },
-      {
-        "id": "904454003977502730",
-        "name": "pogawędki",
-        "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 6992
-      },
-      {
-        "id": "1034931177414479992",
-        "name": "biblioteka-mangowa",
-        "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 3477
-      },
-      {
-        "id": "976957742621290556",
-        "name": "meetowo-konwentowy",
-        "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 3032
-      },
-      {
-        "id": "1406686362979139837",
-        "name": "zakupowo-merchowy",
-        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2639
-      },
-      {
-        "id": "1398773115106103418",
-        "name": "japodróże",
-        "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 2188
-      },
-      {
-        "id": "875089270430396526",
-        "name": "kącik-muzyczny",
-        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 1971
-      },
-      {
-        "id": "1130865669429264456",
-        "name": "fantastyczny-burdel🍯",
-        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 1938
-      },
-      {
-        "id": "928729662081892435",
-        "name": "sezon-jesien-2004",
-        "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 1828
-      }
-    ],
-    "11": [
       {
         "id": "1043195907258196079",
         "name": "degenerackie-pogawędki",
@@ -1381,31 +1263,143 @@
         "id": "904454003977502730",
         "name": "pogawędki",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 10497
+        "count": 9542
       },
       {
-        "id": "875089652518903869",
-        "name": "animowe-dysputy",
-        "category_name": "Unknown",
-        "count": 8299
+        "id": "976957742621290556",
+        "name": "meetowo-konwentowy",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 8032
       },
       {
         "id": "1034931177414479992",
         "name": "biblioteka-mangowa",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 4212
-      },
-      {
-        "id": "1130865669429264456",
-        "name": "fantastyczny-burdel🍯",
-        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2647
+        "count": 4534
       },
       {
         "id": "1406686362979139837",
         "name": "zakupowo-merchowy",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2533
+        "count": 4060
+      },
+      {
+        "id": "875089347072917574",
+        "name": "gotuj-z-karczmą",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 2764
+      },
+      {
+        "id": "976551528691298345",
+        "name": "foto-studio",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 2190
+      },
+      {
+        "id": "914458084892606484",
+        "name": "integracja-online",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1914
+      },
+      {
+        "id": "909153584766132315",
+        "name": "kebab-głosowo-tekstowy",
+        "category_name": "╭── KANAŁY GŁOSOWE ──╮",
+        "count": 1614
+      }
+    ],
+    "10": [
+      {
+        "id": "875089652518903869",
+        "name": "animowe-dysputy",
+        "category_name": "Unknown",
+        "count": 15888
+      },
+      {
+        "id": "1043195907258196079",
+        "name": "degenerackie-pogawędki",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 11454
+      },
+      {
+        "id": "904454003977502730",
+        "name": "pogawędki",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 6959
+      },
+      {
+        "id": "1034931177414479992",
+        "name": "biblioteka-mangowa",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 3461
+      },
+      {
+        "id": "976957742621290556",
+        "name": "meetowo-konwentowy",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 3026
+      },
+      {
+        "id": "1406686362979139837",
+        "name": "zakupowo-merchowy",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2606
+      },
+      {
+        "id": "1398773115106103418",
+        "name": "japodróże",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 2179
+      },
+      {
+        "id": "875089270430396526",
+        "name": "kącik-muzyczny",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1963
+      },
+      {
+        "id": "928729662081892435",
+        "name": "sezon-jesien-2004",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 1827
+      },
+      {
+        "id": "1305164589410811924",
+        "name": "Karczmogus",
+        "category_name": "integracja-online",
+        "count": 1757
+      }
+    ],
+    "11": [
+      {
+        "id": "1043195907258196079",
+        "name": "degenerackie-pogawędki",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 13103
+      },
+      {
+        "id": "904454003977502730",
+        "name": "pogawędki",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 10470
+      },
+      {
+        "id": "875089652518903869",
+        "name": "animowe-dysputy",
+        "category_name": "Unknown",
+        "count": 8265
+      },
+      {
+        "id": "1034931177414479992",
+        "name": "biblioteka-mangowa",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 4199
+      },
+      {
+        "id": "1406686362979139837",
+        "name": "zakupowo-merchowy",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2489
       },
       {
         "id": "976957742621290556",
@@ -1414,22 +1408,28 @@
         "count": 2114
       },
       {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2019
+      },
+      {
         "id": "875089347072917574",
         "name": "gotuj-z-karczmą",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 1932
+        "count": 1930
       },
       {
         "id": "918039801419145277",
         "name": "kinowo-literacki",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 1748
+        "count": 1727
       },
       {
         "id": "909153584766132315",
         "name": "kebab-głosowo-tekstowy",
         "category_name": "╭── KANAŁY GŁOSOWE ──╮",
-        "count": 1360
+        "count": 1356
       }
     ],
     "12": [
@@ -1437,61 +1437,61 @@
         "id": "1043195907258196079",
         "name": "degenerackie-pogawędki",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 11792
+        "count": 11561
       },
       {
         "id": "875089652518903869",
         "name": "animowe-dysputy",
         "category_name": "Unknown",
-        "count": 10553
+        "count": 10478
       },
       {
         "id": "904454003977502730",
         "name": "pogawędki",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 7857
+        "count": 7817
       },
       {
         "id": "1034931177414479992",
         "name": "biblioteka-mangowa",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 3297
+        "count": 3287
       },
       {
         "id": "1417802301309063239",
         "name": "Nitka na anidramy",
         "category_name": "animowe-dysputy",
-        "count": 2985
+        "count": 2941
       },
       {
         "id": "1406686362979139837",
         "name": "zakupowo-merchowy",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2442
-      },
-      {
-        "id": "1130865669429264456",
-        "name": "fantastyczny-burdel🍯",
-        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2289
+        "count": 2362
       },
       {
         "id": "918039801419145277",
         "name": "kinowo-literacki",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 2149
+        "count": 2134
+      },
+      {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1559
       },
       {
         "id": "909379591267819570",
         "name": "【zobacz-memy】",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 1438
+        "count": 1310
       },
       {
         "id": "875089270430396526",
         "name": "kącik-muzyczny",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 1212
+        "count": 1200
       }
     ]
   }

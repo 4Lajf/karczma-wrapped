@@ -18,21 +18,23 @@ const db = new Database(DB_PATH, { readonly: true });
 
 function getTopUsersByMonth() {
     console.log('Computing TOP 10 users per month...');
-    
+
     const rows = db.prepare(`
         SELECT 
-            strftime('%m', timestamp) as month,
-            author_id,
+            strftime('%m', m.timestamp) as month,
+            m.author_id,
             COUNT(*) as count
-        FROM messages
-        WHERE strftime('%Y', timestamp) = ? 
-        AND channel_id != ?
-        GROUP BY month, author_id
+        FROM messages m
+        JOIN users u ON m.author_id = u.id
+        WHERE strftime('%Y', m.timestamp) = ? 
+        AND m.channel_id != ?
+        AND u.is_bot = 0
+        GROUP BY month, m.author_id
         ORDER BY month ASC, count DESC
     `).all(TARGET_YEAR.toString(), EXCLUDED_CHANNEL_ID);
 
     const monthlyUsers = {};
-    
+
     for (const row of rows) {
         const month = parseInt(row.month);
         if (!monthlyUsers[month]) {
@@ -47,13 +49,13 @@ function getTopUsersByMonth() {
     // Get user details and limit to TOP 10 per month
     const result = {};
     const getUserStmt = db.prepare('SELECT name, avatar_url FROM users WHERE id = ?');
-    
+
     for (let month = 1; month <= 12; month++) {
         if (!monthlyUsers[month]) {
             result[month] = [];
             continue;
         }
-        
+
         // Sort by count descending and take top 10
         const topUsers = monthlyUsers[month]
             .sort((a, b) => b.count - a.count)
@@ -67,19 +69,19 @@ function getTopUsersByMonth() {
                     count: user.count
                 };
             });
-        
+
         result[month] = topUsers;
     }
-    
+
     return result;
 }
 
 function getTopChannelsByMonth() {
     console.log('Computing TOP 10 channels per month...');
-    
+
     const excludedChannels = [EXCLUDED_CHANNEL_ID, ...EXCLUDED_POPULAR_CHANNEL_IDS];
     const excludedChannelsPlaceholders = excludedChannels.map(() => '?').join(',');
-    
+
     const rows = db.prepare(`
         SELECT 
             strftime('%m', m.timestamp) as month,
@@ -89,14 +91,16 @@ function getTopChannelsByMonth() {
             COUNT(m.id) as count
         FROM messages m
         JOIN channels c ON m.channel_id = c.id
+        JOIN users u ON m.author_id = u.id
         WHERE strftime('%Y', m.timestamp) = ? 
         AND m.channel_id NOT IN (${excludedChannelsPlaceholders})
+        AND u.is_bot = 0
         GROUP BY month, m.channel_id
         ORDER BY month ASC, count DESC
     `).all(TARGET_YEAR.toString(), ...excludedChannels);
 
     const monthlyChannels = {};
-    
+
     for (const row of rows) {
         const month = parseInt(row.month);
         if (!monthlyChannels[month]) {
@@ -112,13 +116,13 @@ function getTopChannelsByMonth() {
 
     // Limit to TOP 10 per month
     const result = {};
-    
+
     for (let month = 1; month <= 12; month++) {
         if (!monthlyChannels[month]) {
             result[month] = [];
             continue;
         }
-        
+
         // Sort by count descending and take top 10
         const topChannels = monthlyChannels[month]
             .sort((a, b) => b.count - a.count)
@@ -129,10 +133,10 @@ function getTopChannelsByMonth() {
                 category_name: channel.category_name,
                 count: channel.count
             }));
-        
+
         result[month] = topChannels;
     }
-    
+
     return result;
 }
 
