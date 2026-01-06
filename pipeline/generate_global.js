@@ -729,6 +729,281 @@ function getGlobalResponseStats(userFilter = '') {
     return stats;
 }
 
+function getMonthlyChannelStats(userFilter = '') {
+    console.log('Computing monthly channel stats...');
+    const excludedChannels = [EXCLUDED_CHANNEL_ID, ...EXCLUDED_POPULAR_CHANNEL_IDS];
+    const excludedChannelsPlaceholders = excludedChannels.map(() => '?').join(',');
+
+    const rows = db.prepare(`
+        SELECT strftime('%m', m.timestamp) as month, m.channel_id, c.name, COUNT(m.id) as count
+        FROM messages m
+        JOIN channels c ON m.channel_id = c.id
+        WHERE strftime('%Y', m.timestamp) = ? AND m.channel_id NOT IN (${excludedChannelsPlaceholders})${userFilter.replace(/author_id/g, 'm.author_id')}
+        GROUP BY month, m.channel_id
+    `).all(TARGET_YEAR.toString(), ...excludedChannels);
+
+    const result = {};
+    for (const row of rows) {
+        const m = parseInt(row.month);
+        if (!result[m]) result[m] = [];
+        result[m].push({ id: row.channel_id, name: row.name, count: row.count });
+    }
+    return result;
+}
+
+function getMonthlyUserStats(userFilter = '') {
+    console.log('Computing monthly user stats...');
+    const rows = db.prepare(`
+        SELECT strftime('%m', timestamp) as month, author_id, COUNT(*) as count
+        FROM messages
+        WHERE strftime('%Y', timestamp) = ? AND channel_id != ?${userFilter}
+        GROUP BY month, author_id
+    `).all(TARGET_YEAR.toString(), EXCLUDED_CHANNEL_ID);
+
+    const result = {};
+    for (const row of rows) {
+        const m = parseInt(row.month);
+        if (!result[m]) result[m] = [];
+        result[m].push({ id: row.author_id, count: row.count });
+    }
+    return result;
+}
+
+function getMonthlyWordStats(userFilter = '') {
+    console.log('Computing monthly word stats...');
+    const msgs = db.prepare(`
+        SELECT strftime('%m', timestamp) as month, content 
+        FROM messages 
+        WHERE strftime('%Y', timestamp) = ? AND channel_id != ?${userFilter}
+    `).all(TARGET_YEAR.toString(), EXCLUDED_CHANNEL_ID);
+
+    const monthlyCounts = {}; // month -> { word -> count }
+    const rawMap = {};
+
+    for (const row of msgs) {
+        if (!row.content) continue;
+        const m = parseInt(row.month);
+        if (!monthlyCounts[m]) monthlyCounts[m] = {};
+
+        const cleanContent = row.content.toLowerCase()
+            .replace(/<a?:\w+:\d+>/g, '') // Strip emojis <:name:id>
+            .replace(/<@!?\d+>/g, '')     // Strip user mentions
+            .replace(/<#\d+>/g, '');      // Strip channel mentions
+
+        const words = cleanContent.split(/[\s,.!?":;()\[\]<>{}|\\/+=*&^%$#@~`]+/);
+        for (const w of words) {
+            if (!w || isLikelyLink(w) || isGarbageWord(w) || w.includes('tenor') || w.includes('discord') || w.includes('www')) continue;
+            if (/^\d+$/.test(w) || w.length > 15) continue;
+            if ((w.length < 4 && w !== 'uwu' && w !== 'owo' && w !== 'xd') || STOPWORDS.has(w)) continue;
+
+            const s = stem(w);
+            const displayWord = shortenRepeatedChars(w);
+            monthlyCounts[m][s] = (monthlyCounts[m][s] || 0) + 1;
+            if (!rawMap[s]) rawMap[s] = displayWord;
+        }
+    }
+
+    const result = {};
+    for (const m in monthlyCounts) {
+        result[m] = Object.entries(monthlyCounts[m])
+            .map(([k, v]) => ({ stem: k, text: rawMap[k], value: v }));
+    }
+    return result;
+}
+
+function computeMonthlyHighlights(monthlyChannels, monthlyUsers, monthlyWords) {
+    console.log('Computing monthly highlights...');
+    const candidates = [];
+
+    // Helper to get total messages per month for normalization
+    const monthTotals = {};
+    for (let m = 1; m <= 12; m++) {
+        monthTotals[m] = (monthlyChannels[m] || []).reduce((sum, c) => sum + c.count, 0);
+    }
+
+    // 1. Channel Spikes
+    const channelYearStats = {}; // id -> { total: 0, months: {} }
+    for (let m = 1; m <= 12; m++) {
+        if (!monthlyChannels[m]) continue;
+        for (const c of monthlyChannels[m]) {
+            if (!channelYearStats[c.id]) channelYearStats[c.id] = { name: c.name, total: 0, months: {} };
+            channelYearStats[c.id].total += c.count;
+            channelYearStats[c.id].months[m] = c.count;
+        }
+    }
+
+    for (const [id, stats] of Object.entries(channelYearStats)) {
+        if (stats.total < 100) continue; // Ignore small channels
+        for (let m = 1; m <= 12; m++) {
+            const count = stats.months[m] || 0;
+            if (count < 50) continue;
+
+            const othersTotal = stats.total - count;
+            const avgOthers = othersTotal / 11;
+            const ratio = avgOthers === 0 ? count : count / avgOthers; // If exclusive to this month, ratio is count
+
+            // Boost if it's a huge portion of the month's total activity
+            const shareOfMonth = count / (monthTotals[m] || 1);
+
+            if (ratio > 2.0) {
+                candidates.push({
+                    month: m,
+                    type: 'channel_spike',
+                    subjectId: id,
+                    subjectName: stats.name,
+                    strength: ratio * Math.log(count) * (shareOfMonth + 0.5),
+                    details: {
+                        count,
+                        ratio: parseFloat(ratio.toFixed(2)),
+                        share: parseFloat(shareOfMonth.toFixed(2))
+                    }
+                });
+            }
+        }
+    }
+
+    // 2. User Outbursts
+    const userYearStats = {};
+    for (let m = 1; m <= 12; m++) {
+        if (!monthlyUsers[m]) continue;
+        for (const u of monthlyUsers[m]) {
+            if (!userYearStats[u.id]) userYearStats[u.id] = { total: 0, months: {} };
+            userYearStats[u.id].total += u.count;
+            userYearStats[u.id].months[m] = u.count;
+        }
+    }
+
+    const userNameCache = new Map();
+    const getName = (id) => {
+        if (userNameCache.has(id)) return userNameCache.get(id);
+        const u = db.prepare('SELECT name FROM users WHERE id = ?').get(id);
+        const name = u ? u.name : 'Unknown';
+        userNameCache.set(id, name);
+        return name;
+    };
+
+    for (const [id, stats] of Object.entries(userYearStats)) {
+        if (stats.total < 100) continue;
+        for (let m = 1; m <= 12; m++) {
+            const count = stats.months[m] || 0;
+            if (count < 30) continue;
+
+            const othersTotal = stats.total - count;
+            const avgOthers = othersTotal / 11;
+            const ratio = avgOthers === 0 ? count : count / avgOthers;
+
+            if (ratio > 2.5) {
+                candidates.push({
+                    month: m,
+                    type: 'user_outburst',
+                    subjectId: id,
+                    subjectName: getName(id),
+                    strength: ratio * Math.log(count),
+                    details: {
+                        count,
+                        ratio: parseFloat(ratio.toFixed(2))
+                    }
+                });
+            }
+        }
+    }
+
+    // 3. Word Anomalies
+    const wordYearStats = {}; // stem -> { text: '', total: 0, months: {} }
+    for (let m = 1; m <= 12; m++) {
+        if (!monthlyWords[m]) continue;
+        for (const w of monthlyWords[m]) {
+            if (!wordYearStats[w.stem]) wordYearStats[w.stem] = { text: w.text, total: 0, months: {} };
+            wordYearStats[w.stem].total += w.value;
+            wordYearStats[w.stem].months[m] = w.value;
+        }
+    }
+
+    for (const [stem, stats] of Object.entries(wordYearStats)) {
+        if (stats.total < 20) continue; // Ignore very rare words
+        for (let m = 1; m <= 12; m++) {
+            const count = stats.months[m] || 0;
+            if (count < 5) continue;
+
+            const othersTotal = stats.total - count;
+            const avgOthers = othersTotal / 11;
+            const ratio = avgOthers === 0 ? count : count / avgOthers;
+
+            if (ratio > 3.0) {
+                candidates.push({
+                    month: m,
+                    type: 'word_anomaly',
+                    subjectId: stem,
+                    subjectName: stats.text,
+                    strength: ratio * Math.log(count) * 0.8, // Slightly lower weight than channels/users
+                    details: {
+                        count,
+                        ratio: parseFloat(ratio.toFixed(2))
+                    }
+                });
+            }
+        }
+    }
+
+    // Sort candidates
+    candidates.sort((a, b) => b.strength - a.strength);
+
+    // Greedy Assignment
+    const assignments = {}; // month -> event
+    const usedSubjects = new Set();
+
+    // Pass 1: Assign high strength unique events
+    for (const cand of candidates) {
+        if (!assignments[cand.month] && !usedSubjects.has(cand.subjectName)) {
+            assignments[cand.month] = cand;
+            usedSubjects.add(cand.subjectName);
+        }
+    }
+
+    // Pass 2: Fill gaps
+    for (let m = 1; m <= 12; m++) {
+        if (!assignments[m]) {
+            // Find busiest channel this month that isn't used
+            const channels = monthlyChannels[m] || [];
+            channels.sort((a, b) => b.count - a.count);
+
+            let best = null;
+            for (const c of channels) {
+                if (!usedSubjects.has(c.name)) {
+                    best = c;
+                    break;
+                }
+            }
+            // If all used, just take top
+            if (!best && channels.length > 0) best = channels[0];
+
+            if (best) {
+                assignments[m] = {
+                    month: m,
+                    type: 'fallback_channel_top',
+                    subjectId: best.id,
+                    subjectName: best.name,
+                    strength: 0,
+                    details: { count: best.count }
+                };
+                usedSubjects.add(best.name);
+            } else {
+                assignments[m] = {
+                    month: m,
+                    type: 'quiet_month',
+                    subjectId: 'none',
+                    subjectName: 'Nothing happened',
+                    strength: 0,
+                    details: {}
+                };
+            }
+        }
+    }
+
+    // Convert to sorted array
+    return Object.values(assignments).sort((a, b) => a.month - b.month);
+}
+
 function generateGlobal() {
     console.log('=============================================');
     console.log(`🌍 Generating Global Discord Stats ${TARGET_YEAR}`);
@@ -756,6 +1031,12 @@ function generateGlobal() {
     const totalWords = db.prepare(`SELECT SUM(word_count) as val FROM messages WHERE strftime('%Y', timestamp) = ? AND channel_id != ?${userFilter}`).get(TARGET_YEAR.toString(), EXCLUDED_CHANNEL_ID)?.val || 0;
     const typingSpeedWPM = 40;
     const timeSpentTypingMinutes = totalWords / typingSpeedWPM;
+
+    // --- Compute Monthly Highlights ---
+    const monthlyChannels = getMonthlyChannelStats(userFilter);
+    const monthlyUsers = getMonthlyUserStats(userFilter);
+    const monthlyWords = getMonthlyWordStats(userFilter);
+    const monthlyHighlights = computeMonthlyHighlights(monthlyChannels, monthlyUsers, monthlyWords);
 
     const stats = {
         meta: {
@@ -785,6 +1066,7 @@ function generateGlobal() {
         roleDistribution: [], // Removed as requested
         interactionNetwork: getInteractionNetwork(userFilter),
         hallOfFame: getHallOfFame(userFilter),
+        monthlyHighlights: monthlyHighlights,
 
         globalAverages: {
             avgMessageLength: db.prepare(`SELECT AVG(char_count) as val FROM messages WHERE strftime('%Y', timestamp) = ? AND channel_id != ?${userFilter}`).get(TARGET_YEAR.toString(), EXCLUDED_CHANNEL_ID)?.val || 0,

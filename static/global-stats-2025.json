@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2025-12-23T21:57:03.336Z",
+    "generatedAt": "2026-01-06T13:45:28.121Z",
     "year": 2025,
     "isLimited": false,
     "limitCount": null
@@ -3588,6 +3588,143 @@
         "avatar": "https://cdn.discordapp.com/avatars/334775842272182273/80373af1ad7cdf6a5cfc09925f02056e.png?size=512"
       },
       "value": "43x cocoXD pod jedną wiadomością"
+    }
+  ],
+  "monthlyHighlights": [
+    {
+      "month": 1,
+      "type": "user_outburst",
+      "subjectId": "348236285825253387",
+      "subjectName": "zoro_senpaii",
+      "strength": 4499.583565193742,
+      "details": {
+        "count": 161,
+        "ratio": 885.5
+      }
+    },
+    {
+      "month": 2,
+      "type": "word_anomaly",
+      "subjectId": "amiamihobbynews",
+      "subjectName": "amiamihobbynews",
+      "strength": 157.16679461896183,
+      "details": {
+        "count": 39,
+        "ratio": 53.63
+      }
+    },
+    {
+      "month": 3,
+      "type": "user_outburst",
+      "subjectId": "688734814483775513",
+      "subjectName": "daciq",
+      "strength": 3837.7632949882695,
+      "details": {
+        "count": 141,
+        "ratio": 775.5
+      }
+    },
+    {
+      "month": 4,
+      "type": "word_anomaly",
+      "subjectId": "junjo",
+      "subjectName": "junjou",
+      "strength": 95.48154397917203,
+      "details": {
+        "count": 29,
+        "ratio": 35.44
+      }
+    },
+    {
+      "month": 5,
+      "type": "word_anomaly",
+      "subjectId": "renton",
+      "subjectName": "rentonem",
+      "strength": 732.6191131265754,
+      "details": {
+        "count": 44,
+        "ratio": 242
+      }
+    },
+    {
+      "month": 6,
+      "type": "word_anomaly",
+      "subjectId": "🇵🇱",
+      "subjectName": "🇵🇱",
+      "strength": 178.45084560764477,
+      "details": {
+        "count": 212,
+        "ratio": 41.64
+      }
+    },
+    {
+      "month": 7,
+      "type": "channel_spike",
+      "subjectId": "1232272048274014288",
+      "subjectName": "Konie do zagrody (gacha kanał)",
+      "strength": 10245.065337744865,
+      "details": {
+        "count": 2472,
+        "ratio": 2472,
+        "share": 0.03
+      }
+    },
+    {
+      "month": 8,
+      "type": "channel_spike",
+      "subjectId": "1400522471555334224",
+      "subjectName": "[✅ done] Kanał forum na polecajki/recenzje",
+      "strength": 1042.7515175196518,
+      "details": {
+        "count": 379,
+        "ratio": 347.42,
+        "share": 0.01
+      }
+    },
+    {
+      "month": 9,
+      "type": "channel_spike",
+      "subjectId": "1415328615641383003",
+      "subjectName": "[✅ done] ''podróżnik w czasie'' reaktywacja",
+      "strength": 7271.808156018726,
+      "details": {
+        "count": 431,
+        "ratio": 2370.5,
+        "share": 0.01
+      }
+    },
+    {
+      "month": 10,
+      "type": "user_outburst",
+      "subjectId": "315137959969947651",
+      "subjectName": "vvolkeer",
+      "strength": 2690.0976062174714,
+      "details": {
+        "count": 187,
+        "ratio": 514.25
+      }
+    },
+    {
+      "month": 11,
+      "type": "word_anomaly",
+      "subjectId": "stratn",
+      "subjectName": "stratne",
+      "strength": 562.6277464912886,
+      "details": {
+        "count": 21,
+        "ratio": 231
+      }
+    },
+    {
+      "month": 12,
+      "type": "user_outburst",
+      "subjectId": "1162716486020890634",
+      "subjectName": "Link Expander",
+      "strength": 166.54817704935172,
+      "details": {
+        "count": 768,
+        "ratio": 25.07
+      }
     }
   ],
   "globalAverages": {

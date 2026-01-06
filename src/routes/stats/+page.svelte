@@ -36,6 +36,21 @@
 	);
 
 	const DAYS = ['Nie', 'Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob'];
+	const MONTHS = [
+		'',
+		'Styczeń',
+		'Luty',
+		'Marzec',
+		'Kwiecień',
+		'Maj',
+		'Czerwiec',
+		'Lipiec',
+		'Sierpień',
+		'Wrzesień',
+		'Październik',
+		'Listopad',
+		'Grudzień'
+	];
 
 	let stats = $state(null);
 	let loading = $state(true);
@@ -280,6 +295,37 @@
 		}
 		return urls;
 	}
+
+	function getHighlightMeta(item) {
+		switch (item.type) {
+			case 'channel_spike':
+				return {
+					icon: '📢',
+					title: 'Miesiąc Kanału',
+					desc: `Wybuch aktywności: ${item.details.ratio}x powyżej średniej`
+				};
+			case 'user_outburst':
+				return {
+					icon: '🗣️',
+					title: 'Miesiąc Użytkownika',
+					desc: `Niespodziewany spam: ${item.details.ratio}x więcej niż zwykle`
+				};
+			case 'word_anomaly':
+				return {
+					icon: '🔤',
+					title: 'Miesiąc Słowa',
+					desc: `Natręctwo językowe: ${item.details.ratio}x częściej używane`
+				};
+			case 'fallback_channel_top':
+				return {
+					icon: '🏆',
+					title: 'Dominacja',
+					desc: 'Najpopularniejszy kanał w tym miesiącu'
+				};
+			default:
+				return { icon: '📅', title: 'Miesiąc', desc: '' };
+		}
+	}
 </script>
 
 <svelte:head>
@@ -354,6 +400,56 @@
 					</div>
 				</div>
 			</header>
+
+			<!-- MONTHLY HIGHLIGHTS (YEAR IN A NUTSHELL) -->
+			{#if stats.monthlyHighlights && stats.monthlyHighlights.length > 0}
+				<section>
+					<h2
+						class="mb-2 inline-block border-4 border-black bg-white px-6 py-2 text-3xl font-black uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
+					>
+						📅 Rok w Pigułce
+					</h2>
+					<p class="mb-8 text-xs font-bold text-gray-500 uppercase">
+						Co wyróżniało każdy z 12 miesięcy? Unikalne wydarzenia i anomalie.
+					</p>
+					<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+						{#each stats.monthlyHighlights as item}
+							{@const meta = getHighlightMeta(item)}
+							<div
+								class="flex flex-col border-4 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-transform hover:-translate-y-1"
+							>
+								<div class="mb-2 flex items-center justify-between border-b-2 border-black pb-2">
+									<span class="text-xl font-black uppercase">{MONTHS[item.month]}</span>
+									<span class="text-2xl">{meta.icon}</span>
+								</div>
+								
+								<div class="mb-1 text-[10px] font-bold text-gray-500 uppercase tracking-wider">
+									{meta.title}
+								</div>
+								
+								<div class="mb-3 flex-1 break-words text-2xl font-black uppercase leading-none">
+									{#if item.type === 'channel_spike' || item.type === 'fallback_channel_top'}
+										#{item.subjectName}
+									{:else if item.type === 'word_anomaly'}
+										"{item.subjectName}"
+									{:else}
+										{item.subjectName}
+									{/if}
+								</div>
+
+								<div class="mt-auto border-t-2 border-black pt-2 text-xs font-bold">
+									{meta.desc}
+								</div>
+								{#if item.details.count}
+									<div class="mt-1 text-[10px] font-mono text-gray-500">
+										(Licznik: {item.details.count.toLocaleString()})
+									</div>
+								{/if}
+							</div>
+						{/each}
+					</div>
+				</section>
+			{/if}
 
 			<!-- HALL OF FAME -->
 			<section>
