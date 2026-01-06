@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-01-06T13:45:28.121Z",
+    "generatedAt": "2026-01-06T16:14:38.524Z",
     "year": 2025,
     "isLimited": false,
     "limitCount": null
@@ -8,9 +8,9 @@
   "guild": {
     "name": "Fantastyczna Karczma",
     "activeUsers": 324,
-    "totalMessages": 707081,
-    "totalWords": 4677599,
-    "timeSpentTypingMinutes": 116939.975
+    "totalMessages": 742794,
+    "totalWords": 4939669,
+    "timeSpentTypingMinutes": 123491.725
   },
   "timeline": [
     {
@@ -1395,179 +1395,259 @@
     },
     {
       "day": "2025-12-12",
-      "count": 64
+      "count": 125
+    },
+    {
+      "day": "2025-12-13",
+      "count": 1233
+    },
+    {
+      "day": "2025-12-14",
+      "count": 860
+    },
+    {
+      "day": "2025-12-15",
+      "count": 2531
+    },
+    {
+      "day": "2025-12-16",
+      "count": 2482
+    },
+    {
+      "day": "2025-12-17",
+      "count": 2448
+    },
+    {
+      "day": "2025-12-18",
+      "count": 2214
+    },
+    {
+      "day": "2025-12-19",
+      "count": 2936
+    },
+    {
+      "day": "2025-12-20",
+      "count": 1926
+    },
+    {
+      "day": "2025-12-21",
+      "count": 1523
+    },
+    {
+      "day": "2025-12-22",
+      "count": 1348
+    },
+    {
+      "day": "2025-12-23",
+      "count": 1393
+    },
+    {
+      "day": "2025-12-24",
+      "count": 1557
+    },
+    {
+      "day": "2025-12-25",
+      "count": 2496
+    },
+    {
+      "day": "2025-12-26",
+      "count": 1521
+    },
+    {
+      "day": "2025-12-27",
+      "count": 1920
+    },
+    {
+      "day": "2025-12-28",
+      "count": 2150
+    },
+    {
+      "day": "2025-12-29",
+      "count": 1796
+    },
+    {
+      "day": "2025-12-30",
+      "count": 1967
+    },
+    {
+      "day": "2025-12-31",
+      "count": 1351
     }
   ],
   "hourlyHeatmap": [
-    13835,
-    6407,
-    2902,
-    1803,
-    1800,
-    3391,
-    6888,
-    13335,
-    21999,
-    29988,
-    36818,
-    41141,
-    43783,
-    41573,
-    42565,
-    46565,
-    42475,
-    44043,
-    48469,
-    51009,
-    53381,
-    47270,
-    39141,
-    26500
+    15134,
+    7198,
+    3197,
+    1901,
+    1940,
+    3498,
+    7077,
+    13669,
+    22968,
+    31288,
+    38753,
+    43039,
+    46263,
+    43986,
+    44962,
+    48777,
+    44968,
+    46132,
+    50210,
+    52907,
+    55631,
+    49414,
+    41406,
+    28476
   ],
   "weeklyHeatmap": [
-    94578,
-    107413,
-    103941,
-    108994,
-    110983,
-    98499,
-    82673
+    99111,
+    113088,
+    109783,
+    114350,
+    115693,
+    103017,
+    87752
   ],
   "channels": {
     "channels": [
       {
         "name": "animowe-dysputy",
-        "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 139679
+        "category_name": "Unknown",
+        "count": 148019
       },
       {
         "name": "degenerackie-pogawędki",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 118883
+        "count": 125611
       },
       {
         "name": "pogawędki",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 93058
+        "count": 96862
       },
       {
         "name": "biblioteka-mangowa",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 45500
+        "count": 47327
       },
       {
         "name": "meetowo-konwentowy",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 35050
+        "count": 35189
       },
       {
         "name": "fantastyczny-burdel🍯",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 30826
+        "count": 32175
       },
       {
         "name": "kinowo-literacki",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 22853
+        "count": 24228
       },
       {
         "name": "gotuj-z-karczmą",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 17404
+        "count": 17987
       },
       {
         "name": "kącik-muzyczny",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 17221
+        "count": 17835
       },
       {
         "name": "【zobacz-memy】",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 16592
+        "count": 17530
       },
       {
         "name": "foto-studio",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 15969
+        "count": 16864
       },
       {
         "name": "salon-gier",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 13602
+        "count": 13936
       },
       {
         "name": "kebab-głosowo-tekstowy",
         "category_name": "╭── KANAŁY GŁOSOWE ──╮",
-        "count": 12995
+        "count": 13401
       },
       {
         "name": "integracja-online",
         "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 12930
+        "count": 13360
       },
       {
         "name": "zakupowo-merchowy",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 11901
+        "count": 13349
       },
       {
         "name": "wciągalnia-kreskówek",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 10159
+        "count": 10446
       },
       {
         "name": "wystawa-artów",
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 9668
+        "count": 10262
       },
       {
         "name": "weebowo-zabawowy",
         "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 6324
+        "count": 6542
       },
       {
         "name": "Karczmogus",
         "category_name": "integracja-online",
-        "count": 5442
+        "count": 5730
       },
       {
-        "name": "polecajkowo-linkowy",
-        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 4901
+        "name": "japodróże",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 5187
       }
     ],
     "categories": [
       {
-        "category_name": "╭──WEEBOWA IZAKAYA──╮",
-        "count": 322180
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 226261
       },
       {
-        "category_name": "╭──SOCJALNA KARCZMA──╮",
-        "count": 219154
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 192134
+      },
+      {
+        "category_name": "Unknown",
+        "count": 148019
       },
       {
         "category_name": "╭──HOBBYSTYCZNY BAR──╮",
-        "count": 123746
+        "count": 131191
       },
       {
         "category_name": "╭── KANAŁY GŁOSOWE ──╮",
-        "count": 13363
+        "count": 13770
       },
       {
         "category_name": "integracja-online",
-        "count": 7753
+        "count": 8259
       },
       {
         "category_name": "╭── WAŻNE ──╮",
-        "count": 5541
-      },
-      {
-        "category_name": "propozycje",
-        "count": 4149
+        "count": 5790
       },
       {
         "category_name": "animowe-dysputy",
-        "count": 3504
+        "count": 5178
+      },
+      {
+        "category_name": "propozycje",
+        "count": 4209
       },
       {
         "category_name": "kącik-muzyczny",
@@ -1575,23 +1655,23 @@
       },
       {
         "category_name": "╭── EIZOUKEN ──╮",
-        "count": 1657
+        "count": 1661
       },
       {
         "category_name": "╭── ARCHIWUM ──╮",
         "count": 1066
       },
       {
+        "category_name": "kanał-na-komendy",
+        "count": 580
+      },
+      {
         "category_name": "╭── GRZYBLING ──╮",
         "count": 435
       },
       {
-        "category_name": "kanał-na-komendy",
-        "count": 360
-      },
-      {
         "category_name": "międzygatunkowi-recenzenci",
-        "count": 351
+        "count": 359
       },
       {
         "category_name": "pogawędki",
@@ -1599,7 +1679,7 @@
       },
       {
         "category_name": "pokaż-mi-swoje-towary",
-        "count": 220
+        "count": 278
       },
       {
         "category_name": "kebab-głosowo-tekstowy",
@@ -1607,7 +1687,7 @@
       },
       {
         "category_name": "foto-studio",
-        "count": 26
+        "count": 28
       },
       {
         "category_name": "kinowo-literacki",
@@ -1626,569 +1706,574 @@
   "wordCloud": [
     {
       "text": "xd",
-      "value": 25482
+      "value": 26603
     },
     {
       "text": "chyba",
-      "value": 15000
+      "value": 15824
     },
     {
       "text": "taka",
-      "value": 14191
+      "value": 15010
     },
     {
       "text": "dobra",
-      "value": 10898
+      "value": 11461
     },
     {
       "text": "jako",
-      "value": 10304
+      "value": 10929
     },
     {
       "text": "fajnie",
-      "value": 8804
+      "value": 9205
     },
     {
       "text": "sumie",
-      "value": 8518
+      "value": 8938
     },
     {
       "text": "czas",
-      "value": 8464
+      "value": 8910
     },
     {
       "text": "razie",
-      "value": 7967
+      "value": 8390
     },
     {
       "text": "pewnie",
-      "value": 7933
+      "value": 8367
     },
     {
       "text": "kurwa",
-      "value": 7870
+      "value": 8185
     },
     {
       "text": "prostu",
-      "value": 7549
+      "value": 8019
     },
     {
       "text": "jestem",
-      "value": 6673
+      "value": 6980
     },
     {
       "text": "rzeczy",
-      "value": 6560
+      "value": 6970
     },
     {
       "text": "kocham",
-      "value": 6547
+      "value": 6890
     },
     {
       "text": "mogę",
-      "value": 6373
+      "value": 6702
     },
     {
       "text": "bajkach",
-      "value": 6208
+      "value": 6594
     },
     {
       "text": "bylo",
-      "value": 6184
+      "value": 6550
     },
     {
       "text": "same",
-      "value": 6139
+      "value": 6510
     },
     {
       "text": "trochę",
-      "value": 5929
+      "value": 6248
     },
     {
       "text": "dobrze",
-      "value": 5846
-    },
-    {
-      "text": "bardziej",
-      "value": 5614
+      "value": 6132
     },
     {
       "text": "ludzie",
-      "value": 5583
+      "value": 5951
+    },
+    {
+      "text": "bardziej",
+      "value": 5940
     },
     {
       "text": "mocne",
-      "value": 5474
+      "value": 5803
     },
     {
       "text": "jakby",
-      "value": 5450
+      "value": 5758
     },
     {
       "text": "widzę",
-      "value": 5290
+      "value": 5589
     },
     {
       "text": "pierwsze",
-      "value": 5176
+      "value": 5483
     },
     {
       "text": "kurde",
-      "value": 5093
+      "value": 5328
     },
     {
       "text": "dużo",
-      "value": 5042
+      "value": 5325
     },
     {
       "text": "film",
-      "value": 4948
+      "value": 5230
     },
     {
       "text": "inny",
-      "value": 4877
+      "value": 5133
     },
     {
       "text": "jedną",
-      "value": 4668
+      "value": 4926
     },
     {
       "text": "trzeba",
-      "value": 4637
+      "value": 4874
     },
     {
       "text": "nowy",
-      "value": 4535
+      "value": 4817
     },
     {
       "text": "muszę",
-      "value": 4476
+      "value": 4670
     },
     {
       "text": "potem",
-      "value": 4334
-    },
-    {
-      "text": "jednak",
-      "value": 4202
+      "value": 4566
     },
     {
       "text": "masz",
-      "value": 4193
+      "value": 4435
     },
     {
-      "text": "miałem",
-      "value": 4191
+      "text": "jednak",
+      "value": 4421
     },
     {
       "text": "moze",
-      "value": 4111
+      "value": 4379
+    },
+    {
+      "text": "miałem",
+      "value": 4376
     },
     {
       "text": "wiec",
-      "value": 3869
+      "value": 4109
     },
     {
       "text": "byłem",
-      "value": 3818
-    },
-    {
-      "text": "ktoś",
-      "value": 3746
+      "value": 4005
     },
     {
       "text": "ciekawym",
-      "value": 3745
+      "value": 3982
     },
     {
       "text": "robie",
-      "value": 3732
+      "value": 3955
     },
     {
       "text": "postaci",
-      "value": 3723
-    },
-    {
-      "text": "druga",
-      "value": 3691
+      "value": 3948
     },
     {
       "text": "anime",
-      "value": 3668
+      "value": 3947
     },
     {
-      "text": "seria",
-      "value": 3647
+      "text": "ktoś",
+      "value": 3941
     },
     {
-      "text": "dalej",
-      "value": 3644
+      "text": "druga",
+      "value": 3879
     },
     {
       "text": "sezony",
-      "value": 3641
+      "value": 3874
     },
     {
-      "text": "dzisiaj",
-      "value": 3626
+      "text": "seria",
+      "value": 3864
     },
     {
       "text": "sens",
-      "value": 3621
+      "value": 3844
+    },
+    {
+      "text": "dalej",
+      "value": 3828
+    },
+    {
+      "text": "dzisiaj",
+      "value": 3801
     },
     {
       "text": "będa",
-      "value": 3609
+      "value": 3762
     },
     {
       "text": "tyle",
-      "value": 3531
+      "value": 3745
     },
     {
       "text": "całą",
-      "value": 3527
+      "value": 3714
     },
     {
       "text": "faktycznie",
-      "value": 3492
-    },
-    {
-      "text": "xddd",
-      "value": 3490
+      "value": 3705
     },
     {
       "text": "bedzie",
-      "value": 3447
+      "value": 3633
     },
     {
-      "text": "chuj",
-      "value": 3442
+      "text": "xddd",
+      "value": 3627
     },
     {
       "text": "mialem",
-      "value": 3407
+      "value": 3601
     },
     {
-      "text": "akurat",
-      "value": 3370
+      "text": "chuj",
+      "value": 3582
     },
     {
       "text": "bangera",
-      "value": 3368
+      "value": 3539
     },
     {
       "text": "można",
-      "value": 3353
+      "value": 3524
     },
     {
-      "text": "tych",
-      "value": 3282
+      "text": "akurat",
+      "value": 3517
     },
     {
       "text": "mang",
-      "value": 3266
+      "value": 3510
     },
     {
-      "text": "jakieś",
-      "value": 3208
+      "text": "tych",
+      "value": 3489
     },
     {
       "text": "nigdy",
-      "value": 3208
+      "value": 3391
+    },
+    {
+      "text": "jakieś",
+      "value": 3367
     },
     {
       "text": "wtedy",
-      "value": 3178
-    },
-    {
-      "text": "baby",
-      "value": 3166
+      "value": 3357
     },
     {
       "text": "myślę",
-      "value": 3155
+      "value": 3334
+    },
+    {
+      "text": "baby",
+      "value": 3302
     },
     {
       "text": "wszystkim",
-      "value": 3043
-    },
-    {
-      "text": "więcej",
-      "value": 3012
-    },
-    {
-      "text": "ogóle",
-      "value": 2991
-    },
-    {
-      "text": "kino",
-      "value": 2957
+      "value": 3223
     },
     {
       "text": "stronie",
-      "value": 2955
+      "value": 3192
+    },
+    {
+      "text": "więcej",
+      "value": 3180
+    },
+    {
+      "text": "ogóle",
+      "value": 3123
     },
     {
       "text": "widział",
-      "value": 2916
-    },
-    {
-      "text": "temu",
-      "value": 2883
+      "value": 3078
     },
     {
       "text": "ktore",
-      "value": 2876
+      "value": 3065
     },
     {
-      "text": "jezu",
-      "value": 2855
+      "text": "kino",
+      "value": 3065
     },
     {
-      "text": "spoko",
-      "value": 2843
-    },
-    {
-      "text": "jakiś",
-      "value": 2839
+      "text": "temu",
+      "value": 3056
     },
     {
       "text": "prawda",
-      "value": 2829
+      "value": 3018
     },
     {
       "text": "ostatnia",
-      "value": 2813
+      "value": 2977
+    },
+    {
+      "text": "jezu",
+      "value": 2974
+    },
+    {
+      "text": "spoko",
+      "value": 2959
+    },
+    {
+      "text": "jakiś",
+      "value": 2956
     },
     {
       "text": "jeden",
-      "value": 2784
+      "value": 2929
     },
     {
       "text": "osoby",
-      "value": 2741
-    },
-    {
-      "text": "moja",
-      "value": 2705
+      "value": 2909
     },
     {
       "text": "chodzi",
-      "value": 2701
+      "value": 2862
     },
     {
-      "text": "chciałem",
-      "value": 2686
-    },
-    {
-      "text": "tutaj",
-      "value": 2665
+      "text": "moja",
+      "value": 2840
     },
     {
       "text": "zeby",
-      "value": 2664
+      "value": 2837
+    },
+    {
+      "text": "chciałem",
+      "value": 2811
+    },
+    {
+      "text": "tutaj",
+      "value": 2801
     },
     {
       "text": "miejsce",
-      "value": 2657
+      "value": 2788
     },
     {
       "text": "końcu",
-      "value": 2657
+      "value": 2781
     },
     {
       "text": "kiedyś",
-      "value": 2623
+      "value": 2743
     },
     {
       "text": "wygląda",
-      "value": 2587
+      "value": 2708
+    },
+    {
+      "text": "roku",
+      "value": 2701
     },
     {
       "text": "super",
-      "value": 2574
-    },
-    {
-      "text": "scena",
-      "value": 2540
+      "value": 2697
     },
     {
       "text": "uwu",
-      "value": 2527
+      "value": 2647
     },
     {
-      "text": "dosłownie",
-      "value": 2504
+      "text": "scena",
+      "value": 2644
     },
     {
       "text": "znowu",
-      "value": 2497
+      "value": 2630
     }
   ],
   "userDistribution": {
-    "1-10": 124,
-    "11-100": 62,
+    "1-10": 121,
+    "11-100": 64,
     "101-500": 45,
-    "501-1000": 22,
-    "1001-5000": 29,
-    "5000+": 42
+    "501-1000": 19,
+    "1001-5000": 32,
+    "5000+": 43
   },
   "attachments": {
-    "image": 92542,
-    "video": 2635,
+    "image": 97639,
+    "video": 2723,
     "audio": 31,
-    "file": 133
+    "file": 141
   },
   "links": {
-    "spotify": 492,
-    "youtube": 5394,
-    "twitter": 30949,
-    "pixiv": 508,
-    "gif": 4923,
-    "total": 52091
+    "spotify": 515,
+    "youtube": 5637,
+    "twitter": 33500,
+    "pixiv": 540,
+    "gif": 5194,
+    "total": 55785
   },
   "emojis": [
     {
       "name": "cocoXD",
       "id": "909369353554771989",
-      "count": 124284,
+      "count": 130017,
       "server": "Karczma"
     },
     {
       "name": "❤️",
       "id": "",
-      "count": 55628
+      "count": 59151
     },
     {
       "name": "😍",
       "id": "",
-      "count": 35757
+      "count": 38365
     },
     {
       "name": "cocoXD",
       "id": "729822486799319071",
-      "count": 10286,
+      "count": 10784,
       "server": "Vtuberkowy"
     },
     {
       "name": "vibecat",
       "id": "909373540212547594",
-      "count": 8327
+      "count": 8614
     },
     {
       "name": "cocoXD_4",
       "id": "917810523003813948",
-      "count": 5587
+      "count": 5975
     },
     {
       "name": "💗",
       "id": "",
-      "count": 4390
+      "count": 4854
     },
     {
       "name": "trollgefk",
       "id": "1003285860596338758",
-      "count": 3985
+      "count": 4165
     },
     {
       "name": "👆",
       "id": "",
-      "count": 3359
+      "count": 3547
     },
     {
       "name": "Pandapat",
       "id": "1056314396713955458",
-      "count": 3223
+      "count": 3350
     },
     {
       "name": "😭",
       "id": "",
-      "count": 2875
+      "count": 3137
     },
     {
       "name": "😳",
       "id": "",
-      "count": 2691
+      "count": 2788
     },
     {
       "name": "👍",
       "id": "",
-      "count": 2331
+      "count": 2441
     },
     {
       "name": "UwUkuraii",
       "id": "909841552224972831",
-      "count": 2305
+      "count": 2352
     },
     {
       "name": "💪",
       "id": "",
-      "count": 2099
+      "count": 2161
     },
     {
       "name": "🚬",
       "id": "",
-      "count": 1916
+      "count": 2024
     },
     {
       "name": "flush",
       "id": "1024969310701109308",
-      "count": 1511
+      "count": 1539
     },
     {
       "name": "😔",
       "id": "",
-      "count": 1398
+      "count": 1459
     },
     {
       "name": "🔥",
       "id": "",
-      "count": 1323
+      "count": 1433
     },
     {
       "name": "💀",
       "id": "",
-      "count": 1163
+      "count": 1178
     },
     {
       "name": "🫂",
       "id": "",
-      "count": 862
+      "count": 975
     },
     {
       "name": "💖",
       "id": "",
-      "count": 809
-    },
-    {
-      "name": "🥰",
-      "id": "",
-      "count": 650
+      "count": 830
     },
     {
       "name": "👀",
       "id": "",
-      "count": 643
+      "count": 711
     },
     {
-      "name": "😎",
+      "name": "🥰",
       "id": "",
-      "count": 636
+      "count": 676
     },
     {
       "name": "😋",
       "id": "",
-      "count": 616
+      "count": 666
+    },
+    {
+      "name": "😎",
+      "id": "",
+      "count": 645
     },
     {
       "name": "plusjeden",
       "id": "1030233662618357842",
-      "count": 531
+      "count": 541
     },
     {
       "name": "cocoxdspin",
       "id": "1416431599414939668",
-      "count": 440
+      "count": 476
+    },
+    {
+      "name": "🤝",
+      "id": "",
+      "count": 464
     },
     {
       "name": "Panda_pat",
@@ -2196,73 +2281,78 @@
       "count": 439
     },
     {
-      "name": "🤝",
-      "id": "",
-      "count": 421
-    },
-    {
       "name": "doggolick",
       "id": "1113849273533087754",
-      "count": 415
+      "count": 435
     },
     {
       "name": "PepeNote",
       "id": "875471915391811655",
-      "count": 401
+      "count": 417
     },
     {
       "name": "pensivecum",
       "id": "1003744834793766922",
-      "count": 387
-    },
-    {
-      "name": "InaHumuu",
-      "id": "909877473754378282",
-      "count": 342
-    },
-    {
-      "name": "wakaru",
-      "id": "949465369045778492",
-      "count": 336
+      "count": 403
     },
     {
       "name": "🙏",
       "id": "",
-      "count": 336
+      "count": 398
     },
     {
-      "name": "Mugi_stronk",
-      "id": "963490485668827136",
-      "count": 334
-    },
-    {
-      "name": "pogcelanka",
-      "id": "997597794032435342",
-      "count": 325
+      "name": "wakaru",
+      "id": "949465369045778492",
+      "count": 370
     },
     {
       "name": "‼️",
       "id": "",
-      "count": 325
+      "count": 362
+    },
+    {
+      "name": "InaHumuu",
+      "id": "909877473754378282",
+      "count": 351
+    },
+    {
+      "name": "Mugi_stronk",
+      "id": "963490485668827136",
+      "count": 345
+    },
+    {
+      "name": "pogcelanka",
+      "id": "997597794032435342",
+      "count": 339
     },
     {
       "name": "nowaying",
       "id": "1280903178191372379",
-      "count": 323
+      "count": 330
     },
     {
       "name": "cocoxd",
       "id": "982745743100104814",
-      "count": 315
+      "count": 326
     },
     {
       "name": "utried",
       "id": "951124564694413312",
-      "count": 306
+      "count": 322
+    },
+    {
+      "name": "💢",
+      "id": "",
+      "count": 275
     },
     {
       "name": "cluelessFK",
       "id": "1298666774459318273",
+      "count": 273
+    },
+    {
+      "name": "🙏🏻",
+      "id": "",
       "count": 266
     },
     {
@@ -2271,19 +2361,24 @@
       "count": 252
     },
     {
-      "name": "💢",
+      "name": "👽",
       "id": "",
-      "count": 246
+      "count": 251
+    },
+    {
+      "name": "❓",
+      "id": "",
+      "count": 250
+    },
+    {
+      "name": "💯",
+      "id": "",
+      "count": 243
     },
     {
       "name": "🎉",
       "id": "",
-      "count": 239
-    },
-    {
-      "name": "👽",
-      "id": "",
-      "count": 238
+      "count": 241
     },
     {
       "name": "💙",
@@ -2291,74 +2386,74 @@
       "count": 230
     },
     {
-      "name": "💯",
-      "id": "",
-      "count": 230
-    },
-    {
-      "name": "🙏🏻",
-      "id": "",
-      "count": 226
-    },
-    {
-      "name": "❓",
-      "id": "",
-      "count": 224
-    },
-    {
       "name": "This",
       "id": "710843631250178128",
-      "count": 218
+      "count": 226
     },
     {
       "name": "🤨",
       "id": "",
-      "count": 202
-    },
-    {
-      "name": "PolarSad",
-      "id": "963823061537292288",
-      "count": 195
-    },
-    {
-      "name": "🇵🇱",
-      "id": "",
-      "count": 193
+      "count": 214
     },
     {
       "name": "sus",
       "id": "1304837093616390177",
-      "count": 191
+      "count": 208
+    },
+    {
+      "name": "🇵🇱",
+      "id": "",
+      "count": 200
+    },
+    {
+      "name": "PolarSad",
+      "id": "963823061537292288",
+      "count": 197
     },
     {
       "name": "KitaPanic",
       "id": "1045506241536999544",
+      "count": 187
+    },
+    {
+      "name": "😡",
+      "id": "",
+      "count": 179
+    },
+    {
+      "name": "clueless",
+      "id": "985261924017111060",
+      "count": 178
+    },
+    {
+      "name": "👍🏻",
+      "id": "",
       "count": 178
     },
     {
       "name": "🍝",
       "id": "",
-      "count": 175
-    },
-    {
-      "name": "👍🏻",
-      "id": "",
-      "count": 173
-    },
-    {
-      "name": "😡",
-      "id": "",
-      "count": 169
-    },
-    {
-      "name": "based",
-      "id": "1003744984392015882",
-      "count": 168
+      "count": 177
     },
     {
       "name": "😮",
       "id": "",
-      "count": 165
+      "count": 174
+    },
+    {
+      "name": "based",
+      "id": "1003744984392015882",
+      "count": 171
+    },
+    {
+      "name": "🫡",
+      "id": "",
+      "count": 170
+    },
+    {
+      "name": "👆🏻",
+      "id": "",
+      "count": 162
     },
     {
       "name": "pat_senpai",
@@ -2366,24 +2461,24 @@
       "count": 159
     },
     {
-      "name": "👆🏻",
-      "id": "",
-      "count": 159
-    },
-    {
-      "name": "clueless",
-      "id": "985261924017111060",
-      "count": 158
-    },
-    {
       "name": "cocoxd_spinning",
       "id": "1087822273752338454",
       "count": 157
     },
     {
-      "name": "🫡",
+      "name": "💜",
       "id": "",
-      "count": 152
+      "count": 146
+    },
+    {
+      "name": "pat_kana",
+      "id": "922864087820558346",
+      "count": 139
+    },
+    {
+      "name": "woozygif",
+      "id": "919888490001494046",
+      "count": 139
     },
     {
       "name": "ShibaLove",
@@ -2391,34 +2486,34 @@
       "count": 138
     },
     {
-      "name": "pat_kana",
-      "id": "922864087820558346",
-      "count": 135
-    },
-    {
-      "name": "woozygif",
-      "id": "919888490001494046",
-      "count": 135
-    },
-    {
       "name": "⁉️",
       "id": "",
-      "count": 130
+      "count": 132
+    },
+    {
+      "name": "niebieskooki",
+      "id": "1422706462219698267",
+      "count": 129
     },
     {
       "name": "DotoPray",
       "id": "868957543177805875",
-      "count": 125
-    },
-    {
-      "name": "💜",
-      "id": "",
-      "count": 124
+      "count": 126
     },
     {
       "name": "🤮",
       "id": "",
-      "count": 121
+      "count": 122
+    },
+    {
+      "name": "THIS",
+      "id": "727696939612635137",
+      "count": 119
+    },
+    {
+      "name": "rudolf",
+      "id": "1406285656753176657",
+      "count": 117
     },
     {
       "name": "❤️‍🔥",
@@ -2426,14 +2521,14 @@
       "count": 117
     },
     {
-      "name": "THIS",
-      "id": "727696939612635137",
-      "count": 115
+      "name": "alienweary",
+      "id": "1176932404464730112",
+      "count": 112
     },
     {
-      "name": "niebieskooki",
-      "id": "1422706462219698267",
-      "count": 114
+      "name": "polarbearPensive",
+      "id": "879863553396461678",
+      "count": 111
     },
     {
       "name": "🗿",
@@ -2443,27 +2538,32 @@
     {
       "name": "🧠",
       "id": "",
-      "count": 110
+      "count": 111
     },
     {
-      "name": "rudolf",
-      "id": "1406285656753176657",
-      "count": 107
-    },
-    {
-      "name": "alienweary",
-      "id": "1176932404464730112",
-      "count": 105
+      "name": "niebieskokoXD",
+      "id": "1283541438285484134",
+      "count": 106
     },
     {
       "name": "👏",
       "id": "",
-      "count": 104
+      "count": 105
     },
     {
-      "name": "polarbearPensive",
-      "id": "879863553396461678",
-      "count": 103
+      "name": "flushedcum",
+      "id": "1219735965216538744",
+      "count": 102
+    },
+    {
+      "name": "realshit",
+      "id": "1021911016096927844",
+      "count": 102
+    },
+    {
+      "name": "🇫",
+      "id": "",
+      "count": 102
     },
     {
       "name": "🐴",
@@ -2473,7 +2573,7 @@
     {
       "name": "😢",
       "id": "",
-      "count": 100
+      "count": 101
     },
     {
       "name": "cocoXD",
@@ -2481,23 +2581,13 @@
       "count": 98
     },
     {
-      "name": "realshit",
-      "id": "1021911016096927844",
-      "count": 97
-    },
-    {
-      "name": "🇫",
+      "name": "👌",
       "id": "",
-      "count": 97
-    },
-    {
-      "name": "niebieskokoXD",
-      "id": "1283541438285484134",
       "count": 96
     },
     {
-      "name": "👌",
-      "id": "",
+      "name": "REAL",
+      "id": "1408208456208613476",
       "count": 93
     },
     {
@@ -2506,19 +2596,19 @@
       "count": 93
     },
     {
+      "name": "prayge",
+      "id": "880195503332151357",
+      "count": 92
+    },
+    {
       "name": "🍑",
       "id": "",
       "count": 91
     },
     {
-      "name": "flushedcum",
-      "id": "1219735965216538744",
-      "count": 87
-    },
-    {
-      "name": "REAL",
-      "id": "1408208456208613476",
-      "count": 86
+      "name": "this",
+      "id": "539550356041105468",
+      "count": 90
     },
     {
       "name": "cocoxd7",
@@ -2526,29 +2616,19 @@
       "count": 86
     },
     {
-      "name": "❗",
-      "id": "",
+      "name": "incident",
+      "id": "1245397476387852288",
+      "count": 86
+    },
+    {
+      "name": "notlikewidim",
+      "id": "1083829342070652948",
       "count": 85
     },
     {
-      "name": "🍯",
+      "name": "❗",
       "id": "",
-      "count": 84
-    },
-    {
-      "name": "prayge",
-      "id": "880195503332151357",
-      "count": 83
-    },
-    {
-      "name": "➕",
-      "id": "",
-      "count": 83
-    },
-    {
-      "name": "Poggers",
-      "id": "875471909809172531",
-      "count": 82
+      "count": 85
     }
   ],
   "mostActiveDay": {
@@ -2664,6 +2744,32 @@
       "count": 37,
       "link": "https://discord.com/channels/875086635744763914/976957742621290556/1433831763402031156",
       "attachments": [],
+      "reactions": [
+        {
+          "emoji_id": "909369353554771989",
+          "emoji_name": "cocoXD",
+          "count": 37
+        }
+      ]
+    },
+    {
+      "id": "1454071069425143818",
+      "content": "Poznań moment",
+      "author": {
+        "name": "4lajf",
+        "avatar": "https://cdn.discordapp.com/avatars/351006685587963916/a_fc3281e48a26b0edae13c46024a37424.gif?size=512"
+      },
+      "emoji_name": "cocoXD",
+      "emoji_id": "909369353554771989",
+      "count": 37,
+      "link": "https://discord.com/channels/875086635744763914/904454003977502730/1454071069425143818",
+      "attachments": [
+        {
+          "url": "https://cdn.discordapp.com/attachments/904454003977502730/1454071068951052288/FB_IMG_1766747500005.jpg?ex=695e4136&is=695cefb6&hm=26687fed7d0603145c8c1897328af17983bd80cc5c86e142e982d06397fc14c4&",
+          "name": "FB_IMG_1766747500005.jpg",
+          "type": "file"
+        }
+      ],
       "reactions": [
         {
           "emoji_id": "909369353554771989",
@@ -2825,32 +2931,6 @@
           "count": 33
         }
       ]
-    },
-    {
-      "id": "1392794819105132554",
-      "content": "Mamy to moi drodzy\nMagister Alicja Horny",
-      "author": {
-        "name": "bari2288",
-        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512"
-      },
-      "emoji_name": "💪",
-      "emoji_id": "",
-      "count": 33,
-      "link": "https://discord.com/channels/875086635744763914/904454003977502730/1392794819105132554",
-      "attachments": [
-        {
-          "url": "https://cdn.discordapp.com/attachments/904454003977502730/1392794818714927104/20250710_105444.jpg?ex=693bdbc1&is=693a8a41&hm=d99ea2f9ccab839ac87c260db05d12c7cf81f3d46719b55b6ba6a37f7505f680&",
-          "name": "20250710_105444.jpg",
-          "type": "file"
-        }
-      ],
-      "reactions": [
-        {
-          "emoji_id": "",
-          "emoji_name": "💪",
-          "count": 33
-        }
-      ]
     }
   ],
   "roleDistribution": [],
@@ -2862,9 +2942,9 @@
       },
       "user2": {
         "name": "bari2288",
-        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512"
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512"
       },
-      "count": 1819
+      "count": 1944
     },
     {
       "user1": {
@@ -2875,7 +2955,7 @@
         "name": "blonzej",
         "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512"
       },
-      "count": 1506
+      "count": 1582
     },
     {
       "user1": {
@@ -2886,7 +2966,7 @@
         "name": "tomasz",
         "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
       },
-      "count": 1027
+      "count": 1075
     },
     {
       "user1": {
@@ -2897,7 +2977,18 @@
         "name": "kodjax",
         "avatar": "https://cdn.discordapp.com/avatars/440239078957383680/8d2c878cc9d2f3402a4ef3785b274455.png?size=512"
       },
-      "count": 1014
+      "count": 1017
+    },
+    {
+      "user1": {
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
+      },
+      "user2": {
+        "name": "kon7216",
+        "avatar": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512"
+      },
+      "count": 996
     },
     {
       "user1": {
@@ -2908,7 +2999,7 @@
         "name": "blonzej",
         "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512"
       },
-      "count": 944
+      "count": 980
     },
     {
       "user1": {
@@ -2919,18 +3010,7 @@
         "name": "mayxs",
         "avatar": "https://cdn.discordapp.com/avatars/291270443829035008/ee356ccfd8435d88b3e7f5c289186ea4.png?size=512"
       },
-      "count": 936
-    },
-    {
-      "user1": {
-        "name": "tomasz",
-        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
-      },
-      "user2": {
-        "name": "kon7216",
-        "avatar": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512"
-      },
-      "count": 919
+      "count": 977
     },
     {
       "user1": {
@@ -2941,18 +3021,7 @@
         "name": "4lajf",
         "avatar": "https://cdn.discordapp.com/avatars/351006685587963916/a_fc3281e48a26b0edae13c46024a37424.gif?size=512"
       },
-      "count": 897
-    },
-    {
-      "user1": {
-        "name": "tomasz",
-        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
-      },
-      "user2": {
-        "name": "nokatoki",
-        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512"
-      },
-      "count": 889
+      "count": 977
     },
     {
       "user1": {
@@ -2963,7 +3032,18 @@
         "name": "tomasz",
         "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
       },
-      "count": 863
+      "count": 927
+    },
+    {
+      "user1": {
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
+      },
+      "user2": {
+        "name": "nokatoki",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512"
+      },
+      "count": 911
     },
     {
       "user1": {
@@ -2974,18 +3054,18 @@
         "name": "blonzej",
         "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512"
       },
-      "count": 830
+      "count": 856
     },
     {
       "user1": {
         "name": "bari2288",
-        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512"
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512"
       },
       "user2": {
         "name": "blonzej",
         "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512"
       },
-      "count": 753
+      "count": 791
     },
     {
       "user1": {
@@ -2994,9 +3074,9 @@
       },
       "user2": {
         "name": "nesttouc",
-        "avatar": "https://cdn.discordapp.com/avatars/291563667290324992/88fbc4fceb7a2de86e0b2a97b188b40d.png?size=512"
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/291563667290324992/avatars/1895170f1ef1db39c3afbf8fe81839a2.png?size=512"
       },
-      "count": 668
+      "count": 689
     },
     {
       "user1": {
@@ -3007,7 +3087,18 @@
         "name": "tsuna_jq",
         "avatar": "https://cdn.discordapp.com/avatars/797950399541805067/8658906fac717ad4289d3f6764455188.png?size=512"
       },
-      "count": 653
+      "count": 674
+    },
+    {
+      "user1": {
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
+      },
+      "user2": {
+        "name": "_ketzu",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/375973550789492736/avatars/5e34b226351a77ec41b32865bb6f7ce7.png?size=512"
+      },
+      "count": 664
     },
     {
       "user1": {
@@ -3018,18 +3109,7 @@
         "name": "jakosi",
         "avatar": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512"
       },
-      "count": 602
-    },
-    {
-      "user1": {
-        "name": "tomasz",
-        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
-      },
-      "user2": {
-        "name": "jakosi",
-        "avatar": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512"
-      },
-      "count": 592
+      "count": 620
     },
     {
       "user1": {
@@ -3040,40 +3120,7 @@
         "name": "futon_s_",
         "avatar": "https://cdn.discordapp.com/avatars/256173446050873344/30b3b5b51c7a9ce881590f691144572c.png?size=512"
       },
-      "count": 591
-    },
-    {
-      "user1": {
-        "name": "tomasz",
-        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
-      },
-      "user2": {
-        "name": "_ketzu",
-        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/375973550789492736/avatars/5e34b226351a77ec41b32865bb6f7ce7.png?size=512"
-      },
-      "count": 591
-    },
-    {
-      "user1": {
-        "name": "tomasz",
-        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
-      },
-      "user2": {
-        "name": "tuptaju",
-        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/299488561130897410/avatars/0138b3d5846b1712c637be336d97d7cd.png?size=512"
-      },
-      "count": 569
-    },
-    {
-      "user1": {
-        "name": "bari2288",
-        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512"
-      },
-      "user2": {
-        "name": "kon7216",
-        "avatar": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512"
-      },
-      "count": 569
+      "count": 613
     },
     {
       "user1": {
@@ -3084,29 +3131,40 @@
         "name": "macaron_cure",
         "avatar": "https://cdn.discordapp.com/avatars/748305998686453910/2c593ca809dac2c76e91af47596f1f0c.png?size=512"
       },
-      "count": 565
+      "count": 604
+    },
+    {
+      "user1": {
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
+      },
+      "user2": {
+        "name": "jakosi",
+        "avatar": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512"
+      },
+      "count": 599
+    },
+    {
+      "user1": {
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
+      },
+      "user2": {
+        "name": "tuptaju",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/299488561130897410/avatars/0138b3d5846b1712c637be336d97d7cd.png?size=512"
+      },
+      "count": 599
     },
     {
       "user1": {
         "name": "bari2288",
-        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512"
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512"
       },
       "user2": {
-        "name": "tlenmlem",
-        "avatar": "https://cdn.discordapp.com/avatars/284044360192884736/4c170e9d4554b315eadc8331d6700fbd.png?size=512"
+        "name": "kon7216",
+        "avatar": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512"
       },
-      "count": 538
-    },
-    {
-      "user1": {
-        "name": "nesttouc",
-        "avatar": "https://cdn.discordapp.com/avatars/291563667290324992/88fbc4fceb7a2de86e0b2a97b188b40d.png?size=512"
-      },
-      "user2": {
-        "name": "blonzej",
-        "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512"
-      },
-      "count": 521
+      "count": 586
     },
     {
       "user1": {
@@ -3117,29 +3175,18 @@
         "name": "_porcelain_",
         "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/388709668941332480/avatars/4ee20ce86bc8c4fb5a839bce3db22fb9.png?size=512"
       },
-      "count": 519
+      "count": 556
     },
     {
       "user1": {
-        "name": "_ketzu",
-        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/375973550789492736/avatars/5e34b226351a77ec41b32865bb6f7ce7.png?size=512"
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512"
       },
       "user2": {
-        "name": "maslanaa",
-        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/526541334467706914/avatars/f96feb0277d4dab4570941ebd1cfebf5.png?size=512"
+        "name": "tlenmlem",
+        "avatar": "https://cdn.discordapp.com/avatars/284044360192884736/4c170e9d4554b315eadc8331d6700fbd.png?size=512"
       },
-      "count": 506
-    },
-    {
-      "user1": {
-        "name": "tomasz",
-        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
-      },
-      "user2": {
-        "name": "sataniel",
-        "avatar": "https://cdn.discordapp.com/avatars/90096269350952960/3b279b5859cdafa9c8d1b839da9457bc.png?size=512"
-      },
-      "count": 499
+      "count": 556
     },
     {
       "user1": {
@@ -3150,7 +3197,29 @@
         "name": "tomasz",
         "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
       },
-      "count": 491
+      "count": 537
+    },
+    {
+      "user1": {
+        "name": "_ketzu",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/375973550789492736/avatars/5e34b226351a77ec41b32865bb6f7ce7.png?size=512"
+      },
+      "user2": {
+        "name": "maslanaa",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/526541334467706914/avatars/f96feb0277d4dab4570941ebd1cfebf5.png?size=512"
+      },
+      "count": 531
+    },
+    {
+      "user1": {
+        "name": "nesttouc",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/291563667290324992/avatars/1895170f1ef1db39c3afbf8fe81839a2.png?size=512"
+      },
+      "user2": {
+        "name": "blonzej",
+        "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512"
+      },
+      "count": 530
     },
     {
       "user1": {
@@ -3161,7 +3230,18 @@
         "name": "tlenmlem",
         "avatar": "https://cdn.discordapp.com/avatars/284044360192884736/4c170e9d4554b315eadc8331d6700fbd.png?size=512"
       },
-      "count": 485
+      "count": 527
+    },
+    {
+      "user1": {
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
+      },
+      "user2": {
+        "name": "sataniel",
+        "avatar": "https://cdn.discordapp.com/avatars/90096269350952960/3b279b5859cdafa9c8d1b839da9457bc.png?size=512"
+      },
+      "count": 511
     },
     {
       "user1": {
@@ -3172,18 +3252,7 @@
         "name": "kon7216",
         "avatar": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512"
       },
-      "count": 475
-    },
-    {
-      "user1": {
-        "name": "tomasz",
-        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
-      },
-      "user2": {
-        "name": "maslanaa",
-        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/526541334467706914/avatars/f96feb0277d4dab4570941ebd1cfebf5.png?size=512"
-      },
-      "count": 464
+      "count": 489
     },
     {
       "user1": {
@@ -3194,7 +3263,18 @@
         "name": "yuhime_",
         "avatar": "https://cdn.discordapp.com/avatars/650761899021041685/5dcd8e268c11e73f2376b936cb79280e.png?size=512"
       },
-      "count": 456
+      "count": 474
+    },
+    {
+      "user1": {
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
+      },
+      "user2": {
+        "name": "maslanaa",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/526541334467706914/avatars/f96feb0277d4dab4570941ebd1cfebf5.png?size=512"
+      },
+      "count": 469
     },
     {
       "user1": {
@@ -3205,18 +3285,7 @@
         "name": "jakosi",
         "avatar": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512"
       },
-      "count": 451
-    },
-    {
-      "user1": {
-        "name": "fucktor",
-        "avatar": "https://cdn.discordapp.com/avatars/213257041609752578/8bf40cac298c724182c4665bced6d48f.png?size=512"
-      },
-      "user2": {
-        "name": "kodjax",
-        "avatar": "https://cdn.discordapp.com/avatars/440239078957383680/8d2c878cc9d2f3402a4ef3785b274455.png?size=512"
-      },
-      "count": 409
+      "count": 465
     },
     {
       "user1": {
@@ -3227,29 +3296,51 @@
         "name": "5zlotych",
         "avatar": "https://cdn.discordapp.com/avatars/290451477602893844/d01d4bd77eb30d84e5405a9cd6234667.png?size=512"
       },
-      "count": 406
+      "count": 435
+    },
+    {
+      "user1": {
+        "name": "Link Expander",
+        "avatar": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "user2": {
+        "name": "4lajf",
+        "avatar": "https://cdn.discordapp.com/avatars/351006685587963916/a_fc3281e48a26b0edae13c46024a37424.gif?size=512"
+      },
+      "count": 433
+    },
+    {
+      "user1": {
+        "name": "fucktor",
+        "avatar": "https://cdn.discordapp.com/avatars/213257041609752578/8bf40cac298c724182c4665bced6d48f.png?size=512"
+      },
+      "user2": {
+        "name": "kodjax",
+        "avatar": "https://cdn.discordapp.com/avatars/440239078957383680/8d2c878cc9d2f3402a4ef3785b274455.png?size=512"
+      },
+      "count": 411
     },
     {
       "user1": {
         "name": "bari2288",
-        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512"
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512"
       },
       "user2": {
         "name": "_porcelain_",
         "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/388709668941332480/avatars/4ee20ce86bc8c4fb5a839bce3db22fb9.png?size=512"
       },
-      "count": 377
+      "count": 398
     },
     {
       "user1": {
         "name": "bari2288",
-        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512"
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512"
       },
       "user2": {
         "name": "tsuna_jq",
         "avatar": "https://cdn.discordapp.com/avatars/797950399541805067/8658906fac717ad4289d3f6764455188.png?size=512"
       },
-      "count": 357
+      "count": 379
     },
     {
       "user1": {
@@ -3260,18 +3351,7 @@
         "name": "blonzej",
         "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512"
       },
-      "count": 343
-    },
-    {
-      "user1": {
-        "name": "fucktor",
-        "avatar": "https://cdn.discordapp.com/avatars/213257041609752578/8bf40cac298c724182c4665bced6d48f.png?size=512"
-      },
-      "user2": {
-        "name": "yuhime_",
-        "avatar": "https://cdn.discordapp.com/avatars/650761899021041685/5dcd8e268c11e73f2376b936cb79280e.png?size=512"
-      },
-      "count": 336
+      "count": 349
     },
     {
       "user1": {
@@ -3282,7 +3362,7 @@
         "name": "shadowmistressyuuko",
         "avatar": "https://cdn.discordapp.com/avatars/251446554093813770/1e0faf0affe73ddad5668bd6fcb22e57.png?size=512"
       },
-      "count": 330
+      "count": 344
     },
     {
       "user1": {
@@ -3293,7 +3373,40 @@
         "name": "tomasz",
         "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
       },
-      "count": 329
+      "count": 340
+    },
+    {
+      "user1": {
+        "name": "fucktor",
+        "avatar": "https://cdn.discordapp.com/avatars/213257041609752578/8bf40cac298c724182c4665bced6d48f.png?size=512"
+      },
+      "user2": {
+        "name": "yuhime_",
+        "avatar": "https://cdn.discordapp.com/avatars/650761899021041685/5dcd8e268c11e73f2376b936cb79280e.png?size=512"
+      },
+      "count": 337
+    },
+    {
+      "user1": {
+        "name": "tlenmlem",
+        "avatar": "https://cdn.discordapp.com/avatars/284044360192884736/4c170e9d4554b315eadc8331d6700fbd.png?size=512"
+      },
+      "user2": {
+        "name": "tsuna_jq",
+        "avatar": "https://cdn.discordapp.com/avatars/797950399541805067/8658906fac717ad4289d3f6764455188.png?size=512"
+      },
+      "count": 327
+    },
+    {
+      "user1": {
+        "name": "willq",
+        "avatar": "https://cdn.discordapp.com/avatars/125677084319285249/612b660ef4c5d1bc215d836362979481.png?size=512"
+      },
+      "user2": {
+        "name": "_porcelain_",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/388709668941332480/avatars/4ee20ce86bc8c4fb5a839bce3db22fb9.png?size=512"
+      },
+      "count": 324
     },
     {
       "user1": {
@@ -3308,28 +3421,6 @@
     },
     {
       "user1": {
-        "name": "tlenmlem",
-        "avatar": "https://cdn.discordapp.com/avatars/284044360192884736/4c170e9d4554b315eadc8331d6700fbd.png?size=512"
-      },
-      "user2": {
-        "name": "tsuna_jq",
-        "avatar": "https://cdn.discordapp.com/avatars/797950399541805067/8658906fac717ad4289d3f6764455188.png?size=512"
-      },
-      "count": 319
-    },
-    {
-      "user1": {
-        "name": "bari2288",
-        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512"
-      },
-      "user2": {
-        "name": "kodjax",
-        "avatar": "https://cdn.discordapp.com/avatars/440239078957383680/8d2c878cc9d2f3402a4ef3785b274455.png?size=512"
-      },
-      "count": 316
-    },
-    {
-      "user1": {
         "name": "yuhime_",
         "avatar": "https://cdn.discordapp.com/avatars/650761899021041685/5dcd8e268c11e73f2376b936cb79280e.png?size=512"
       },
@@ -3337,18 +3428,29 @@
         "name": "tsuna_jq",
         "avatar": "https://cdn.discordapp.com/avatars/797950399541805067/8658906fac717ad4289d3f6764455188.png?size=512"
       },
-      "count": 306
+      "count": 322
     },
     {
       "user1": {
-        "name": "mayxs",
-        "avatar": "https://cdn.discordapp.com/avatars/291270443829035008/ee356ccfd8435d88b3e7f5c289186ea4.png?size=512"
+        "name": "Link Expander",
+        "avatar": "https://cdn.discordapp.com/embed/avatars/0.png"
       },
       "user2": {
-        "name": "blonzej",
-        "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512"
+        "name": "jacekczarny",
+        "avatar": "https://cdn.discordapp.com/avatars/262986692602888192/1c842f8641336e266113b4e739a91e2d.png?size=512"
       },
-      "count": 302
+      "count": 316
+    },
+    {
+      "user1": {
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512"
+      },
+      "user2": {
+        "name": "kodjax",
+        "avatar": "https://cdn.discordapp.com/avatars/440239078957383680/8d2c878cc9d2f3402a4ef3785b274455.png?size=512"
+      },
+      "count": 316
     },
     {
       "user1": {
@@ -3359,29 +3461,18 @@
         "name": "_ketzu",
         "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/375973550789492736/avatars/5e34b226351a77ec41b32865bb6f7ce7.png?size=512"
       },
-      "count": 298
+      "count": 313
     },
     {
       "user1": {
-        "name": "willq",
-        "avatar": "https://cdn.discordapp.com/avatars/125677084319285249/612b660ef4c5d1bc215d836362979481.png?size=512"
+        "name": "mayxs",
+        "avatar": "https://cdn.discordapp.com/avatars/291270443829035008/ee356ccfd8435d88b3e7f5c289186ea4.png?size=512"
       },
       "user2": {
-        "name": "_porcelain_",
-        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/388709668941332480/avatars/4ee20ce86bc8c4fb5a839bce3db22fb9.png?size=512"
+        "name": "blonzej",
+        "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512"
       },
-      "count": 297
-    },
-    {
-      "user1": {
-        "name": "willq",
-        "avatar": "https://cdn.discordapp.com/avatars/125677084319285249/612b660ef4c5d1bc215d836362979481.png?size=512"
-      },
-      "user2": {
-        "name": "bari2288",
-        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512"
-      },
-      "count": 294
+      "count": 308
     },
     {
       "user1": {
@@ -3390,7 +3481,29 @@
       },
       "user2": {
         "name": "nesttouc",
-        "avatar": "https://cdn.discordapp.com/avatars/291563667290324992/88fbc4fceb7a2de86e0b2a97b188b40d.png?size=512"
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/291563667290324992/avatars/1895170f1ef1db39c3afbf8fe81839a2.png?size=512"
+      },
+      "count": 300
+    },
+    {
+      "user1": {
+        "name": "willq",
+        "avatar": "https://cdn.discordapp.com/avatars/125677084319285249/612b660ef4c5d1bc215d836362979481.png?size=512"
+      },
+      "user2": {
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512"
+      },
+      "count": 299
+    },
+    {
+      "user1": {
+        "name": "avinex",
+        "avatar": "https://cdn.discordapp.com/avatars/165731360563003392/ef279720c2bdef55f122f0dea6d6a26f.png?size=512"
+      },
+      "user2": {
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512"
       },
       "count": 294
     },
@@ -3403,18 +3516,18 @@
         "name": "kon7216",
         "avatar": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512"
       },
-      "count": 286
+      "count": 291
     },
     {
       "user1": {
-        "name": "avinex",
-        "avatar": "https://cdn.discordapp.com/avatars/165731360563003392/ef279720c2bdef55f122f0dea6d6a26f.png?size=512"
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512"
       },
       "user2": {
-        "name": "bari2288",
-        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512"
+        "name": "macaron_cure",
+        "avatar": "https://cdn.discordapp.com/avatars/748305998686453910/2c593ca809dac2c76e91af47596f1f0c.png?size=512"
       },
-      "count": 283
+      "count": 288
     },
     {
       "user1": {
@@ -3425,18 +3538,7 @@
         "name": "raien",
         "avatar": "https://cdn.discordapp.com/avatars/95969159845806080/f81b4f5923c4fed048ffbaa7d42b3a12.png?size=512"
       },
-      "count": 267
-    },
-    {
-      "user1": {
-        "name": "bari2288",
-        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512"
-      },
-      "user2": {
-        "name": "macaron_cure",
-        "avatar": "https://cdn.discordapp.com/avatars/748305998686453910/2c593ca809dac2c76e91af47596f1f0c.png?size=512"
-      },
-      "count": 264
+      "count": 277
     },
     {
       "user1": {
@@ -3447,18 +3549,7 @@
         "name": "blonzej",
         "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512"
       },
-      "count": 258
-    },
-    {
-      "user1": {
-        "name": "namaryu",
-        "avatar": "https://cdn.discordapp.com/avatars/196943066874118144/51d101d68481379113661478a9fdeb53.png?size=512"
-      },
-      "user2": {
-        "name": "kon7216",
-        "avatar": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512"
-      },
-      "count": 253
+      "count": 269
     },
     {
       "user1": {
@@ -3467,31 +3558,20 @@
       },
       "user2": {
         "name": "bari2288",
-        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512"
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512"
       },
-      "count": 251
+      "count": 268
     },
     {
       "user1": {
-        "name": "fucktor",
-        "avatar": "https://cdn.discordapp.com/avatars/213257041609752578/8bf40cac298c724182c4665bced6d48f.png?size=512"
+        "name": "otoshigami",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270601300570406925/avatars/f1add6d475286dd292cade9c69e2f8f2.png?size=512"
       },
       "user2": {
-        "name": "tomasz",
-        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
+        "name": "4lajf",
+        "avatar": "https://cdn.discordapp.com/avatars/351006685587963916/a_fc3281e48a26b0edae13c46024a37424.gif?size=512"
       },
-      "count": 241
-    },
-    {
-      "user1": {
-        "name": "jacekczarny",
-        "avatar": "https://cdn.discordapp.com/avatars/262986692602888192/1c842f8641336e266113b4e739a91e2d.png?size=512"
-      },
-      "user2": {
-        "name": "tlenmlem",
-        "avatar": "https://cdn.discordapp.com/avatars/284044360192884736/4c170e9d4554b315eadc8331d6700fbd.png?size=512"
-      },
-      "count": 238
+      "count": 268
     },
     {
       "user1": {
@@ -3502,18 +3582,18 @@
         "name": "otoshigami",
         "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270601300570406925/avatars/f1add6d475286dd292cade9c69e2f8f2.png?size=512"
       },
-      "count": 233
+      "count": 259
     },
     {
       "user1": {
-        "name": ".goge",
-        "avatar": "https://cdn.discordapp.com/avatars/270968874420273153/f64c6d9100b86c364211dc800696fea9.png?size=512"
+        "name": "namaryu",
+        "avatar": "https://cdn.discordapp.com/avatars/196943066874118144/51d101d68481379113661478a9fdeb53.png?size=512"
       },
       "user2": {
-        "name": "maslanaa",
-        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/526541334467706914/avatars/f96feb0277d4dab4570941ebd1cfebf5.png?size=512"
+        "name": "kon7216",
+        "avatar": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512"
       },
-      "count": 228
+      "count": 258
     }
   ],
   "hallOfFame": [
@@ -3523,7 +3603,7 @@
         "name": "tomasz",
         "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512"
       },
-      "value": "69 604 wiadomości"
+      "value": "73 820 wiadomości"
     },
     {
       "title": "Mistrz Yappowania",
@@ -3531,7 +3611,7 @@
         "name": "otoshigami",
         "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270601300570406925/avatars/f1add6d475286dd292cade9c69e2f8f2.png?size=512"
       },
-      "value": "208 766 słów"
+      "value": "229 547 słów"
     },
     {
       "title": "Farmer Reakcji",
@@ -3539,15 +3619,15 @@
         "name": "blonzej",
         "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512"
       },
-      "value": "18 546 otrzymanych reakcji"
+      "value": "19 530 otrzymanych reakcji"
     },
     {
       "title": "Potentat Mediowy",
       "user": {
         "name": "bari2288",
-        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/fe88e117a94a4dfa25fc601fce056591.png?size=512"
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512"
       },
-      "value": "3338 plików"
+      "value": "3617 plików"
     },
     {
       "title": "Wszechobecny",
@@ -3563,7 +3643,7 @@
         "name": "_porcelain_",
         "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/388709668941332480/avatars/4ee20ce86bc8c4fb5a839bce3db22fb9.png?size=512"
       },
-      "value": "15 803 wysłanych reakcji"
+      "value": "16 677 wysłanych reakcji"
     },
     {
       "title": "Kolekcjoner Gwiazdek",
@@ -3571,90 +3651,97 @@
         "name": "nokatoki",
         "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512"
       },
-      "value": "151 postów na starboardzie"
+      "value": "156 postów na starboardzie"
     },
     {
       "title": "Gwiazda Karczmy",
       "user": {
-        "name": "roshek",
-        "avatar": "https://cdn.discordapp.com/avatars/311211514164019200/ca13aca67a163796338d7251ebb34ca5.png?size=512"
+        "name": "ermayume",
+        "avatar": "https://cdn.discordapp.com/avatars/334775842272182273/80373af1ad7cdf6a5cfc09925f02056e.png?size=512"
       },
-      "value": "1 na 31 wiadomości trafia na starboard"
+      "value": "1 na 14 wiadomości trafia na starboard"
     },
     {
       "title": "Jednogłośny",
       "user": {
-        "name": "ermayume",
-        "avatar": "https://cdn.discordapp.com/avatars/334775842272182273/80373af1ad7cdf6a5cfc09925f02056e.png?size=512"
+        "name": "kuze2137",
+        "avatar": "https://cdn.discordapp.com/avatars/626521587797065728/4440c365a28b1100a468d8c547a4105e.png?size=512"
       },
-      "value": "43x cocoXD pod jedną wiadomością"
+      "value": "40x cocoXD pod jedną wiadomością"
     }
   ],
   "monthlyHighlights": [
     {
       "month": 1,
       "type": "user_outburst",
-      "subjectId": "348236285825253387",
-      "subjectName": "zoro_senpaii",
-      "strength": 4499.583565193742,
+      "subjectId": "549659474508382232",
+      "subjectName": "xpinguino",
+      "strength": 73.85161848229998,
       "details": {
-        "count": 161,
-        "ratio": 885.5
+        "count": 751,
+        "ratio": 7.44,
+        "avgOthers": 101
       }
     },
     {
       "month": 2,
-      "type": "word_anomaly",
-      "subjectId": "amiamihobbynews",
-      "subjectName": "amiamihobbynews",
-      "strength": 157.16679461896183,
+      "type": "channel_spike",
+      "subjectId": "1295680431613546548",
+      "subjectName": "Album czal d-_-b",
+      "strength": 45.000187433167376,
       "details": {
-        "count": 39,
-        "ratio": 53.63
+        "count": 1113,
+        "ratio": 6.12,
+        "share": 0.02,
+        "avgOthers": 181.8
       }
     },
     {
       "month": 3,
-      "type": "user_outburst",
-      "subjectId": "688734814483775513",
-      "subjectName": "daciq",
-      "strength": 3837.7632949882695,
+      "type": "fallback_channel_top",
+      "subjectId": "875089652518903869",
+      "subjectName": "animowe-dysputy",
+      "strength": 0,
       "details": {
-        "count": 141,
-        "ratio": 775.5
+        "count": 12288
       }
     },
     {
       "month": 4,
-      "type": "word_anomaly",
-      "subjectId": "junjo",
-      "subjectName": "junjou",
-      "strength": 95.48154397917203,
+      "type": "channel_spike",
+      "subjectId": "960927506624577556",
+      "subjectName": "sportowo-kanapowy",
+      "strength": 15.337547800039887,
       "details": {
-        "count": 29,
-        "ratio": 35.44
+        "count": 429,
+        "ratio": 2.49,
+        "share": 0.01,
+        "avgOthers": 172.4
       }
     },
     {
       "month": 5,
-      "type": "word_anomaly",
-      "subjectId": "renton",
-      "subjectName": "rentonem",
-      "strength": 732.6191131265754,
+      "type": "user_outburst",
+      "subjectId": "485919193892519957",
+      "subjectName": "zombiecatfish",
+      "strength": 27.13248873957039,
       "details": {
-        "count": 44,
-        "ratio": 242
+        "count": 351,
+        "ratio": 3.09,
+        "avgOthers": 113.7
       }
     },
     {
       "month": 6,
-      "type": "word_anomaly",
-      "subjectId": "🇵🇱",
-      "subjectName": "🇵🇱",
-      "strength": 178.45084560764477,
+      "type": "channel_spike",
+      "subjectId": "909820821353144371",
+      "subjectName": "my-anilist",
+      "strength": 61.888477716344184,
       "details": {
-        "count": 212,
-        "ratio": 41.64
+        "count": 501,
+        "ratio": 9.75,
+        "share": 0.01,
+        "avgOthers": 51.4
       }
     },
     {
@@ -3662,98 +3749,103 @@
       "type": "channel_spike",
       "subjectId": "1232272048274014288",
       "subjectName": "Konie do zagrody (gacha kanał)",
-      "strength": 10245.065337744865,
+      "strength": 20490.13067548973,
       "details": {
         "count": 2472,
         "ratio": 2472,
-        "share": 0.03
+        "share": 0.03,
+        "avgOthers": 0
       }
     },
     {
       "month": 8,
-      "type": "channel_spike",
-      "subjectId": "1400522471555334224",
-      "subjectName": "[✅ done] Kanał forum na polecajki/recenzje",
-      "strength": 1042.7515175196518,
+      "type": "user_outburst",
+      "subjectId": "266074481871552513",
+      "subjectName": "yamiiyami",
+      "strength": 67.28474834349691,
       "details": {
-        "count": 379,
-        "ratio": 347.42,
-        "share": 0.01
+        "count": 3009,
+        "ratio": 5.6,
+        "avgOthers": 537.3
       }
     },
     {
       "month": 9,
-      "type": "channel_spike",
-      "subjectId": "1415328615641383003",
-      "subjectName": "[✅ done] ''podróżnik w czasie'' reaktywacja",
-      "strength": 7271.808156018726,
+      "type": "user_outburst",
+      "subjectId": "299488561130897410",
+      "subjectName": "tuptaju",
+      "strength": 62.85064472881049,
       "details": {
-        "count": 431,
-        "ratio": 2370.5,
-        "share": 0.01
+        "count": 4338,
+        "ratio": 5,
+        "avgOthers": 867.1
       }
     },
     {
       "month": 10,
-      "type": "user_outburst",
-      "subjectId": "315137959969947651",
-      "subjectName": "vvolkeer",
-      "strength": 2690.0976062174714,
+      "type": "channel_spike",
+      "subjectId": "928729662081892435",
+      "subjectName": "sezon-jesien-2004",
+      "strength": 100.95285956361775,
       "details": {
-        "count": 187,
-        "ratio": 514.25
+        "count": 1828,
+        "ratio": 12.75,
+        "share": 0.03,
+        "avgOthers": 143.4
       }
     },
     {
       "month": 11,
-      "type": "word_anomaly",
-      "subjectId": "stratn",
-      "subjectName": "stratne",
-      "strength": 562.6277464912886,
+      "type": "user_outburst",
+      "subjectId": "164761586966200321",
+      "subjectName": "elemental_dsc",
+      "strength": 31.61713380362686,
       "details": {
-        "count": 21,
-        "ratio": 231
+        "count": 755,
+        "ratio": 3.18,
+        "avgOthers": 237.4
       }
     },
     {
       "month": 12,
       "type": "user_outburst",
-      "subjectId": "1162716486020890634",
-      "subjectName": "Link Expander",
-      "strength": 166.54817704935172,
+      "subjectId": "367782767410413569",
+      "subjectName": "cbrzeszczot",
+      "strength": 218.11529313457032,
       "details": {
-        "count": 768,
-        "ratio": 25.07
+        "count": 2872,
+        "ratio": 18.26,
+        "avgOthers": 157.3
       }
     }
   ],
   "globalAverages": {
-    "avgMessageLength": 44.09862519287041,
-    "totalWords": 4677599,
-    "totalReactions": 306164,
-    "totalMentions": 57428
+    "avgMessageLength": 44.387538133049,
+    "totalWords": 4939669,
+    "totalReactions": 323004,
+    "totalMentions": 59799
   },
   "timeOfDay": [
     {
       "period": "Afternoon",
-      "count": 261004
+      "count": 275088
     },
     {
       "period": "Evening",
-      "count": 239270
+      "count": 249568
     },
     {
       "period": "Morning",
-      "count": 150169
+      "count": 156794
     },
     {
       "period": "Night",
-      "count": 56638
+      "count": 61344
     }
   ],
   "responseStats": {
-    "avgWords": 6.615365142041718,
-    "avgChars": 44.09862519287041,
-    "replyRate": 16.225298091732064
+    "avgWords": 6.650119683249999,
+    "avgChars": 44.387538133049,
+    "replyRate": 16.341273623642625
   }
 }

@@ -302,28 +302,32 @@
 				return {
 					icon: '📢',
 					title: 'Miesiąc Kanału',
-					desc: `Wybuch aktywności: ${item.details.ratio}x powyżej średniej`
+					desc: `${item.details.ratio}x powyżej średniej`,
+					avgText: item.details.avgOthers ? `Średnia: ${item.details.avgOthers.toLocaleString()}` : null
 				};
 			case 'user_outburst':
 				return {
 					icon: '🗣️',
 					title: 'Miesiąc Użytkownika',
-					desc: `Niespodziewany spam: ${item.details.ratio}x więcej niż zwykle`
+					desc: `${item.details.ratio}x więcej niż zwykle`,
+					avgText: item.details.avgOthers ? `Średnia: ${item.details.avgOthers.toLocaleString()}` : null
 				};
 			case 'word_anomaly':
 				return {
 					icon: '🔤',
 					title: 'Miesiąc Słowa',
-					desc: `Natręctwo językowe: ${item.details.ratio}x częściej używane`
+					desc: `${item.details.ratio}x częściej używane`,
+					avgText: item.details.avgOthers ? `Średnia: ${item.details.avgOthers.toLocaleString()}` : null
 				};
 			case 'fallback_channel_top':
 				return {
 					icon: '🏆',
 					title: 'Dominacja',
-					desc: 'Najpopularniejszy kanał w tym miesiącu'
+					desc: 'Najpopularniejszy kanał w tym miesiącu',
+					avgText: null
 				};
 			default:
-				return { icon: '📅', title: 'Miesiąc', desc: '' };
+				return { icon: '📅', title: 'Miesiąc', desc: '', avgText: null };
 		}
 	}
 </script>
@@ -442,7 +446,12 @@
 								</div>
 								{#if item.details.count}
 									<div class="mt-1 text-[10px] font-mono text-gray-500">
-										(Licznik: {item.details.count.toLocaleString()})
+										Ten miesiąc: {item.details.count.toLocaleString()}
+									</div>
+								{/if}
+								{#if meta.avgText}
+									<div class="mt-1 text-[10px] font-mono text-gray-500">
+										{meta.avgText}
 									</div>
 								{/if}
 							</div>

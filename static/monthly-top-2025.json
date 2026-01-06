@@ -1,0 +1,1498 @@
+{
+  "meta": {
+    "generatedAt": "2026-01-06T15:51:16.975Z",
+    "year": 2025
+  },
+  "users": {
+    "1": [
+      {
+        "id": "237208084378812416",
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+        "count": 6641
+      },
+      {
+        "id": "338642102479224833",
+        "name": "blonzej",
+        "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+        "count": 3375
+      },
+      {
+        "id": "279397680776478720",
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512",
+        "count": 2966
+      },
+      {
+        "id": "297647773103292416",
+        "name": "jakosi",
+        "avatar": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
+        "count": 2307
+      },
+      {
+        "id": "517766317961510912",
+        "name": "kon7216",
+        "avatar": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512",
+        "count": 1715
+      },
+      {
+        "id": "797950399541805067",
+        "name": "tsuna_jq",
+        "avatar": "https://cdn.discordapp.com/avatars/797950399541805067/8658906fac717ad4289d3f6764455188.png?size=512",
+        "count": 1645
+      },
+      {
+        "id": "270968874420273153",
+        "name": ".goge",
+        "avatar": "https://cdn.discordapp.com/avatars/270968874420273153/f64c6d9100b86c364211dc800696fea9.png?size=512",
+        "count": 1636
+      },
+      {
+        "id": "290451477602893844",
+        "name": "5zlotych",
+        "avatar": "https://cdn.discordapp.com/avatars/290451477602893844/d01d4bd77eb30d84e5405a9cd6234667.png?size=512",
+        "count": 1616
+      },
+      {
+        "id": "270245951837437955",
+        "name": "nokatoki",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+        "count": 1577
+      },
+      {
+        "id": "526541334467706914",
+        "name": "maslanaa",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/526541334467706914/avatars/f96feb0277d4dab4570941ebd1cfebf5.png?size=512",
+        "count": 1512
+      }
+    ],
+    "2": [
+      {
+        "id": "237208084378812416",
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+        "count": 5335
+      },
+      {
+        "id": "338642102479224833",
+        "name": "blonzej",
+        "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+        "count": 2814
+      },
+      {
+        "id": "297647773103292416",
+        "name": "jakosi",
+        "avatar": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
+        "count": 2395
+      },
+      {
+        "id": "279397680776478720",
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512",
+        "count": 2341
+      },
+      {
+        "id": "270968874420273153",
+        "name": ".goge",
+        "avatar": "https://cdn.discordapp.com/avatars/270968874420273153/f64c6d9100b86c364211dc800696fea9.png?size=512",
+        "count": 1829
+      },
+      {
+        "id": "270245951837437955",
+        "name": "nokatoki",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+        "count": 1419
+      },
+      {
+        "id": "270601300570406925",
+        "name": "otoshigami",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270601300570406925/avatars/f1add6d475286dd292cade9c69e2f8f2.png?size=512",
+        "count": 1228
+      },
+      {
+        "id": "877097274021396530",
+        "name": "Pingu",
+        "avatar": "https://cdn.discordapp.com/avatars/877097274021396530/e42c3a69ca1506268b00cebb56bd806b.png?size=512",
+        "count": 1175
+      },
+      {
+        "id": "797950399541805067",
+        "name": "tsuna_jq",
+        "avatar": "https://cdn.discordapp.com/avatars/797950399541805067/8658906fac717ad4289d3f6764455188.png?size=512",
+        "count": 1165
+      },
+      {
+        "id": "650761899021041685",
+        "name": "yuhime_",
+        "avatar": "https://cdn.discordapp.com/avatars/650761899021041685/5dcd8e268c11e73f2376b936cb79280e.png?size=512",
+        "count": 1145
+      }
+    ],
+    "3": [
+      {
+        "id": "237208084378812416",
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+        "count": 6822
+      },
+      {
+        "id": "338642102479224833",
+        "name": "blonzej",
+        "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+        "count": 4413
+      },
+      {
+        "id": "297647773103292416",
+        "name": "jakosi",
+        "avatar": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
+        "count": 3068
+      },
+      {
+        "id": "279397680776478720",
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512",
+        "count": 2920
+      },
+      {
+        "id": "270245951837437955",
+        "name": "nokatoki",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+        "count": 2164
+      },
+      {
+        "id": "270601300570406925",
+        "name": "otoshigami",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270601300570406925/avatars/f1add6d475286dd292cade9c69e2f8f2.png?size=512",
+        "count": 2056
+      },
+      {
+        "id": "270968874420273153",
+        "name": ".goge",
+        "avatar": "https://cdn.discordapp.com/avatars/270968874420273153/f64c6d9100b86c364211dc800696fea9.png?size=512",
+        "count": 1767
+      },
+      {
+        "id": "877097274021396530",
+        "name": "Pingu",
+        "avatar": "https://cdn.discordapp.com/avatars/877097274021396530/e42c3a69ca1506268b00cebb56bd806b.png?size=512",
+        "count": 1460
+      },
+      {
+        "id": "517766317961510912",
+        "name": "kon7216",
+        "avatar": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512",
+        "count": 1316
+      },
+      {
+        "id": "650761899021041685",
+        "name": "yuhime_",
+        "avatar": "https://cdn.discordapp.com/avatars/650761899021041685/5dcd8e268c11e73f2376b936cb79280e.png?size=512",
+        "count": 1218
+      }
+    ],
+    "4": [
+      {
+        "id": "237208084378812416",
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+        "count": 5880
+      },
+      {
+        "id": "338642102479224833",
+        "name": "blonzej",
+        "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+        "count": 4090
+      },
+      {
+        "id": "297647773103292416",
+        "name": "jakosi",
+        "avatar": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
+        "count": 3169
+      },
+      {
+        "id": "279397680776478720",
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512",
+        "count": 2327
+      },
+      {
+        "id": "270601300570406925",
+        "name": "otoshigami",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270601300570406925/avatars/f1add6d475286dd292cade9c69e2f8f2.png?size=512",
+        "count": 1912
+      },
+      {
+        "id": "517766317961510912",
+        "name": "kon7216",
+        "avatar": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512",
+        "count": 1882
+      },
+      {
+        "id": "270245951837437955",
+        "name": "nokatoki",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+        "count": 1712
+      },
+      {
+        "id": "270968874420273153",
+        "name": ".goge",
+        "avatar": "https://cdn.discordapp.com/avatars/270968874420273153/f64c6d9100b86c364211dc800696fea9.png?size=512",
+        "count": 1582
+      },
+      {
+        "id": "351006685587963916",
+        "name": "4lajf",
+        "avatar": "https://cdn.discordapp.com/avatars/351006685587963916/a_fc3281e48a26b0edae13c46024a37424.gif?size=512",
+        "count": 1364
+      },
+      {
+        "id": "877097274021396530",
+        "name": "Pingu",
+        "avatar": "https://cdn.discordapp.com/avatars/877097274021396530/e42c3a69ca1506268b00cebb56bd806b.png?size=512",
+        "count": 1286
+      }
+    ],
+    "5": [
+      {
+        "id": "237208084378812416",
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+        "count": 4995
+      },
+      {
+        "id": "297647773103292416",
+        "name": "jakosi",
+        "avatar": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
+        "count": 2313
+      },
+      {
+        "id": "338642102479224833",
+        "name": "blonzej",
+        "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+        "count": 2191
+      },
+      {
+        "id": "279397680776478720",
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512",
+        "count": 2174
+      },
+      {
+        "id": "429656936435286016",
+        "name": "RinBot",
+        "avatar": "https://cdn.discordapp.com/avatars/429656936435286016/19caf89ba433bef1ad18a4d84e07a63a.png?size=512",
+        "count": 2050
+      },
+      {
+        "id": "517766317961510912",
+        "name": "kon7216",
+        "avatar": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512",
+        "count": 1716
+      },
+      {
+        "id": "270245951837437955",
+        "name": "nokatoki",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+        "count": 1667
+      },
+      {
+        "id": "877097274021396530",
+        "name": "Pingu",
+        "avatar": "https://cdn.discordapp.com/avatars/877097274021396530/e42c3a69ca1506268b00cebb56bd806b.png?size=512",
+        "count": 1393
+      },
+      {
+        "id": "270968874420273153",
+        "name": ".goge",
+        "avatar": "https://cdn.discordapp.com/avatars/270968874420273153/f64c6d9100b86c364211dc800696fea9.png?size=512",
+        "count": 1365
+      },
+      {
+        "id": "270601300570406925",
+        "name": "otoshigami",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270601300570406925/avatars/f1add6d475286dd292cade9c69e2f8f2.png?size=512",
+        "count": 1360
+      }
+    ],
+    "6": [
+      {
+        "id": "237208084378812416",
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+        "count": 4089
+      },
+      {
+        "id": "297647773103292416",
+        "name": "jakosi",
+        "avatar": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
+        "count": 2492
+      },
+      {
+        "id": "279397680776478720",
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512",
+        "count": 2468
+      },
+      {
+        "id": "95969159845806080",
+        "name": "raien",
+        "avatar": "https://cdn.discordapp.com/avatars/95969159845806080/f81b4f5923c4fed048ffbaa7d42b3a12.png?size=512",
+        "count": 2450
+      },
+      {
+        "id": "270601300570406925",
+        "name": "otoshigami",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270601300570406925/avatars/f1add6d475286dd292cade9c69e2f8f2.png?size=512",
+        "count": 2156
+      },
+      {
+        "id": "338642102479224833",
+        "name": "blonzej",
+        "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+        "count": 2154
+      },
+      {
+        "id": "429656936435286016",
+        "name": "RinBot",
+        "avatar": "https://cdn.discordapp.com/avatars/429656936435286016/19caf89ba433bef1ad18a4d84e07a63a.png?size=512",
+        "count": 1908
+      },
+      {
+        "id": "270245951837437955",
+        "name": "nokatoki",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+        "count": 1730
+      },
+      {
+        "id": "196943066874118144",
+        "name": "namaryu",
+        "avatar": "https://cdn.discordapp.com/avatars/196943066874118144/51d101d68481379113661478a9fdeb53.png?size=512",
+        "count": 1599
+      },
+      {
+        "id": "165731360563003392",
+        "name": "avinex",
+        "avatar": "https://cdn.discordapp.com/avatars/165731360563003392/ef279720c2bdef55f122f0dea6d6a26f.png?size=512",
+        "count": 1458
+      }
+    ],
+    "7": [
+      {
+        "id": "237208084378812416",
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+        "count": 7208
+      },
+      {
+        "id": "338642102479224833",
+        "name": "blonzej",
+        "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+        "count": 5417
+      },
+      {
+        "id": "297647773103292416",
+        "name": "jakosi",
+        "avatar": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
+        "count": 5347
+      },
+      {
+        "id": "279397680776478720",
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512",
+        "count": 3666
+      },
+      {
+        "id": "650761899021041685",
+        "name": "yuhime_",
+        "avatar": "https://cdn.discordapp.com/avatars/650761899021041685/5dcd8e268c11e73f2376b936cb79280e.png?size=512",
+        "count": 3529
+      },
+      {
+        "id": "196943066874118144",
+        "name": "namaryu",
+        "avatar": "https://cdn.discordapp.com/avatars/196943066874118144/51d101d68481379113661478a9fdeb53.png?size=512",
+        "count": 3084
+      },
+      {
+        "id": "270245951837437955",
+        "name": "nokatoki",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+        "count": 2857
+      },
+      {
+        "id": "95969159845806080",
+        "name": "raien",
+        "avatar": "https://cdn.discordapp.com/avatars/95969159845806080/f81b4f5923c4fed048ffbaa7d42b3a12.png?size=512",
+        "count": 2710
+      },
+      {
+        "id": "517766317961510912",
+        "name": "kon7216",
+        "avatar": "https://cdn.discordapp.com/avatars/517766317961510912/99fde48c23242795ed4480b5ea1a359e.png?size=512",
+        "count": 2487
+      },
+      {
+        "id": "125677084319285249",
+        "name": "willq",
+        "avatar": "https://cdn.discordapp.com/avatars/125677084319285249/612b660ef4c5d1bc215d836362979481.png?size=512",
+        "count": 2265
+      }
+    ],
+    "8": [
+      {
+        "id": "237208084378812416",
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+        "count": 5203
+      },
+      {
+        "id": "299488561130897410",
+        "name": "tuptaju",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/299488561130897410/avatars/0138b3d5846b1712c637be336d97d7cd.png?size=512",
+        "count": 3720
+      },
+      {
+        "id": "279397680776478720",
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512",
+        "count": 3231
+      },
+      {
+        "id": "266074481871552513",
+        "name": "yamiiyami",
+        "avatar": "https://cdn.discordapp.com/avatars/266074481871552513/857a7343d20b410ba873c3ab428d4e9a.png?size=512",
+        "count": 3009
+      },
+      {
+        "id": "650761899021041685",
+        "name": "yuhime_",
+        "avatar": "https://cdn.discordapp.com/avatars/650761899021041685/5dcd8e268c11e73f2376b936cb79280e.png?size=512",
+        "count": 2635
+      },
+      {
+        "id": "270245951837437955",
+        "name": "nokatoki",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+        "count": 2571
+      },
+      {
+        "id": "338642102479224833",
+        "name": "blonzej",
+        "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+        "count": 2261
+      },
+      {
+        "id": "270601300570406925",
+        "name": "otoshigami",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270601300570406925/avatars/f1add6d475286dd292cade9c69e2f8f2.png?size=512",
+        "count": 2123
+      },
+      {
+        "id": "877097274021396530",
+        "name": "Pingu",
+        "avatar": "https://cdn.discordapp.com/avatars/877097274021396530/e42c3a69ca1506268b00cebb56bd806b.png?size=512",
+        "count": 1969
+      },
+      {
+        "id": "270968874420273153",
+        "name": ".goge",
+        "avatar": "https://cdn.discordapp.com/avatars/270968874420273153/f64c6d9100b86c364211dc800696fea9.png?size=512",
+        "count": 1773
+      }
+    ],
+    "9": [
+      {
+        "id": "237208084378812416",
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+        "count": 7361
+      },
+      {
+        "id": "429656936435286016",
+        "name": "RinBot",
+        "avatar": "https://cdn.discordapp.com/avatars/429656936435286016/19caf89ba433bef1ad18a4d84e07a63a.png?size=512",
+        "count": 4353
+      },
+      {
+        "id": "299488561130897410",
+        "name": "tuptaju",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/299488561130897410/avatars/0138b3d5846b1712c637be336d97d7cd.png?size=512",
+        "count": 4338
+      },
+      {
+        "id": "270601300570406925",
+        "name": "otoshigami",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270601300570406925/avatars/f1add6d475286dd292cade9c69e2f8f2.png?size=512",
+        "count": 3854
+      },
+      {
+        "id": "338642102479224833",
+        "name": "blonzej",
+        "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+        "count": 3237
+      },
+      {
+        "id": "125677084319285249",
+        "name": "willq",
+        "avatar": "https://cdn.discordapp.com/avatars/125677084319285249/612b660ef4c5d1bc215d836362979481.png?size=512",
+        "count": 2870
+      },
+      {
+        "id": "279397680776478720",
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512",
+        "count": 2626
+      },
+      {
+        "id": "270245951837437955",
+        "name": "nokatoki",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+        "count": 2341
+      },
+      {
+        "id": "290451477602893844",
+        "name": "5zlotych",
+        "avatar": "https://cdn.discordapp.com/avatars/290451477602893844/d01d4bd77eb30d84e5405a9cd6234667.png?size=512",
+        "count": 2232
+      },
+      {
+        "id": "297647773103292416",
+        "name": "jakosi",
+        "avatar": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
+        "count": 2221
+      }
+    ],
+    "10": [
+      {
+        "id": "237208084378812416",
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+        "count": 8804
+      },
+      {
+        "id": "279397680776478720",
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512",
+        "count": 3352
+      },
+      {
+        "id": "429656936435286016",
+        "name": "RinBot",
+        "avatar": "https://cdn.discordapp.com/avatars/429656936435286016/19caf89ba433bef1ad18a4d84e07a63a.png?size=512",
+        "count": 3304
+      },
+      {
+        "id": "338642102479224833",
+        "name": "blonzej",
+        "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+        "count": 3131
+      },
+      {
+        "id": "270601300570406925",
+        "name": "otoshigami",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270601300570406925/avatars/f1add6d475286dd292cade9c69e2f8f2.png?size=512",
+        "count": 2558
+      },
+      {
+        "id": "270968874420273153",
+        "name": ".goge",
+        "avatar": "https://cdn.discordapp.com/avatars/270968874420273153/f64c6d9100b86c364211dc800696fea9.png?size=512",
+        "count": 1962
+      },
+      {
+        "id": "270245951837437955",
+        "name": "nokatoki",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270245951837437955/avatars/7290ba2766f372da9f1a32fc1c4aff3e.png?size=512",
+        "count": 1957
+      },
+      {
+        "id": "877097274021396530",
+        "name": "Pingu",
+        "avatar": "https://cdn.discordapp.com/avatars/877097274021396530/e42c3a69ca1506268b00cebb56bd806b.png?size=512",
+        "count": 1954
+      },
+      {
+        "id": "291563667290324992",
+        "name": "nesttouc",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/291563667290324992/avatars/1895170f1ef1db39c3afbf8fe81839a2.png?size=512",
+        "count": 1782
+      },
+      {
+        "id": "213257041609752578",
+        "name": "fucktor",
+        "avatar": "https://cdn.discordapp.com/avatars/213257041609752578/8bf40cac298c724182c4665bced6d48f.png?size=512",
+        "count": 1765
+      }
+    ],
+    "11": [
+      {
+        "id": "237208084378812416",
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+        "count": 5530
+      },
+      {
+        "id": "270601300570406925",
+        "name": "otoshigami",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270601300570406925/avatars/f1add6d475286dd292cade9c69e2f8f2.png?size=512",
+        "count": 3004
+      },
+      {
+        "id": "299488561130897410",
+        "name": "tuptaju",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/299488561130897410/avatars/0138b3d5846b1712c637be336d97d7cd.png?size=512",
+        "count": 2865
+      },
+      {
+        "id": "279397680776478720",
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512",
+        "count": 2712
+      },
+      {
+        "id": "270968874420273153",
+        "name": ".goge",
+        "avatar": "https://cdn.discordapp.com/avatars/270968874420273153/f64c6d9100b86c364211dc800696fea9.png?size=512",
+        "count": 1939
+      },
+      {
+        "id": "284044360192884736",
+        "name": "tlenmlem",
+        "avatar": "https://cdn.discordapp.com/avatars/284044360192884736/4c170e9d4554b315eadc8331d6700fbd.png?size=512",
+        "count": 1921
+      },
+      {
+        "id": "338642102479224833",
+        "name": "blonzej",
+        "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+        "count": 1907
+      },
+      {
+        "id": "351006685587963916",
+        "name": "4lajf",
+        "avatar": "https://cdn.discordapp.com/avatars/351006685587963916/a_fc3281e48a26b0edae13c46024a37424.gif?size=512",
+        "count": 1746
+      },
+      {
+        "id": "297647773103292416",
+        "name": "jakosi",
+        "avatar": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
+        "count": 1715
+      },
+      {
+        "id": "95969159845806080",
+        "name": "raien",
+        "avatar": "https://cdn.discordapp.com/avatars/95969159845806080/f81b4f5923c4fed048ffbaa7d42b3a12.png?size=512",
+        "count": 1700
+      }
+    ],
+    "12": [
+      {
+        "id": "237208084378812416",
+        "name": "tomasz",
+        "avatar": "https://cdn.discordapp.com/avatars/237208084378812416/140e87abfaaed0da50eb82c4f2005cdc.png?size=512",
+        "count": 5952
+      },
+      {
+        "id": "279397680776478720",
+        "name": "bari2288",
+        "avatar": "https://cdn.discordapp.com/avatars/279397680776478720/2dfe9d617c1d5f7a638efd19ce418d22.png?size=512",
+        "count": 3230
+      },
+      {
+        "id": "367782767410413569",
+        "name": "cbrzeszczot",
+        "avatar": "https://cdn.discordapp.com/avatars/367782767410413569/6bccc1203bf006e23b70efd28379c051.png?size=512",
+        "count": 2872
+      },
+      {
+        "id": "351006685587963916",
+        "name": "4lajf",
+        "avatar": "https://cdn.discordapp.com/avatars/351006685587963916/a_fc3281e48a26b0edae13c46024a37424.gif?size=512",
+        "count": 2620
+      },
+      {
+        "id": "270601300570406925",
+        "name": "otoshigami",
+        "avatar": "https://cdn.discordapp.com/guilds/875086635744763914/users/270601300570406925/avatars/f1add6d475286dd292cade9c69e2f8f2.png?size=512",
+        "count": 2491
+      },
+      {
+        "id": "338642102479224833",
+        "name": "blonzej",
+        "avatar": "https://cdn.discordapp.com/avatars/338642102479224833/1a67de7f3a3ee98e56b4aecb61523efa.png?size=512",
+        "count": 2181
+      },
+      {
+        "id": "1162716486020890634",
+        "name": "Link Expander",
+        "avatar": "https://cdn.discordapp.com/embed/avatars/0.png",
+        "count": 1813
+      },
+      {
+        "id": "297647773103292416",
+        "name": "jakosi",
+        "avatar": "https://cdn.discordapp.com/avatars/297647773103292416/0ef90cd4238e409787bfdbb10f237ab6.png?size=512",
+        "count": 1712
+      },
+      {
+        "id": "196943066874118144",
+        "name": "namaryu",
+        "avatar": "https://cdn.discordapp.com/avatars/196943066874118144/51d101d68481379113661478a9fdeb53.png?size=512",
+        "count": 1697
+      },
+      {
+        "id": "95969159845806080",
+        "name": "raien",
+        "avatar": "https://cdn.discordapp.com/avatars/95969159845806080/f81b4f5923c4fed048ffbaa7d42b3a12.png?size=512",
+        "count": 1579
+      }
+    ]
+  },
+  "channels": {
+    "1": [
+      {
+        "id": "875089652518903869",
+        "name": "animowe-dysputy",
+        "category_name": "Unknown",
+        "count": 10521
+      },
+      {
+        "id": "904454003977502730",
+        "name": "pogawędki",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 9928
+      },
+      {
+        "id": "1043195907258196079",
+        "name": "degenerackie-pogawędki",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 5914
+      },
+      {
+        "id": "1034931177414479992",
+        "name": "biblioteka-mangowa",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 4495
+      },
+      {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 3899
+      },
+      {
+        "id": "918039801419145277",
+        "name": "kinowo-literacki",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2700
+      },
+      {
+        "id": "1305164589410811924",
+        "name": "Karczmogus",
+        "category_name": "integracja-online",
+        "count": 2087
+      },
+      {
+        "id": "909036888017489920",
+        "name": "salon-gier",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1889
+      },
+      {
+        "id": "976957742621290556",
+        "name": "meetowo-konwentowy",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1777
+      },
+      {
+        "id": "976551528691298345",
+        "name": "foto-studio",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1465
+      }
+    ],
+    "2": [
+      {
+        "id": "904454003977502730",
+        "name": "pogawędki",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 8581
+      },
+      {
+        "id": "875089652518903869",
+        "name": "animowe-dysputy",
+        "category_name": "Unknown",
+        "count": 8030
+      },
+      {
+        "id": "1043195907258196079",
+        "name": "degenerackie-pogawędki",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 5338
+      },
+      {
+        "id": "1034931177414479992",
+        "name": "biblioteka-mangowa",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 4124
+      },
+      {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 3507
+      },
+      {
+        "id": "918039801419145277",
+        "name": "kinowo-literacki",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2541
+      },
+      {
+        "id": "875089347072917574",
+        "name": "gotuj-z-karczmą",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1807
+      },
+      {
+        "id": "909036888017489920",
+        "name": "salon-gier",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1470
+      },
+      {
+        "id": "976551528691298345",
+        "name": "foto-studio",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1337
+      },
+      {
+        "id": "875089270430396526",
+        "name": "kącik-muzyczny",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1295
+      }
+    ],
+    "3": [
+      {
+        "id": "875089652518903869",
+        "name": "animowe-dysputy",
+        "category_name": "Unknown",
+        "count": 12288
+      },
+      {
+        "id": "904454003977502730",
+        "name": "pogawędki",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 9122
+      },
+      {
+        "id": "1043195907258196079",
+        "name": "degenerackie-pogawędki",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 6456
+      },
+      {
+        "id": "1034931177414479992",
+        "name": "biblioteka-mangowa",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 4078
+      },
+      {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 3465
+      },
+      {
+        "id": "918039801419145277",
+        "name": "kinowo-literacki",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2674
+      },
+      {
+        "id": "909153584766132315",
+        "name": "kebab-głosowo-tekstowy",
+        "category_name": "╭── KANAŁY GŁOSOWE ──╮",
+        "count": 1852
+      },
+      {
+        "id": "976551528691298345",
+        "name": "foto-studio",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1711
+      },
+      {
+        "id": "909379591267819570",
+        "name": "【zobacz-memy】",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1693
+      },
+      {
+        "id": "909036888017489920",
+        "name": "salon-gier",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1546
+      }
+    ],
+    "4": [
+      {
+        "id": "875089652518903869",
+        "name": "animowe-dysputy",
+        "category_name": "Unknown",
+        "count": 14388
+      },
+      {
+        "id": "1043195907258196079",
+        "name": "degenerackie-pogawędki",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 6436
+      },
+      {
+        "id": "904454003977502730",
+        "name": "pogawędki",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 6175
+      },
+      {
+        "id": "1034931177414479992",
+        "name": "biblioteka-mangowa",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 4830
+      },
+      {
+        "id": "918039801419145277",
+        "name": "kinowo-literacki",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2258
+      },
+      {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2123
+      },
+      {
+        "id": "909379591267819570",
+        "name": "【zobacz-memy】",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1808
+      },
+      {
+        "id": "976957742621290556",
+        "name": "meetowo-konwentowy",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1668
+      },
+      {
+        "id": "875089270430396526",
+        "name": "kącik-muzyczny",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1582
+      },
+      {
+        "id": "909036888017489920",
+        "name": "salon-gier",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1538
+      }
+    ],
+    "5": [
+      {
+        "id": "875089652518903869",
+        "name": "animowe-dysputy",
+        "category_name": "Unknown",
+        "count": 10862
+      },
+      {
+        "id": "1043195907258196079",
+        "name": "degenerackie-pogawędki",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 6848
+      },
+      {
+        "id": "904454003977502730",
+        "name": "pogawędki",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 4561
+      },
+      {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 3090
+      },
+      {
+        "id": "1034931177414479992",
+        "name": "biblioteka-mangowa",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 2917
+      },
+      {
+        "id": "918039801419145277",
+        "name": "kinowo-literacki",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2109
+      },
+      {
+        "id": "976957742621290556",
+        "name": "meetowo-konwentowy",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1845
+      },
+      {
+        "id": "875089270430396526",
+        "name": "kącik-muzyczny",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1749
+      },
+      {
+        "id": "909379591267819570",
+        "name": "【zobacz-memy】",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1426
+      },
+      {
+        "id": "909153584766132315",
+        "name": "kebab-głosowo-tekstowy",
+        "category_name": "╭── KANAŁY GŁOSOWE ──╮",
+        "count": 1386
+      }
+    ],
+    "6": [
+      {
+        "id": "1043195907258196079",
+        "name": "degenerackie-pogawędki",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 11506
+      },
+      {
+        "id": "875089652518903869",
+        "name": "animowe-dysputy",
+        "category_name": "Unknown",
+        "count": 10294
+      },
+      {
+        "id": "904454003977502730",
+        "name": "pogawędki",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 4938
+      },
+      {
+        "id": "976957742621290556",
+        "name": "meetowo-konwentowy",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 3612
+      },
+      {
+        "id": "1034931177414479992",
+        "name": "biblioteka-mangowa",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 3009
+      },
+      {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2156
+      },
+      {
+        "id": "909379591267819570",
+        "name": "【zobacz-memy】",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1329
+      },
+      {
+        "id": "875089270430396526",
+        "name": "kącik-muzyczny",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1256
+      },
+      {
+        "id": "918039801419145277",
+        "name": "kinowo-literacki",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1231
+      },
+      {
+        "id": "875089347072917574",
+        "name": "gotuj-z-karczmą",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1127
+      }
+    ],
+    "7": [
+      {
+        "id": "875089652518903869",
+        "name": "animowe-dysputy",
+        "category_name": "Unknown",
+        "count": 21268
+      },
+      {
+        "id": "1043195907258196079",
+        "name": "degenerackie-pogawędki",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 18471
+      },
+      {
+        "id": "904454003977502730",
+        "name": "pogawędki",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 7730
+      },
+      {
+        "id": "1034931177414479992",
+        "name": "biblioteka-mangowa",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 5241
+      },
+      {
+        "id": "976957742621290556",
+        "name": "meetowo-konwentowy",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 3965
+      },
+      {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2500
+      },
+      {
+        "id": "1232272048274014288",
+        "name": "Konie do zagrody (gacha kanał)",
+        "category_name": "propozycje",
+        "count": 2472
+      },
+      {
+        "id": "918039801419145277",
+        "name": "kinowo-literacki",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2268
+      },
+      {
+        "id": "875089270430396526",
+        "name": "kącik-muzyczny",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2186
+      },
+      {
+        "id": "914458084892606484",
+        "name": "integracja-online",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 2073
+      }
+    ],
+    "8": [
+      {
+        "id": "1043195907258196079",
+        "name": "degenerackie-pogawędki",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 14537
+      },
+      {
+        "id": "875089652518903869",
+        "name": "animowe-dysputy",
+        "category_name": "Unknown",
+        "count": 10957
+      },
+      {
+        "id": "904454003977502730",
+        "name": "pogawędki",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 10896
+      },
+      {
+        "id": "976957742621290556",
+        "name": "meetowo-konwentowy",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 6236
+      },
+      {
+        "id": "1034931177414479992",
+        "name": "biblioteka-mangowa",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 3095
+      },
+      {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2971
+      },
+      {
+        "id": "875089270430396526",
+        "name": "kącik-muzyczny",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1997
+      },
+      {
+        "id": "875089347072917574",
+        "name": "gotuj-z-karczmą",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1865
+      },
+      {
+        "id": "918039801419145277",
+        "name": "kinowo-literacki",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1837
+      },
+      {
+        "id": "976551528691298345",
+        "name": "foto-studio",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1830
+      }
+    ],
+    "9": [
+      {
+        "id": "875089652518903869",
+        "name": "animowe-dysputy",
+        "category_name": "Unknown",
+        "count": 14609
+      },
+      {
+        "id": "1043195907258196079",
+        "name": "degenerackie-pogawędki",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 13427
+      },
+      {
+        "id": "904454003977502730",
+        "name": "pogawędki",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 9585
+      },
+      {
+        "id": "976957742621290556",
+        "name": "meetowo-konwentowy",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 8041
+      },
+      {
+        "id": "1034931177414479992",
+        "name": "biblioteka-mangowa",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 4552
+      },
+      {
+        "id": "1406686362979139837",
+        "name": "zakupowo-merchowy",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 4088
+      },
+      {
+        "id": "875089347072917574",
+        "name": "gotuj-z-karczmą",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 2765
+      },
+      {
+        "id": "976551528691298345",
+        "name": "foto-studio",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 2191
+      },
+      {
+        "id": "914458084892606484",
+        "name": "integracja-online",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1915
+      },
+      {
+        "id": "909153584766132315",
+        "name": "kebab-głosowo-tekstowy",
+        "category_name": "╭── KANAŁY GŁOSOWE ──╮",
+        "count": 1616
+      }
+    ],
+    "10": [
+      {
+        "id": "875089652518903869",
+        "name": "animowe-dysputy",
+        "category_name": "Unknown",
+        "count": 15950
+      },
+      {
+        "id": "1043195907258196079",
+        "name": "degenerackie-pogawędki",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 11590
+      },
+      {
+        "id": "904454003977502730",
+        "name": "pogawędki",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 6992
+      },
+      {
+        "id": "1034931177414479992",
+        "name": "biblioteka-mangowa",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 3477
+      },
+      {
+        "id": "976957742621290556",
+        "name": "meetowo-konwentowy",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 3032
+      },
+      {
+        "id": "1406686362979139837",
+        "name": "zakupowo-merchowy",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2639
+      },
+      {
+        "id": "1398773115106103418",
+        "name": "japodróże",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 2188
+      },
+      {
+        "id": "875089270430396526",
+        "name": "kącik-muzyczny",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1971
+      },
+      {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1938
+      },
+      {
+        "id": "928729662081892435",
+        "name": "sezon-jesien-2004",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 1828
+      }
+    ],
+    "11": [
+      {
+        "id": "1043195907258196079",
+        "name": "degenerackie-pogawędki",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 13296
+      },
+      {
+        "id": "904454003977502730",
+        "name": "pogawędki",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 10497
+      },
+      {
+        "id": "875089652518903869",
+        "name": "animowe-dysputy",
+        "category_name": "Unknown",
+        "count": 8299
+      },
+      {
+        "id": "1034931177414479992",
+        "name": "biblioteka-mangowa",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 4212
+      },
+      {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2647
+      },
+      {
+        "id": "1406686362979139837",
+        "name": "zakupowo-merchowy",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2533
+      },
+      {
+        "id": "976957742621290556",
+        "name": "meetowo-konwentowy",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 2114
+      },
+      {
+        "id": "875089347072917574",
+        "name": "gotuj-z-karczmą",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1932
+      },
+      {
+        "id": "918039801419145277",
+        "name": "kinowo-literacki",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1748
+      },
+      {
+        "id": "909153584766132315",
+        "name": "kebab-głosowo-tekstowy",
+        "category_name": "╭── KANAŁY GŁOSOWE ──╮",
+        "count": 1360
+      }
+    ],
+    "12": [
+      {
+        "id": "1043195907258196079",
+        "name": "degenerackie-pogawędki",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 11792
+      },
+      {
+        "id": "875089652518903869",
+        "name": "animowe-dysputy",
+        "category_name": "Unknown",
+        "count": 10553
+      },
+      {
+        "id": "904454003977502730",
+        "name": "pogawędki",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 7857
+      },
+      {
+        "id": "1034931177414479992",
+        "name": "biblioteka-mangowa",
+        "category_name": "╭──WEEBOWA IZAKAYA──╮",
+        "count": 3297
+      },
+      {
+        "id": "1417802301309063239",
+        "name": "Nitka na anidramy",
+        "category_name": "animowe-dysputy",
+        "count": 2985
+      },
+      {
+        "id": "1406686362979139837",
+        "name": "zakupowo-merchowy",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2442
+      },
+      {
+        "id": "1130865669429264456",
+        "name": "fantastyczny-burdel🍯",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2289
+      },
+      {
+        "id": "918039801419145277",
+        "name": "kinowo-literacki",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 2149
+      },
+      {
+        "id": "909379591267819570",
+        "name": "【zobacz-memy】",
+        "category_name": "╭──SOCJALNA KARCZMA──╮",
+        "count": 1438
+      },
+      {
+        "id": "875089270430396526",
+        "name": "kącik-muzyczny",
+        "category_name": "╭──HOBBYSTYCZNY BAR──╮",
+        "count": 1212
+      }
+    ]
+  }
+}

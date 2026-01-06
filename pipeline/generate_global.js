@@ -796,6 +796,12 @@ function getMonthlyWordStats(userFilter = '') {
             if (/^\d+$/.test(w) || w.length > 15) continue;
             if ((w.length < 4 && w !== 'uwu' && w !== 'owo' && w !== 'xd') || STOPWORDS.has(w)) continue;
 
+            // Exclude specific word "rentonem" (case-insensitive)
+            if (w.toLowerCase() === 'rentonem') continue;
+
+            // Exclude emoji "🇵🇱"
+            if (w === '🇵🇱' || w.includes('🇵🇱')) continue;
+
             const s = stem(w);
             const displayWord = shortenRepeatedChars(w);
             monthlyCounts[m][s] = (monthlyCounts[m][s] || 0) + 1;
@@ -803,9 +809,18 @@ function getMonthlyWordStats(userFilter = '') {
         }
     }
 
+    // Compute total counts per word across all months to filter out words with < 50 appearances
+    const wordTotals = {};
+    for (const m in monthlyCounts) {
+        for (const [stem, count] of Object.entries(monthlyCounts[m])) {
+            wordTotals[stem] = (wordTotals[stem] || 0) + count;
+        }
+    }
+
     const result = {};
     for (const m in monthlyCounts) {
         result[m] = Object.entries(monthlyCounts[m])
+            .filter(([k]) => wordTotals[k] >= 42) // Only include words with 42+ total appearances
             .map(([k, v]) => ({ stem: k, text: rawMap[k], value: v }));
     }
     return result;
@@ -833,7 +848,7 @@ function computeMonthlyHighlights(monthlyChannels, monthlyUsers, monthlyWords) {
     }
 
     for (const [id, stats] of Object.entries(channelYearStats)) {
-        if (stats.total < 100) continue; // Ignore small channels
+        if (stats.total < 500) continue; // Ignore channels with less than 500 messages
         for (let m = 1; m <= 12; m++) {
             const count = stats.months[m] || 0;
             if (count < 50) continue;
@@ -846,16 +861,20 @@ function computeMonthlyHighlights(monthlyChannels, monthlyUsers, monthlyWords) {
             const shareOfMonth = count / (monthTotals[m] || 1);
 
             if (ratio > 2.0) {
+                // Weighted "hype" score: channels get highest priority (weight 2.0)
+                const baseStrength = ratio * Math.log(count) * (shareOfMonth + 0.5);
+                const hypeScore = baseStrength * 2.0; // Boost channels
                 candidates.push({
                     month: m,
                     type: 'channel_spike',
                     subjectId: id,
                     subjectName: stats.name,
-                    strength: ratio * Math.log(count) * (shareOfMonth + 0.5),
+                    strength: hypeScore,
                     details: {
                         count,
                         ratio: parseFloat(ratio.toFixed(2)),
-                        share: parseFloat(shareOfMonth.toFixed(2))
+                        share: parseFloat(shareOfMonth.toFixed(2)),
+                        avgOthers: parseFloat(avgOthers.toFixed(1))
                     }
                 });
             }
@@ -882,8 +901,13 @@ function computeMonthlyHighlights(monthlyChannels, monthlyUsers, monthlyWords) {
         return name;
     };
 
+    // Exclude "Link Expander" user
+    const linkExpanderUser = db.prepare('SELECT id FROM users WHERE name = ?').get('Link Expander');
+    const excludedUserId = linkExpanderUser ? linkExpanderUser.id : null;
+
     for (const [id, stats] of Object.entries(userYearStats)) {
-        if (stats.total < 100) continue;
+        if (stats.total < 1000) continue; // Exclude users with less than 1000 messages
+        if (excludedUserId && id === excludedUserId) continue; // Exclude "Link Expander"
         for (let m = 1; m <= 12; m++) {
             const count = stats.months[m] || 0;
             if (count < 30) continue;
@@ -893,15 +917,19 @@ function computeMonthlyHighlights(monthlyChannels, monthlyUsers, monthlyWords) {
             const ratio = avgOthers === 0 ? count : count / avgOthers;
 
             if (ratio > 2.5) {
+                // Weighted "hype" score: users get medium-high priority (weight 1.5)
+                const baseStrength = ratio * Math.log(count);
+                const hypeScore = baseStrength * 1.5; // Boost users
                 candidates.push({
                     month: m,
                     type: 'user_outburst',
                     subjectId: id,
                     subjectName: getName(id),
-                    strength: ratio * Math.log(count),
+                    strength: hypeScore,
                     details: {
                         count,
-                        ratio: parseFloat(ratio.toFixed(2))
+                        ratio: parseFloat(ratio.toFixed(2)),
+                        avgOthers: parseFloat(avgOthers.toFixed(1))
                     }
                 });
             }
@@ -920,43 +948,74 @@ function computeMonthlyHighlights(monthlyChannels, monthlyUsers, monthlyWords) {
     }
 
     for (const [stem, stats] of Object.entries(wordYearStats)) {
-        if (stats.total < 20) continue; // Ignore very rare words
+        if (stats.total < 42) continue; // Ignore words with less than 42 appearances
         for (let m = 1; m <= 12; m++) {
             const count = stats.months[m] || 0;
-            if (count < 5) continue;
+            if (count < 50) continue; // Exclude words with less than 50 occurrences in this month
 
             const othersTotal = stats.total - count;
             const avgOthers = othersTotal / 11;
             const ratio = avgOthers === 0 ? count : count / avgOthers;
 
             if (ratio > 3.0) {
+                // Weighted "hype" score: words get lower priority (weight 0.5) to prefer channels/users
+                const baseStrength = ratio * Math.log(count);
+                const hypeScore = baseStrength * 0.5; // Penalize words to prefer other metrics
                 candidates.push({
                     month: m,
                     type: 'word_anomaly',
                     subjectId: stem,
                     subjectName: stats.text,
-                    strength: ratio * Math.log(count) * 0.8, // Slightly lower weight than channels/users
+                    strength: hypeScore,
                     details: {
                         count,
-                        ratio: parseFloat(ratio.toFixed(2))
+                        ratio: parseFloat(ratio.toFixed(2)),
+                        avgOthers: parseFloat(avgOthers.toFixed(1))
                     }
                 });
             }
         }
     }
 
-    // Sort candidates
-    candidates.sort((a, b) => b.strength - a.strength);
+    // Sort candidates by weighted "hype" score (descending)
+    candidates.sort((a, b) => {
+        // First sort by strength (hype score)
+        if (Math.abs(b.strength - a.strength) > 0.1) {
+            return b.strength - a.strength;
+        }
+        // If strengths are similar, prefer non-word events
+        const typePriority = { 'channel_spike': 3, 'user_outburst': 2, 'word_anomaly': 1 };
+        return (typePriority[b.type] || 0) - (typePriority[a.type] || 0);
+    });
 
-    // Greedy Assignment
+    // Greedy Assignment with preference for non-word events
     const assignments = {}; // month -> event
     const usedSubjects = new Set();
 
-    // Pass 1: Assign high strength unique events
+    // Pass 1: Assign high strength unique events, preferring channels/users over words
     for (const cand of candidates) {
-        if (!assignments[cand.month] && !usedSubjects.has(cand.subjectName)) {
-            assignments[cand.month] = cand;
-            usedSubjects.add(cand.subjectName);
+        if (!usedSubjects.has(cand.subjectName)) {
+            if (!assignments[cand.month]) {
+                // Month is empty, assign this candidate
+                assignments[cand.month] = cand;
+                usedSubjects.add(cand.subjectName);
+            } else {
+                // Month already has an assignment
+                const existing = assignments[cand.month];
+                // If existing is a word and new candidate is not a word, prefer the non-word event
+                if (existing.type === 'word_anomaly' && cand.type !== 'word_anomaly') {
+                    // Replace word with non-word event (prefer channels/users)
+                    usedSubjects.delete(existing.subjectName);
+                    assignments[cand.month] = cand;
+                    usedSubjects.add(cand.subjectName);
+                } else if (cand.type !== 'word_anomaly' && existing.type === 'word_anomaly') {
+                    // New candidate is non-word and existing is word - replace
+                    usedSubjects.delete(existing.subjectName);
+                    assignments[cand.month] = cand;
+                    usedSubjects.add(cand.subjectName);
+                }
+                // Otherwise keep existing assignment (it's better or same type)
+            }
         }
     }
 
