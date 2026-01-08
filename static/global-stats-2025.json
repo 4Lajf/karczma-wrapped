@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-01-06T16:14:38.524Z",
+    "generatedAt": "2026-01-08T11:32:18.182Z",
     "year": 2025,
     "isLimited": false,
     "limitCount": null
@@ -1706,7 +1706,7 @@
   "wordCloud": [
     {
       "text": "xd",
-      "value": 26603
+      "value": 26602
     },
     {
       "text": "chyba",
@@ -1738,7 +1738,7 @@
     },
     {
       "text": "razie",
-      "value": 8390
+      "value": 8389
     },
     {
       "text": "pewnie",
@@ -1754,7 +1754,7 @@
     },
     {
       "text": "jestem",
-      "value": 6980
+      "value": 6979
     },
     {
       "text": "rzeczy",
@@ -1822,15 +1822,15 @@
     },
     {
       "text": "film",
-      "value": 5230
+      "value": 5162
     },
     {
       "text": "inny",
-      "value": 5133
+      "value": 5132
     },
     {
       "text": "jedną",
-      "value": 4926
+      "value": 4925
     },
     {
       "text": "trzeba",
@@ -1874,7 +1874,7 @@
     },
     {
       "text": "ciekawym",
-      "value": 3982
+      "value": 3970
     },
     {
       "text": "robie",
@@ -1883,10 +1883,6 @@
     {
       "text": "postaci",
       "value": 3948
-    },
-    {
-      "text": "anime",
-      "value": 3947
     },
     {
       "text": "ktoś",
@@ -1898,7 +1894,7 @@
     },
     {
       "text": "sezony",
-      "value": 3874
+      "value": 3873
     },
     {
       "text": "seria",
@@ -1914,7 +1910,7 @@
     },
     {
       "text": "dzisiaj",
-      "value": 3801
+      "value": 3800
     },
     {
       "text": "będa",
@@ -1938,7 +1934,7 @@
     },
     {
       "text": "xddd",
-      "value": 3627
+      "value": 3626
     },
     {
       "text": "mialem",
@@ -1961,12 +1957,16 @@
       "value": 3517
     },
     {
-      "text": "mang",
-      "value": 3510
+      "text": "anime",
+      "value": 3498
     },
     {
       "text": "tych",
       "value": 3489
+    },
+    {
+      "text": "mang",
+      "value": 3415
     },
     {
       "text": "nigdy",
@@ -2013,12 +2013,12 @@
       "value": 3065
     },
     {
-      "text": "kino",
-      "value": 3065
+      "text": "temu",
+      "value": 3055
     },
     {
-      "text": "temu",
-      "value": 3056
+      "text": "kino",
+      "value": 3053
     },
     {
       "text": "prawda",
@@ -2093,12 +2093,12 @@
       "value": 2697
     },
     {
-      "text": "uwu",
-      "value": 2647
+      "text": "scena",
+      "value": 2641
     },
     {
-      "text": "scena",
-      "value": 2644
+      "text": "uwu",
+      "value": 2639
     },
     {
       "text": "znowu",
@@ -2166,19 +2166,9 @@
       "count": 4854
     },
     {
-      "name": "trollgefk",
-      "id": "1003285860596338758",
-      "count": 4165
-    },
-    {
       "name": "👆",
       "id": "",
       "count": 3547
-    },
-    {
-      "name": "Pandapat",
-      "id": "1056314396713955458",
-      "count": 3350
     },
     {
       "name": "😭",
@@ -2204,11 +2194,6 @@
       "name": "💪",
       "id": "",
       "count": 2161
-    },
-    {
-      "name": "🚬",
-      "id": "",
-      "count": 2024
     },
     {
       "name": "flush",
@@ -2274,11 +2259,6 @@
       "name": "🤝",
       "id": "",
       "count": 464
-    },
-    {
-      "name": "Panda_pat",
-      "id": "867302170775781376",
-      "count": 439
     },
     {
       "name": "doggolick",

@@ -87,7 +87,7 @@ try {
 const STOPWORDS = new Set([
   'a', 'aby', 'ach', 'acz', 'aczkolwiek', 'aj', 'albo', 'ale', 'alez', 'aleź', 'ani', 'az', 'aż', 'bardziej', 'bardzo', 'beda', 'bedzie', 'bez', 'deda', 'będą', 'bede', 'będę', 'będzie', 'bo', 'bowiem', 'by', 'byc', 'być', 'byl', 'byla', 'byli', 'bylo', 'byly', 'był', 'była', 'było', 'były', 'bynajmniej', 'caly', 'cały', 'ci', 'cie', 'ciebie', 'ciat', 'co', 'cokolwiek', 'cos', 'coś', 'czasami', 'czasem', 'czemu', 'czy', 'czyli', 'daleko', 'dla', 'dlaczego', 'dlatego', 'do', 'dobrze', 'dokad', 'dokąd', 'dosc', 'dość', 'duzo', 'dużo', 'dwa', 'dwaj', 'dwie', 'dwoje', 'dzis', 'dzisiaj', 'dziś', 'dy', 'gdy', 'gdyby', 'gdyz', 'gdyż', 'gdzie', 'gdziekolwiek', 'gdzies', 'gdzieś', 'go', 'i', 'ich', 'ile', 'im', 'inna', 'inne', 'inny', 'innych', 'iz', 'iż', 'ja', 'jak', 'jakas', 'jakaś', 'jakby', 'jaki', 'jakichs', 'jakichś', 'jakie', 'jakis', 'jakiś', 'jako', 'jakos', 'jakoś', 'je', 'jeden', 'jedna', 'jedno', 'jednak', 'jednakze', 'jednakże', 'jego', 'jej', 'jemu', 'jest', 'jestem', 'jeszcze', 'jesli', 'jeśli', 'jezeli', 'jeżeli', 'juz', 'już', 'kazdy', 'każdy', 'kiedy', 'kilka', 'kims', 'kimś', 'kto', 'ktokolwiek', 'ktora', 'ktore', 'ktorego', 'ktorej', 'ktory', 'ktorych', 'ktorym', 'ktorzy', 'ktos', 'ktoś', 'która', 'które', 'którego', 'której', 'który', 'których', 'którym', 'którzy', 'ku', 'lat', 'lecz', 'lub', 'ma', 'mają', 'mało', 'mam', 'mi', 'miedzy', 'między', 'mimo', 'mna', 'mną', 'mnie', 'moga', 'mogą', 'moi', 'moim', 'moj', 'moja', 'moje', 'moze', 'może', 'mozliwe', 'możliwe', 'mozna', 'można', 'mój', 'mu', 'musi', 'my', 'na', 'nad', 'nam', 'nami', 'nas', 'nasi', 'nasz', 'nasza', 'nasze', 'naszego', 'naszych', 'natomiast', 'natychmiast', 'nawet', 'nia', 'nią', 'nic', 'nich', 'nie', 'niech', 'niego', 'niej', 'niemu', 'nigdy', 'nim', 'nimi', 'niz', 'niż', 'no', 'o', 'obok', 'od', 'okolo', 'około', 'on', 'ona', 'one', 'oni', 'ono', 'oraz', 'oto', 'owszem', 'pan', 'pana', 'pani', 'po', 'pod', 'podczas', 'pomimo', 'ponad', 'poniewaz', 'ponieważ', 'powinien', 'powinna', 'powinni', 'powinno', 'poza', 'prawie', 'przeciez', 'przecież', 'przed', 'przede', 'przedtem', 'przez', 'przy', 'roku', 'rowniez', 'również', 'sam', 'sama', 'są', 'sie', 'się', 'skad', 'skąd', 'soba', 'sobą', 'sobie', 'sposob', 'sposób', 'swoje', 'ta', 'tak', 'taka', 'taki', 'takie', 'takze', 'także', 'tam', 'te', 'tego', 'tej', 'temu', 'ten', 'teraz', 'też', 'to', 'toba', 'tobą', 'tobie', 'totez', 'toteż', 'totobą', 'trzeba', 'tu', 'tutaj', 'twoi', 'twoim', 'twoj', 'twoja', 'twoje', 'twój', 'ty', 'tylko', 'tym', 'u', 'w', 'wam', 'wami', 'was', 'wasz', 'wasza', 'wasze', 'we', 'według', 'wiele', 'wielu', 'więc', 'więcej', 'wlasnie', 'właśnie', 'wszyscy', 'wszystkich', 'wszystkie', 'wszystkim', 'wszystko', 'wtedy', 'wy', 'z', 'za', 'zaden', 'zadna', 'zadne', 'zadnych', 'zapewne', 'zawsze', 'ze', 'zeby', 'żeby', 'zez', 'zi', 'znow', 'znowu', 'znów', 'zostal', 'został', 'żaden', 'żadna', 'żadne', 'żadnych', 'że', 'żeby',
   // Conversational fillers
-  'chyba', 's=19', 'trollgefk', 'youtube', 'qt_iw4yb22jfxrnx3q6eug', 'ezgif-1-458e83eb9c', 'sakamoto_store', 'start_radio', 'fixupx', 'medicos_et_02', 'kaiyodo_pr', 'bilety24', '27s_gate_3', 'hatsune-miku-miku-hatsune-miku-hatsune-washing-machine-gif-4863029126409914383', 'sorry-gif-22861535', 'nero-devil-may-cry-nero-dmc-dmc-devilmaycry-gif-5266084179185635046', 'cat-wiggle-crazy-cat-zoomies-gif-987735829864339346', 'hiding-spooked-sad-crying-cold-gif-15759512', 'teto-kasane-teto-bald-explosion-explode-gif-6656963363388285940', 'kegf3rsj6thrccde4xenvq', 'bocchi_goods', 'sbeaeba-gif-133119280752873140', 'amane_bushi', 'lft4vjtv471cfkd1scuzaw', 'sagafro2', 'vxtwitter', 'ab_channel', 'sessionid', 'seiyuucorner', '_blank', 'shinobuded1', 'shinobuded2', '30**', '909369353554771989><', 'is_from_webapp=1&sender_device=pc&web_id=7476523811413984790', 'gref', 'discordapp', '🇵🇱', 'searchbtn', 'g_st=com', 'cocoxd', 'dogoangery', 'emotethonk', 'anthropic', 's=20', 's=21', 'https', 'wiec', 'tez', 'tylko', 'troche', 'trochę', 'moze', 'może', 'jeszcze', 'tutaj', 'wlasnie', 'właśnie', 'potem', 'teraz', 'znowu', 'nawet', 'nagle', 'napisze', 'dobra', 'raz', 'sumie', 'serio', 'naprawde', 'naprawdę', 'ogolnie', 'ogólnie', 'wtedy', 'zawsze', 'nigdy', 'moim', 'zdaniem', 'raczej', 'zbyt', 'bardzo', 'całkiem', 'całkowicie', 'znow', 'znów', 'wiem', 'chce', 'chcę', 'wiedzieć', 'powiedzieć', 'robić', 'robic', 'mówić', 'mowic', 'prostu', 'razie'
+  'chyba', 's=19', 'trollgefk', 'youtube', 'qt_iw4yb22jfxrnx3q6eug', 'ezgif-1-458e83eb9c', 'sakamoto_store', 'start_radio', 'fixupx', 'medicos_et_02', 'kaiyodo_pr', 'bilety24', '27s_gate_3', 'hatsune-miku-miku-hatsune-miku-hatsune-washing-machine-gif-4863029126409914383', 'sorry-gif-22861535', 'nero-devil-may-cry-nero-dmc-dmc-devilmaycry-gif-5266084179185635046', 'cat-wiggle-crazy-cat-zoomies-gif-987735829864339346', 'hiding-spooked-sad-crying-cold-gif-15759512', 'teto-kasane-teto-bald-explosion-explode-gif-6656963363388285940', 'kegf3rsj6thrccde4xenvq', 'bocchi_goods', 'sbeaeba-gif-133119280752873140', 'amane_bushi', 'lft4vjtv471cfkd1scuzaw',   'sagafro2', 'vxtwitter', 'ab_channel', 'sessionid', 'seiyuucorner', '_blank', 'shinobuded1', 'shinobuded2', '30**', '909369353554771989><', 'is_from_webapp=1&sender_device=pc&web_id=7476523811413984790', 'gref', 'discordapp', '🇵🇱', 'searchbtn', 'g_st=com', 'cocoxd', 'dogoangery', 'emotethonk', 'anthropic', 's=20', 's=21', 'https', 'wiec', 'tez', 'tylko', 'troche', 'trochę', 'moze', 'może', 'jeszcze', 'tutaj', 'wlasnie', 'właśnie', 'potem', 'teraz', 'znowu', 'nawet', 'nagle', 'napisze', 'dobra', 'raz', 'sumie', 'serio', 'naprawde', 'naprawdę', 'ogolnie', 'ogólnie', 'wtedy', 'zawsze', 'nigdy', 'moim', 'zdaniem', 'raczej', 'zbyt', 'bardzo', 'całkiem', 'całkowicie', 'znow', 'znów', 'wiem', 'chce', 'chcę', 'wiedzieć', 'powiedzieć', 'robić', 'robic', 'mówić', 'mowic', 'prostu', 'razie', 'view', 'attachments', 'status', 'hitlerx', 'girlcockx', 'cunnyx', 'pixiv', 'phixiv', 'searchquery', 'maniax', 'const'
 ]);
 
 // ==================== EMOJI DISCOVERY ====================
@@ -153,6 +153,8 @@ async function discoverAllEmojis() {
           if (msg.reactions && Array.isArray(msg.reactions)) {
             for (const reaction of msg.reactions) {
               if (reaction.emoji && reaction.emoji.id && reaction.emoji.name) {
+                // Skip emojis with blacklisted symbols
+                if (containsBlacklistedSymbol(reaction.emoji.name)) continue;
                 const nameNormalized = normalizeEmojiName(reaction.emoji.name);
                 if (nameNormalized && !emojiMap[nameNormalized]) {
                   emojiMap[nameNormalized] = reaction.emoji.id;
@@ -170,6 +172,8 @@ async function discoverAllEmojis() {
             while ((match = emojiRegex.exec(msg.content)) !== null) {
               const name = match[1];
               const id = match[2];
+              // Skip emojis with blacklisted symbols
+              if (containsBlacklistedSymbol(name)) continue;
               const nameNormalized = normalizeEmojiName(name);
 
               if (nameNormalized && !emojiMap[nameNormalized]) {
@@ -208,6 +212,10 @@ function isLikelyLink(w) {
   if (w.startsWith('http')) return true;
   if (w.includes('/') && (w.includes('attachments') || w.includes('cdn') || w.includes('com'))) return true;
   if (w.split('/').length > 2) return true; // More than 2 slashes is likely a path/link
+  // Common URL fragments
+  if (w.includes('://') || w.includes('www.') || w.endsWith('.com') || w.endsWith('.net') || w.endsWith('.org')) return true;
+  // Discord CDN and common platforms
+  if (w.includes('discord') || w.includes('tenor') || w.includes('giphy') || w.includes('imgur')) return true;
   return false;
 }
 
@@ -242,11 +250,13 @@ function computeVocabularyFingerprint(userId, serverWordFreqs, serverRawWords) {
 
   for (const row of msgs) {
     if (!row.content) continue;
-    // Strip Discord emojis and mentions before splitting to avoid emoji names appearing as words
+    // Strip Discord emojis, mentions, and URLs before splitting to avoid them appearing as words
     const cleanContent = row.content.toLowerCase()
       .replace(/<a?:\w+:\d+>/g, '') // Strip emojis <:name:id>
       .replace(/<@!?\d+>/g, '')     // Strip user mentions
-      .replace(/<#\d+>/g, '');      // Strip channel mentions
+      .replace(/<#\d+>/g, '')       // Strip channel mentions
+      .replace(/https?:\/\/[^\s]+/gi, '') // Strip URLs
+      .replace(/www\.[^\s]+/gi, ''); // Strip www links
 
     const words = cleanContent.split(/[\s,.!?":;()\[\]<>{}|\\/+=*&^%$#@~`]+/);
     for (let w of words) {
@@ -527,6 +537,31 @@ const IGNORED_EMOJI_NAMES = [
   '🚬'
 ];
 
+// Blacklisted symbols that should be filtered from emojis
+// Including Unicode quote characters that get captured by emoji regex
+const BLACKLISTED_EMOJI_SYMBOLS = [
+  '"""', "'", '"', 
+  '\u2018', // ' (left single quote)
+  '\u2019', // ' (right single quote)
+  '\u201A', // ‚ (single low-9 quote)
+  '\u201B', // ‛ (single high-reversed-9 quote)
+  '\u201C', // " (left double quote)
+  '\u201D', // " (right double quote)
+  '\u201E', // „ (double low-9 quote)
+  '\u201F', // ‟ (double high-reversed-9 quote)
+  '\u2033', // ″ (double prime)
+  '\u2034', // ‴ (triple prime)
+  '\u2035', // ‵ (reversed prime)
+  '\u2036', // ‶ (reversed double prime)
+  '\u2037'  // ‷ (reversed triple prime)
+];
+
+function containsBlacklistedSymbol(text) {
+  if (!text) return false;
+  // Check if text exactly matches a blacklisted symbol or contains it
+  return BLACKLISTED_EMOJI_SYMBOLS.some(symbol => text === symbol || text.includes(symbol));
+}
+
 function computeFunniestMessages(userId, guildId) {
   console.log(`  Computing funniest messages (cocoxd)...`);
   // Top 3 messages with most "cocoxd" reactions
@@ -550,7 +585,7 @@ function computeFunniestMessages(userId, guildId) {
       WHERE message_id = ?
       GROUP BY emoji_id, emoji_name
       ORDER BY count DESC
-    `).all(msg.id);
+    `).all(msg.id).filter(r => !containsBlacklistedSymbol(r.emoji_name));
 
     return {
       id: msg.id,
@@ -588,14 +623,20 @@ function computeMostReactedMessages(userId, guildId) {
     LIMIT 15
   `).all(userId, TARGET_YEAR.toString());
 
-  return mostReacted.map(msg => {
+  // Filter out messages with emojis containing blacklisted symbols
+  const filteredMostReacted = mostReacted.filter(msg => {
+    if (containsBlacklistedSymbol(msg.emoji_name)) return false;
+    return true;
+  });
+
+  return filteredMostReacted.map(msg => {
     const reactions = db.prepare(`
       SELECT emoji_id, emoji_name, COUNT(*) as count
       FROM reactions
       WHERE message_id = ?
       GROUP BY emoji_id, emoji_name
       ORDER BY count DESC
-    `).all(msg.id);
+    `).all(msg.id).filter(r => !containsBlacklistedSymbol(r.emoji_name));
 
     return {
       id: msg.id,
@@ -1452,11 +1493,13 @@ function computeContentStats(userId, rawWordsMap) {
 
   for (const row of msgs) {
     if (!row.content) continue;
-    // Strip Discord emojis and mentions before splitting
+    // Strip Discord emojis, mentions, and URLs before splitting
     const cleanContent = row.content.toLowerCase()
       .replace(/<a?:\w+:\d+>/g, '') // Strip emojis <:name:id>
       .replace(/<@!?\d+>/g, '')     // Strip user mentions
-      .replace(/<#\d+>/g, '');      // Strip channel mentions
+      .replace(/<#\d+>/g, '')       // Strip channel mentions
+      .replace(/https?:\/\/[^\s]+/gi, '') // Strip URLs
+      .replace(/www\.[^\s]+/gi, ''); // Strip www links
 
     const words = cleanContent.split(/[\s,.!?":;()\[\]<>{}|\\/+=*&^%$#@~`]+/);
     for (let w of words) {
@@ -1498,6 +1541,8 @@ function computeInlineEmojis(userId) {
     while ((customMatch = customEmojiRegex.exec(row.content)) !== null) {
       const name = customMatch[1];
       const id = customMatch[2];
+      // Skip emojis with blacklisted symbols
+      if (containsBlacklistedSymbol(name)) continue;
       emojiCounts[name] = (emojiCounts[name] || 0) + 1;
 
       if (!emojiIds[name] || emojiCounts[name] > (emojiIds[name].count || 0)) {
@@ -1510,6 +1555,8 @@ function computeInlineEmojis(userId) {
     let unicodeMatch;
     while ((unicodeMatch = unicodeEmojiRegex.exec(row.content)) !== null) {
       const emoji = unicodeMatch[0];
+      // Skip emojis with blacklisted symbols
+      if (containsBlacklistedSymbol(emoji)) continue;
       // Use the emoji character as both name and key for unicode emojis
       emojiCounts[emoji] = (emojiCounts[emoji] || 0) + 1;
     }
@@ -1760,6 +1807,8 @@ async function generate() {
 
     // Process inline emojis
     for (const [name, count] of Object.entries(inlineEmojis.counts || {})) {
+      // Skip emojis with blacklisted symbols
+      if (containsBlacklistedSymbol(name)) continue;
       const nameNormalized = normalizeEmojiName(name);
       if (!nameNormalized) continue;
 
@@ -1783,6 +1832,8 @@ async function generate() {
 
     // Process reaction emojis
     for (const emoji of reactionsSent) {
+      // Skip emojis with blacklisted symbols
+      if (containsBlacklistedSymbol(emoji.key)) continue;
       const keyNormalized = normalizeEmojiName(emoji.key);
       if (!keyNormalized) continue;
 
@@ -1805,6 +1856,10 @@ async function generate() {
     }
 
     const mapToTopList = (map) => Object.entries(map)
+      .filter(([normalizedKey]) => {
+        const key = emojiKeyMap[normalizedKey] || normalizedKey;
+        return !containsBlacklistedSymbol(key);
+      })
       .sort((a, b) => b[1] - a[1])
       .slice(0, 30) // Increased from 10 to 30 to allow filtering in UI
       .map(([normalizedKey, count]) => ({
@@ -1837,6 +1892,8 @@ async function generate() {
     const receivedEmojiKeyMap = {}; // Track original key for display
 
     for (const emoji of topEmojisReceivedRaw) {
+      // Skip emojis with blacklisted symbols
+      if (containsBlacklistedSymbol(emoji.key)) continue;
       const keyNormalized = normalizeEmojiName(emoji.key);
       if (!keyNormalized) continue;
 
@@ -1869,6 +1926,10 @@ async function generate() {
     }
 
     const topEmojisReceived = Object.entries(receivedEmojiMapNormalized)
+      .filter(([normalizedKey]) => {
+        const key = receivedEmojiKeyMap[normalizedKey] || normalizedKey;
+        return !containsBlacklistedSymbol(key);
+      })
       .map(([normalizedKey, data]) => ({
         key: receivedEmojiKeyMap[normalizedKey] || normalizedKey,
         count: data.count,

@@ -30,6 +30,10 @@ function isLikelyLink(w) {
     if (w.startsWith('http')) return true;
     if (w.includes('/') && (w.includes('attachments') || w.includes('cdn') || w.includes('com'))) return true;
     if (w.split('/').length > 2) return true;
+    // Common URL fragments
+    if (w.includes('://') || w.includes('www.') || w.endsWith('.com') || w.endsWith('.net') || w.endsWith('.org')) return true;
+    // Discord CDN and common platforms
+    if (w.includes('discord') || w.includes('tenor') || w.includes('giphy') || w.includes('imgur')) return true;
     return false;
 }
 
@@ -89,7 +93,7 @@ const STOPWORDS = new Set([
     'i', 'w', 'z', 'na', 'do', 'ze', 'za', 'o', 'a', 'ale', 'te', 'to', 'jest', 'jak', 'nie', 'tak', 'co', 'po', 'od', 'tym', 'czy', 'bo', 'się', 'ma', 'są', 'będzie', 'było', 'mnie', 'ci', 'mu', 'jej', 'im', 'nam', 'wam', 'ten', 'ta', 'tego', 'tej', 'dla', 'lub', 'ani', 'gdy', 'już', 'może', 'będą', 'kto', 'gdzie', 'kiedy', 'nic', 'wszystko',
     'albo', 'bardzo', 'bez', 'być', 'ciebie', 'czemu', 'dlaczego', 'dziś', 'go', 'ja', 'je', 'jego', 'jeszcze', 'każdy', 'kogo', 'który', 'mam', 'mi', 'mój', 'moje', 'moim', 'my', 'nad', 'nas', 'nawet', 'niech', 'niż', 'no', 'ona', 'one', 'oni', 'ono', 'pan', 'pani', 'pod', 'ponad', 'przed', 'przez', 'przy', 'sam', 'sobą', 'sobie', 'tam', 'teraz', 'to', 'tobą', 'tobie', 'tu', 'twoje', 'twoim', 'twój', 'ty', 'tylko', 'więc', 'właśnie', 'wszyscy', 'wy', 'wiele', 'żaden', 'zawsze', 'że', 'żeby', 'wiem', 'chce', 'chcę', 'wiedzieć', 'powiedzieć', 'robić', 'robic', 'mówić', 'mowic',
     'które', 'która', 'którego', 'której', 'którym', 'którzy', 'mną', 'tobą', 'sobą', 'naszym', 'waszym', 'ich', 'jego', 'jej', 'nam', 'wam', 'mamy', 'macie', 'mają', 'miał', 'miała', 'mieli', 'był', 'była', 'było', 'byli',
-    'status', 'vxtwitter', 'view', 'attachments', 'youtube', 'watch'
+    'status', 'vxtwitter', 'view', 'attachments', 'youtube', 'watch', 'hitlerx', 'girlcockx', 'cunnyx', 'pixiv', 'phixiv', 'searchquery', '_blank', 'maniax', 'const'
 ]);
 
 // --- Metrics ---
@@ -109,6 +113,31 @@ const IGNORED_EMOJI_IDS = [
 const IGNORED_EMOJI_NAMES = [
     '🚬'
 ];
+
+// Blacklisted symbols that should be filtered from emojis
+// Including Unicode quote characters that get captured by emoji regex
+const BLACKLISTED_EMOJI_SYMBOLS = [
+    '"""', "'", '"', 
+    '\u2018', // ' (left single quote)
+    '\u2019', // ' (right single quote)
+    '\u201A', // ‚ (single low-9 quote)
+    '\u201B', // ‛ (single high-reversed-9 quote)
+    '\u201C', // " (left double quote)
+    '\u201D', // " (right double quote)
+    '\u201E', // „ (double low-9 quote)
+    '\u201F', // ‟ (double high-reversed-9 quote)
+    '\u2033', // ″ (double prime)
+    '\u2034', // ‴ (triple prime)
+    '\u2035', // ‵ (reversed prime)
+    '\u2036', // ‶ (reversed double prime)
+    '\u2037'  // ‷ (reversed triple prime)
+];
+
+function containsBlacklistedSymbol(text) {
+    if (!text) return false;
+    // Check if text exactly matches a blacklisted symbol or contains it
+    return BLACKLISTED_EMOJI_SYMBOLS.some(symbol => text === symbol || text.includes(symbol));
+}
 
 // Excluded channel IDs
 const EXCLUDED_CHANNEL_ID = '875089858144632832'; // Excluded from all global stats
@@ -192,11 +221,13 @@ function getGlobalWords(userFilter = '') {
 
     for (const row of msgs) {
         if (!row.content) continue;
-        // Strip Discord emojis and mentions before splitting
+        // Strip Discord emojis, mentions, and URLs before splitting
         const cleanContent = row.content.toLowerCase()
             .replace(/<a?:\w+:\d+>/g, '') // Strip emojis <:name:id>
             .replace(/<@!?\d+>/g, '')     // Strip user mentions
-            .replace(/<#\d+>/g, '');      // Strip channel mentions
+            .replace(/<#\d+>/g, '')       // Strip channel mentions
+            .replace(/https?:\/\/[^\s]+/gi, '') // Strip URLs
+            .replace(/www\.[^\s]+/gi, ''); // Strip www links
 
         const words = cleanContent.split(/[\s,.!?":;()\[\]<>{}|\\/+=*&^%$#@~`]+/);
         for (const w of words) {
@@ -306,8 +337,16 @@ function getEmojiStats(userFilter = '') {
         LIMIT 100
     `).all(TARGET_YEAR.toString(), EXCLUDED_CHANNEL_ID);
 
+    // Filter out emojis with blacklisted symbols
+    const filteredEmojis = topEmojis.filter(e => {
+        if (containsBlacklistedSymbol(e.name)) return false;
+        if (IGNORED_EMOJI_IDS.includes(e.id)) return false;
+        if (IGNORED_EMOJI_NAMES.includes(e.name)) return false;
+        return true;
+    });
+
     // Add server differentiation for specific emojis
-    const differentiated = topEmojis.map(e => {
+    const differentiated = filteredEmojis.map(e => {
         if (e.id === '909369353554771989') return { ...e, server: 'Karczma' };
         if (e.id === '729822486799319071') return { ...e, server: 'Vtuberkowy' };
         return e;
@@ -620,7 +659,7 @@ function getHallOfFame(userFilter = '') {
         AND m.channel_id != ?
         GROUP BY r.message_id, r.emoji_name, r.emoji_id
         ORDER BY val DESC
-    `).all(year, EXCLUDED_CHANNEL_ID);
+    `).all(year, EXCLUDED_CHANNEL_ID).filter(row => !containsBlacklistedSymbol(row.emoji_name));
 
     let unanimousBadge = null;
     for (const row of topEmojiOnSingleMessage) {
@@ -669,7 +708,13 @@ function getGlobalMostReactedMessages() {
         LIMIT 12
     `).all(TARGET_YEAR.toString(), EXCLUDED_CHANNEL_ID);
 
-    return mostReacted.map(msg => {
+    // Filter out messages with emojis containing blacklisted symbols
+    const filteredMostReacted = mostReacted.filter(msg => {
+        if (containsBlacklistedSymbol(msg.emoji_name)) return false;
+        return true;
+    });
+
+    return filteredMostReacted.map(msg => {
         const author = db.prepare('SELECT name, avatar_url FROM users WHERE id = ?').get(msg.author_id);
         const reactions = db.prepare(`
             SELECT emoji_id, emoji_name, COUNT(*) as count
@@ -677,7 +722,7 @@ function getGlobalMostReactedMessages() {
             WHERE message_id = ?
             GROUP BY emoji_id, emoji_name
             ORDER BY count DESC
-        `).all(msg.id);
+        `).all(msg.id).filter(r => !containsBlacklistedSymbol(r.emoji_name));
 
         return {
             id: msg.id,
@@ -788,7 +833,9 @@ function getMonthlyWordStats(userFilter = '') {
         const cleanContent = row.content.toLowerCase()
             .replace(/<a?:\w+:\d+>/g, '') // Strip emojis <:name:id>
             .replace(/<@!?\d+>/g, '')     // Strip user mentions
-            .replace(/<#\d+>/g, '');      // Strip channel mentions
+            .replace(/<#\d+>/g, '')       // Strip channel mentions
+            .replace(/https?:\/\/[^\s]+/gi, '') // Strip URLs
+            .replace(/www\.[^\s]+/gi, ''); // Strip www links
 
         const words = cleanContent.split(/[\s,.!?":;()\[\]<>{}|\\/+=*&^%$#@~`]+/);
         for (const w of words) {
